@@ -1,0 +1,73 @@
+{
+  "name": "@white-block/monorepo",
+  "description": "Intuitive Design for Effortless Development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kythuen/white-block.git"
+  },
+  "keywords": [
+    "components",
+    "UI library",
+    "white block",
+    "Vue"
+  ],
+  "author": {
+    "name": "Kythuen",
+    "email": "616332192@qq.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky",
+    "preinstall": "npx only-allow pnpm",
+    "docs:dev": "pnpm -C docs dev",
+    "docs:build": "pnpm -C docs build",
+    "play:dev": "pnpm -C packages/playground dev",
+    "play:build": "pnpm -C packages/playground build",
+    "docs:preview": "pnpm -C docs preview",
+    "test": "pnpm --filter ./packages/** test",
+    "test:coverage": "pnpm --filter ./packages/** test:coverage",
+    "types": "tsc --noEmit",
+    "format": "prettier --write --cache .",
+    "clear": "rimraf 'packages/*/{dist,node_modules}' && rimraf node_modules",
+    "change": "changeset",
+    "change:version": "changeset version",
+    "build": "pnpm --filter ./packages/** build",
+    "release": "pnpm --recursive --stream build && changeset publish"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "@commitlint/cli": "19.5.0",
+    "@commitlint/config-conventional": "19.5.0",
+    "@types/node": "20.4.5",
+    "@typescript-eslint/eslint-plugin": "8.15.0",
+    "@typescript-eslint/parser": "8.15.0",
+    "@vitest/coverage-istanbul": "^2.1.5",
+    "@vitest/coverage-v8": "^2.1.5",
+    "commitizen": "4.3.1",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "9.15.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-vue": "9.31.0",
+    "husky": "9.1.7",
+    "jsdom": "^25.0.1",
+    "lint-staged": "15.2.10",
+    "memfs": "^4.14.0",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.1",
+    "typescript": "5.6.3",
+    "unocss": "^0.62.2",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.5",
+    "vue-tsc": "^2.1.10"
+  }
+}

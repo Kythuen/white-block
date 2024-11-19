@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`# Button > ## Base > ### default config 1`] = `
+<button
+  aria-disabled="false"
+  bg="$wb-button-background hover:$wb-button-background-hover active:$wb-button-background-active"
+  box="border"
+  class="wb-button wb-button--base wb-button--primary wb-button--rectangle wb-button--md"
+  color="$wb-button-text hover:$wb-button-text-hover active:$wb-button-text-active"
+  cursor="pointer"
+  flex="inline row nowrap"
+  focus-visible="outline outline-2 outline-offset-2 outline-$wb-color-primary"
+  gap="$wb-button-gap"
+  h="$wb-button-height"
+  items="center"
+  justify="center"
+  outline="none"
+  p="x-$wb-button-padding"
+  ring="1 inset $wb-button-border hover:$wb-button-border-hover active:$wb-button-border-active"
+  rounded="$wb-button-radius"
+  select="none"
+  transition="all ease duration-200"
+  type="button"
+>
+  <!--v-if-->
+  <!---->
+  <!---->
+</button>
+`;
