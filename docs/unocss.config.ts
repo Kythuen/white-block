@@ -1,3 +1,3 @@
-import UnocssConfigs from '@ephemeras/vitepress/unocss'
+import UnocssConfigs from '@white-block/vitepress/unocss'
 
 export default UnocssConfigs

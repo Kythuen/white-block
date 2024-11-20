@@ -93,9 +93,9 @@ export function getHeaders(type = 'content') {
 }
 
 export function useSpecialHeight() {
-  const SPECIAL_HEIGHT = ref(window.innerWidth > 1024 ? 148 : 108)
+  const SPECIAL_HEIGHT = ref(window.innerWidth > 1024 ? 128 : 108)
   window.addEventListener('resize', () => {
-    SPECIAL_HEIGHT.value = window.innerWidth > 1024 ? 148 : 108
+    SPECIAL_HEIGHT.value = window.innerWidth > 1024 ? 128 : 108
   })
   return SPECIAL_HEIGHT
 }

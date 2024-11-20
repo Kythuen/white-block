@@ -1,9 +1,9 @@
 {
-  "name": "@ephemeras/vitepress",
+  "name": "@white-block/vitepress",
   "version": "0.0.1",
-  "description": "vitepress theme for ephemeras documents",
+  "description": "white-block vitepress theme for documents",
   "keywords": [
-    "ephemeras",
+    "white-block",
     "vitepress",
     "theme"
   ],
@@ -41,8 +41,6 @@
     "chokidar": "^3.6.0"
   },
   "dependencies": {
-    "@ephemeras/vitepress": "workspace:*",
-    "axios": "^1.7.7",
     "fs-extra": "^11.2.0",
     "unocss": "^0.64.1",
     "vitepress": "^1.5.0",
