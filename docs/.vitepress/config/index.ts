@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import { transformPageData } from '../transforms/data'
+import mdPlugin from '../transforms/markdown'
 import {
   DESCRIPTION,
   DESCRIPTION_ZH,
@@ -6,9 +8,9 @@ import {
   OG_IMAGE,
   TITLE
 } from './constant'
-import { localSearchConfig } from './search'
 import { NAV, SIDEBAR } from './routes/en'
 import { NAV as NAV_ZH, SIDEBAR as SIDEBAR_ZH } from './routes/zh'
+import { localSearchConfig } from './search'
 
 export default defineConfig({
   srcDir: 'src',
@@ -56,5 +58,9 @@ export default defineConfig({
   },
   vite: {
     configFile: 'vite.config.ts'
-  }
+  },
+  markdown: {
+    config: md => mdPlugin(md as any)
+  },
+  transformPageData
 })

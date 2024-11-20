@@ -1,58 +1,73 @@
 <template>
   <ClientOnly>
     <Suspense>
-      <div
-        id="layoutRoot"
-        w="full"
-        h="screen"
-        bg="dark:[rgb(var(--wb-vc-gray-950))]"
-        class="scrollable-main"
-      >
-        <WBHeader>
-          <template #header-operation-before>
-            <slot name="header-operation-before">
-              <wb-popup
-                trigger="hover"
-                placement="bottom"
-                content="Theme"
-                :z-index="100"
-              >
-                <wb-button key="theme" type="text" theme="primary">
-                  <div w="5" h="5" class="i-heroicons-swatch-20-solid" />
-                </wb-button>
-              </wb-popup>
-            </slot>
-          </template>
-          <template #header-operation-inside>
-            <slot name="header-operation-inside">
-              <wb-popup
-                trigger="hover"
-                placement="bottom"
-                content="Language"
-                :z-index="100"
-              >
-                <wb-button key="lang" type="text" theme="contrast">
-                  <div w="5" h="5" class="i-tdesign-translate" />
-                </wb-button>
-              </wb-popup>
-            </slot>
-          </template>
-          <template #header-operation-after>
-            <slot name="header-operation-after" />
-          </template>
-        </WBHeader>
+      <div w="full" h="screen" flex>
         <div
+          id="layoutRoot"
           w="full"
-          min-h="[calc(100vh-var(--wb-height-header))]"
-          class="content"
+          h="screen"
+          bg="dark:[rgb(var(--wb-vc-gray-950))]"
+          class="scrollable-main"
         >
-          <NotFound v-if="pageData.isNotFound" />
-          <!-- <EPHome v-else-if="frontmatter.page === 'Home'" />
-          <div v-else max-w="lg:400" h="full" m="x-auto" flex>
-            <EPSidebar />
-            <EPDocument />
-          </div> -->
+          <WBHeader>
+            <template #home-top>
+              <slot name="home-top" />
+            </template>
+            <template #header-top>
+              <slot name="header-top" />
+            </template>
+            <template #header-operation-before>
+              <slot name="header-operation-before" />
+            </template>
+            <template #header-operation-inside>
+              <slot name="header-operation-inside" />
+            </template>
+            <template #header-operation-after>
+              <slot name="header-operation-after" />
+            </template>
+          </WBHeader>
+          <div
+            w="full"
+            min-h="[calc(100vh-var(--wb-height-layout-header)-1px)]"
+            class="content"
+          >
+            <NotFound v-if="pageData.isNotFound" />
+            <template v-else-if="frontmatter.layout === 'home'">
+              <slot name="home-content">
+                <WBHome />
+              </slot>
+            </template>
+            <div v-else max-w="lg:400" h="full" m="x-auto" flex>
+              <WBSidebar>
+                <template #sidebar-top>
+                  <slot name="sidebar-top" />
+                </template>
+                <template #sidebar-bottom>
+                  <slot name="sidebar-bottom" />
+                </template>
+              </WBSidebar>
+              <WBDocument>
+                <template #document-header="payload">
+                  <slot name="document-header" v-bind="payload" />
+                </template>
+                <template #document-content="payload">
+                  <slot name="document-content" v-bind="payload" />
+                </template>
+                <template #document-bottom="payload">
+                  <slot name="document-bottom" v-bind="payload" />
+                </template>
+                <template #document-aside-menu="payload">
+                  <slot name="document-aside-menu" v-bind="payload" />
+                </template>
+                <template #document-aside-bottom>
+                  <slot name="document-aside-bottom" />
+                </template>
+              </WBDocument>
+            </div>
+          </div>
+          <slot name="layout-bottom" />
         </div>
+        <slot name="layout-aside" />
       </div>
     </Suspense>
   </ClientOnly>
@@ -63,9 +78,9 @@ import { useData } from 'vitepress'
 import NotFound from 'vitepress/dist/client/theme-default/NotFound.vue'
 import { ref } from 'vue'
 import WBHeader from './components/WBHeader.vue'
-import EPHome from './EPHome.vue'
-import EPSidebar from './EPSidebar.vue'
-import EPDocument from './EPDocument.vue'
+import WBHome from './components/WBHome.vue'
+import WBSidebar from './components/WBSidebar.vue'
+import WBDocument from './components/WBDocument.vue'
 
 defineOptions({ name: 'WBLayout' })
 

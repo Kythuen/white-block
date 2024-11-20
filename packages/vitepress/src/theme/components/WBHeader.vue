@@ -3,35 +3,40 @@
     sticky
     top="0"
     w="full"
-    h="$wb-height-layout-header"
     z="100"
     bg="dark:[rgb(var(--wb-vc-gray-950))]"
     border="0 b-px solid $wb-color-border-soft"
     class="ep-headers"
-    overflow="x-hidden"
+    overflow="hidden"
     @click.stop="
       clickDelegate(
         $event,
-        'header-option-item',
+        'wb-button',
         handleMenuOptions,
         hideMenuPanel
       )
     "
   >
+    <div v-if="$slots.headerTop">
+      <slot name="header-top" />
+    </div>
+    <div v-else-if="frontmatter.layout === 'home'">
+      <slot name="home-top" />
+    </div>
     <div
       max-w="lg:400"
-      h="full"
+      h="$wb-height-layout-header"
       m="x-auto"
-      p="x-2 md:x-6 lg:x-6"
+      p="x-2 !md:x-6 !lg:x-6"
       flex="~ row"
       justify="between"
       items="center"
       gap="3"
     >
-      <div w="60" flex="none">
+      <div max-w="60" flex="1">
         <a
           p="1.5"
-          :href="`${localePrefix}/`"
+          :href="withBase(`${localePrefix}/`)"
           un-text="4"
           font="semibold"
           flex="~ row"
@@ -59,51 +64,35 @@
         <VPNavBarSearch class="search" absolute translate="x-999" />
         <VPNavBarMenu />
       </div>
-      <div flex="lg:none ~ row" items="center" justify="end">
+      <div min-w="60" flex="lg:none ~ row" items="center" justify="end">
         <slot name="header-operation-before" />
-        <wb-button-group allow-types="['WbButton', 'WbPopup']">
-          <wb-popup
-            trigger="hover"
-            placement="bottom"
-            content="Search"
-            :z-index="100"
-          >
-            <wb-button key="search" type="text" theme="contrast">
-              <div w="5" h="5" class="i-heroicons-magnifying-glass" />
-            </wb-button>
-          </wb-popup>
-          <slot name="header-operation-inside" />
-          <wb-popup
-            trigger="hover"
-            placement="bottom"
-            content="Mode"
-            :z-index="100"
-          >
-            <wb-button key="mode" type="text" theme="contrast">
-              <div v-if="isDark" w="5" h="5" class="i-heroicons-moon-20-solid" />
-              <div v-else w="5" h="5" class="i-heroicons-sun-20-solid" />
-            </wb-button>
-          </wb-popup>
-          <wb-popup
-            trigger="hover"
-            content="GitHub"
-            :z-index="100"
-          >
-            <wb-button tag="a" type="text" theme="contrast" href="https://github.com/Kythuen/white-block" >
-              <div w="5" h="5" class="i-simple-icons-github" />
-            </wb-button>
-          </wb-popup>
-        </wb-button-group>
+        <WBIconButton
+          name="search"
+          icon="i-heroicons-magnifying-glass"
+          tip="Search"
+        />
+        <slot name="header-operation-inside" />
+        <WBIconButton
+          name="mode"
+          :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
+          tip="Mode"
+        />
+        <WBIconButton
+          name="gitHub"
+          icon="i-simple-icons-github"
+          tip="GitHub"
+          tag="a"
+          target="__blank"
+          href="https://github.com/Kythuen/white-block"
+        />
         <slot name="header-operation-after" />
-        <button data-value="menu" class="header-option-item lg:hidden" p="1.5">
-          <div
-            v-if="!showMenuPanel"
-            w="5"
-            h="5"
-            class="i-heroicons-bars-3-20-solid"
+        <div class="header-option-item lg:hidden">
+          <WBIconButton
+            name="menu"
+            :icon="showMenuPanel ? 'i-heroicons-x-mark-20-solid' : 'i-heroicons-bars-3-20-solid'"
+            tip="Menu"
           />
-          <div v-else w="5" h="5" class="i-heroicons-x-mark-20-solid" />
-        </button>
+        </div>
       </div>
     </div>
   </header>
@@ -116,8 +105,7 @@ import VPNavBarMenu from 'vitepress/dist/client/theme-default/components/VPNavBa
 import VPNavBarSearch from 'vitepress/dist/client/theme-default/components/VPNavBarSearch.vue'
 import { computed, ref } from 'vue'
 
-const emits = defineEmits<{ theme: [visible: boolean] }>()
-const { site, isDark, lang, theme } = useData()
+const { site, isDark, lang, theme, frontmatter } = useData()
 
 const showMenuPanel = ref(false)
 function hideMenuPanel() {
@@ -136,27 +124,27 @@ function handleMenuOptions(dataset: Record<string, string>) {
       isDark.value = !isDark.value
       break
     }
-    case 'lang': {
-      let targetPath = ''
-      const { path } = router.route
-      if (path.includes('/zh')) {
-        targetPath = path.replace('/zh', '')
-      } else {
-        const { base } = site.value
-        const pure = path.replace(base, '')
-        targetPath = `${base}zh/${pure}`
-      }
-      router.go(targetPath)
-      break
-    }
+    // case 'lang': {
+    //   let targetPath = ''
+    //   const { path } = router.route
+    //   if (path.includes('/zh')) {
+    //     targetPath = path.replace('/zh', '')
+    //   } else {
+    //     const { base } = site.value
+    //     const pure = path.replace(base, '')
+    //     targetPath = `${base}zh/${pure}`
+    //   }
+    //   router.go(targetPath)
+    //   break
+    // }
     case 'menu': {
       showMenuPanel.value = !showMenuPanel.value
       break
     }
-    case 'theme': {
-      emits('theme', true)
-      break
-    }
+    // case 'theme': {
+    //   emits('theme', true)
+    //   break
+    // }
     case 'search': {
       ;(
         document.querySelector('.DocSearch-Button') as HTMLButtonElement

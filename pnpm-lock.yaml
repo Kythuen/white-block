@@ -101,11 +101,14 @@ importers:
 
   docs:
     dependencies:
-      '@ephemeras/vitepress':
+      '@white-block/types':
+        specifier: workspace:*
+        version: link:../packages/types
+      '@white-block/vitepress':
         specifier: workspace:*
         version: link:../packages/vitepress
       axios:
-        specifier: ^1.6.8
+        specifier: ^1.7.7
         version: 1.7.7
       color:
         specifier: ^4.2.3
@@ -203,14 +206,18 @@ importers:
         specifier: ^3.28.0
         version: 3.29.5
 
+  packages/types:
+    dependencies:
+      '@babel/parser':
+        specifier: ^7.22.7
+        version: 7.26.2
+    devDependencies:
+      '@babel/types':
+        specifier: ^7.22.10
+        version: 7.26.0
+
   packages/vitepress:
     dependencies:
-      '@ephemeras/vitepress':
-        specifier: workspace:*
-        version: 'link:'
-      axios:
-        specifier: ^1.7.7
-        version: 1.7.7
       fs-extra:
         specifier: ^11.2.0
         version: 11.2.0

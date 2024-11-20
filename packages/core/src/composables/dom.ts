@@ -1,5 +1,5 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
-import { getElementBySelector } from '../utils'
+import { getElementBySelector } from '../utils/dom'
 
 type UseIntersectionObserverHandler = (visible: boolean) => void
 export function useIntersectionObserver(
