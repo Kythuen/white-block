@@ -1,6 +1,5 @@
 import { ref } from 'vue'
 
-// eslint-disable-next-line consistent-return
 export async function copyToClipboard(text: string) {
   try {
     return navigator.clipboard.writeText(text)

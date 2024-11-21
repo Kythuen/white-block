@@ -13,7 +13,7 @@
         h="17.5"
         color="$wb-color-text-5"
         bg="$wb-color-background"
-        round="1"
+        rounded="1"
         flex
         items="center"
         justify="center"
@@ -32,7 +32,7 @@
         h="17.5"
         color="$wb-color-text-5"
         bg="$wb-color-background"
-        round="1"
+        rounded="1"
         flex
         items="center"
         justify="center"
@@ -73,7 +73,7 @@
         m="t-4"
         color="$wb-color-text-5"
         bg="$wb-color-background"
-        round="1"
+        rounded="1"
         flex
         items="center"
         justify="center"
@@ -82,7 +82,7 @@
       </div>
     </template>
     <template #document-header="{ focus, tab, setTab }">
-      <DocumentHeader :focus="focus" :tab="tab" :setTab="setTab" />
+      <DocumentHeader :focus="focus" :tab="tab" :set-tab="setTab" />
     </template>
     <template #document-content="{ tab }">
       <DocumentContent :tab="tab" />
@@ -107,7 +107,7 @@
         h="60"
         color="$wb-color-text-5"
         bg="$wb-color-background"
-        round="1"
+        rounded="1"
         flex
         items="center"
         justify="center"
@@ -125,7 +125,7 @@
         m="t-4"
         color="$wb-color-text-5"
         bg="$wb-color-background"
-        round="1"
+        rounded="1"
         flex
         items="center"
         justify="center"
@@ -152,7 +152,7 @@ const TAB_OPTIONS = [
   { label: 'DEMO', value: 'content' },
   { label: 'API', value: 'api' }
 ]
-const [currentTab, setCurrentTab] = useState<string>('content')
+// const [currentTab, setCurrentTab] = useState<string>('content')
 
 const [homeTopVisible, setHomeTopVisible] = useState<boolean>(true)
 const [headerTopVisible, setHeaderTopVisible] = useState<boolean>(true)

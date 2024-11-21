@@ -85,7 +85,6 @@ function selectSaturationColorStart(e: MouseEvent) {
     x: -(resolveOffsetX.value / HubBarClientRect.width) * 100,
     y: (resolveOffsetY.value / HubBarClientRect.height) * 100
   })
-  // eslint-disable-next-line no-use-before-define
   on(document.body, 'mousemove', throttleSelectSaturationChange)
 }
 function selectSaturationColorChange(e: MouseEvent) {

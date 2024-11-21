@@ -9,12 +9,7 @@
     class="ep-headers"
     overflow="hidden"
     @click.stop="
-      clickDelegate(
-        $event,
-        'wb-button',
-        handleMenuOptions,
-        hideMenuPanel
-      )
+      clickDelegate($event, 'wb-button', handleMenuOptions, hideMenuPanel)
     "
   >
     <div v-if="$slots.headerTop">
@@ -56,8 +51,8 @@
               alt="logo"
             />
             <span>{{ theme.siteTitle }}</span>
-          </div v-else>
-          <span>{{ site.title }}</span>
+          </div>
+          <span v-else>{{ site.title }}</span>
         </a>
       </div>
       <div class="hidden !lg:flex" flex="lg:1" justify="center">
@@ -74,7 +69,9 @@
         <slot name="header-operation-inside" />
         <WBIconButton
           name="mode"
-          :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
+          :icon="
+            isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
+          "
           tip="Mode"
         />
         <WBIconButton
@@ -89,7 +86,11 @@
         <div class="header-option-item lg:hidden">
           <WBIconButton
             name="menu"
-            :icon="showMenuPanel ? 'i-heroicons-x-mark-20-solid' : 'i-heroicons-bars-3-20-solid'"
+            :icon="
+              showMenuPanel
+                ? 'i-heroicons-x-mark-20-solid'
+                : 'i-heroicons-bars-3-20-solid'
+            "
             tip="Menu"
           />
         </div>
@@ -99,11 +100,11 @@
 </template>
 
 <script setup lang="ts">
-import { clickDelegate } from 'white-block'
-import { useData, useRouter, withBase } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 import VPNavBarMenu from 'vitepress/dist/client/theme-default/components/VPNavBarMenu.vue'
 import VPNavBarSearch from 'vitepress/dist/client/theme-default/components/VPNavBarSearch.vue'
 import { computed, ref } from 'vue'
+import { clickDelegate } from 'white-block'
 
 const { site, isDark, lang, theme, frontmatter } = useData()
 
@@ -116,7 +117,6 @@ const localePrefix = computed(() =>
   lang.value === 'en' ? '' : `/${lang.value}`
 )
 
-const router = useRouter()
 function handleMenuOptions(dataset: Record<string, string>) {
   const { value } = dataset
   switch (value) {
@@ -124,27 +124,10 @@ function handleMenuOptions(dataset: Record<string, string>) {
       isDark.value = !isDark.value
       break
     }
-    // case 'lang': {
-    //   let targetPath = ''
-    //   const { path } = router.route
-    //   if (path.includes('/zh')) {
-    //     targetPath = path.replace('/zh', '')
-    //   } else {
-    //     const { base } = site.value
-    //     const pure = path.replace(base, '')
-    //     targetPath = `${base}zh/${pure}`
-    //   }
-    //   router.go(targetPath)
-    //   break
-    // }
     case 'menu': {
       showMenuPanel.value = !showMenuPanel.value
       break
     }
-    // case 'theme': {
-    //   emits('theme', true)
-    //   break
-    // }
     case 'search': {
       ;(
         document.querySelector('.DocSearch-Button') as HTMLButtonElement

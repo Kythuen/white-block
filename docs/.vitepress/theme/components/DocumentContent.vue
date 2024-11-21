@@ -22,6 +22,7 @@
           {{ lang === 'en' ? `${name} Props` : `${name} 属性` }}
           <a class="header-anchor" :href="`#API${name}Props`"></a>
         </h2>
+        <!-- eslint-disable-next-line vue/no-v-html -->
         <div class="api-table" v-html="JSON.parse(item[lang]?.props || '')" />
       </template>
       <template v-if="item[lang]?.events">
@@ -29,6 +30,7 @@
           {{ lang === 'en' ? `${name} Events` : `${name} 事件` }}
           <a class="header-anchor" :href="`#API${name}Events`"></a>
         </h2>
+        <!-- eslint-disable-next-line vue/no-v-html -->
         <div class="api-table" v-html="JSON.parse(item[lang]?.events || '')" />
       </template>
     </div>

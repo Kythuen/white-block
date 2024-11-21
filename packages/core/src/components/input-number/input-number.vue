@@ -175,7 +175,6 @@ function changeInputValue(e: KeyboardEvent) {
     }
   }
   const value = getLimitValue(result)
-  // eslint-disable-next-line no-use-before-define
   originInputValue.value = value
   setInputValue(value)
 }

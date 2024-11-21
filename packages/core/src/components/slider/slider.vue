@@ -101,7 +101,6 @@ function selectHueColorStart(e: MouseEvent) {
   offsetXPercent.value = getLimitOffsetPercent(offsetX)
   SliderValuePopupRef.value?.updatePopup()
   setSliderValue(offsetXPercent.value)
-  // eslint-disable-next-line no-use-before-define
   on(document.body, 'mousemove', throttleSelectHueChange)
 }
 function selectHueColorChange(e: MouseEvent) {

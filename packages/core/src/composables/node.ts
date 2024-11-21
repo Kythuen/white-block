@@ -8,7 +8,6 @@ function getFilterNodes(nodes: any[], allowNodeTypes: string[]) {
         : n.type.toString()
     if (type === 'Symbol(v-fgt)') return true
     if (allowNodeTypes.length && !allowNodeTypes.includes(type)) {
-      // eslint-disable-next-line no-console
       console.warn(
         `[white-block]: Detected invalid child element type: \`${type}\``
       )

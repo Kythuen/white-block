@@ -72,7 +72,6 @@ export function EventHandler(elm: Element): EventHandlerInstance {
   }
 }
 
-// eslint-disable-next-line consistent-return
 export async function copyToClipboard(text: string) {
   try {
     return navigator.clipboard.writeText(text)

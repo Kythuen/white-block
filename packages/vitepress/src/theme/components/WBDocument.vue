@@ -5,7 +5,7 @@
       name="document-header"
       :focus="isFocusMode"
       :tab="currentTab"
-      :setTab="setCurrentTab"
+      :set-tab="setCurrentTab"
     >
       <WBDocumentHeader :focus="isFocusMode" />
     </slot>
@@ -27,7 +27,7 @@
           name="document-bottom"
           :focus="isFocusMode"
           :tab="currentTab"
-          :setTab="setCurrentTab"
+          :set-tab="setCurrentTab"
         />
       </div>
       <WBDocumentAside :focus="isFocusMode" :tab="currentTab">

@@ -290,6 +290,7 @@
       transition="all duration-200 ease-in-out"
       class="scrollable"
     >
+      <!-- eslint-disable-next-line vue/no-v-html -->
       <div p="x-6" v-html="getHighlighCode(compCode)" />
     </div>
   </div>

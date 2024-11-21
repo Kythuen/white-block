@@ -13,8 +13,4 @@ import { useSpace } from 'white-block'
 const { node: MySpace } = useSpace({
   type: 'plain'
 })
-
-function handleClick(e: MouseEvent) {
-  console.log('click:', e)
-}
 </script>

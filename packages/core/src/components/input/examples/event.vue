@@ -1,7 +1,7 @@
 <template>
   <wb-space vertical>
-    <wb-input @change="handleChange" placeholder="@change" />
-    <wb-input :onChange="handleChange" placeholder="onChange" />
+    <wb-input placeholder="@change" @change="handleChange" />
+    <wb-input placeholder="onChange" :on-change="handleChange" />
   </wb-space>
 </template>
 

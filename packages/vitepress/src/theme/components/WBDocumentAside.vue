@@ -3,7 +3,7 @@
     sticky
     top="[calc(var(--wb-doc-height-header)+8.5rem)]"
     w="52"
-    flex="none"
+    flex="~ none col"
     :h="
       focus
         ? '[calc(100vh-var(--wb-doc-height-header)-10.5rem)]'
