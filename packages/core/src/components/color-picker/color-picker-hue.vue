@@ -88,7 +88,6 @@ function selectHueColorStart(e: MouseEvent) {
   offsetX.value = e.clientX - HueBarClientRect.left
   prevOffsetX = offsetX.value
   emits('change', (offsetX.value / HueBarClientRect.width) * 360)
-  // eslint-disable-next-line no-use-before-define
   on(document.body, 'mousemove', throttleSelectHueChange)
 }
 function selectHueColorChange(e: MouseEvent) {

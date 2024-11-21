@@ -7,6 +7,7 @@ import DemoBlock from './components/global/DemoBlock.vue'
 import DemoBox from './components/global/DemoBox.vue'
 import UsageBlock from './components/global/UsageBlock.vue'
 import Layout from './Layout.vue'
+import './styles/index.less'
 
 const theme: Theme = {
   extends: WBTheme,

@@ -21,7 +21,6 @@ defineOptions({ name: 'ColorPickerDropper' })
 async function pickColor() {
   if ('EyeDropper' in window) {
     // @ts-ignore
-    // eslint-disable-next-line no-undef
     const eyeDropper = new EyeDropper()
     try {
       const { sRGBHex } = await eyeDropper.open()

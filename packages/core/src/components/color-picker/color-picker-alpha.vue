@@ -105,7 +105,6 @@ function selectAlphaColorStart(e: MouseEvent) {
   offsetX.value = e.clientX - AlphaBarClientRect.left
   prevOffsetX = offsetX.value
   emits('change', 1 - offsetX.value / AlphaBarClientRect.width)
-  // eslint-disable-next-line no-use-before-define
   on(document.body, 'mousemove', throttleSelectAlphaChange)
 }
 function selectAlphaColorChange(e: MouseEvent) {

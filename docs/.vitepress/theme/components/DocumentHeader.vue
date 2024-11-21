@@ -90,7 +90,7 @@ import { useData, useRoute } from 'vitepress'
 import type { PropType } from 'vue'
 import { ref, watch } from 'vue'
 
-const props = defineProps({
+defineProps({
   focus: { type: Boolean, default: false },
   tab: {
     type: String as PropType<'content' | 'api'>,
@@ -107,7 +107,7 @@ const TAB_OPTIONS = [
   { label: 'API', value: 'api' }
 ]
 
-const { page, frontmatter, site } = useData()
+const { page, frontmatter } = useData()
 // const { hash } = window.location
 
 const componentName = frontmatter.value.component

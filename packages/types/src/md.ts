@@ -16,7 +16,6 @@ export type TableDataItem = Record<string, any>
 export interface CreateTableOptions {
   headers: TableHeaderItem[]
   data: TableDataItem[]
-  // eslint-disable-next-line no-unused-vars
   transform?: (propName: string, propValue: any) => void
 }
 

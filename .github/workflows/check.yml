@@ -19,6 +19,7 @@ jobs:
         run: |
           pnpm --filter=@white-block/types build
           pnpm --filter=white-block build
+          pnpm --filter=@white-block/vitepress build
 
       - name: Check type
         run: pnpm types

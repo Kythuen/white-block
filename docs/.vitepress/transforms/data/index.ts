@@ -152,7 +152,6 @@ export async function transformPageData(pageData: PageData) {
             for (const key in resolveImportDataMap) {
               if (propValue.includes(key)) {
                 if (resolveImportDataMap[key].startsWith('http')) {
-                  // eslint-disable-next-line no-param-reassign
                   propValue = propValue.replace(
                     new RegExp(key, 'g'),
                     `[${key}](${resolveImportDataMap[key]})`
@@ -161,13 +160,11 @@ export async function transformPageData(pageData: PageData) {
               }
             }
             if (propValue === 'T') {
-              // eslint-disable-next-line no-param-reassign
               propValue = propValue.replace(/T/g, componentValueType)
             }
             return propValue
           }
           if (propName === 'comment') {
-            // eslint-disable-next-line no-param-reassign
             propValue = propValue.replace(
               /\$\{COMPONENT_NAME\}/g,
               componentName
@@ -186,12 +183,10 @@ export async function transformPageData(pageData: PageData) {
         transform: (propName: string, propValue: any) => {
           if (propName === 'type') {
             if (propValue.includes('T')) {
-              // eslint-disable-next-line no-param-reassign
               propValue = propValue.replace(/T/g, componentValueType)
             }
           }
           if (propName === 'comment') {
-            // eslint-disable-next-line no-param-reassign
             propValue = propValue.replace(
               /\$\{COMPONENT_NAME\}/g,
               componentName

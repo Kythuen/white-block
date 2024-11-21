@@ -1,6 +1,6 @@
 <template>
   <wb-space vertical>
-    <wb-button-group @click="clickHandler" separate>
+    <wb-button-group separate @click="clickHandler">
       <wb-button key="theme" type="ghost" theme="primary">
         <div w-5 h-5 class="i-heroicons-swatch-20-solid" />
       </wb-button>

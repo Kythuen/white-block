@@ -1,5 +1,3 @@
-/* eslint-disable max-classes-per-file */
-
 // export interface EventCenterInstance {
 //   on: (event: string, handler: (...args: any[]) => any) => void
 //   off: (event: string, handler: (...args: any[]) => any) => void

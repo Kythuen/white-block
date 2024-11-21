@@ -76,18 +76,12 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import NotFound from 'vitepress/dist/client/theme-default/NotFound.vue'
-import { ref } from 'vue'
+import WBDocument from './components/WBDocument.vue'
 import WBHeader from './components/WBHeader.vue'
 import WBHome from './components/WBHome.vue'
 import WBSidebar from './components/WBSidebar.vue'
-import WBDocument from './components/WBDocument.vue'
 
 defineOptions({ name: 'WBLayout' })
 
-const { page: pageData, frontmatter, site } = useData()
-
-const themeEditorVisible = ref(false)
-function toggleThemeEditor(data: boolean) {
-  themeEditorVisible.value = data
-}
+const { page: pageData, frontmatter } = useData()
 </script>

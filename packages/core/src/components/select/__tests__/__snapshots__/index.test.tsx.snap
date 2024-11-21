@@ -7,6 +7,7 @@ exports[`# Select > ## Base > ### default config 1`] = `
   <div
     class="wb-popup-trigger"
     cursor="pointer"
+    flex=""
     select="none"
   >
     

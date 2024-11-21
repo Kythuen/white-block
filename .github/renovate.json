@@ -10,37 +10,45 @@
     },
     {
       "groupName": "test dependencies",
-      "matchPackageNames": ["vitest", "jsdom", "@vitest{/,}**"]
+      "matchPackageNames": ["@vitest{/,}**", "jsdom", "memfs", "vitest"]
     },
     {
       "groupName": "build dependencies",
       "matchPackageNames": [
-        "vite",
-        "tsup",
-        "rollup{/,}**",
-        "esbuild{/,}**",
         "@rollup{/,}**",
-        "@vitejs{/,}**"
+        "@vitejs{/,}**",
+        "esbuild{/,}**",
+        "rollup{/,}**",
+        "tsup",
+        "unocss",
+        "vite"
       ]
     },
     {
-      "groupName": "test dependencies",
-      "matchPackageNames": ["vitest", "memfs", "@vitest{/,}**"]
+      "groupName": "commit dependencies",
+      "matchPackageNames": [
+        "@changesets/cli",
+        "@commitlint{/,}**",
+        "commitizen",
+        "cz-conventional-changelog",
+        "husky",
+        "lint-staged"
+      ]
     },
     {
       "groupName": "lint dependencies",
       "matchPackageNames": [
-        "husky",
-        "lint-staged",
-        "commitizen",
-        "cz-conventional-changelog",
-        "@commitlint{/,}**",
-        "@typescript-eslint{/,}**",
-        "typescript-eslint{/,}**",
+        "@eslint/js",
         "eslint{/,}**",
-        "prettier{/,}**"
+        "globals",
+        "prettier{/,}**",
+        "typescript-eslint"
       ]
+    },
+    {
+      "groupName": "tool dependencies",
+      "matchPackageNames": ["rimraf", "tsx"]
     }
   ],
-  "ignoreDeps": ["typescript", "@types/node", "vue-tsc"]
+  "ignoreDeps": ["@types/node", "typescript", "vue-tsc"]
 }
