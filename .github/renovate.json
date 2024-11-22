@@ -50,5 +50,5 @@
       "matchPackageNames": ["rimraf", "tsx"]
     }
   ],
-  "ignoreDeps": ["@types/node", "typescript", "vue-tsc"]
+  "ignoreDeps": ["@types/node", "typescript", "vue-tsc", "@iconify-json/**"]
 }
