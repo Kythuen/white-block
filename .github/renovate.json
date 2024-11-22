@@ -48,7 +48,11 @@
     {
       "groupName": "tool dependencies",
       "matchPackageNames": ["rimraf", "tsx"]
+    },
+    {
+      "matchPackageNames": ["@iconify-json/**"],
+      "enabled": false
     }
   ],
-  "ignoreDeps": ["@types/node", "typescript", "vue-tsc", "@iconify-json/**"]
+  "ignoreDeps": ["@types/node", "typescript", "vue-tsc"]
 }
