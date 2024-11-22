@@ -37,12 +37,6 @@
     "test:coverage": "vitest run --coverage",
     "test:coverage:update": "tsx scripts/coverage.ts"
   },
-  "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "color": "^4.2.3",
-    "radash": "^12.1.0",
-    "vue": "^3.3.0"
-  },
   "devDependencies": {
     "@ephemeras/utils": "^2.1.0",
     "@iconify-json/codicon": "^1.1.48",
@@ -54,8 +48,13 @@
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "@vue/test-utils": "^2.4.5",
     "dom-parser": "^1.1.5",
-    "fast-glob": "^3.3.1",
-    "rollup": "^3.28.0"
+    "rollup": "^3.28.0",
+    "unocss": "^0.64.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "color": "^4.2.3",
+    "radash": "^12.1.0"
   },
   "peerDependencies": {
     "vue": ">=3.3.0"

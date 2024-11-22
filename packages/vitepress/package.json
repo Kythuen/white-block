@@ -1,11 +1,12 @@
 {
   "name": "@white-block/vitepress",
   "version": "0.0.1",
-  "description": "white-block vitepress theme for documents",
+  "description": "white-block document theme for vitepress",
   "keywords": [
     "white-block",
-    "vitepress",
-    "theme"
+    "document",
+    "theme",
+    "vitepress"
   ],
   "author": {
     "name": "ephemeras",
@@ -44,14 +45,16 @@
     "test": "echo \"@ephemeras/vitepress ignore\"",
     "test:coverage": "echo \"@ephemeras/vitepress coverage ignore\""
   },
-  "devDependencies": {
-    "chokidar": "^4.0.1"
-  },
   "dependencies": {
     "fs-extra": "^11.2.0",
     "unocss": "^0.64.1",
-    "vitepress": "^1.5.0",
     "vue": "^3.5.12",
     "white-block": "workspace:*"
+  },
+  "devDependencies": {
+    "chokidar": "^4.0.1"
+  },
+  "peerDependencies": {
+    "vitepress": "^1.5.0"
   }
 }
