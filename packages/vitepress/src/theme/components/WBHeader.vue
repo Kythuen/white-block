@@ -50,7 +50,7 @@
               filter=" drop-shadow-sm"
               alt="logo"
             />
-            <span>{{ theme.siteTitle }}</span>
+            <span>{{ site.title }}</span>
           </div>
           <span v-else>{{ site.title }}</span>
         </a>
