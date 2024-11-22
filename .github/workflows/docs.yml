@@ -27,7 +27,7 @@ jobs:
         run: pnpm docs:build
 
       - name: Deploy document
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        uses: JamesIves/github-pages-deploy-action@v4.6.9
         with:
           token: ${{ secrets.ACTIONS_TOKEN }}
           branch: gh-pages
@@ -58,7 +58,7 @@ jobs:
         run: pnpm play:build
 
       - name: Deploy Playground
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        uses: JamesIves/github-pages-deploy-action@v4.6.9
         with:
           token: ${{ secrets.ACTIONS_TOKEN }}
           branch: gh-pages
