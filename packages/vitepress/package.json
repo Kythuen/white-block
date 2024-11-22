@@ -22,6 +22,11 @@
       "require": "./dist/index.js",
       "import": "./dist/index.js"
     },
+    "./theme": {
+      "types": "./dist/types/theme/index.d.ts",
+      "require": "./dist/theme/index.js",
+      "import": "./dist/theme/index.js"
+    },
     "./unocss": {
       "types": "./dist/types/unocss/index.d.ts",
       "require": "./dist/unocss/index.js",
@@ -30,10 +35,12 @@
     "./dist/*": "./dist/*"
   },
   "scripts": {
-    "dev": "pnpm --stream \"/^dev:(client|watch)$/\"",
-    "dev:client": "tsc --watch",
-    "dev:watch": "node scripts/watchAndCopy",
-    "build": "tsc",
+    "dev": "pnpm --stream \"/^dev:(ts|copy)$/\"",
+    "dev:ts": "tsc --watch",
+    "dev:copy": "node scripts/watchCopy.js",
+    "build": "pnpm --stream \"/^build:(ts|copy)$/\"",
+    "build:ts": "tsc",
+    "build:copy": "node scripts/copy.js",
     "test": "echo \"@ephemeras/vitepress ignore\"",
     "test:coverage": "echo \"@ephemeras/vitepress coverage ignore\""
   },
