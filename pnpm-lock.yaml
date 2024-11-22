@@ -226,8 +226,8 @@ importers:
         version: link:../core
     devDependencies:
       chokidar:
-        specifier: ^3.6.0
-        version: 3.6.0
+        specifier: ^4.0.1
+        version: 4.0.1
 
 packages:
 
