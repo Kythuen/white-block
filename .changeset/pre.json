@@ -1,0 +1,11 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "@white-block/docs": "0.0.1",
+    "white-block": "0.0.35",
+    "@white-block/types": "0.0.3",
+    "@white-block/vitepress": "0.0.1"
+  },
+  "changesets": ["silly-poets-sniff"]
+}
