@@ -7,5 +7,7 @@
     "@white-block/types": "0.0.3",
     "@white-block/vitepress": "0.0.1"
   },
-  "changesets": ["silly-poets-sniff"]
+  "changesets": [
+    "silly-poets-sniff"
+  ]
 }
