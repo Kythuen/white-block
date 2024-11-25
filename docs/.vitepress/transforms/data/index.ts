@@ -84,7 +84,7 @@ export async function transformPageData(pageData: PageData) {
 
       const importData = resolver.getImports()
       const typeRoot =
-        'https://github.com/Kythuen/white-block-next/blob/main/packages/core/src/components'
+        'https://github.com/Kythuen/white-block/blob/main/packages/core/src/components'
 
       let resolvePropsData = propsData
       let resolveEmitsData = emitsData

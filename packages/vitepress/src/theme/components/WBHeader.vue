@@ -6,8 +6,6 @@
     z="100"
     bg="dark:[rgb(var(--wb-vc-gray-950))]"
     border="0 b-px solid $wb-color-border-soft"
-    class="ep-headers"
-    overflow="hidden"
     @click.stop="
       clickDelegate($event, 'wb-button', handleMenuOptions, hideMenuPanel)
     "
@@ -50,7 +48,7 @@
               filter=" drop-shadow-sm"
               alt="logo"
             />
-            <span>{{ site.title }}</span>
+            <span>{{ theme.siteTitle }}</span>
           </div>
           <span v-else>{{ site.title }}</span>
         </a>

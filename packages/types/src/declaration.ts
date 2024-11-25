@@ -4,11 +4,10 @@ export type GetImportDeclaration = Record<string, string>
 export function getImportDeclaration(declaration: any) {
   const identifiers: GetImportDeclaration = {}
   declaration.specifiers.forEach((identifier: any) => {
-    if (identifier.imported) {
-      identifiers[identifier.imported.name] = declaration.source.value
-    }
     if (identifier.local) {
       identifiers[identifier.local.name] = declaration.source.value
+    } else if (identifier.imported) {
+      identifiers[identifier.imported.name] = declaration.source.value
     }
   })
   return identifiers

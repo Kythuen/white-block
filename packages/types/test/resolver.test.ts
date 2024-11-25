@@ -233,7 +233,6 @@ describe('# ModuleResolver', () => {
 
       const resolver = new ModuleResolver(code)
       expect(resolver.getImports()).toEqual({
-        AAA: './not-exist',
         BBB: './not-exist'
       })
     })
@@ -250,7 +249,6 @@ describe('# ModuleResolver', () => {
         AAA: './type',
         PropType: 'vue',
         BBB: './type',
-        CCC: './type',
         DDD: './type'
       })
     })
