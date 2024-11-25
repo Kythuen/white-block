@@ -39,30 +39,3 @@ jobs:
             v1/**/*
             playground/*
             playground/**/*
-
-  playground:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Setup Environment
-        uses: ./.github/actions/setup-environment
-
-      - name: Build packages
-        run: pnpm --filter=white-block build
-
-      - name: Build playground
-        env:
-          PLATFORM: GitHub
-        run: pnpm play:build
-
-      - name: Deploy Playground
-        uses: JamesIves/github-pages-deploy-action@v4.6.9
-        with:
-          token: ${{ secrets.ACTIONS_TOKEN }}
-          branch: gh-pages
-          folder: docs/.vitepress/dist/playground
-          single-commit: true
-          clean: true
-          target-folder: playground
