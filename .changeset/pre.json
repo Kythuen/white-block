@@ -8,6 +8,7 @@
     "@white-block/vitepress": "0.0.1"
   },
   "changesets": [
+    "few-ducks-destroy",
     "silly-poets-sniff"
   ]
 }
