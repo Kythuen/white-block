@@ -1,0 +1,1 @@
+import{h as n}from"./theme.DxWOurjz.js";import{d as a,o as c,c as r,w as l,I as p,u as i}from"./framework.E0xHZxNf.js";const d=a({__name:"composables",setup(u){const{node:s}=n({type:"plain"});function t(e){console.log("click:",e)}return(e,o)=>(c(),r(i(s),{onClick:t},{default:l(()=>o[0]||(o[0]=[p(" button ")])),_:1}))}});export{d as default};
