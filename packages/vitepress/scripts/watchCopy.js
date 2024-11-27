@@ -6,9 +6,11 @@ function toDist(file) {
   return normalizePath(file).replace(/^src\//, 'dist/')
 }
 
-watch('src', {
-  ignored: (path, stats) => stats?.isFile() && path.endsWith('.ts')
-})
-  .on('change', file => copy(file, toDist(file)))
-  .on('add', file => copy(file, toDist(file)))
-  .on('unlink', file => remove(toDist(file)))
+setTimeout(() => {
+  watch('src', {
+    ignored: (path, stats) => stats?.isFile() && path.endsWith('.ts')
+  })
+    .on('change', file => copy(file, toDist(file)))
+    .on('add', file => copy(file, toDist(file)))
+    .on('unlink', file => remove(toDist(file)))
+}, 5000)

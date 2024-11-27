@@ -1,5 +1,6 @@
 import { Theme as WBTheme } from '@white-block/vitepress'
 import 'virtual:uno.css'
+import 'virtual:group-icons.css'
 import type { Theme } from 'vitepress'
 import ComponentOverview from './components/ComponentOverview.vue'
 import CustomUsageBlock from './components/global/CustomUsageBlock.vue'
