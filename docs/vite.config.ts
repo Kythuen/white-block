@@ -3,6 +3,10 @@ import { resolve } from 'node:path'
 import UnoCSS from 'unocss/vite'
 import type { Alias } from 'vite'
 import { defineConfig } from 'vite'
+import {
+  groupIconMdPlugin,
+  groupIconVitePlugin
+} from 'vitepress-plugin-group-icons'
 import { version } from './package.json'
 
 const alias: Alias[] = [
@@ -26,7 +30,7 @@ export default defineConfig({
   resolve: {
     alias
   },
-  plugins: [UnoCSS() as any, vueJSX()],
+  plugins: [UnoCSS(), vueJSX(), groupIconVitePlugin()],
   optimizeDeps: {
     exclude: ['vitepress']
   },
