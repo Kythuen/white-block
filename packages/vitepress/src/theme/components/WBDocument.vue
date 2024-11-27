@@ -2,6 +2,7 @@
   <div w="full" h="full">
     <div id="DocumentHeaderIndicator" w="full" h="0" />
     <slot
+      v-if="frontmatterField(frontmatter, 'document-header')"
       name="document-header"
       :focus="isFocusMode"
       :tab="currentTab"
@@ -17,7 +18,11 @@
       gap="8"
       class="vp-doc"
     >
-      <div max-w="xl:264" w="full">
+      <div
+        max-w="xl:264"
+        w="full"
+        :m="frontmatterField(frontmatter, 'sidebar') ? '' : 'x-auto'"
+      >
         <slot name="document-content" :tab="currentTab">
           <div class="vp-doc-content">
             <Content />
@@ -30,7 +35,11 @@
           :set-tab="setCurrentTab"
         />
       </div>
-      <WBDocumentAside :focus="isFocusMode" :tab="currentTab">
+      <WBDocumentAside
+        v-if="frontmatterField(frontmatter, 'document-aside')"
+        :focus="isFocusMode"
+        :tab="currentTab"
+      >
         <template #document-aside-bottom>
           <slot name="document-aside-bottom" />
         </template>
@@ -40,11 +49,14 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vitepress'
-import { watch } from 'vue'
-import { useIntersectionObserver, useState } from 'white-block'
 import WBDocumentAside from './WBDocumentAside.vue'
 import WBDocumentHeader from './WBDocumentHeader.vue'
+import { useRoute, useData } from 'vitepress'
+import { watch } from 'vue'
+import { useIntersectionObserver, useState } from 'white-block'
+import { frontmatterField } from '../../utils'
+
+const { frontmatter } = useData()
 
 const { visible: isFocusMode } = useIntersectionObserver(
   '#layoutRoot',

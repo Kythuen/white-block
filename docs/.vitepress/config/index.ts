@@ -38,6 +38,7 @@ export default defineConfig({
       head: [['meta', { name: 'og:description', content: DESCRIPTION }]],
       themeConfig: {
         logo: '/logo.png',
+        siteTitle: 'WhiteBlock',
         nav: NAV,
         socialLinks: [{ icon: 'github', link: GITHUB_URL }],
         sidebar: SIDEBAR
@@ -50,6 +51,7 @@ export default defineConfig({
       head: [['meta', { name: 'og:description', content: DESCRIPTION_ZH }]],
       themeConfig: {
         logo: '/logo.png',
+        siteTitle: 'WhiteBlock',
         nav: NAV_ZH,
         socialLinks: [{ icon: 'github', link: GITHUB_URL }],
         sidebar: SIDEBAR_ZH
