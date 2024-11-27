@@ -19,40 +19,64 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.js"
+      "types": "./dist/types/client/index.d.ts",
+      "require": "./dist/client/index.js",
+      "import": "./dist/client/index.js"
+    },
+    "./client": {
+      "types": "./dist/types/client/index.d.ts",
+      "require": "./dist/client/index.js",
+      "import": "./dist/client/index.js"
     },
     "./theme": {
-      "types": "./dist/types/theme/index.d.ts",
-      "require": "./dist/theme/index.js",
-      "import": "./dist/theme/index.js"
+      "types": "./dist/types/client/theme/index.d.ts",
+      "require": "./dist/client/theme/index.js",
+      "import": "./dist/client/theme/index.js"
+    },
+    "./utils": {
+      "types": "./dist/types/client/utils/index.d.ts",
+      "require": "./dist/client/utils/index.js",
+      "import": "./dist/client/utils/index.js"
+    },
+    "./node": {
+      "types": "./dist/types/node/index.d.ts",
+      "require": "./dist/node/index.js",
+      "import": "./dist/node/index.js"
     },
     "./unocss": {
-      "types": "./dist/types/unocss/index.d.ts",
-      "require": "./dist/unocss/index.js",
-      "import": "./dist/unocss/index.js"
+      "types": "./dist/types/node/unocss/index.d.ts",
+      "require": "./dist/node/unocss/index.js",
+      "import": "./dist/node/unocss/index.js"
     },
     "./dist/*": "./dist/*"
   },
+  "bin": {
+    "wb-vitepress": "dist/node/cli/index.js"
+  },
   "scripts": {
-    "dev": "pnpm --stream \"/^dev:(ts|copy)$/\"",
-    "dev:ts": "tsc --watch",
+    "dev": "run-p dev:ts dev:copy",
+    "dev:ts": "tsup --watch src",
     "dev:copy": "node scripts/watchCopy.js",
-    "build": "pnpm --stream \"/^build:(ts|copy)$/\"",
-    "build:ts": "tsc",
+    "build": "run-s build:ts build:copy",
+    "build:ts": "tsup",
     "build:copy": "node scripts/copy.js",
     "test": "echo \"@ephemeras/vitepress ignore\"",
     "test:coverage": "echo \"@ephemeras/vitepress coverage ignore\""
   },
   "dependencies": {
+    "cac": "^6.7.14",
     "fs-extra": "^11.2.0",
+    "gradient-string": "^3.0.0",
+    "picocolors": "^1.1.1",
+    "prompts": "^2.4.2",
     "unocss": "^0.64.1",
     "vue": "^3.5.13",
     "white-block": "workspace:*"
   },
   "devDependencies": {
-    "chokidar": "^4.0.1"
+    "@types/prompts": "^2.4.9",
+    "chokidar": "^4.0.1",
+    "npm-run-all": "^4.1.5"
   },
   "peerDependencies": {
     "vitepress": "^1.5.0"

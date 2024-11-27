@@ -1,2 +1,0 @@
-Global component provide:
-- WBIconButton
