@@ -3,3 +3,4 @@ dist
 packages/cli/files
 packages/core/src/components/keys.ts
 pnpm-lock.yaml
+.changeset

@@ -7,7 +7,7 @@ import globals from 'globals'
 
 export default tsEslint.config([
   {
-    ignores: ['**/dist', 'docs/.vitepress/cache/']
+    ignores: ['**/dist', 'docs/.vitepress/cache/', '.changeset/']
   },
   eslint.configs.recommended,
   tsEslint.configs.recommended,
