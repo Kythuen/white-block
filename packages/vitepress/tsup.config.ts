@@ -4,7 +4,7 @@ export const tsup: Options = {
   entry: ['src/client/**/*.ts', 'src/node/**/*.ts'],
   format: ['cjs', 'esm'],
   dts: true,
-  splitting: true,
+  splitting: false,
   clean: true,
   shims: false,
   external: [/.*\.vue/, /.*\.css/, /.*\.less/],
