@@ -1,0 +1,1 @@
+import{_ as c,p as t,o as a,c as r,w as n,a as _,F as l,g as p,e as u,I as d,B as f}from"./framework.E0xHZxNf.js";const m={};function b(i,w){const o=t("wb-button"),s=t("wb-space");return a(),r(s,null,{default:n(()=>[(a(),_(l,null,p(3,e=>u(o,{key:e},{default:n(()=>[d(f(e),1)]),_:2},1024)),64))]),_:1})}const g=c(m,[["render",b]]);export{g as default};

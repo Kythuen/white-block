@@ -1,0 +1,1 @@
+import{B as t}from"./theme.b4flA4JE.js";import{e,I as a,F as r}from"./framework.E0xHZxNf.js";const l={default:e(r,null,[e(t,{style:"width: 1rem; height: 1rem"},{default:()=>[a("1")]}),e(t,{style:"width: 2rem; height: 2rem"},{default:()=>[a("2")]}),e(t,{style:"width: 3rem; height: 3rem"},{default:()=>[a("3")]})])};export{l as default};
