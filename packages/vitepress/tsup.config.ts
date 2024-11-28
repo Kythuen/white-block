@@ -5,7 +5,7 @@ export const tsup: Options = {
   format: ['cjs', 'esm'],
   dts: true,
   splitting: false,
-  clean: true,
+  clean: process.env.NODE_ENV !== 'production',
   shims: false,
   external: [/.*\.vue/, /.*\.css/, /.*\.less/],
   ignoreWatch: [

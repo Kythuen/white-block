@@ -58,7 +58,7 @@
     "dev:ts": "tsup --watch src",
     "dev:copy": "node scripts/watchCopy.js",
     "build": "run-s build:ts build:copy",
-    "build:ts": "tsup",
+    "build:ts": "tsup --env.NODE_ENV production",
     "build:copy": "node scripts/copy.js",
     "test": "echo \"@ephemeras/vitepress ignore\"",
     "test:coverage": "echo \"@ephemeras/vitepress coverage ignore\""
