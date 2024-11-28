@@ -19,14 +19,9 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/types/client/index.d.ts",
-      "require": "./dist/client/index.js",
-      "import": "./dist/client/index.js"
-    },
-    "./client": {
-      "types": "./dist/types/client/index.d.ts",
-      "require": "./dist/client/index.js",
-      "import": "./dist/client/index.js"
+      "types": "./dist/types/client/theme/index.d.ts",
+      "require": "./dist/client/theme/index.js",
+      "import": "./dist/client/theme/index.js"
     },
     "./theme": {
       "types": "./dist/types/client/theme/index.d.ts",
@@ -37,11 +32,6 @@
       "types": "./dist/types/client/utils/index.d.ts",
       "require": "./dist/client/utils/index.js",
       "import": "./dist/client/utils/index.js"
-    },
-    "./node": {
-      "types": "./dist/types/node/index.d.ts",
-      "require": "./dist/node/index.js",
-      "import": "./dist/node/index.js"
     },
     "./unocss": {
       "types": "./dist/types/node/unocss/index.d.ts",
@@ -57,8 +47,8 @@
     "dev": "run-p dev:ts dev:copy",
     "dev:ts": "tsup --watch src",
     "dev:copy": "node scripts/watchCopy.js",
-    "build": "run-s build:copy build:ts",
-    "build:ts": "tsup --env.NODE_ENV production",
+    "build": "run-s build:ts build:copy",
+    "build:ts": "tsup",
     "build:copy": "node scripts/copy.js",
     "test": "echo \"@ephemeras/vitepress ignore\"",
     "test:coverage": "echo \"@ephemeras/vitepress coverage ignore\""
