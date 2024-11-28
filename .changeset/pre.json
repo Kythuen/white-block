@@ -5,7 +5,12 @@
     "@white-block/docs": "0.0.1",
     "white-block": "0.0.35",
     "@white-block/types": "0.0.3",
-    "@white-block/vitepress": "0.0.1"
+    "@white-block/vitepress": "0.0.1",
+    "test": "1.0.0"
   },
-  "changesets": ["few-ducks-destroy", "silly-poets-sniff"]
+  "changesets": [
+    "few-ducks-destroy",
+    "silly-poets-sniff",
+    "stale-bottles-fry"
+  ]
 }
