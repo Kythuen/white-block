@@ -1,6 +1,6 @@
 {
   "name": "@white-block/vitepress",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "white-block document theme for vitepress",
   "keywords": [
     "white-block",
@@ -19,14 +19,9 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/types/client/index.d.ts",
-      "require": "./dist/client/index.js",
-      "import": "./dist/client/index.js"
-    },
-    "./client": {
-      "types": "./dist/types/client/index.d.ts",
-      "require": "./dist/client/index.js",
-      "import": "./dist/client/index.js"
+      "types": "./dist/types/client/theme/index.d.ts",
+      "require": "./dist/client/theme/index.js",
+      "import": "./dist/client/theme/index.js"
     },
     "./theme": {
       "types": "./dist/types/client/theme/index.d.ts",
@@ -37,11 +32,6 @@
       "types": "./dist/types/client/utils/index.d.ts",
       "require": "./dist/client/utils/index.js",
       "import": "./dist/client/utils/index.js"
-    },
-    "./node": {
-      "types": "./dist/types/node/index.d.ts",
-      "require": "./dist/node/index.js",
-      "import": "./dist/node/index.js"
     },
     "./unocss": {
       "types": "./dist/types/node/unocss/index.d.ts",
