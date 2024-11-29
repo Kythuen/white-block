@@ -55,7 +55,7 @@
       </div>
       <div class="hidden !lg:flex" flex="lg:1" justify="center">
         <VPNavBarSearch class="search" absolute translate="x-999" />
-        <VPNavBarMenu />
+        <WBHeaderMenu />
       </div>
       <div min-w="60" flex="lg:none ~ row" items="center" justify="end">
         <slot name="header-operation-before" />
@@ -99,10 +99,10 @@
 
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
-import VPNavBarMenu from 'vitepress/dist/client/theme-default/components/VPNavBarMenu.vue'
 import VPNavBarSearch from 'vitepress/dist/client/theme-default/components/VPNavBarSearch.vue'
 import { computed, ref } from 'vue'
 import { clickDelegate } from 'white-block'
+import WBHeaderMenu from './WBHeaderMenu.vue'
 
 const { site, isDark, lang, theme, frontmatter } = useData()
 

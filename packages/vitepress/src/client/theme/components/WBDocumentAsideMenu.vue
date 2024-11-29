@@ -29,6 +29,7 @@
       </div>
     </div>
     <div
+      v-if="headers.length"
       v-show="markerTop >= 0"
       absolute
       top="0"

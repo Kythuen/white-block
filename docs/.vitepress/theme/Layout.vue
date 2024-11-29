@@ -6,7 +6,7 @@
         @close="setThemeEditorVisible(false)"
       />
     </template>
-    <template #home-top>
+    <!-- <template #home-top>
       <div
         v-if="homeTopVisible"
         w="full"
@@ -21,11 +21,11 @@
       >
         #home-top
       </div>
-    </template>
+    </template> -->
     <template #home-content>
       <WBHome />
     </template>
-    <template #header-top>
+    <!-- <template #header-top>
       <div
         v-if="headerTopVisible"
         w="full"
@@ -40,7 +40,7 @@
       >
         #header-top
       </div>
-    </template>
+    </template> -->
     <template #header-operation-before>
       <WBIconButton
         name="theme"
@@ -59,14 +59,22 @@
       />
     </template>
     <template #sidebar-top>
-      <div m="b-4">
+      <div
+        v-if="
+          matchItems(router.route.path, [
+            '/white-block/components',
+            '/white-block/guide'
+          ])
+        "
+        m="b-4"
+      >
         <wb-select
           :options="[{ label: '0.0.1', value: '0.0.1' }]"
           placeholder="0.0.1"
         />
       </div>
     </template>
-    <template #sidebar-bottom>
+    <!-- <template #sidebar-bottom>
       <div
         w="full"
         h="40"
@@ -80,14 +88,14 @@
       >
         #sidebar-bottom
       </div>
-    </template>
+    </template> -->
     <template #document-header="{ focus, tab, setTab }">
       <DocumentHeader :focus="focus" :tab="tab" :set-tab="setTab" />
     </template>
     <template #document-content="{ tab }">
       <DocumentContent :tab="tab" />
     </template>
-    <template #document-bottom="{ focus, tab, setTab }">
+    <!-- <template #document-bottom="{ focus, tab, setTab }">
       <DocumentMobileDock :focus="focus">
         <div w="40">
           <wb-radio-group
@@ -114,11 +122,11 @@
       >
         Document Bottom
       </div>
-    </template>
+    </template> -->
     <template #document-aside-menu="{ focus, tab }">
       <WBDocumentAside :focus="focus" :tab="tab" />
     </template>
-    <template #document-aside-bottom>
+    <!-- <template #document-aside-bottom>
       <div
         w="full"
         h="60"
@@ -132,7 +140,7 @@
       >
         #document-aside-bottom
       </div>
-    </template>
+    </template> -->
   </Layout>
 </template>
 
@@ -142,7 +150,7 @@ import DocumentContent from './components/DocumentContent.vue'
 import DocumentMobileDock from './components/DocumentMobileDock.vue'
 import ThemeEditor from './components/theme-editor/Index.vue'
 import { Layout, WBDocumentAside, WBHome } from '@white-block/vitepress'
-import { useState } from 'white-block'
+import { useState, matchItems } from 'white-block'
 import { useRouter, useData } from 'vitepress'
 
 const { site } = useData()

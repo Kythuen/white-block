@@ -13,4 +13,4 @@ setTimeout(() => {
     .on('change', file => copy(file, toDist(file)))
     .on('add', file => copy(file, toDist(file)))
     .on('unlink', file => remove(toDist(file)))
-}, 5000)
+}, 500)

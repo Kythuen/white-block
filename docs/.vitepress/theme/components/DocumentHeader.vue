@@ -87,13 +87,12 @@
 <script setup lang="ts">
 import axios from 'axios'
 import { useData, useRoute } from 'vitepress'
-import type { PropType } from 'vue'
 import { ref, watch } from 'vue'
 
 defineProps({
   focus: { type: Boolean, default: false },
   tab: {
-    type: String as PropType<'content' | 'api'>,
+    type: String,
     default: 'content'
   },
   setTab: {
