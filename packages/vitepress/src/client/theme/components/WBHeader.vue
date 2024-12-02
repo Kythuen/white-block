@@ -4,7 +4,8 @@
     top="0"
     w="full"
     z="100"
-    bg="dark:[rgb(var(--wb-vc-gray-950))]"
+    bg="dark:[rgba(var(--wb-vc-gray-950)/95%)]"
+    backdrop="blur-lg"
     border="0 b-px solid $wb-color-border-soft"
     @click.stop="
       clickDelegate($event, 'wb-button', handleMenuOptions, hideMenuPanel)
@@ -17,7 +18,7 @@
       <slot name="home-top" />
     </div>
     <div
-      max-w="lg:400"
+      max-w="lg:384"
       h="$wb-height-layout-header"
       m="x-auto"
       p="x-2 !md:x-6 !lg:x-6"

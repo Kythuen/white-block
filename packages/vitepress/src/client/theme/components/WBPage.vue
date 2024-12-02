@@ -1,44 +1,157 @@
 <template>
   <div
     relative
-    min-h="[calc(100vh-var(--wb-height-layout-header)-1px+10rem)]"
     m="x-auto"
-    p="y-10"
     flex="~ col"
     items="center"
-    bg="[url(/assets/hero.svg)] no-repeat"
-    style="background-size: 100% auto"
+    style="--wb-vc-primary: 96 42 154; --wb-color-primary: #602a9a"
   >
-    <div p="y-16">
-      <div p="x-5 md:x-4 lg:x-8">
+    <div
+      relative
+      w="full"
+      max-w="lg:350 2xl:384"
+      min-h="160 sm:200 md:220 lg:290"
+      aspect-ratio="1"
+      p="t-30"
+      flex="~ col"
+      items="center"
+    >
+      <!-- bg -->
+      <div
+        absolute
+        w="full"
+        aspect-ratio="1 2xl:6/5"
+        overflow="hidden"
+        class="hidden lg:block"
+      >
         <div
-          v-if="inFrontmatter(frontmatter, 'logo')"
-          m="x-auto y-20"
+          absolute
+          max-w="384"
+          w="full"
+          aspect-ratio="1"
+          m="x-auto"
           flex
+          items="center"
           justify="center"
         >
+          <div w="full" h="full" flex items="center" justify="center">
+            <div
+              w="60%"
+              aspect-ratio="1"
+              rounded="full"
+              bg="$wb-color-primary"
+            />
+            <div absolute w="full" h="full" backdrop="blur-[5rem]" />
+            <div absolute w="full" h="full" backdrop="blur-[5rem]" />
+            <div absolute w="full" h="full" backdrop="blur-[5rem]" />
+          </div>
+          <div
+            absolute
+            w="30%"
+            aspect-ratio="1"
+            rounded="full"
+            ring="px white/4"
+          />
+          <div
+            absolute
+            w="50%"
+            aspect-ratio="1"
+            rounded="full"
+            ring="px white/6"
+          />
+          <div
+            absolute
+            w="80%"
+            aspect-ratio="1"
+            rounded="full"
+            ring="px white/8"
+          />
+        </div>
+      </div>
+      <!-- preview -->
+      <div
+        absolute
+        bottom="0"
+        w="90%"
+        aspect-ratio="[16/9]"
+        p="2 2xl:3.5"
+        rounded="4"
+        overflow="hidden"
+        bg="black/30 gradient-to-r no-repeat"
+        from="black"
+        via="transparent"
+        to="black"
+        style="
+          background-size: 100% 100%;
+          box-shadow: 0 0 10rem 1rem var(--wb-color-primary);
+        "
+      >
+        <div relative h="full" rounded="3" ring="1 white/10" overflow="hidden">
+          <img w="full" src="../assets/preview.png" />
+          <div
+            absolute
+            bottom="0"
+            w="full"
+            h="30%"
+            bg="gradient-to-b no-repeat"
+            from="transparent"
+            to="black"
+            style="background-size: 100% 100%"
+            overflow-hidden
+          ></div>
+        </div>
+      </div>
+      <!-- frontmatter -->
+      <div
+        absolute
+        top="0"
+        w="full"
+        m="t-12%"
+        flex="~ col"
+        items="center"
+        gap="8 lg:12"
+      >
+        <div v-if="false && inFrontmatter(frontmatter, 'logo')">
           <img h="30" :src="withBase(frontmatter.logo)" alt="@ephemeras/fs" />
         </div>
         <h1
           v-if="inFrontmatter(frontmatter, 'slogan')"
-          max-w="100 md:280"
-          m="x-auto"
-          text="9 md:6xl $wb-color-text-main center"
-          font="black tracking-tight !leading-[1.2]"
+          max-w="88% md:72%"
+          text="9 sm:13 lg:17 xl:20 $wb-color-text-main center"
+          font="black tracking-tight !leading-[1.25]"
+          style="
+            background: linear-gradient(
+              to bottom,
+              white,
+              white,
+              white,
+              rgb(var(--wb-vc-primary))
+            );
+            background-clip: text;
+            color: transparent;
+          "
         >
           {{ frontmatter.slogan }}
         </h1>
+        <p
+          v-if="inFrontmatter(frontmatter, 'description')"
+          max-w="75% md:60%"
+          text="4 sm:5 lg:7 xl:8  $wb-color-text-main center"
+          font="light tracking-tight !leading-[1.5]"
+        >
+          {{ frontmatter.description }}
+        </p>
         <div
           v-if="inFrontmatter(frontmatter, 'link')"
-          m="y-16"
+          p="2"
+          ring="px white/10"
+          rounded="2"
           text="md"
-          flex="~ wrap"
-          gap="x-6 y-3"
-          justify="center"
         >
           <wb-button
             tag="a"
             size="lg"
+            theme="contrast"
             :href="
               withBase(
                 lang === 'zh' ? `/zh${frontmatter.link}` : frontmatter.link
@@ -50,54 +163,21 @@
               <i w="5" h="5" class="i-heroicons-arrow-right-20-solid" />
             </template>
           </wb-button>
-          <wb-input
-            v-if="inFrontmatter(frontmatter, 'shell')"
-            w="72"
-            size="lg"
-            text="$wb-color-foreground"
-            readonly
-            :value="frontmatter.shell"
-          >
-            <template #prefix>
-              <i
-                w="5"
-                h="5"
-                text="$wb-color-text-secondly"
-                class="i-heroicons-command-line"
-              />
-            </template>
-            <template #suffix>
-              <button w="5" h="5" flex="~ row" items="center" justify="center">
-                <i
-                  w="4"
-                  h="4"
-                  text="$wb-color-text-secondly"
-                  class="i-heroicons-clipboard-document"
-                  @click="copyToClipboard(frontmatter.shell)"
-                />
-              </button>
-            </template>
-          </wb-input>
         </div>
-        <slot name="page-content">
-          <div max-w="xl:264" m="x-auto" class="vp-doc">
-            <Content />
-          </div>
-        </slot>
       </div>
-    </div>
-    <div w="380" h="225" p="3.5" rounded="4" bg="black/50" overflow-hidden>
-      <div relative h="full" rounded="3" ring="1 gray/10" overflow="hidden">
-        <img w="full" op="90" src="../assets/preview.png" />
-        <img absolute bottom="0" w="373" op="90" src="../assets/shade.svg" />
-      </div>
+      <!-- content -->
+      <slot name="page-content">
+        <div max-w="xl:264" m="x-auto" class="vp-doc">
+          <Content />
+        </div>
+      </slot>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
-import { copyToClipboard, inFrontmatter } from '../../utils'
+import { inFrontmatter } from '../../utils'
 
 const { lang, frontmatter } = useData()
 </script>

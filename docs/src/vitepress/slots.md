@@ -1,11 +1,11 @@
 ---
 title: '@white-block/vitepress'
-description: white-block document theme for vitepress.
+description: WhiteBlock document theme for vitepress.
 
 layout: page
-logo: /vitepress/logo.svg 
+logo: /logos/vitepress.svg 
 slogan: white-block document theme for vitepress
-link: /ecosystem/vitepress/guide
+link: /vitepress/guide
 shell: pnpm install @white-block/vitepress
 ---
 

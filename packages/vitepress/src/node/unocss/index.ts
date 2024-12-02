@@ -3,6 +3,7 @@ import {
   presetAttributify,
   presetIcons,
   presetWind,
+  presetUno,
   transformerDirectives,
   transformerAttributifyJsx
 } from 'unocss'
@@ -10,6 +11,7 @@ import {
 const configs: Partial<VitePluginConfig> = {
   presets: [
     presetWind(),
+    presetUno(),
     presetAttributify(),
     presetIcons({
       cdn: 'https://esm.sh/'

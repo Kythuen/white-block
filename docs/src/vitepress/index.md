@@ -1,10 +1,8 @@
 ---
-title: '@white-block/vitepress'
-description: white-block document theme for vitepress.
-
 layout: page
 logo: /logos/vitepress.svg 
-slogan: white-block document theme for vitepress
+slogan: WhiteBlock document theme for vitepress
+description: Elevate your site’s visibility effortlessly with AI, where smart technology meets user-friendly SEO tools.
 link: /vitepress/guide
 shell: pnpm install @white-block/vitepress
 ---
