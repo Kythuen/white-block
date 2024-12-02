@@ -10,7 +10,7 @@
       relative
       w="full"
       max-w="lg:350 2xl:384"
-      min-h="160 sm:200 md:220 lg:290"
+      min-h="md:240 lg:290"
       aspect-ratio="1"
       p="t-30"
       flex="~ col"
@@ -81,6 +81,7 @@
         from="black"
         via="transparent"
         to="black"
+        class="hidden !md:block"
         style="
           background-size: 100% 100%;
           box-shadow: 0 0 10rem 1rem var(--wb-color-primary);
@@ -106,7 +107,7 @@
         absolute
         top="0"
         w="full"
-        m="t-12%"
+        m="35% md:t-12%"
         flex="~ col"
         items="center"
         gap="8 lg:12"
