@@ -1,10 +1,10 @@
 ---
 title: '@white-block/types'
-description: Tool to resolve Props & Emits type for Vue3.
 
 layout: page
 logo: /logos/types.svg 
-slogan: white-block document theme for vitepress
+slogan: Resolve API Types for WhiteBlock
+description: A tool to resolve Props & Emits & slots types for WhiteBlock
 link: /types/guide
 shell: pnpm install @white-block/types
 ---

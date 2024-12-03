@@ -1,8 +1,10 @@
 import type { Options } from 'tsup'
+import watchOtherFiles from './scripts/watch'
+import copyOtherFiles from './scripts/copy'
 
 export const tsup: Options = {
   entry: ['src/client/**/*.ts', 'src/node/**/*.ts'],
-  format: ['cjs', 'esm'],
+  format: ['esm'],
   dts: true,
   splitting: false,
   clean: true,
@@ -12,5 +14,12 @@ export const tsup: Options = {
     'src/client/theme/components',
     'src/client/theme/styles',
     'src/client/theme/Layout.vue'
-  ]
+  ],
+  async onSuccess() {
+    if (process.env.NODE_ENV === 'development') {
+      watchOtherFiles()
+    } else {
+      copyOtherFiles()
+    }
+  }
 }

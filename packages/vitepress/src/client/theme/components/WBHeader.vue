@@ -4,14 +4,14 @@
     top="0"
     w="full"
     z="100"
-    bg="dark:[rgba(var(--wb-vc-gray-950)/95%)]"
-    backdrop="blur-lg"
+    bg="[rgb(var(--wb-vc-background)/75%)]"
+    backdrop="blur-20"
     border="0 b-px solid $wb-color-border-soft"
     @click.stop="
       clickDelegate($event, 'wb-button', handleMenuOptions, hideMenuPanel)
     "
   >
-    <div v-if="$slots.headerTop">
+    <div v-if="$slots['header-top']">
       <slot name="header-top" />
     </div>
     <div v-else-if="frontmatter.layout === 'home'">

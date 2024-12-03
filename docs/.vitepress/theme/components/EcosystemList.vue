@@ -1,7 +1,13 @@
 <template>
-  <div w="full" flex="~ col" gap="6">
+  <div max-w="lg:384" m="x-auto" p="y-16 x-4 md:x-8" flex="~ col" gap="6">
     <div>
-      <wb-input w="100" size="lg" placeholder="Search a package">
+      <wb-input
+        w="full"
+        max-w="full md:88"
+        flex="1"
+        size="lg"
+        placeholder="Search a package"
+      >
         <template #prefix>
           <i class="i-tdesign:search" />
         </template>
@@ -58,6 +64,7 @@ async function getPackageList() {
   )
   for (const pkg in pkgs) {
     const link = pkg.match(/packages\/(.*)\/package\.json/)?.[1]
+    /* @vite-ignore */
     const { name, description } = await import(pkg)
     result.push({
       name,

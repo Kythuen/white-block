@@ -6,7 +6,7 @@
           id="layoutRoot"
           w="full"
           h="screen"
-          bg="dark:[rgb(var(--wb-vc-gray-950))]"
+          bg="[rgb(var(--wb-vc-background))]"
           class="scrollable-main"
         >
           <WBHeader>
@@ -45,6 +45,9 @@
                   </template>
                 </WBPage>
               </slot>
+            </template>
+            <template v-else-if="frontmatter.layout === 'empty'">
+              <Content />
             </template>
             <div v-else max-w="lg:400" h="full" m="x-auto" flex>
               <WBSidebar v-if="frontmatterField(frontmatter, 'sidebar')">

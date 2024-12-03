@@ -6,11 +6,11 @@ function toDist(file) {
   return normalizePath(file).replace(/^src\//, 'dist/')
 }
 
-setTimeout(() => {
+export default function () {
   watch('src', {
     ignored: (path, stats) => stats?.isFile() && path.endsWith('.ts')
   })
     .on('change', file => copy(file, toDist(file)))
     .on('add', file => copy(file, toDist(file)))
     .on('unlink', file => remove(toDist(file)))
-}, 2000)
+}

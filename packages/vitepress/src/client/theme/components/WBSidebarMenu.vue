@@ -75,7 +75,6 @@ const resolveSidebar = computed(() => {
   return theme.value.sidebar
 })
 function getStyles(link: string) {
-  console.log(route.path, link, withBase(link))
   const match = route.path === withBase(link)
   if (match) {
     return {

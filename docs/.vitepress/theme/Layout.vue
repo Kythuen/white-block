@@ -6,7 +6,7 @@
         @close="setThemeEditorVisible(false)"
       />
     </template>
-    <!-- <template #home-top>
+    <template #home-top>
       <div
         v-if="homeTopVisible"
         w="full"
@@ -21,26 +21,26 @@
       >
         #home-top
       </div>
-    </template> -->
+    </template>
     <template #home-content>
       <WBHome />
     </template>
-    <!-- <template #header-top>
+    <template #header-top>
       <div
         v-if="headerTopVisible"
         w="full"
         h="17.5"
         color="$wb-color-text-5"
-        bg="$wb-color-background"
+        bg="$wb-color-container"
         rounded="1"
         flex
         items="center"
         justify="center"
         @click="setHeaderTopVisible(false)"
       >
-        #header-top
+        #header-top / #home-top
       </div>
-    </template> -->
+    </template>
     <template #header-operation-before>
       <WBIconButton
         name="theme"
@@ -59,7 +59,7 @@
       />
     </template>
     <template #sidebar-top>
-      <div
+      <!-- <div
         v-if="
           matchItems(router.route.path, [
             '/white-block/components',
@@ -72,15 +72,28 @@
           :options="[{ label: '0.0.1', value: '0.0.1' }]"
           placeholder="0.0.1"
         />
+      </div> -->
+      <div
+        w="full"
+        h="30"
+        m="b-4"
+        color="$wb-color-text-5"
+        bg="$wb-color-container"
+        rounded="1"
+        flex
+        items="center"
+        justify="center"
+      >
+        #sidebar-top
       </div>
     </template>
-    <!-- <template #sidebar-bottom>
+    <template #sidebar-bottom>
       <div
         w="full"
         h="40"
         m="t-4"
         color="$wb-color-text-5"
-        bg="$wb-color-background"
+        bg="$wb-color-container"
         rounded="1"
         flex
         items="center"
@@ -88,15 +101,15 @@
       >
         #sidebar-bottom
       </div>
-    </template> -->
+    </template>
     <template #document-header="{ focus, tab, setTab }">
       <DocumentHeader :focus="focus" :tab="tab" :set-tab="setTab" />
     </template>
     <template #document-content="{ tab }">
       <DocumentContent :tab="tab" />
     </template>
-    <!-- <template #document-bottom="{ focus, tab, setTab }">
-      <DocumentMobileDock :focus="focus">
+    <template #document-bottom="{ focus, tab, setTab }">
+      <!-- <DocumentMobileDock :focus="focus">
         <div w="40">
           <wb-radio-group
             :default-value="tab"
@@ -109,30 +122,30 @@
             @change="setTab"
           />
         </div>
-      </DocumentMobileDock>
+      </DocumentMobileDock> -->
       <div
         w="full"
         h="60"
         color="$wb-color-text-5"
-        bg="$wb-color-background"
+        bg="$wb-color-container"
         rounded="1"
         flex
         items="center"
         justify="center"
       >
-        Document Bottom
+        #document-bottom
       </div>
-    </template> -->
+    </template>
     <template #document-aside-menu="{ focus, tab }">
       <WBDocumentAside :focus="focus" :tab="tab" />
     </template>
-    <!-- <template #document-aside-bottom>
+    <template #document-aside-bottom>
       <div
         w="full"
         h="60"
         m="t-4"
         color="$wb-color-text-5"
-        bg="$wb-color-background"
+        bg="$wb-color-container"
         rounded="1"
         flex
         items="center"
@@ -140,7 +153,7 @@
       >
         #document-aside-bottom
       </div>
-    </template> -->
+    </template>
   </Layout>
 </template>
 

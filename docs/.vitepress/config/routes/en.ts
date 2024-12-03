@@ -3,7 +3,8 @@ import { PLAYGROUND_URL } from '../constant'
 
 const SidebarGuides: DefaultTheme.NavItemWithLink[] = [
   { text: 'Getting Started', link: '/guide' },
-  { text: 'Overview', link: '/guide/overview' }
+  { text: 'Overview', link: '/guide/overview' },
+  { text: 'Colors', link: '/guide/colors' }
 ]
 
 const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
@@ -39,7 +40,7 @@ const SidebarWhiteBlock = [
 ]
 const SidebarVitepress = [
   { text: 'Getting Started', link: '/vitepress/guide' },
-  { text: 'slots', link: '/vitepress/slots' }
+  { text: 'Layout Slots', link: '/vitepress/slots' }
 ]
 const SidebarTypes = [{ text: 'Getting Started', link: '/types/guide' }]
 
