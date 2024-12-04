@@ -45,9 +45,7 @@
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development tsup --watch src",
-    "build": "run-s build:ts build:copy",
-    "build:ts": "cross-env NODE_ENV=production tsup",
-    "build:copy": "node scripts/copy.js",
+    "build": "cross-env NODE_ENV=production tsup",
     "test": "echo \"@ephemeras/vitepress ignore\"",
     "test:coverage": "echo \"@ephemeras/vitepress coverage ignore\""
   },
