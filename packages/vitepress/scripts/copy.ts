@@ -1,7 +1,7 @@
 import { copy } from 'fs-extra'
 import glob from 'fast-glob'
 
-function toDest(file) {
+function toDest(file: string) {
   return file.replace(/^src\//, 'dist/')
 }
 

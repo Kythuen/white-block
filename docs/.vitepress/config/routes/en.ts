@@ -27,19 +27,20 @@ const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
   { text: 'Message', link: '/components/message' }
 ]
 
-const SidebarEcosystem = {
-  text: 'Ecosystem',
-  items: [
-    { text: 'vitepress', link: '/vitepress' },
-    { text: 'types', link: '/types' }
-  ]
-}
+// const SidebarEcosystem = {
+//   text: 'Ecosystem',
+//   items: [
+//     { text: 'vitepress', link: '/vitepress' },
+//     { text: 'types', link: '/types' }
+//   ]
+// }
 const SidebarWhiteBlock = [
   { text: 'Guide', items: SidebarGuides },
   { text: 'Components', items: SidebarComponents }
 ]
 const SidebarVitepress = [
   { text: 'Getting Started', link: '/vitepress/guide' },
+  { text: 'Layout', link: '/vitepress/layout' },
   { text: 'Layout Slots', link: '/vitepress/slots' }
 ]
 const SidebarTypes = [{ text: 'Getting Started', link: '/types/guide' }]
