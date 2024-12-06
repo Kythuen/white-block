@@ -1,0 +1,1 @@
+import{_ as c,p as o,o as n,c as a,w as _,e as s}from"./framework.uY59_9OQ.js";const r={};function i(l,p){const e=o("wb-toggle"),t=o("wb-space");return n(),a(t,{align:"center"},{default:_(()=>[s(e,{size:"xl"}),s(e,{size:"lg"}),s(e,{size:"md"}),s(e,{size:"sm"}),s(e,{size:"xs"})]),_:1})}const f=c(r,[["render",i]]);export{f as default};

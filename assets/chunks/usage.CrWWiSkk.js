@@ -1,0 +1,1 @@
+import{_ as a,p as o,o as r,c as p,w as t,j as c,e as _,I as u}from"./framework.uY59_9OQ.js";const l={};function d(f,e){const n=o("wb-button"),s=o("wb-popup");return r(),p(s,null,{content:t(()=>e[1]||(e[1]=[c("div",null,"Content",-1)])),default:t(()=>[_(n,{type:"base"},{default:t(()=>e[0]||(e[0]=[u("Trigger")])),_:1})]),_:1})}const i=a(l,[["render",d]]);export{i as default};

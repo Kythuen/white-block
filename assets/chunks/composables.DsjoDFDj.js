@@ -1,0 +1,1 @@
+import{k as s}from"./theme.B7xzU2dC.js";import{d as a,o as p,c,w as r,I as l,u}from"./framework.uY59_9OQ.js";const d=a({__name:"composables",setup(i){const{node:t}=s({type:"plain"});function n(o){console.log("click:",o)}return(o,e)=>(p(),c(u(t),{onClick:n},{default:r(()=>e[0]||(e[0]=[l(" button ")])),_:1}))}});export{d as default};

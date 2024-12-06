@@ -1,0 +1,1 @@
+import{d as p,p as a,o as s,c as _,w as r,e as t}from"./framework.uY59_9OQ.js";const i=p({__name:"event",setup(l){function e(n){console.log(n)}return(n,h)=>{const o=a("wb-input"),c=a("wb-space");return s(),_(c,{vertical:""},{default:r(()=>[t(o,{placeholder:"@change",onChange:e}),t(o,{placeholder:"onChange","on-change":e})]),_:1})}}});export{i as default};

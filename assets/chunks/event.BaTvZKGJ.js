@@ -1,0 +1,1 @@
+import{d as s,p as t,o as _,c as p,w as l,e as a}from"./framework.uY59_9OQ.js";const u=s({__name:"event",setup(r){function e(o){console.log(o)}return(o,g)=>{const n=t("wb-toggle"),c=t("wb-space");return _(),p(c,null,{default:l(()=>[a(n,{onChange:e}),a(n,{"on-change":e})]),_:1})}}});export{u as default};
