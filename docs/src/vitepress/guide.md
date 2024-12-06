@@ -101,7 +101,7 @@ If `@white-block/vitepress` can meet most of your needs, but you want to customi
 
 ### Layout
 
-[Layouts](./layouts)
+[Layouts](./layout)
 
 ### Layout Slots
 
