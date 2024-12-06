@@ -4,7 +4,7 @@
     sticky
     top="-6 !md:-18"
     z="80"
-    bg="dark:[rgb(var(--wb-vc-gray-950))]"
+    bg="[rgb(var(--wb-vc-background)/85%)]"
     backdrop="blur"
     border="0 b-px solid $wb-color-border-base dark:$wb-color-border-soft"
   >
@@ -87,13 +87,12 @@
 <script setup lang="ts">
 import axios from 'axios'
 import { useData, useRoute } from 'vitepress'
-import type { PropType } from 'vue'
 import { ref, watch } from 'vue'
 
 defineProps({
   focus: { type: Boolean, default: false },
   tab: {
-    type: String as PropType<'content' | 'api'>,
+    type: String,
     default: 'content'
   },
   setTab: {

@@ -39,11 +39,10 @@
 
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import type { PropType } from 'vue'
 
 defineProps({
   tab: {
-    type: String as PropType<'content' | 'api'>,
+    type: String,
     default: 'content'
   }
 })

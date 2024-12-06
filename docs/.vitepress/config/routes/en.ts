@@ -2,8 +2,9 @@ import type { DefaultTheme } from 'vitepress'
 import { PLAYGROUND_URL } from '../constant'
 
 const SidebarGuides: DefaultTheme.NavItemWithLink[] = [
-  { text: 'Getting Started', link: '/guide/' },
-  { text: 'Overview', link: '/guide/overview' }
+  { text: 'Getting Started', link: '/guide' },
+  { text: 'Overview', link: '/guide/overview' },
+  { text: 'Colors', link: '/guide/colors' }
 ]
 
 const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
@@ -26,14 +27,40 @@ const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
   { text: 'Message', link: '/components/message' }
 ]
 
-export const SIDEBAR: DefaultTheme.SidebarItem[] = [
+// const SidebarEcosystem = {
+//   text: 'Ecosystem',
+//   items: [
+//     { text: 'vitepress', link: '/vitepress' },
+//     { text: 'types', link: '/types' }
+//   ]
+// }
+const SidebarWhiteBlock = [
   { text: 'Guide', items: SidebarGuides },
   { text: 'Components', items: SidebarComponents }
 ]
+const SidebarVitepress = [
+  { text: 'Getting Started', link: '/vitepress/guide' },
+  { text: 'Layout', link: '/vitepress/layout' },
+  { text: 'Layout Slots', link: '/vitepress/slots' }
+]
+const SidebarTypes = [{ text: 'Getting Started', link: '/types/guide' }]
+
+export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
+  '/guide': SidebarWhiteBlock,
+  '/components/': SidebarWhiteBlock,
+  '/vitepress/': [
+    { text: 'Guides', items: SidebarVitepress }
+    // SidebarEcosystem
+  ],
+  '/types/': [
+    { text: 'Guides', items: SidebarTypes }
+    // SidebarEcosystem
+  ]
+}
 
 export const NAV = [
-  { text: 'Guide', link: '/guide/' },
+  { text: 'Guide', link: '/guide' },
   { text: 'Components', link: '/guide/overview' },
   { text: 'Playground', link: PLAYGROUND_URL },
-  { text: 'Themes', link: '/themes' }
+  { text: 'Packages', link: '/packages' }
 ]

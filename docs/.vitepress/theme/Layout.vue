@@ -31,14 +31,14 @@
         w="full"
         h="17.5"
         color="$wb-color-text-5"
-        bg="$wb-color-background"
+        bg="$wb-color-container"
         rounded="1"
         flex
         items="center"
         justify="center"
         @click="setHeaderTopVisible(false)"
       >
-        #header-top
+        #header-top / #home-top
       </div>
     </template>
     <template #header-operation-before>
@@ -59,11 +59,32 @@
       />
     </template>
     <template #sidebar-top>
-      <div m="b-4">
+      <!-- <div
+        v-if="
+          matchItems(router.route.path, [
+            '/white-block/components',
+            '/white-block/guide'
+          ])
+        "
+        m="b-4"
+      >
         <wb-select
           :options="[{ label: '0.0.1', value: '0.0.1' }]"
           placeholder="0.0.1"
         />
+      </div> -->
+      <div
+        w="full"
+        h="30"
+        m="b-4"
+        color="$wb-color-text-5"
+        bg="$wb-color-container"
+        rounded="1"
+        flex
+        items="center"
+        justify="center"
+      >
+        #sidebar-top
       </div>
     </template>
     <template #sidebar-bottom>
@@ -72,7 +93,7 @@
         h="40"
         m="t-4"
         color="$wb-color-text-5"
-        bg="$wb-color-background"
+        bg="$wb-color-container"
         rounded="1"
         flex
         items="center"
@@ -88,7 +109,7 @@
       <DocumentContent :tab="tab" />
     </template>
     <template #document-bottom="{ focus, tab, setTab }">
-      <DocumentMobileDock :focus="focus">
+      <!-- <DocumentMobileDock :focus="focus">
         <div w="40">
           <wb-radio-group
             :default-value="tab"
@@ -101,18 +122,18 @@
             @change="setTab"
           />
         </div>
-      </DocumentMobileDock>
+      </DocumentMobileDock> -->
       <div
         w="full"
         h="60"
         color="$wb-color-text-5"
-        bg="$wb-color-background"
+        bg="$wb-color-container"
         rounded="1"
         flex
         items="center"
         justify="center"
       >
-        Document Bottom
+        #document-bottom
       </div>
     </template>
     <template #document-aside-menu="{ focus, tab }">
@@ -124,7 +145,7 @@
         h="60"
         m="t-4"
         color="$wb-color-text-5"
-        bg="$wb-color-background"
+        bg="$wb-color-container"
         rounded="1"
         flex
         items="center"
@@ -142,7 +163,7 @@ import DocumentContent from './components/DocumentContent.vue'
 import DocumentMobileDock from './components/DocumentMobileDock.vue'
 import ThemeEditor from './components/theme-editor/Index.vue'
 import { Layout, WBDocumentAside, WBHome } from '@white-block/vitepress'
-import { useState } from 'white-block'
+import { useState, matchItems } from 'white-block'
 import { useRouter, useData } from 'vitepress'
 
 const { site } = useData()

@@ -4,31 +4,34 @@
     :size="size"
     placement="bottom-start"
     pure
+    v-bind="popupProps"
     :class="propsClasses"
     @show="$emit('show')"
     @hide="handleHideSelect"
     @keydown="togglePopup"
   >
-    <Input
-      :size="size"
-      v-bind="{ ...$attrs, ...inputProps }"
-      :value="currentValue?.label"
-      readonly
-      class="wb-select-input"
-    >
-      <!-- @change="emits('change', selectedValue)" -->
-      <!-- TODO: 加载数据效果 -->
-      <!-- TODO: loading -->
-      <template #suffix>
-        <i
-          w="$wb-select-arrow"
-          h="$wb-select-arrow"
-          color="$wb-color-text-5"
-          i="heroicons-chevron-down-20-solid"
-        />
-        <!-- pointer-events-none -->
-      </template>
-    </Input>
+    <slot name="trigger">
+      <Input
+        :size="size"
+        v-bind="{ ...$attrs, ...inputProps }"
+        :value="currentValue?.label"
+        readonly
+        class="wb-select-input"
+      >
+        <!-- @change="emits('change', selectedValue)" -->
+        <!-- TODO: 加载数据效果 -->
+        <!-- TODO: loading -->
+        <template #suffix>
+          <i
+            w="$wb-select-arrow"
+            h="$wb-select-arrow"
+            color="$wb-color-text-5"
+            i="heroicons-chevron-down-20-solid"
+          />
+          <!-- pointer-events-none -->
+        </template>
+      </Input>
+    </slot>
     <template #content="{ trigger }">
       <div :class="propsClasses">
         <ul
@@ -212,7 +215,7 @@ function handleHideSelect() {
   if (!props.options) return
   currentIndex.value = selectedIndex.value
   currentValue.value = selectedValue.value
-  emits('select', props.options[currentIndex.value].value)
+  emits('select', props.options[currentIndex.value]?.value)
   emits('hide')
 }
 </script>

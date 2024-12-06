@@ -4,20 +4,21 @@
     top="0"
     w="full"
     z="100"
-    bg="dark:[rgb(var(--wb-vc-gray-950))]"
+    bg="[rgb(var(--wb-vc-background)/75%)]"
+    backdrop="blur-20"
     border="0 b-px solid $wb-color-border-soft"
     @click.stop="
       clickDelegate($event, 'wb-button', handleMenuOptions, hideMenuPanel)
     "
   >
-    <div v-if="$slots.headerTop">
+    <div v-if="$slots['header-top']">
       <slot name="header-top" />
     </div>
     <div v-else-if="frontmatter.layout === 'home'">
       <slot name="home-top" />
     </div>
     <div
-      max-w="lg:400"
+      max-w="lg:384"
       h="$wb-height-layout-header"
       m="x-auto"
       p="x-2 !md:x-6 !lg:x-6"
@@ -55,7 +56,7 @@
       </div>
       <div class="hidden !lg:flex" flex="lg:1" justify="center">
         <VPNavBarSearch class="search" absolute translate="x-999" />
-        <VPNavBarMenu />
+        <WBHeaderMenu />
       </div>
       <div min-w="60" flex="lg:none ~ row" items="center" justify="end">
         <slot name="header-operation-before" />
@@ -99,10 +100,10 @@
 
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
-import VPNavBarMenu from 'vitepress/dist/client/theme-default/components/VPNavBarMenu.vue'
 import VPNavBarSearch from 'vitepress/dist/client/theme-default/components/VPNavBarSearch.vue'
 import { computed, ref } from 'vue'
 import { clickDelegate } from 'white-block'
+import WBHeaderMenu from './WBHeaderMenu.vue'
 
 const { site, isDark, lang, theme, frontmatter } = useData()
 

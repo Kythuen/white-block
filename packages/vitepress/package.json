@@ -44,12 +44,8 @@
     "wb-vitepress": "dist/node/cli/index.js"
   },
   "scripts": {
-    "dev": "run-p dev:ts dev:copy",
-    "dev:ts": "tsup --watch src",
-    "dev:copy": "node scripts/watchCopy.js",
-    "build": "run-s build:ts build:copy",
-    "build:ts": "tsup",
-    "build:copy": "node scripts/copy.js",
+    "dev": "cross-env NODE_ENV=development tsup --watch src",
+    "build": "cross-env NODE_ENV=production tsup",
     "test": "echo \"@ephemeras/vitepress ignore\"",
     "test:coverage": "echo \"@ephemeras/vitepress coverage ignore\""
   },
@@ -64,9 +60,11 @@
     "white-block": "workspace:*"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
     "@types/prompts": "^2.4.9",
     "chokidar": "^4.0.1",
-    "npm-run-all2": "^5.0.0"
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5"
   },
   "peerDependencies": {
     "vitepress": "^1.5.0"
