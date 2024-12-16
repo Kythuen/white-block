@@ -6,7 +6,7 @@
     "declarationDir": "dist/types",
     "target": "ESNext",
     "module": "ES2020",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "lib": ["esnext", "DOM"],
     "jsx": "preserve",

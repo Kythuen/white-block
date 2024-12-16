@@ -10,7 +10,9 @@ function toDist(file: string) {
 export default function () {
   watch('src', {
     ignored: ((path: string, stats: Stats) =>
-      stats?.isFile() && path.endsWith('.ts')) as any
+      stats?.isFile() &&
+      path.endsWith('.ts') &&
+      !path.includes('/files/')) as any
   })
     .on('change', file => copy(file, toDist(file)))
     .on('add', file => copy(file, toDist(file)))

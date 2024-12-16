@@ -7,7 +7,12 @@ import globals from 'globals'
 
 export default tsEslint.config([
   {
-    ignores: ['**/dist', 'docs/.vitepress/cache/', '.changeset/']
+    ignores: [
+      '**/dist',
+      'docs/.vitepress/cache/',
+      '.changeset/',
+      'packages/vitepress/src/node/cli/files'
+    ]
   },
   eslint.configs.recommended,
   tsEslint.configs.recommended,

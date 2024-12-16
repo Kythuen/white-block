@@ -3,7 +3,11 @@ import watchOtherFiles from './scripts/watch'
 import copyOtherFiles from './scripts/copy'
 
 export const tsup: Options = {
-  entry: ['src/client/**/*.ts', 'src/node/**/*.ts'],
+  entry: [
+    'src/client/**/*.ts',
+    'src/node/cli/index.ts',
+    'src/node/unocss/index.ts'
+  ],
   format: ['esm'],
   dts: true,
   splitting: false,

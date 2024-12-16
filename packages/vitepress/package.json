@@ -50,9 +50,13 @@
     "test:coverage": "echo \"@ephemeras/vitepress coverage ignore\""
   },
   "dependencies": {
+    "@ephemeras/parser": "0.0.2-alpha.3",
     "cac": "^6.7.14",
+    "execa": "^4.1.0",
     "fs-extra": "^11.2.0",
     "gradient-string": "^3.0.0",
+    "i18next": "^24.1.0",
+    "ora": "^7.0.1",
     "picocolors": "^1.1.1",
     "prompts": "^2.4.2",
     "unocss": "^0.64.1",

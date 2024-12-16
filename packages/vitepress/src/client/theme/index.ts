@@ -1,4 +1,5 @@
 import type { Theme as ThemeType } from 'vitepress'
+import DefaultTheme from 'vitepress/theme-without-fonts'
 import WhiteBlock from 'white-block'
 import 'white-block/dist/styles/index.css'
 import Layout from './Layout.vue'
@@ -22,6 +23,7 @@ import WBSidebar from './components/WBSidebar.vue'
 import WBSidebarMenu from './components/WBSidebarMenu.vue'
 
 export const Theme: ThemeType = {
+  ...DefaultTheme,
   Layout,
   enhanceApp({ app, router }) {
     app.use(WhiteBlock)

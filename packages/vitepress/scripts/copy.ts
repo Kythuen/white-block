@@ -7,7 +7,8 @@ function toDest(file: string) {
 
 export default function () {
   glob.sync(['src/**']).forEach(file => {
-    if (file.endsWith('.ts')) return
+    console.log(file)
+    if (file.endsWith('.ts') && !file.includes('/files/')) return
     copy(file, toDest(file))
   })
 }
