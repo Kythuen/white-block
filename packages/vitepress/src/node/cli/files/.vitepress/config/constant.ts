@@ -1,6 +1,6 @@
-export const TITLE = 'Ephemeras'
-export const DESCRIPTION = 'Make development easier and more efficient'
+export const TITLE = '{{ title }}'
+export const DESCRIPTION = '{{ slogan }}'
 
-export const GITHUB_URL = 'https://github.com/Kythuen/ephemeras'
-export const OG_URL = 'https://kythuen.github.io/ephemeras'
+export const GITHUB_URL = 'https://github.com/{{ user }}/{{ repo }}'
+export const OG_URL = 'https://{{ user | lower }}.github.io/{{ repo }}'
 export const OG_IMAGE = `${OG_URL}/logo.png`

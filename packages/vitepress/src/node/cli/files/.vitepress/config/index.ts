@@ -4,12 +4,14 @@ import { NAV, SIDEBAR } from './routes/en'
 
 export default defineConfig({
   lang: 'en',
-  base: '/ephemeras/',
+  base: '/{{ repo }}/',
   srcDir: 'src',
-  title: 'Ephemeras',
-  description: 'Make development easier and more efficient',
+  title: '{{ title }}',
+  description: '{{ slogan }}',
   cleanUrls: true,
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }]
+  ],
   themeConfig: {
     search: {
       provider: 'local'
@@ -22,7 +24,7 @@ export default defineConfig({
       description: DESCRIPTION,
       head: [['meta', { name: 'og:description', content: DESCRIPTION }]],
       themeConfig: {
-        logo: '/logo.png',
+        logo: '/logo.svg',
         siteTitle: '',
         nav: NAV,
         socialLinks: [{ icon: 'github', link: GITHUB_URL }],

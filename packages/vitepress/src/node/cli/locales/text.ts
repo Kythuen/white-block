@@ -1,9 +1,8 @@
-import gradient from 'gradient-string'
+import { retro, vice } from 'gradient-string'
 import picocolors from 'picocolors'
 import { $t } from '.'
 
-const { reset, bold, underline, cyan } = picocolors
-const { retro, vice } = gradient
+const { bold } = picocolors
 
 export default {
   TIP_WELCOME: bold(retro($t('TIP.WELCOME'))),
