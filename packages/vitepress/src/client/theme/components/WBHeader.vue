@@ -73,14 +73,19 @@
           "
           tip="Mode"
         />
-        <WBIconButton
-          name="gitHub"
-          icon="i-simple-icons-github"
-          tip="GitHub"
-          tag="a"
-          target="__blank"
-          href="https://github.com/Kythuen/white-block"
-        />
+        <template
+          v-for="item in site.themeConfig.socialLinks || []"
+          :key="item.icon"
+        >
+          <WBIconButton
+            :name="item.icon"
+            :icon="SOCIALS[item.icon].icon"
+            :tip="SOCIALS[item.icon].title"
+            tag="a"
+            target="__blank"
+            :href="item.link"
+          />
+        </template>
         <slot name="header-operation-after" />
         <div class="header-option-item lg:hidden">
           <WBIconButton
@@ -106,6 +111,13 @@ import { clickDelegate } from 'white-block'
 import WBHeaderMenu from './WBHeaderMenu.vue'
 
 const { site, isDark, lang, theme, frontmatter } = useData()
+
+console.log(site.value)
+const SOCIALS: any = {
+  github: { icon: 'i-simple-icons-github', title: 'GitHub' },
+  twitter: { icon: 'i-simple-icons-x', title: 'Twitter' },
+  discord: { icon: 'i-simple-icons-discord', title: 'Discord' }
+}
 
 const showMenuPanel = ref(false)
 function hideMenuPanel() {

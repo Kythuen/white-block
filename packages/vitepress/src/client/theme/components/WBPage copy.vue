@@ -1,6 +1,9 @@
 <template>
   <div
+    ref="main"
+    relative
     m="x-auto"
+    h="[300vh]"
     flex="~ col"
     items="center"
     :style="{
@@ -19,11 +22,10 @@
       items="center"
     >
       <!-- bg -->
-      <div
-        ref="canvasContainer"
+      <!-- <div
         absolute
         w="full"
-        aspect-ratio="1 2xl:1"
+        aspect-ratio="1 2xl:6/5"
         overflow="hidden"
         class="hidden !lg:block"
       >
@@ -43,7 +45,6 @@
               aspect-ratio="1"
               rounded="full"
               bg="[rgb(var(--wb-vc-primary)/40%)] dark:$wb-color-primary"
-              backdrop="~ blur-lg"
             />
             <div absolute w="full" h="full" backdrop="blur-[5rem]" />
             <div absolute w="full" h="full" backdrop="blur-[5rem]" />
@@ -55,7 +56,6 @@
             aspect-ratio="1"
             rounded="full"
             ring="px white/4"
-            z="3"
           />
           <div
             absolute
@@ -72,16 +72,17 @@
             ring="px white/8"
           />
         </div>
-        <StarsRing />
-      </div>
+      </div> -->
       <!-- preview -->
-      <div w="full" m="t-150" style="perspective: 1000px">
+      <div w="full" m="t-180" style="perspective: 1000px">
         <div
+          absolute
+          left="0"
           w="90% 2xl:100%"
           aspect-ratio="[16/9]"
-          m="x-auto"
           p="2 2xl:3.5"
           rounded="4"
+          overflow="hidden"
           bg="black/30 gradient-to-r no-repeat"
           from="black"
           via="transparent"
@@ -89,10 +90,9 @@
           class="preview-box hidden !md:block"
           :style="{
             backgroundSize: '100% 100%',
-            boxShadow:
-              isDark && active
-                ? '0 0 10rem 1rem var(--wb-color-primary)'
-                : 'none'
+            boxShadow: isDark
+              ? '0 0 10rem 1rem var(--wb-color-primary)'
+              : 'none'
           }"
         >
           <div h="full" rounded="3" ring="1 white/10" overflow="hidden">
@@ -110,11 +110,11 @@
         </div>
       </div>
       <!-- frontmatter -->
-      <div
+      <!-- <div
         absolute
         top="0"
         w="full"
-        m="t-15% !md:t-4%"
+        m="t-15% !md:t-10%"
         flex="~ col"
         items="center"
         gap="8 lg:12"
@@ -124,7 +124,7 @@
         </div>
         <h1
           v-if="inFrontmatter(frontmatter, 'slogan')"
-          max-w="88% md:70%"
+          max-w="88% md:72%"
           text="8 sm:12 lg:17 xl:20 $wb-color-text-main center"
           font="black tracking-tight !leading-[1.25]"
           style="
@@ -172,7 +172,7 @@
             </template>
           </wb-button>
         </div>
-      </div>
+      </div> -->
       <!-- content -->
       <slot name="page-content">
         <div max-w="xl:264" m="x-auto" class="vp-doc">
@@ -184,33 +184,36 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { inFrontmatter } from '../../utils'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import StarsRing from './StarsRing.vue'
 
 const { lang, frontmatter, isDark } = useData()
 
 gsap.registerPlugin(ScrollTrigger)
-const active = ref(false)
-
+const main = ref()
+let ctx: any
 onMounted(() => {
-  const elements: any = gsap.utils.toArray('.preview-box')
-  gsap.from(elements[0], {
-    scrollTrigger: {
-      trigger: elements[0],
-      scroller: '#layoutRoot',
-      // markers: true,
-      scrub: true,
-      start: 'top 85%',
-      end: 'top 50%',
-      onUpdate: ({ progress }) => {
-        active.value = progress > 0.9
-      }
-    },
-    rotateX: 50
-  })
+  ctx = gsap.context(() => {
+    const elements: any = gsap.utils.toArray('.preview-box')
+    elements.forEach((el: any) => {
+      gsap.to(el, {
+        x: 50,
+        scrollTrigger: {
+          trigger: el,
+          toggleActions: 'restart pause reverse pause',
+          markers: true,
+          start: 'top center',
+          end: 'bottom 300'
+        }
+      })
+    })
+  }, main.value)
+})
+
+onUnmounted(() => {
+  ctx.revert() // <- Easy Cleanup!
 })
 </script>

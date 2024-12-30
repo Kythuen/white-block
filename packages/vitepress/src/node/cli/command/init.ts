@@ -26,6 +26,7 @@ export async function init(data: InitData) {
 
 export default async function () {
   console.log(TEXT.TITLE_INPUT_INFORMATION)
+
   const answers: any = await answerPrompts(INIT_PROMPTS)
 
   const { repo, user } = getRepoInfo(answers.repo) || 'ephemeras'
