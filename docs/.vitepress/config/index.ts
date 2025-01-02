@@ -25,7 +25,14 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Kythuen' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { name: 'og:title', content: TITLE }],
-    ['meta', { property: 'og:image', content: OG_IMAGE }]
+    ['meta', { property: 'og:image', content: OG_IMAGE }],
+    [
+      'script',
+      {
+        type: 'module',
+        src: 'https://unpkg.com/@splinetool/viewer@1.9.54/build/spline-viewer.js'
+      }
+    ]
   ],
   themeConfig: {
     search: localSearchConfig

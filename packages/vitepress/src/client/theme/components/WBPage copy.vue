@@ -1,9 +1,6 @@
 <template>
   <div
-    ref="main"
-    relative
     m="x-auto"
-    h="[300vh]"
     flex="~ col"
     items="center"
     :style="{
@@ -22,12 +19,17 @@
       items="center"
     >
       <!-- bg -->
-      <!-- <div
+      <div
+        ref="canvasContainer"
         absolute
         w="full"
-        aspect-ratio="1 2xl:6/5"
+        aspect-ratio="1 2xl:1"
         overflow="hidden"
         class="hidden !lg:block"
+        :style="{
+          display: active ? 'none' : 'block',
+          opacity: `${1 - scrollProgress}`
+        }"
       >
         <div
           absolute
@@ -45,6 +47,7 @@
               aspect-ratio="1"
               rounded="full"
               bg="[rgb(var(--wb-vc-primary)/40%)] dark:$wb-color-primary"
+              backdrop="~ blur-lg"
             />
             <div absolute w="full" h="full" backdrop="blur-[5rem]" />
             <div absolute w="full" h="full" backdrop="blur-[5rem]" />
@@ -56,6 +59,7 @@
             aspect-ratio="1"
             rounded="full"
             ring="px white/4"
+            z="3"
           />
           <div
             absolute
@@ -72,27 +76,16 @@
             ring="px white/8"
           />
         </div>
-      </div> -->
+        <StarsRing :style="{ transform: `scale(${1 + scrollProgress})` }" />
+      </div>
       <!-- preview -->
-      <div w="full" m="t-180" style="perspective: 1000px">
-        <div
-          absolute
-          left="0"
-          w="90% 2xl:100%"
-          aspect-ratio="[16/9]"
-          p="2 2xl:3.5"
-          rounded="4"
-          overflow="hidden"
-          bg="black/30 gradient-to-r no-repeat"
-          from="black"
-          via="transparent"
-          to="black"
-          class="preview-box hidden !md:block"
+      <div w="250" m="t-150" style="perspective: 1000px">
+        <Card
           :style="{
-            backgroundSize: '100% 100%',
-            boxShadow: isDark
-              ? '0 0 10rem 1rem var(--wb-color-primary)'
-              : 'none'
+            boxShadow:
+              isDark && active
+                ? '0 0 1rem 1rem rgb(var(--wb-vc-primary)/10%)'
+                : 'none'
           }"
         >
           <div h="full" rounded="3" ring="1 white/10" overflow="hidden">
@@ -104,27 +97,33 @@
               from="transparent"
               to="black"
               overflow="hidden"
-              style="background-size: 100% 100%"
-            ></div>
+              :style="{
+                backgroundSize: '100% 100%',
+                boxShadow:
+                  isDark && active
+                    ? '0 0 5rem 1rem var(--wb-color-primary)'
+                    : 'none'
+              }"
+            />
           </div>
-        </div>
+        </Card>
       </div>
       <!-- frontmatter -->
-      <!-- <div
+      <div
         absolute
         top="0"
         w="full"
-        m="t-15% !md:t-10%"
+        m="t-15% !md:t-4%"
         flex="~ col"
         items="center"
-        gap="8 lg:12"
+        gap="8 lg:16"
       >
         <div v-if="false && inFrontmatter(frontmatter, 'logo')">
           <img h="30" :src="withBase(frontmatter.logo)" alt="@ephemeras/fs" />
         </div>
         <h1
           v-if="inFrontmatter(frontmatter, 'slogan')"
-          max-w="88% md:72%"
+          max-w="88% md:70%"
           text="8 sm:12 lg:17 xl:20 $wb-color-text-main center"
           font="black tracking-tight !leading-[1.25]"
           style="
@@ -149,30 +148,70 @@
         >
           {{ frontmatter.description }}
         </p>
-        <div
+        <a
           v-if="inFrontmatter(frontmatter, 'link')"
-          p="2"
-          ring="px white/10"
-          rounded="2"
-          text="md"
+          :href="
+            withBase(
+              lang === 'zh' ? `/zh${frontmatter.link}` : frontmatter.link
+            )
+          "
         >
-          <wb-button
-            tag="a"
-            size="lg"
-            theme="contrast"
-            :href="
-              withBase(
-                lang === 'zh' ? `/zh${frontmatter.link}` : frontmatter.link
-              )
+          <button
+            relative
+            z="1"
+            p="3 x-5"
+            rounded="2"
+            style="
+              background-image: linear-gradient(
+                -45deg,
+                #ffcb47,
+                #e34ba9,
+                #369eff,
+                #95f3d9
+              );
+              background-size: 400% 400%;
+              animation: 5s bgp-animation 5s ease infinite;
             "
+            flex
+            items="center"
+            gap="2"
           >
-            Get Started
-            <template #suffix>
-              <i w="5" h="5" class="i-heroicons-arrow-right-20-solid" />
-            </template>
-          </wb-button>
-        </div>
-      </div> -->
+            <div
+              absolute
+              w="full"
+              h="full"
+              top="0"
+              left="0"
+              op="50"
+              z="-1"
+              style="
+                background-image: linear-gradient(
+                  -45deg,
+                  #ffcb47,
+                  #e34ba9,
+                  #369eff,
+                  #95f3d9
+                );
+                background-size: 400% 400%;
+                animation: 5s bgp-animation 5s ease infinite;
+                filter: blur(1.5em);
+              "
+            ></div>
+            <div
+              absolute
+              top="2px"
+              left="2px"
+              w="[calc(100%-4px)]"
+              h="[calc(100%-4px)]"
+              bg="black"
+              rounded="1.5"
+            ></div>
+            <div relative w="full" h="full" text="4">Get Started</div>
+
+            <i w="5" h="5" class="i-heroicons-arrow-right-20-solid" />
+          </button>
+        </a>
+      </div>
       <!-- content -->
       <slot name="page-content">
         <div max-w="xl:264" m="x-auto" class="vp-doc">
@@ -184,36 +223,52 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
-import { useData, withBase } from 'vitepress'
-import { inFrontmatter } from '../../utils'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useData, withBase } from 'vitepress'
+import { onMounted, ref } from 'vue'
+import { inFrontmatter } from '../../utils'
+import StarsRing from './StarsRing.vue'
+import Card from './Card.vue'
 
 const { lang, frontmatter, isDark } = useData()
 
 gsap.registerPlugin(ScrollTrigger)
-const main = ref()
-let ctx: any
-onMounted(() => {
-  ctx = gsap.context(() => {
-    const elements: any = gsap.utils.toArray('.preview-box')
-    elements.forEach((el: any) => {
-      gsap.to(el, {
-        x: 50,
-        scrollTrigger: {
-          trigger: el,
-          toggleActions: 'restart pause reverse pause',
-          markers: true,
-          start: 'top center',
-          end: 'bottom 300'
-        }
-      })
-    })
-  }, main.value)
-})
+const active = ref(false)
+const scrollProgress = ref(0)
 
-onUnmounted(() => {
-  ctx.revert() // <- Easy Cleanup!
+onMounted(() => {
+  const elements: any = gsap.utils.toArray('.preview-box')
+  gsap.from(elements[0], {
+    scrollTrigger: {
+      trigger: elements[0],
+      scroller: '#layoutRoot',
+      // markers: true,
+      scrub: true,
+      start: 'top 85%',
+      end: 'top 50%',
+      onUpdate: ({ progress }) => {
+        scrollProgress.value = progress
+        active.value = progress > 0.9
+        console.log(progress)
+      }
+    },
+    rotateX: 50
+  })
 })
 </script>
+
+<style>
+@keyframes bgp-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>

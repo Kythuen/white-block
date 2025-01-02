@@ -6,7 +6,7 @@
         @close="setThemeEditorVisible(false)"
       />
     </template>
-    <template #home-top>
+    <!-- <template #home-top>
       <div
         v-if="homeTopVisible"
         w="full"
@@ -21,11 +21,11 @@
       >
         #home-top
       </div>
-    </template>
+    </template> -->
     <template #home-content>
       <WBHome />
     </template>
-    <template #header-top>
+    <!-- <template #header-top>
       <div
         v-if="headerTopVisible"
         w="full"
@@ -40,7 +40,7 @@
       >
         #header-top / #home-top
       </div>
-    </template>
+    </template> -->
     <template #header-operation-before>
       <WBIconButton
         name="theme"

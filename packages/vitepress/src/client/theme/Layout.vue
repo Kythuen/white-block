@@ -6,7 +6,8 @@
           id="layoutRoot"
           w="full"
           h="screen"
-          bg="[rgb(var(--wb-vc-background))]"
+          bg="black"
+          overflow="x-hidden"
           class="scrollable-main"
         >
           <WBHeader>

@@ -22,6 +22,21 @@ export function clickDelegate(
   fallback?.()
 }
 
+export function eventDelegate(
+  e: MouseEvent | any,
+  className: string,
+  handler: (event: MouseEvent) => void,
+  fallback?: () => void
+) {
+  const domList = e.path ?? (e.composedPath && e.composedPath())
+  const target = domList[0]?.className === className
+  if (target) {
+    handler(e)
+    return
+  }
+  fallback?.()
+}
+
 export function clickDelegateKey(
   e: MouseEvent | any,
   className: string,
