@@ -257,7 +257,7 @@ onMounted(() => {
     scrollTrigger: {
       trigger: titleBox,
       scroller: '#layoutRoot',
-      markers: true,
+      // markers: true,
       scrub: true,
       start: 'center center',
       end: '70% 50%'
@@ -269,6 +269,7 @@ onMounted(() => {
     z: 0
   })
   tl1.from(title, {
+    duration: 2,
     y: 40
   })
 
