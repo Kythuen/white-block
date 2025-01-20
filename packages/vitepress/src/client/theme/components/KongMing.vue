@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import StarsWorker from './stars?worker'
 
 const CanvasRef = ref()
 
@@ -77,7 +78,10 @@ onMounted(() => {
   const canvas = CanvasRef.value
   if (canvas.transferControlToOffscreen) {
     const offscreen = canvas.transferControlToOffscreen()
-    const worker = new Worker(new URL('/stars.js', import.meta.url))
+    // const worker = new Worker(new URL('/stars.js', import.meta.url), {
+    //   type: 'module'
+    // })
+    const worker = new StarsWorker()
     worker.postMessage(
       {
         canvas: offscreen,

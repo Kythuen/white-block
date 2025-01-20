@@ -74,17 +74,24 @@
         />
       </div> -->
       <div
+        v-if="router.route.path.includes('vitepress')"
         w="full"
         h="30"
+        p="x-3"
         m="b-4"
         color="$wb-color-text-5"
-        bg="$wb-color-container"
         rounded="1"
-        flex
-        items="center"
+        flex="~ col"
+        gap="4"
         justify="center"
       >
-        #sidebar-top
+        <div text="lg white/80" font="bold">@ephemeras/types</div>
+        <div flex gap="2">
+          <div w="5" h="5" class="i-simple-icons-npm"></div>
+          <div w="5" h="5" class="i-simple-icons-github"></div>
+          changlogs, npm,github,Q&A
+        </div>
+        <div>{{ frontmatter.package }}</div>
       </div>
     </template>
     <template #sidebar-bottom>
@@ -126,6 +133,7 @@
       <div
         w="full"
         h="60"
+        m="t-6"
         color="$wb-color-text-5"
         bg="$wb-color-container"
         rounded="1"
@@ -166,7 +174,7 @@ import { Layout, WBDocumentAside, WBHome } from '@white-block/vitepress'
 import { useState, matchItems } from 'white-block'
 import { useRouter, useData } from 'vitepress'
 
-const { site } = useData()
+const { site, frontmatter } = useData()
 const router = useRouter()
 
 const TAB_OPTIONS = [

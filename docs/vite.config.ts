@@ -7,6 +7,8 @@ import {
   groupIconMdPlugin,
   groupIconVitePlugin
 } from 'vitepress-plugin-group-icons'
+import Components from 'unplugin-vue-components/vite'
+
 import { version } from './package.json'
 
 const alias: Alias[] = [
@@ -30,7 +32,15 @@ export default defineConfig({
   resolve: {
     alias
   },
-  plugins: [UnoCSS(), vueJSX(), groupIconVitePlugin()],
+  plugins: [
+    UnoCSS(),
+    vueJSX(),
+    groupIconVitePlugin(),
+    Components({
+      dirs: ['.vitepress/theme/components/colors']
+    })
+  ],
+
   optimizeDeps: {
     exclude: ['vitepress']
   },

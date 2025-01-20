@@ -21,7 +21,10 @@ export default defineConfig({
   appearance: 'dark',
   cleanUrls: true,
   head: [
-    ['link', { rel: 'icon', href: '/logo.png', type: 'image/png' }],
+    [
+      'link',
+      { rel: 'icon', href: '/white-block/logo.svg ', type: 'image/svg+xml' }
+    ],
     ['meta', { name: 'author', content: 'Kythuen' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { name: 'og:title', content: TITLE }],
