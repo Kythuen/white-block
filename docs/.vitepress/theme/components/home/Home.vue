@@ -184,7 +184,7 @@
           <div w="xl:3xl" m="t-30 x-auto" flex="~ col" gap="3">
             <div
               class="text-box"
-              bg="gray/30"
+              bg="gray/20"
               p="2"
               rounded="2"
               flex
@@ -193,7 +193,7 @@
             ></div>
             <div
               class="text-box2"
-              bg="gray/30"
+              bg="gray/20"
               p="2"
               rounded="2"
               flex
@@ -220,9 +220,11 @@ gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(TextPlugin)
 
 onMounted(() => {
+  ScrollTrigger.defaults({
+    scroller: '#layoutRoot'
+  })
   ScrollTrigger.create({
     trigger: '.stars',
-    scroller: '#layoutRoot',
     scrub: true,
     start: 'center center',
     end: '70% 50%',
@@ -233,7 +235,6 @@ onMounted(() => {
   })
   ScrollTrigger.create({
     trigger: '.preview-box',
-    scroller: '#layoutRoot',
     scrub: true,
     start: 'top center',
     end: 'center center',
@@ -246,7 +247,7 @@ onMounted(() => {
   })
   ScrollTrigger.create({
     trigger: '.title-box',
-    scroller: '#layoutRoot',
+    scrub: true,
     start: 'top center',
     end: 'center center',
     animation: gsap
@@ -262,8 +263,15 @@ onMounted(() => {
         y: 40,
         ease: 'power4.inOut'
       })
+  })
+  ScrollTrigger.create({
+    trigger: '.title-box',
+    start: 'top center',
+    end: 'center center',
+    animation: gsap
+      .timeline()
       .to('.text-box', {
-        duration: 2,
+        duration: 1.5,
         text: '不论普通用户与专业开发者，LobeChat 旨在成为所有人的 AI 助手实验场。👇✨'
       })
       .to('.text-box2', {
