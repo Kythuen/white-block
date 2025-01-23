@@ -4,54 +4,73 @@ description: Overview of the existing components. Get more information from repo
 ---
 
 ## Base
-<Colors title="Gray">
+<ColorGroup title="Primary">
   <PaletteColors
-    name="wb-vc-gray"
+    name="wb-color-primary"
     :group="[50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]"
-    variable
   />
-</Colors>
-<br/>
-<Colors title="Primary">
+</ColorGroup>
+<br />
+<ColorGroup title="Green">
   <PaletteColors
-    name="wb-vc-primary"
+    name="wb-color-green"
     :group="[50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]"
-    variable
   />
-</Colors>
+</ColorGroup>
+<br />
+<ColorGroup title="Red">
+  <PaletteColors
+    name="wb-color-red"
+    :group="[50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]"
+  />
+</ColorGroup>
+<br />
+<ColorGroup title="Yellow">
+  <PaletteColors
+    name="wb-color-yellow"
+    :group="[50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]"
+  />
+</ColorGroup>
+<br />
+<ColorGroup title="Gray">
+  <PaletteColors
+    name="wb-color-gray"
+    :group="[50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]"
+  />
+</ColorGroup>
 
 ## Defined
-<Colors title="Text">
+<ColorGroup title="Text">
   <TextColors
     name="wb-vc-text"
     :group="['main', 'active', 'normal', 'decorative', 'placeholder']"
     variable
   />
-</Colors>
+</ColorGroup>
 <br/>
-<Colors title="Border">
-  <BorderColors
+<ColorGroup title="Border">
+  <!-- <BorderColors
     name="wb-color-border"
     :group="['emphasize', 'base', 'soft', 'dinky']"
-  />
+  /> -->
   <BorderColors
     name="wb-color-border1"
     :group="[1, 2, 3, 4]"
   />
-</Colors>
+</ColorGroup>
 <br/>
-<Colors title="Status">
+<ColorGroup title="Status">
   <StatusColors
     name="wb-vc"
     :group="['success', 'warning', 'danger']"
     variable
   />
-</Colors>
+</ColorGroup>
 <br/>
-<Colors title="Layout">
+<ColorGroup title="Layout">
   <LayoutColors
     name="wb-vc"
     :group="['success', 'warning', 'danger']"
     variable
   />
-</Colors>
+</ColorGroup>

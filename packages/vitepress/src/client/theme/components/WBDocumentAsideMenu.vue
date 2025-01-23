@@ -3,7 +3,7 @@
     <div
       w="full"
       p="l-4"
-      border="0 l-2px solid $wb-color-border-soft"
+      border="0 l-2px solid $wb-color-border"
       flex="~ col"
       gap="0.5"
     >
@@ -17,7 +17,7 @@
         :color="
           decodeURIComponent(currentActiveHash) === link
             ? '$wb-color-primary'
-            : '$wb-color-text-secondly'
+            : '$wb-color-text'
         "
         leading="6"
         truncate

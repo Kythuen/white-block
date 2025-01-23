@@ -23,7 +23,7 @@
       </div>
     </template> -->
     <template #home-content>
-      <WBHome />
+      <Home />
     </template>
     <!-- <template #header-top>
       <div
@@ -94,7 +94,7 @@
         <div>{{ frontmatter.package }}</div>
       </div>
     </template>
-    <template #sidebar-bottom>
+    <!-- <template #sidebar-bottom>
       <div
         w="full"
         h="40"
@@ -108,7 +108,7 @@
       >
         #sidebar-bottom
       </div>
-    </template>
+    </template> -->
     <template #document-header="{ focus, tab, setTab }">
       <DocumentHeader :focus="focus" :tab="tab" :set-tab="setTab" />
     </template>
@@ -116,7 +116,7 @@
       <DocumentContent :tab="tab" />
     </template>
     <template #document-bottom="{ focus, tab, setTab }">
-      <!-- <DocumentMobileDock :focus="focus">
+      <DocumentMobileDock :focus="focus">
         <div w="40">
           <wb-radio-group
             :default-value="tab"
@@ -129,8 +129,8 @@
             @change="setTab"
           />
         </div>
-      </DocumentMobileDock> -->
-      <div
+      </DocumentMobileDock>
+      <!-- <div
         w="full"
         h="60"
         m="t-6"
@@ -142,12 +142,12 @@
         justify="center"
       >
         #document-bottom
-      </div>
+      </div> -->
     </template>
     <template #document-aside-menu="{ focus, tab }">
       <WBDocumentAside :focus="focus" :tab="tab" />
     </template>
-    <template #document-aside-bottom>
+    <!-- <template #document-aside-bottom>
       <div
         w="full"
         h="60"
@@ -161,7 +161,7 @@
       >
         #document-aside-bottom
       </div>
-    </template>
+    </template> -->
   </Layout>
 </template>
 
@@ -170,9 +170,10 @@ import DocumentHeader from './components/DocumentHeader.vue'
 import DocumentContent from './components/DocumentContent.vue'
 import DocumentMobileDock from './components/DocumentMobileDock.vue'
 import ThemeEditor from './components/theme-editor/Index.vue'
-import { Layout, WBDocumentAside, WBHome } from '@white-block/vitepress'
-import { useState, matchItems } from 'white-block'
+import { Layout, WBHeader, WBDocumentAside } from '@white-block/vitepress'
+import { useState } from 'white-block'
 import { useRouter, useData } from 'vitepress'
+import Home from './components/home/Home.vue'
 
 const { site, frontmatter } = useData()
 const router = useRouter()

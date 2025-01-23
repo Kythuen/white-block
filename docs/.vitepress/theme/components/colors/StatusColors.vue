@@ -3,7 +3,7 @@
     w="full"
     p="y-10"
     rounded="md"
-    ring="px $wb-color-border-soft"
+    ring="px $wb-color-border-dinky"
     flex="~ col"
     items="center"
     gap="8"

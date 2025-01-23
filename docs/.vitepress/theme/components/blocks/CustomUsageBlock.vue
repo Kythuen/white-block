@@ -4,7 +4,7 @@
     m="y-4"
     color="$wb-color-text-4"
     bg="[rgb(var(--vc-gray-50))] dark:[rgb(var(--vc-gray-950))]"
-    ring="1 inset $wb-color-border-base"
+    ring="1 inset $wb-color-border"
     rounded="1"
     overflow="hidden"
     class="vp-raw"
@@ -30,7 +30,7 @@
                   <div
                     v-if="propsOptions.input.length"
                     p="3"
-                    border="0 b-px solid $wb-color-border-base"
+                    border="0 b-px solid $wb-color-border"
                   >
                     <div
                       v-for="item in propsOptions.input"
@@ -53,7 +53,7 @@
                   <div
                     v-if="propsOptions.number.length"
                     p="3"
-                    border="0 b-px solid $wb-color-border-soft"
+                    border="0 b-px solid $wb-color-border"
                   >
                     <div
                       v-for="item in propsOptions.number"
@@ -77,7 +77,7 @@
                   <div
                     v-if="propsOptions.toggle.length"
                     p="3"
-                    border="0 b-px solid $wb-color-border-base"
+                    border="0 b-px solid $wb-color-border"
                   >
                     <div
                       v-for="item in propsOptions.toggle"
@@ -150,9 +150,7 @@
         <div
           h="12"
           p="2"
-          :border="
-            hasProperties ? '0 t-px solid $wb-color-border-base' : 'none'
-          "
+          :border="hasProperties ? '0 t-px solid $wb-color-border' : 'none'"
           flex
           items-center
           justify-end
@@ -195,14 +193,14 @@
           w="full"
           h="full"
           overflow-auto
-          border="0 l-px solid $wb-color-border-base"
+          border="0 l-px solid $wb-color-border"
           class="scrollable"
         >
           <div overflow="auto" text="3.5" p="1" class="scrollable">
             <div
               v-if="propsOptions.input.length"
               p="3"
-              border="0 b-px solid $wb-color-border-base"
+              border="0 b-px solid $wb-color-border"
             >
               <div
                 v-for="item in propsOptions.input"
@@ -226,7 +224,7 @@
             <div
               v-if="propsOptions.number.length"
               p="3"
-              border="0 b-px solid $wb-color-border-soft"
+              border="0 b-px solid $wb-color-border"
             >
               <div
                 v-for="item in propsOptions.number"
@@ -250,7 +248,7 @@
             <div
               v-if="propsOptions.toggle.length"
               p="3"
-              border="0 b-px solid $wb-color-border-base"
+              border="0 b-px solid $wb-color-border"
             >
               <div
                 v-for="item in propsOptions.toggle"
@@ -296,7 +294,7 @@
     <div
       w="full"
       :max-h="showCode ? '140' : '0'"
-      border="0 t-px solid $wb-color-border-base"
+      border="0 t-px solid $wb-color-border"
       overflow="y-auto"
       transition="all duration-200 ease-in-out"
       class="scrollable"

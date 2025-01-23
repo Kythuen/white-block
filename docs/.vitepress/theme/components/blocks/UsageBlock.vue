@@ -3,7 +3,7 @@
     w="full"
     m="y-4"
     color="$wb-color-text-4"
-    ring="1 inset $wb-color-border-soft"
+    ring="1 inset $wb-color-border"
     rounded="1"
     class="vp-raw"
     overflow="hidden"
@@ -13,7 +13,7 @@
         <div
           h="12"
           p="x-4"
-          border="0 b-px solid $wb-color-border-soft"
+          border="0 b-px solid $wb-color-border"
           flex="none ~ row"
           items="center"
           justify="between"
@@ -133,7 +133,7 @@
           <div
             h="12"
             p="2"
-            border="0 t-px solid $wb-color-border-soft"
+            border="0 t-px solid $wb-color-border"
             flex
             items-center
             justify-end
@@ -170,12 +170,12 @@
           v-if="showProperties"
           w="full"
           h="full"
-          border="0 l-px solid $wb-color-border-soft"
+          border="0 l-px solid $wb-color-border"
         >
           <div
             h="12"
             p="x-4"
-            border="0 b-px solid $wb-color-border-soft"
+            border="0 b-px solid $wb-color-border"
             flex
             items="center"
           >
@@ -285,7 +285,7 @@
     <div
       w="full"
       :max-h="showCode ? '140' : '0'"
-      border="0 t-px solid $wb-color-border-soft"
+      border="0 t-px solid $wb-color-border"
       overflow="y-auto"
       transition="all duration-200 ease-in-out"
       class="scrollable"

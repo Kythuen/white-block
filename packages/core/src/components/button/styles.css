@@ -1,31 +1,23 @@
 .wb-button {
   border: none;
   box-sizing: border-box;
-  --wb-button-color-main: rgb(var(--wb-button-vc-main));
-  --wb-button-color-main-lighten: color-mix(
-    in srgb,
-    var(--wb-button-color-main) 80%,
-    var(--wb-color-foreground)
-  );
-  --wb-button-color-main-darken: color-mix(
-    in srgb,
-    var(--wb-button-color-main) 70%,
-    var(--wb-color-background)
-  );
+  outline: none;
+  backface-visibility: hidden;
 
-  --wb-button-border: var(--wb-button-color-main);
-  --wb-button-border-hover: var(--wb-button-color-main-lighten);
-  --wb-button-border-active: var(--wb-button-color-main-darken);
+  --wb-button-background: var(--wb-button-main-color);
+  --wb-button-background-hover: var(--wb-button-main-color-lighten);
+  --wb-button-background-active: var(--wb-button-main-color-darken);
 
-  --wb-button-text: var(--wb-button-color-main);
-  --wb-button-text-hover: var(--wb-button-color-main);
-  --wb-button-text-active: var(--wb-button-color-main);
+  --wb-button-border: var(--wb-button-main-color);
+  --wb-button-border-hover: var(--wb-button-main-color-lighten);
+  --wb-button-border-active: var(--wb-button-main-color-darken);
 
-  --wb-button-background-hover: rgb(var(--wb-button-vc-main) / 20%);
+  --wb-button-text: var(--wb-button-main-color);
+  --wb-button-text-hover: var(--wb-button-main-color);
+  --wb-button-text-active: var(--wb-button-main-color);
 
   font-size: var(--wb-button-font-size);
   transition: var(--wb-transition-ease);
-  backface-visibility: hidden;
 }
 
 /* -------------------------------------------- size --------------------------------------------- */
@@ -66,89 +58,150 @@
 }
 
 /* -------------------------------------------- theme -------------------------------------------- */
+.dark .wb-button--primary {
+  --wb-button-main-color: var(--wb-color-primary);
+  --wb-button-main-color-lighten: var(--wb-color-primary-400);
+  --wb-button-main-color-darken: var(--wb-color-primary-600);
+}
 .wb-button--primary {
-  --wb-button-vc-main: var(--wb-vc-primary);
+  --wb-button-main-color: var(--wb-color-primary);
+  --wb-button-main-color-lighten: var(--wb-color-primary-500);
+  --wb-button-main-color-darken: var(--wb-color-primary-700);
 }
 .wb-button--contrast {
-  --wb-button-vc-main: var(--wb-vc-foreground);
+  --wb-button-main-color: var(--wb-color-contrast);
+  --wb-button-main-color-lighten: var(--wb-color-text-active);
+  --wb-button-main-color-darken: var(--wb-color-text-main);
 }
 .wb-button--success {
-  --wb-button-vc-main: var(--wb-vc-success);
+  --wb-button-main-color: var(--wb-color-green-500);
+  --wb-button-main-color-lighten: var(--wb-color-green-400);
+  --wb-button-main-color-darken: var(--wb-color-green-600);
 }
 .wb-button--warning {
-  --wb-button-vc-main: var(--wb-vc-warning);
+  --wb-button-main-color: var(--wb-color-yellow-500);
+  --wb-button-main-color-lighten: var(--wb-color-yellow-400);
+  --wb-button-main-color-darken: var(--wb-color-yellow-600);
 }
 .wb-button--danger {
-  --wb-button-vc-main: var(--wb-vc-danger);
+  --wb-button-main-color: var(--wb-color-red-500);
+  --wb-button-main-color-lighten: var(--wb-color-red-400);
+  --wb-button-main-color-darken: var(--wb-color-red-600);
 }
 .wb-button--default {
-  --wb-button-vc-main: var(--wb-vc-soft);
-  --wb-button-border: var(--wb-button-color-main-lighten);
-  --wb-button-border-active: var(--wb-button-border);
-  --wb-button-text: var(--wb-color-text-3);
-  --wb-button-text-hover: var(--wb-vc-foreground);
-  --wb-button-text-active: var(--wb-vc-foreground);
-  --wb-button-background-hover: rgb(var(--wb-button-vc-main) / 70%);
+  --wb-button-main-color: var(--wb-color-gray-500);
+  --wb-button-main-color-lighten: var(--wb-color-gray-400);
+  --wb-button-main-color-darken: var(--wb-color-gray-600);
+  --wb-button-text: var(--wb-color-text);
+  --wb-button-text-hover: var(--wb-color-main);
+  --wb-button-text-active: var(--wb-color-main);
 }
 .wb-button--default.wb-button--base {
-  --wb-button-text: var(--wb-color-text-3);
-  --wb-button-text-hover: var(--wb-vc-foreground);
-  --wb-button-text-active: var(--wb-vc-foreground);
+  --wb-button-main-color: var(--wb-color-default);
+  --wb-button-main-color-lighten: var(--wb-color-default-1);
+  --wb-button-main-color-darken: var(--wb-color-default-2);
+  --wb-button-text: var(--wb-color-text);
+  --wb-button-text-hover: var(--wb-color-text-main);
+  --wb-button-text-active: var(--wb-color-text-main);
 }
 .wb-button--default.wb-button--plain {
-  --wb-button-background-hover: rgb(var(--wb-button-vc-main) / 70%);
+  --wb-button-main-color: var(--wb-color-gray-900);
+  --wb-button-main-color-lighten: var(--wb-color-gray-500);
+  --wb-button-main-color-darken: var(--wb-color-gray-950);
+}
+.wb-button--default.wb-button--ghost {
+  --wb-button-main-color: var(--wb-color-default);
+  --wb-button-background-hover: var(--wb-color-default-1);
+  --wb-button-background-active: var(--wb-color-default-2);
+  --wb-button-text: var(--wb-color-foreground);
+  --wb-button-text-hover: var(--wb-color-foreground);
+  --wb-button-text-active: var(--wb-color-foreground);
 }
 
 /* -------------------------------------------- type -------------------------------------------- */
 .wb-button--base {
-  --wb-button-background: var(--wb-button-color-main);
-  --wb-button-background-hover: var(--wb-button-color-main-lighten);
-  --wb-button-background-active: var(--wb-button-color-main-darken);
+  --wb-button-background: var(--wb-button-main-color);
+  --wb-button-background-hover: var(--wb-button-main-color-lighten);
+  --wb-button-background-active: var(--wb-button-main-color-darken);
   --wb-button-border: var(--wb-button-background);
   --wb-button-border-hover: var(--wb-button-background-hover);
   --wb-button-border-active: var(--wb-button-background-active);
-  --wb-button-text: var(--wb-color-background);
-  --wb-button-text-hover: var(--wb-color-background);
-  --wb-button-text-active: var(--wb-color-background);
+  --wb-button-text: color-contrast(
+    var(--wb-button-main-color) vs var(--wb-color-black),
+    var(--wb-color-white)
+  );
+  --wb-button-text-hover: var(--wb-button-text);
+  --wb-button-text-active: var(--wb-button-text);
 }
 .wb-button--plain {
-  --wb-button-background: rgb(var(--wb-button-vc-main) / 10%);
-  --wb-button-background-hover: rgb(var(--wb-button-vc-main) / 20%);
+  --wb-button-background: color-mix(
+    in srgb,
+    var(--wb-button-main-color) 20%,
+    transparent
+  );
+  --wb-button-background-hover: color-mix(
+    in srgb,
+    var(--wb-button-main-color) 25%,
+    transparent
+  );
+  --wb-button-background-active: color-mix(
+    in srgb,
+    var(--wb-button-main-color) 15%,
+    transparent
+  );
 }
 .wb-button--outline {
-  --wb-button-background: none;
+  --wb-button-background: transparent;
+  --wb-button-background-hover: transparent;
+  --wb-button-background-active: transparent;
 }
 .wb-button--ghost {
+  --wb-button-background: transparent;
   --wb-button-border: transparent;
   --wb-button-border-hover: transparent;
   --wb-button-border-active: transparent;
+  --wb-button-background-hover: color-mix(
+    in srgb,
+    var(--wb-button-main-color) 25%,
+    transparent
+  );
+  --wb-button-background-active: color-mix(
+    in srgb,
+    var(--wb-button-main-color) 15%,
+    transparent
+  );
 }
 .wb-button--dashed {
   box-shadow: none;
+  --wb-button-background: transparent;
+  --wb-button-background-hover: transparent;
+  --wb-button-background-active: transparent;
   border: 0.1rem dashed var(--wb-button-border);
 }
 .wb-button--dashed:hover {
-  border-color: var(--wb-button-border-hover);
+  border-color: var(--wb-button-main-color-lighten);
 }
 .wb-button--dashed:active {
-  border-color: var(--wb-button-border-active);
+  border-color: var(--wb-button-main-color-darken);
 }
 .wb-button--link {
-  --wb-button-background: none;
-  --wb-button-background-hover: none;
-  --wb-button-background-active: none;
+  --wb-button-background: transparent;
+  --wb-button-background-hover: transparent;
+  --wb-button-background-active: transparent;
   --wb-button-border: transparent;
   --wb-button-border-hover: transparent;
   --wb-button-border-active: transparent;
   --wb-button-text-decoration: underline;
-  --wb-button-text-hover: var(--wb-button-color-main-lighten);
-  --wb-button-text-active: var(--wb-button-color-main-darken);
+  --wb-button-text-hover: var(--wb-button-main-color-lighten);
+  --wb-button-text-active: var(--wb-button-main-color-darken);
 }
 .wb-button--link:hover {
-  /* --wb-button-border: transparent; */
-
   text-decoration-line: var(--wb-button-text-decoration);
+  text-decoration-color: var(--wb-button-main-color-lighten);
   text-underline-offset: 0.25rem;
+}
+.wb-button--link:active {
+  text-decoration-color: var(--wb-button-main-color-darken);
 }
 .wb-button--text {
   --wb-button-background: none;
@@ -157,8 +210,8 @@
   --wb-button-border: transparent;
   --wb-button-border-hover: transparent;
   --wb-button-border-active: transparent;
-  --wb-button-text-hover: var(--wb-button-color-main-lighten);
-  --wb-button-text-active: var(--wb-button-color-main-darken);
+  --wb-button-text-hover: var(--wb-button-main-color-lighten);
+  --wb-button-text-active: var(--wb-button-main-color-darken);
 }
 
 /* -------------------------------------------- shape -------------------------------------------- */

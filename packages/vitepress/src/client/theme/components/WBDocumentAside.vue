@@ -3,13 +3,13 @@
     sticky
     top="[calc(var(--wb-doc-height-header)+8.5rem)]"
     w="52"
-    flex="~ none col"
+    flex="hidden !xl:flex none col"
     :h="
       focus
         ? '[calc(100vh-var(--wb-doc-height-header)-10.5rem)]'
         : '[calc(100vh-var(--wb-doc-height-header)-19rem)]'
     "
-    class="hidden !2xl:block vp-raw"
+    class="vp-raw"
   >
     <div flex="1" class="scrollable" :style="{ height: menuHeightStyle }">
       <slot name="document-aside-menu">

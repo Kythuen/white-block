@@ -1,23 +1,17 @@
 <template>
   <header
-    sticky
-    inset="0"
     w="full"
-    z="100"
-    bg="$wb-color-background"
-    border="0 b-px solid $wb-color-border"
+    h="15"
+    m="x-auto"
+    rounded="full"
+    ring="px $wb-color-border-dinky"
+    bg="#00000080"
+    style="backdrop-filter: saturate(180%) blur(16px)"
     @click.stop="
       clickDelegate($event, 'wb-button', handleMenuOptions, hideMenuPanel)
     "
   >
-    <div v-if="$slots['header-top']">
-      <slot name="header-top" />
-    </div>
-    <div v-else-if="frontmatter.layout === 'home'">
-      <slot name="home-top" />
-    </div>
     <div
-      max-w="full lg:360"
       h="$wb-height-layout-header"
       m="x-auto"
       p="x-2 !md:x-6 !lg:x-6"
@@ -26,9 +20,8 @@
       items="center"
       gap="3"
     >
-      <div max-w="60" flex="1">
+      <div max-w="60" flex="none">
         <a
-          p="1.5"
           :href="withBase(`${localePrefix}/`)"
           un-text="lg $wb-color-text-main"
           font="bold"
@@ -48,16 +41,15 @@
               filter=" drop-shadow-sm"
               alt="logo"
             />
-            <span>{{ theme.siteTitle }}</span>
           </div>
           <span v-else>{{ site.title }}</span>
         </a>
       </div>
-      <div class="hidden !lg:flex" flex="lg:1" justify="center">
+      <div class="hidden !lg:flex" flex="1" justify="center">
         <VPNavBarSearch class="search" absolute translate="x-999" />
         <WBHeaderMenu />
       </div>
-      <div min-w="60" flex="lg:none ~ row" items="center" justify="end">
+      <div flex="~ row none" items="center" justify="end">
         <slot name="header-operation-before" />
         <WBIconButton
           name="search"
@@ -65,13 +57,13 @@
           tip="Search"
         />
         <slot name="header-operation-inside" />
-        <WBIconButton
+        <!-- <WBIconButton
           name="mode"
           :icon="
             isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
           "
           tip="Mode"
-        />
+        /> -->
         <template
           v-for="item in site.themeConfig.socialLinks || []"
           :key="item.icon"
@@ -111,7 +103,6 @@ import WBHeaderMenu from './WBHeaderMenu.vue'
 
 const { site, isDark, lang, theme, frontmatter } = useData()
 
-console.log(site.value)
 const SOCIALS: any = {
   github: { icon: 'i-simple-icons-github', title: 'GitHub' },
   twitter: { icon: 'i-simple-icons-x', title: 'Twitter' },

@@ -6,7 +6,7 @@
     z="80"
     bg="[rgb(var(--wb-vc-background)/85%)]"
     backdrop="blur"
-    border="0 b-px solid $wb-color-border-base dark:$wb-color-border-soft"
+    border="0 b-px solid $wb-color-border dark:$wb-color-border"
   >
     <div relative w="full" h="38 !md:50" m="x-auto" p="3 md:6 lg:8">
       <div v-if="focus" h="12 md:18" m="t-21 md:t-19" flex items="center">

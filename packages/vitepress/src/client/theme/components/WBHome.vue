@@ -1,5 +1,5 @@
 <template>
-  <div max-w="lg:400" h="full" m="x-auto">
+  <div max-w="lg:360" h="full" m="x-auto">
     <div relative p="y-32 md:y-48 lg:y-25vh b-16">
       <div absolute inset="0" h="full" class="hidden !lg:block">
         <div

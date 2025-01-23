@@ -9,8 +9,8 @@ import 'vitepress/dist/client/theme-default/styles/icons.css'
 import 'vitepress/dist/client/theme-default/styles/utils.css'
 import 'vitepress/dist/client/theme-default/styles/vars.css'
 import DefaultTheme from 'vitepress/theme-without-fonts'
-import WhiteBlock from 'white-block'
-import 'white-block/dist/styles/index.css'
+// import WhiteBlock from 'white-block'
+// import 'white-block/dist/styles/index.css'
 import Layout from './Layout.vue'
 import WBDocumentAside from './components/WBDocumentAside.vue'
 import WBDocumentAsideMenu from './components/WBDocumentAsideMenu.vue'
@@ -26,7 +26,7 @@ export const Theme: ThemeType = {
   ...DefaultTheme,
   Layout,
   enhanceApp({ app, router }) {
-    app.use(WhiteBlock)
+    // app.use(WhiteBlock)
     app.component('WBIconButton', WBIconButton)
     router.onBeforePageLoad = () => {
       if (!import.meta.env.SSR) {

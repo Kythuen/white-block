@@ -2,7 +2,7 @@
   <component
     :is="tag || 'button'"
     :disabled="loading || disabled"
-    :aria-disabled="loading || disabled"
+    :type="$attrs['form-type'] || tag"
     h="$wb-button-height"
     p="x-$wb-button-padding"
     bg="$wb-button-background hover:$wb-button-background-hover active:$wb-button-background-active"
@@ -17,10 +17,7 @@
     select="none"
     outline="none"
     focus-visible="outline outline-2 outline-offset-2 outline-$wb-color-primary"
-    transition="all ease duration-200"
-    box="border"
     v-bind="{ ...$attrs }"
-    :type="$attrs['form-type'] || tag"
     :class="propsClasses"
     :style="propsStyles"
     @click="propEmits('click', $event)"
@@ -62,13 +59,15 @@ const propsClasses = useClasses<keyof Props>({
   valueProps: ['type', 'theme', 'shape', 'size'],
   nameProps: ['block', 'loading', 'disabled']
 })
+
 const propsStyles = useStyles(() => {
   if (props.color) {
     const palette: any = Color(props.color)
     const { color, valpha } = palette.rgb()
     return {
-      '--wb-button-color-main': `rgb(${color.join(' ')} / ${valpha})`,
-      '--wb-button-vc-main': color.join(' ')
+      '--wb-button-main-color': `rgb(${color.join(' ')} / ${valpha})`,
+      '--wb-button-main-color-lighten': `color-mix(in srgb, ${palette.hex()} 90%, #ffffff)`,
+      '--wb-button-main-color-darken': `color-mix(in srgb, ${palette.hex()} 90%, #000000)`
     }
   }
 })

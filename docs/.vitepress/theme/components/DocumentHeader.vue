@@ -4,13 +4,17 @@
     sticky
     top="-6 !md:-18"
     z="80"
-    bg="[rgb(var(--wb-vc-background)/85%)]"
+    bg="$wb-color-background"
     backdrop="blur"
-    border="0 b-px solid $wb-color-border-base dark:$wb-color-border-soft"
+    border="0 b-px solid $wb-color-border"
   >
     <div relative w="full" h="38 !md:60" m="x-auto" p="3 md:6 lg:8">
       <div v-if="focus" h="12 md:18" m="t-21 md:t-29" flex items="center">
-        <h1 text="6 md:7 lg:7" leading="relaxed" fw="extrabold">
+        <h1
+          text="$wb-color-text-main 6 md:7 lg:7"
+          leading="relaxed"
+          font="extrabold"
+        >
           {{ frontmatter.title }}
         </h1>
       </div>
@@ -30,11 +34,15 @@
               />
             </div>
           </div>
-          <h1 text="6 md:8 lg:10" leading="relaxed" fw="extrabold">
+          <h1
+            text="$wb-color-text-main 6 md:8 lg:10"
+            leading="relaxed"
+            fw="extrabold"
+          >
             {{ frontmatter.title }}
           </h1>
           <p
-            color="$wb-color-text-4"
+            color="$wb-color-text"
             text="line-clamp-2"
             style="margin: 0"
             v-html="frontmatter.description"
@@ -54,7 +62,7 @@
           type="tab"
           theme="white"
           size="lg"
-          ring="1 inset $wb-color-border-base"
+          ring="1 inset $wb-color-border"
           @change="setTab"
         />
       </div>

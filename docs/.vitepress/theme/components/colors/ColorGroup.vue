@@ -1,9 +1,9 @@
 <template>
-  <div m="x-4" flex items="start" gap="4">
-    <div w="20" h="9" text="md" font="semibold" flex items="center">
+  <div flex="~ wrap lg:nowrap" items="start" gap="4">
+    <div w="16" h="9" text="lg" font="semibold" flex items="center">
       {{ title }}
     </div>
-    <div w="full" flex items="center" gap="2">
+    <div w="full" flex="1" items="center" gap="2">
       <slot />
     </div>
   </div>

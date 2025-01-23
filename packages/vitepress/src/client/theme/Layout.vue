@@ -6,11 +6,11 @@
           id="layoutRoot"
           w="full"
           h="screen"
-          bg="black"
+          bg="$wb-color-background"
           overflow="x-hidden"
           class="scrollable-main"
         >
-          <WBHeader>
+          <WBHeader v-if="frontmatterField(frontmatter, 'header')">
             <template #home-top>
               <slot name="home-top" />
             </template>
@@ -50,7 +50,7 @@
             <template v-else-if="frontmatter.layout === 'empty'">
               <Content />
             </template>
-            <div v-else max-w="lg:400" h="full" m="x-auto" flex>
+            <div v-else max-w="lg:360" h="full" m="x-auto" flex>
               <WBSidebar v-if="frontmatterField(frontmatter, 'sidebar')">
                 <template #sidebar-top>
                   <slot name="sidebar-top" />

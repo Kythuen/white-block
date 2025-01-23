@@ -2,7 +2,7 @@
   <div text="sm" flex="~ col" gap="4">
     <div v-for="group in resolveSidebar" :key="group.text">
       <div v-if="group.items">
-        <div p="y-1" color="$wb-color-text-main" select="none">
+        <div p="y-1" color="$wb-color-text-active" font="bold" select="none">
           {{ group.text }}
         </div>
         <div
@@ -13,7 +13,7 @@
           flex="~ row"
           items="center"
           gap="1.5 lg:2"
-          color="$wb-color-text-secondly hover:$wb-color-text-main"
+          color="$wb-color-text hover:$wb-color-text-main"
           cursor="pointer"
           transition="color ease-in duration-200"
           select="none"

@@ -1,0 +1,60 @@
+:root {
+  --wb-size-1: calc(1 / 16 * 1rem);
+  --wb-size-2: calc(2 / 16 * 1rem);
+  --wb-size-3: calc(3 / 16 * 1rem);
+  --wb-size-4: calc(4 / 16 * 1rem);
+  --wb-size-5: calc(5 / 16 * 1rem);
+  --wb-size-6: calc(6 / 16 * 1rem);
+  --wb-size-8: calc(8 / 16 * 1rem);
+  --wb-size-10: calc(10 / 16 * 1rem);
+  --wb-size-12: calc(12 / 16 * 1rem);
+  --wb-size-14: calc(14 / 16 * 1rem);
+  --wb-size-16: calc(16 / 16 * 1rem);
+  --wb-size-18: calc(18 / 16 * 1rem);
+  --wb-size-20: calc(20 / 16 * 1rem);
+  --wb-size-24: calc(24 / 16 * 1rem);
+  --wb-size-32: calc(32 / 16 * 1rem);
+  --wb-size-36: calc(36 / 16 * 1rem);
+  --wb-size-40: calc(40 / 16 * 1rem);
+  --wb-size-48: calc(48 / 16 * 1rem);
+  --wb-size-56: calc(56 / 16 * 1rem);
+  --wb-size-64: calc(64 / 16 * 1rem);
+  --wb-size-80: calc(80 / 16 * 1rem);
+  --wb-size-96: calc(96 / 16 * 1rem);
+  --wb-size-128: calc(128 / 16 * 1rem);
+  --wb-size-160: calc(160 / 16 * 1rem);
+  --wb-size-192: calc(192 / 16 * 1rem);
+  --wb-size-224: calc(224 / 16 * 1rem);
+  --wb-size-256: calc(256 / 16 * 1rem);
+  --wb-size-512: calc(512 / 16 * 1rem);
+
+  --wb-comp-height-xs: var(--wb-size-18);
+  --wb-comp-height-sm: var(--wb-size-24);
+  --wb-comp-height-md: var(--wb-size-32);
+  --wb-comp-height-lg: var(--wb-size-40);
+  --wb-comp-height-xl: var(--wb-size-48);
+
+  --wb-comp-padding-xs: var(--wb-size-6);
+  --wb-comp-padding-sm: var(--wb-size-8);
+  --wb-comp-padding-md: var(--wb-size-10);
+  --wb-comp-padding-lg: var(--wb-size-12);
+  --wb-comp-padding-xl: var(--wb-size-14);
+
+  --wb-comp-font-size-xs: var(--wb-size-10);
+  --wb-comp-font-size-sm: var(--wb-size-12);
+  --wb-comp-font-size-md: var(--wb-size-14);
+  --wb-comp-font-size-lg: var(--wb-size-16);
+  --wb-comp-font-size-xl: var(--wb-size-18);
+
+  --wb-comp-radius-xs: var(--wb-size-2);
+  --wb-comp-radius-sm: var(--wb-size-3);
+  --wb-comp-radius-md: var(--wb-size-4);
+  --wb-comp-radius-lg: var(--wb-size-5);
+  --wb-comp-radius-xl: var(--wb-size-6);
+
+  --wb-comp-content-gap-xs: var(--wb-size-2);
+  --wb-comp-content-gap-sm: var(--wb-size-3);
+  --wb-comp-content-gap-md: var(--wb-size-4);
+  --wb-comp-content-gap-lg: var(--wb-size-5);
+  --wb-comp-content-gap-xl: var(--wb-size-6);
+}

@@ -60,183 +60,162 @@
   --wb-comp-content-gap-xl: var(--wb-size-6);
 
   /* ------------------------------------------- color ------------------------------------------- */
-  /* Slate */
-  --wb-vc-gray-50: 248 250 252;
-  --wb-vc-gray-100: 241 245 249;
-  --wb-vc-gray-200: 226 232 240;
-  --wb-vc-gray-300: 203 213 225;
-  --wb-vc-gray-400: 148 163 184;
-  --wb-vc-gray-500: 100 116 139;
-  --wb-vc-gray-600: 71 85 105;
-  --wb-vc-gray-700: 51 65 85;
-  --wb-vc-gray-800: 30 41 59;
-  --wb-vc-gray-900: 15 23 42;
-  --wb-vc-gray-950: 2 6 23;
+  --wb-color-gray-50: #f6f6f6;
+  --wb-color-gray-100: #e7e7e7;
+  --wb-color-gray-200: #d1d1d1;
+  --wb-color-gray-300: #b0b0b0;
+  --wb-color-gray-400: #888888;
+  --wb-color-gray-500: #737373;
+  --wb-color-gray-600: #5d5d5d;
+  --wb-color-gray-700: #4f4f4f;
+  --wb-color-gray-800: #454545;
+  --wb-color-gray-900: #3d3d3d;
+  --wb-color-gray-950: #262626;
 
-  /* Neutral */
-  --wb-vc-gray-50: 250 250 250;
-  --wb-vc-gray-100: 245 245 245;
-  --wb-vc-gray-200: 229 229 229;
-  --wb-vc-gray-300: 212 212 212;
-  --wb-vc-gray-400: 163 163 163;
-  --wb-vc-gray-500: 115 115 115;
-  --wb-vc-gray-600: 82 82 82;
-  --wb-vc-gray-700: 64 64 64;
-  --wb-vc-gray-800: 38 38 38;
-  --wb-vc-gray-900: 23 23 23;
-  --wb-vc-gray-950: 10 10 10;
+  --wb-color-gray-50: #f6f6f6;
+  --wb-color-gray-100: #e7e7e7;
+  --wb-color-gray-200: #d1d1d1;
+  --wb-color-gray-300: #b0b0b0;
+  --wb-color-gray-400: #888888;
+  --wb-color-gray-500: #666666;
+  --wb-color-gray-600: #5d5d5d;
+  --wb-color-gray-700: #4f4f4f;
+  --wb-color-gray-800: #454545;
+  --wb-color-gray-900: #3d3d3d;
+  --wb-color-gray-950: #262626;
 
-  --wb--color-primary-50: 0 193 106;
+  --wb-color-green-50: #f3faf4;
+  --wb-color-green-100: #e3f5e6;
+  --wb-color-green-200: #c8eace;
+  --wb-color-green-300: #9cd9a7;
+  --wb-color-green-400: #69bf78;
+  --wb-color-green-500: #45a557;
+  --wb-color-green-600: #348543;
+  --wb-color-green-700: #2b6a38;
+  --wb-color-green-800: #275430;
+  --wb-color-green-900: #214629;
+  --wb-color-green-950: #0e2513;
 
-  --wb-color-white: rgb(var(--wb-vc-white));
-  --wb-color-black: rgb(var(--wb-vc-black));
-  --wb-color-primary: rgb(var(--wb-vc-primary));
-  --wb-color-soft: rgb(var(--wb-vc-soft));
-  --wb-color-success: rgb(var(--wb-vc-success));
-  --wb-color-warning: rgb(var(--wb-vc-warning));
-  --wb-color-danger: rgb(var(--wb-vc-danger));
-  --wb-color-background: rgb(var(--wb-vc-background));
-  --wb-color-foreground: rgb(var(--wb-vc-foreground));
-  --wb-color-container: rgb(var(--wb-vc-container));
-  --wb-color-layer: rgb(var(--wb-vc-layer));
-  --wb-color-panel: rgb(var(--wb-vc-layer));
-  --wb-color-scrollbar: rgb(var(--wb-vc-scrollbar));
-  --wb-color-placeholder: color-mix(
-    in srgb,
-    var(--wb-color-soft) 80%,
-    var(--wb-color-foreground)
-  );
+  --wb-color-red-50: #fdf3f3;
+  --wb-color-red-100: #fde3e4;
+  --wb-color-red-200: #fcccce;
+  --wb-color-red-300: #f8a9ac;
+  --wb-color-red-400: #f2777b;
+  --wb-color-red-500: #e74c52;
+  --wb-color-red-600: #d32c32;
+  --wb-color-red-700: #b22328;
+  --wb-color-red-800: #932125;
+  --wb-color-red-900: #7a2225;
+  --wb-color-red-950: #420d0f;
 
-  --wb-vc-white: 255 255 255;
-  --wb-vc-black: 0 0 0;
-  --wb-vc-primary: 0 193 106;
-  --wb-vc-soft: var(--wb-vc-gray-300);
-  --wb-vc-success: 19 219 101;
-  --wb-vc-warning: 255 165 0;
-  --wb-vc-danger: 237 72 84;
-  --wb-vc-background: var(--wb-vc-white);
-  --wb-vc-foreground: var(--wb-vc-gray-700);
-  --wb-vc-container: var(--wb-vc-gray-200);
-  --wb-vc-layer: var(--wb-vc-gray-300);
-  --wb-vc-panel: var(--wb-vc-gray-400);
-  --wb-vc-scrollbar: var(--wb-vc-gray-200);
+  --wb-color-yellow-50: #fffaeb;
+  --wb-color-yellow-100: #fff0c6;
+  --wb-color-yellow-200: #ffde88;
+  --wb-color-yellow-300: #ffc84a;
+  --wb-color-yellow-400: #ffb224;
+  --wb-color-yellow-500: #f98d07;
+  --wb-color-yellow-600: #dd6702;
+  --wb-color-yellow-700: #b74606;
+  --wb-color-yellow-800: #94350c;
+  --wb-color-yellow-900: #7a2c0d;
+  --wb-color-yellow-950: #461502;
 
-  --wb-color-text-main: var(--wb-color-text-1);
-  --wb-color-text-default: var(--wb-color-text-2);
-  --wb-color-text-disabled: var(--wb-color-text-3);
-  --wb-color-text-secondly: var(--wb-color-text-4);
-  --wb-color-text-placeholder: var(--wb-color-text-4);
+  --wb-color-primary-50: #edfff7;
+  --wb-color-primary-100: #d5ffee;
+  --wb-color-primary-200: #aeffde;
+  --wb-color-primary-300: #70ffc6;
+  --wb-color-primary-400: #2bfda7;
+  --wb-color-primary-500: #00dc82;
+  --wb-color-primary-600: #00c06d;
+  --wb-color-primary-700: #009658;
+  --wb-color-primary-800: #067549;
+  --wb-color-primary-900: #07603e;
+  --wb-color-primary-950: #003721;
+  /*
+  --wb-color-primary-50: #f6f6f6;
+  --wb-color-primary-100: #e7e7e7;
+  --wb-color-primary-200: #d1d1d1;
+  --wb-color-primary-300: #b0b0b0;
+  --wb-color-primary-400: #888888;
+  --wb-color-primary-500: #6d6d6d;
+  --wb-color-primary-600: #5d5d5d;
+  --wb-color-primary-700: #4f4f4f;
+  --wb-color-primary-800: #454545;
+  --wb-color-primary-900: #3d3d3d;
+  --wb-color-primary-950: #222222; */
 
-  --wb-color-text-1: rgb(var(--wb-vc-gray-900));
-  --wb-color-text-2: rgb(var(--wb-vc-gray-800));
-  --wb-color-text-3: rgb(var(--wb-vc-gray-700));
-  --wb-color-text-4: rgb(var(--wb-vc-gray-600));
-  --wb-color-text-5: rgb(var(--wb-vc-gray-500));
+  --wb-color-white: #ffffff;
+  --wb-color-black: #000000;
+  --wb-color-gray: #737373;
+  --wb-color-green: #45a557;
+  --wb-color-yellow: #ffb224;
+  --wb-color-red: #d82c32;
+  --wb-color-blue: #1e84f8;
+  --wb-color-default: #d6d6d6;
+  --wb-color-default-1: #eeeeee;
+  --wb-color-default-2: #161616;
 
-  --wb-color-border-container: rgb(var(--wb-vc-gray-500));
-  --wb-color-border-emphasize: rgb(var(--wb-vc-gray-400));
-  --wb-color-border-base: rgb(var(--wb-vc-gray-300));
-  --wb-color-border-soft: rgb(var(--wb-vc-gray-200));
-  --wb-color-border-dinky: rgb(var(--wb-vc-gray-100));
+  --wb-color-text-main: #000000;
+  --wb-color-text-active: #262626;
+  --wb-color-text-default: #666666;
+  --wb-color-text-secondly: #888888;
+  --wb-color-text-placeholder: #b0b0b0;
 
-  /* ------------------------------------------- other ------------------------------------------- */
-  --wb-transition-ease: all 0.2s cubic-bezier(0.38, 0, 0.24, 1);
-  --wb-transition-linear: all 0.2s linear;
+  --wb-color-border-active: #d1d1d1;
+  --wb-color-border-default: #e7e7e7;
+  --wb-color-border-comp: #e7e7e7;
+  --wb-color-border-dinky: #f6f6f6;
 
-  --wb-color-scrollbar: rgba(0, 0, 0, 0.12);
+  --wb-color-scrollbar: #d1d1d1;
+  --wb-color-layer: #f6f6f6;
+  --wb-color-comp: #161616;
+  --wb-color-active: #222222;
+  --wb-color-popup: #333333;
+  --wb-color-operation: #ffffff0f;
+  --wb-color-card: linear-gradient(to bottom, #000000 50%, #111111);
+  --wb-color-background: var(--wb-color-white);
+  --wb-color-foreground: var(--wb-color-text);
+  --wb-color-contrast: var(--wb-color-text-active);
+  --wb-color-border: var(--wb-color-border-default);
+  --wb-color-primary: var(--wb-color-primary-600);
+
+  --wb-transition-ease: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .dark:root {
-  --wb-vc-primary-50: 238 255 246;
-  --wb-vc-primary-100: 215 255 236;
-  --wb-vc-primary-200: 178 255 219;
-  --wb-vc-primary-300: 118 255 192;
-  --wb-vc-primary-400: 51 245 157;
-  --wb-vc-primary-500: 9 222 125;
-  --wb-vc-primary-600: 0 193 106;
-  --wb-vc-primary-700: 4 145 82;
-  --wb-vc-primary-800: 10 113 68;
-  --wb-vc-primary-900: 10 93 58;
-  --wb-vc-primary-950: 0 52 30;
+  --wb-color-white: #ffffff;
+  --wb-color-black: #000000;
+  --wb-color-green: #45a557;
+  --wb-color-yellow: #ffb224;
+  --wb-color-red: #d32c32;
+  --wb-color-blue: #1e84f8;
+  --wb-color-gray: #737373;
+  --wb-color-default: #222222;
+  --wb-color-default-1: #333333;
+  --wb-color-default-2: #161616;
 
-  /* ----------------------------------------- background ------------------------------------------- */
-  /* --wb-vc-layer: rgb(255 255 255 / 6%)  card content layer disabled hover popup-bg:hover scrollbar */
-  /* --wb-vc-layer: rgb(255 255 255 / 16%)  list-scrollbar */
-  --wb-vc-card: 17 17 17; /* card table */
-  --wb-vc-tag: 22 22 22; /* tag header hover:bg */
-  --wb-vc-active-bg: 34 34 34; /* tag button popup-bg*/
-  /* rgba(255 255 255 / 10%)  content main layer component-bg-active */
-  /* background: linear-gradient(to bottom, #000000 50%, #111111); 渐变card */
-  /* background: linear-gradient(45deg, #111111, #181827, #3d3d62); 右侧渐变card */
-  /* opacity: 0.05; background: radial-gradient(50% 50% at 50% 0, #ffffff 0, transparent 100%);  */
+  --wb-color-text-main: #ffffff;
+  --wb-color-text-active: #eeeeee;
+  --wb-color-text-default: #aaaaaa;
+  --wb-color-text-secondly: #6f6f6f;
+  --wb-color-text-placeholder: #555555;
 
-  /* ------------------------------------------- color ------------------------------------------- */
-  --wb-vc-white: 255 255 255;
-  --wb-vc-black: 0 0 0;
-  --wb-vc-primary: 0 193 106;
-  --wb-vc-soft: var(--wb-vc-gray-800);
-  --wb-vc-success: 19 219 101;
-  --wb-vc-warning: 255 165 0;
-  --wb-vc-danger: 237 72 84;
-  --wb-vc-foreground: var(--wb-vc-gray-200);
-  --wb-vc-background: 0 0 0;
-  --wb-vc-container: var(--wb-vc-gray-800);
-  --wb-vc-layer: var(--wb-vc-gray-700);
-  --wb-vc-panel: var(--wb-vc-gray-600);
-  --wb-vc-scrollbar: var(--wb-vc-gray-700);
+  --wb-color-border-active: #555555;
+  --wb-color-border-default: #333333;
+  --wb-color-border-comp: #2d2d2d;
+  --wb-color-border-dinky: #fafafa1f;
 
-  --wb-vc-text-main: 255 255 255; /* #ffffff main */
-  --wb-vc-text-active: 238 238 238; /* #eeeeee active */
-  --wb-vc-text-normal: 170 170 170; /* #aaaaaa normal */
-  --wb-vc-text-decorative: 111 111 111; /* #6f6f6f desc secondly */
-  --wb-vc-text-placeholder: 85 85 85; /* #555555 placeholder */
+  --wb-color-scrollbar: #3d3d3d;
+  --wb-color-primary: var(--wb-color-primary-500);
+  --wb-color-background: var(--wb-color-black);
+  --wb-color-foreground: var(--wb-color-text);
+  --wb-color-text: var(--wb-color-text-default);
+  --wb-color-border: var(--wb-color-border-default);
 
-  --wb-color-text-1: rgb(var(--wb-vc-gray-100));
-  --wb-color-text-2: rgb(var(--wb-vc-gray-200));
-  --wb-color-text-3: rgb(var(--wb-vc-gray-300) / 75%);
-  --wb-color-text-4: rgb(var(--wb-vc-gray-400));
-  --wb-color-text-5: rgb(var(--wb-vc-gray-400) / 75%);
-
-  --wb-color-border-container: rgb(var(--wb-vc-gray-800));
-  --wb-color-border-emphasize: rgb(var(--wb-vc-gray-600) / 75%);
-  --wb-color-border-base: rgb(var(--wb-vc-gray-700));
-  --wb-color-border-soft: rgb(var(--wb-vc-gray-800));
-  --wb-color-border-dinky: rgb(var(--wb-vc-gray-800) / 50%);
-
-  /* --wb-border-5: rgba(51, 51, 51); component border */
-  /* --wb-border-5: rgba(255, 255, 255, 0.1); */
-  /* --wb-border-5: 0 0 0 1px rgba(255, 255, 255, 0.10) inset; card */
-  /* --wb-border-5: 45 45 45; divide table-border element-border card component-light */
-  /* rgba(250, 250, 250, 0.12) rgba(255, 255, 255, 0.10) divide */
-
-  /* component-radius: 5px */
-  /* card-radius: 8px */
-  --wb-color-scrollbar: rgba(255, 255, 255, 0.16);
-
-  --wb-color-border1-1: rgb(51, 51, 51);
-  --wb-color-border1-2: rgb(45 45 45);
-  --wb-color-border1-3: rgba(255, 255, 255, 0.12);
-  --wb-color-border1-4: rgba(255, 255, 255, 0.1);
-
-  /* ----------------------------------------- background ------------------------------------------- */
-  /* --wb-vc-layer: rgb(255 255 255 / 6%)  card content layer disabled hover popup-bg:hover scrollbar */
-  /* --wb-vc-layer: rgb(255 255 255 / 16%)  list-scrollbar */
-  --wb-vc-background: 0 0 0; /* page */
-  --wb-vc-background-container: 17 17 17; /* card table */
-  --wb-vc-background-element: 22 22 22; /* tag header hover:bg */
-  --wb-vc-background-component-active: 34 34 34; /* tag button popup-bg*/
-  /* rgba(255 255 255 / 10%)  content main layer component-bg-active */
-  /* background: linear-gradient(to bottom, #000000 50%, #111111); 渐变card */
-  /* background: linear-gradient(45deg, #111111, #181827, #3d3d62); 右侧渐变card */
-  /* opacity: 0.05; background: radial-gradient(50% 50% at 50% 0, #ffffff 0, transparent 100%);  */
-}
-
-* {
-  scrollbar-color: var(--wb-color-scrollbar) transparent;
-  scrollbar-width: thin;
-}
-::selection {
-  color: rgb(0, 0, 0);
-  background: var(--wb-color-primary);
-  -webkit-text-fill-color: unset !important;
+  --wb-color-layer: #111111;
+  --wb-color-comp: #161616;
+  --wb-color-active: #222222;
+  --wb-color-popup: #333333;
+  --wb-color-operation: #ffffff0f;
+  --wb-color-card: linear-gradient(to bottom, #000000 50%, #111111);
 }

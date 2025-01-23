@@ -3,10 +3,7 @@ import { resolve } from 'node:path'
 import UnoCSS from 'unocss/vite'
 import type { Alias } from 'vite'
 import { defineConfig } from 'vite'
-import {
-  groupIconMdPlugin,
-  groupIconVitePlugin
-} from 'vitepress-plugin-group-icons'
+import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import Components from 'unplugin-vue-components/vite'
 
 import { version } from './package.json'
@@ -37,7 +34,11 @@ export default defineConfig({
     vueJSX(),
     groupIconVitePlugin(),
     Components({
-      dirs: ['.vitepress/theme/components/colors']
+      dirs: ['../.vitepress/theme/components'],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      deep: true,
+      dts: 'components.d.ts',
+      extensions: ['vue']
     })
   ],
 

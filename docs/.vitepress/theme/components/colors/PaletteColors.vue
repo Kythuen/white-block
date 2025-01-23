@@ -1,5 +1,5 @@
 <template>
-  <div flex gap="2">
+  <div flex="~ wrap" gap="2">
     <template v-for="item in group" :key="name + item">
       <wb-popup
         trigger="hover"

@@ -142,6 +142,8 @@
   /* ------------------------------------------- other ------------------------------------------- */
   --wb-transition-ease: all 0.2s cubic-bezier(0.38, 0, 0.24, 1);
   --wb-transition-linear: all 0.2s linear;
+
+  --wb-color-scrollbar: rgba(0, 0, 0, 0.12);
 }
 
 .dark:root {
@@ -159,6 +161,7 @@
 
   /* ----------------------------------------- background ------------------------------------------- */
   /* --wb-vc-layer: rgb(255 255 255 / 6%)  card content layer disabled hover popup-bg:hover scrollbar */
+  /* --wb-vc-layer: rgb(255 255 255 / 16%)  list-scrollbar */
   /* --wb-vc-layer: rgb(255 255 255 / 16%)  list-scrollbar */
   --wb-vc-card: 17 17 17; /* card table */
   --wb-vc-tag: 22 22 22; /* tag header hover:bg */
@@ -209,66 +212,32 @@
 
   /* component-radius: 5px */
   /* card-radius: 8px */
-}
-* {
-  scrollbar-color: rgba(0, 0, 0, 0.12) transparent;
-  scrollbar-width: thin;
-}
-.dark {
-  * {
-    scrollbar-color: rgba(255, 255, 255, 0.16) transparent;
-    scrollbar-width: thin;
-  }
+  --wb-color-scrollbar: rgba(255, 255, 255, 0.16);
+
+  --wb-color-border1-1: rgb(51, 51, 51);
+  --wb-color-border1-2: rgb(45 45 45);
+  --wb-color-border1-3: rgba(255, 255, 255, 0.12);
+  --wb-color-border1-4: rgba(255, 255, 255, 0.1);
+
+  /* ----------------------------------------- background ------------------------------------------- */
+  /* --wb-vc-layer: rgb(255 255 255 / 6%)  card content layer disabled hover popup-bg:hover scrollbar */
+  /* --wb-vc-layer: rgb(255 255 255 / 16%)  list-scrollbar */
+  --wb-vc-background: 0 0 0; /* page */
+  --wb-vc-background-container: 17 17 17; /* card table */
+  --wb-vc-background-element: 22 22 22; /* tag header hover:bg */
+  --wb-vc-background-component-active: 34 34 34; /* tag button popup-bg*/
+  /* rgba(255 255 255 / 10%)  content main layer component-bg-active */
+  /* background: linear-gradient(to bottom, #000000 50%, #111111); 渐变card */
+  /* background: linear-gradient(45deg, #111111, #181827, #3d3d62); 右侧渐变card */
+  /* opacity: 0.05; background: radial-gradient(50% 50% at 50% 0, #ffffff 0, transparent 100%);  */
 }
 
-/* ----------------------------------- utilities ----------------------------------- */
-/* .scrollable-main {
-  overflow-y: auto;
-  &::-webkit-scrollbar {
-    width: 16px;
-    height: 16px;
-  }
-  &::-webkit-scrollbar-corner {
-    width: 0;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--wb-color-scrollbar);
-    background-clip: content-box;
-    border: 4px solid transparent;
-    border-radius: 8px;
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
+* {
+  scrollbar-color: var(--wb-color-scrollbar) transparent;
+  scrollbar-width: thin;
 }
-@media (max-width: 641px) {
-  .scrollable-main {
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
+::selection {
+  color: rgb(0, 0, 0);
+  background: var(--wb-color-primary);
+  -webkit-text-fill-color: unset !important;
 }
-.scrollable {
-  overflow-y: auto;
-  &::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-    background: transparent;
-  }
-  &::-webkit-scrollbar-corner {
-    width: 0;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--wb-color-scrollbar);
-    background-clip: content-box;
-    border: 4px solid transparent;
-    border-radius: 6px;
-  }
-}
-@media (max-width: 641px) {
-  .scrollable {
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-} */
