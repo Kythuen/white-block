@@ -3,6 +3,7 @@
     <div v-for="group in theme.nav" :key="group.text">
       <div v-if="group.items">
         <wb-select
+          size="lg"
           :options="transformItems(group.items)"
           :popup-props="{ zIndex: 1000 }"
           @change="toPage"
@@ -19,6 +20,7 @@
       </div>
       <wb-button
         v-else
+        size="lg"
         :type="route.path === withBase(group.link) ? 'base' : 'text'"
         :theme="route.path === withBase(group.link) ? 'primary' : 'contrast'"
         @click="toPage(group.link)"
