@@ -26,7 +26,14 @@
       <WBHeader />
     </div>
     <div relative>
-      <div w="full lg:360" h="screen" m="x-auto" flex="~ col" items="center">
+      <div
+        relative
+        w="full lg:360"
+        h="screen"
+        m="x-auto"
+        flex="~ col"
+        items="center"
+      >
         <div
           w="85% xl:280"
           h="[calc(100vh-10rem)]"
@@ -69,12 +76,20 @@
               Explorer More
             </wb-button>
           </div>
-          <!-- <div absolute top="50%" right="10" w="80" h="80" pointer-events-none>
-          <spline-viewer
-            transform="scale-35"
-            url="https://prod.spline.design/UgLhMEneL55Ks1Sg/scene.splinecode"
-          />
-        </div> -->
+          <div
+            absolute
+            top="50%"
+            right="10"
+            w="80"
+            h="80"
+            pointer-events-none
+            class="hidden !2xl:block"
+          >
+            <spline-viewer
+              transform="scale-35"
+              url="https://prod.spline.design/UgLhMEneL55Ks1Sg/scene.splinecode"
+            />
+          </div>
         </div>
       </div>
       <div w="90% xl:280" h="200vh" m="x-auto">
