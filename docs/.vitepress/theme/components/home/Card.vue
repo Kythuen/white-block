@@ -8,7 +8,7 @@
     overflow="hidden"
     z-2
     bg="black gradient-to-r no-repeat"
-    border="px solid $wb-color-border-base"
+    border="px solid $wb-color-border"
   >
     <div
       absolute

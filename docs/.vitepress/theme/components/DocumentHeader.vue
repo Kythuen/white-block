@@ -19,7 +19,7 @@
         </h1>
       </div>
       <div v-else h="full">
-        <div w="full lg:70%" flex="~ col" gap="2 md:4 lg:5">
+        <div w="full lg:70%" flex="~ col">
           <div v-if="frontmatter.component" m="b-4">
             <div class="!md:hidden">
               <img
@@ -44,7 +44,7 @@
           <p
             color="$wb-color-text"
             text="line-clamp-2"
-            style="margin: 0"
+            m="t-2 md:t-4 lg:t-5"
             v-html="frontmatter.description"
           />
         </div>

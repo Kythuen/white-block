@@ -42,7 +42,7 @@
           justify-center
           gap="8 xl:12"
         >
-          <div
+          <!-- <div
             p="2 x-3"
             bg="#ffffff09"
             backdrop="blur-lg"
@@ -57,8 +57,17 @@
               LobeChat Knowledge Base Launch — From Now On, Every Step Counts
             </div>
             <div text="5 white" i="heroicons-arrow-right-20-solid"></div>
+          </div> -->
+          <div
+            text="6 md:10 center white"
+            font="bold"
+            flex
+            items=" start"
+            gap="2"
+          >
+            <div h="10" font="leading-tight">WhiteBlock</div>
+            <wb-button type="plain" size="sm">1.1.17</wb-button>
           </div>
-          <div text="6 md:10 center white" font="bold">WhiteBlock</div>
           <div
             w="full"
             text="7 md:15 xl:24 center white"
@@ -76,7 +85,7 @@
               Explorer More
             </wb-button>
           </div>
-          <div
+          <!-- <div
             absolute
             top="50%"
             right="10"
@@ -89,12 +98,12 @@
               transform="scale-35"
               url="https://prod.spline.design/UgLhMEneL55Ks1Sg/scene.splinecode"
             />
-          </div>
+          </div> -->
         </div>
       </div>
-      <div w="90% xl:280" h="200vh" m="x-auto">
+      <div w="90% xl:280" m="x-auto">
         <div relative>
-          <div relative w="100" m="x-auto">
+          <div relative w="60" m="x-auto">
             <wb-radio-group
               :options="options"
               type="tab"
@@ -142,7 +151,7 @@
             </Card>
           </div>
         </div>
-        <div w="90% xl:280" h="100" m="t-50 x-auto">
+        <div m="t-50 x-auto">
           <div
             w="full"
             h="100"
@@ -217,6 +226,7 @@
             ></div>
           </div>
         </div>
+        <WBFooter m="t-50" />
       </div>
     </div>
   </div>
@@ -229,6 +239,7 @@ import { TextPlugin } from 'gsap/TextPlugin'
 import { onMounted, ref } from 'vue'
 import KongMing from './KongMing.vue'
 import WBHeader from './WBHeader.vue'
+import WBFooter from './WBFooter.vue'
 import Card from './Card.vue'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -255,7 +266,7 @@ onMounted(() => {
     end: 'center center',
     animation: gsap
       .timeline()
-      .fromTo('.preview-box', { rotateX: 30, y: -120 }, { rotateX: 0, y: 140 }),
+      .fromTo('.preview-box', { rotateX: 30, y: -200 }, { rotateX: 0, y: 140 }),
     onUpdate: ({ progress }) => {
       active.value = progress > 0.9
     }
@@ -298,11 +309,8 @@ onMounted(() => {
 
 const active = ref(false)
 const options = [
-  { label: '概览', value: '1' },
-  { label: '助理', value: '2' },
-  { label: '文生图', value: '3' },
-  { label: '语音', value: '4' },
-  { label: '插件', value: '5' },
-  { label: '多模型', value: '6' }
+  { label: 'Overview', value: '1' },
+  { label: 'Colors', value: '2' },
+  { label: 'Mode', value: '3' }
 ]
 </script>

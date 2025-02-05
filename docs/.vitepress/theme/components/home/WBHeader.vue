@@ -41,6 +41,7 @@
               filter=" drop-shadow-sm"
               alt="logo"
             />
+            <p>WhiteBlock</p>
           </div>
           <span v-else>{{ site.title }}</span>
         </a>

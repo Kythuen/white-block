@@ -7,12 +7,10 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Border: typeof import('./../.vitepress/theme/components/colors/Border.vue')['default']
     BorderColors: typeof import('./../.vitepress/theme/components/colors/BorderColors.vue')['default']
     Card: typeof import('./../.vitepress/theme/components/home/Card.vue')['default']
     Color: typeof import('./../.vitepress/theme/components/theme-editor/Color.vue')['default']
     ColorGroup: typeof import('./../.vitepress/theme/components/colors/ColorGroup.vue')['default']
-    Colors: typeof import('./../.vitepress/theme/components/colors/Colors.vue')['default']
     ComponentOverview: typeof import('./../.vitepress/theme/components/ComponentOverview.vue')['default']
     CustomUsageBlock: typeof import('./../.vitepress/theme/components/blocks/CustomUsageBlock.vue')['default']
     DemoBlock: typeof import('./../.vitepress/theme/components/blocks/DemoBlock.vue')['default']
@@ -25,18 +23,15 @@ declare module 'vue' {
     Home: typeof import('./../.vitepress/theme/components/home/Home.vue')['default']
     Index: typeof import('./../.vitepress/theme/components/theme-editor/Index.vue')['default']
     KongMing: typeof import('./../.vitepress/theme/components/home/KongMing.vue')['default']
-    Layout: typeof import('./../.vitepress/theme/components/colors/Layout.vue')['default']
     LayoutColors: typeof import('./../.vitepress/theme/components/colors/LayoutColors.vue')['default']
-    Palette: typeof import('./../.vitepress/theme/components/colors/Palette.vue')['default']
     PaletteColors: typeof import('./../.vitepress/theme/components/colors/PaletteColors.vue')['default']
+    Placeholder: typeof import('./../.vitepress/theme/components/Placeholder.vue')['default']
     Preset: typeof import('./../.vitepress/theme/components/theme-editor/Preset.vue')['default']
-    SeriesColor: typeof import('./../.vitepress/theme/components/colors/SeriesColor.vue')['default']
     Size: typeof import('./../.vitepress/theme/components/theme-editor/Size.vue')['default']
-    Status: typeof import('./../.vitepress/theme/components/colors/Status.vue')['default']
     StatusColors: typeof import('./../.vitepress/theme/components/colors/StatusColors.vue')['default']
-    Text: typeof import('./../.vitepress/theme/components/colors/Text.vue')['default']
     TextColors: typeof import('./../.vitepress/theme/components/colors/TextColors.vue')['default']
     UsageBlock: typeof import('./../.vitepress/theme/components/blocks/UsageBlock.vue')['default']
+    WBFooter: typeof import('./../.vitepress/theme/components/home/WBFooter.vue')['default']
     WBHeader: typeof import('./../.vitepress/theme/components/home/WBHeader.vue')['default']
     WBHeaderMenu: typeof import('./../.vitepress/theme/components/home/WBHeaderMenu.vue')['default']
   }

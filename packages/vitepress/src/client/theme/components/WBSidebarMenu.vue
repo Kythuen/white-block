@@ -43,7 +43,7 @@
         class="group"
         flex
         items="center"
-        color="$wb-color-text-secondly hover:$wb-color-text-main"
+        color="$wb-color-text hover:$wb-color-text-main"
         cursor="pointer"
         transition="color ease-in duration-200"
         select="none"
@@ -89,7 +89,7 @@ function getStyles(link: string) {
   const match = route.path === withBase(link)
   if (match) {
     return {
-      '--wb-color-text-secondly': 'var(--wb-color-primary)',
+      '--wb-color-text': 'var(--wb-color-primary)',
       '--wb-color-text-main': 'var(--wb-color-primary)'
     }
   }
