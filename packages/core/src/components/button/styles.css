@@ -70,8 +70,8 @@
 }
 .wb-button--contrast {
   --wb-button-main-color: var(--wb-color-contrast);
-  --wb-button-main-color-lighten: var(--wb-color-text-active);
-  --wb-button-main-color-darken: var(--wb-color-text-main);
+  --wb-button-main-color-lighten: var(--wb-color-text-main);
+  --wb-button-main-color-darken: var(--wb-color-text-active);
 }
 .wb-button--success {
   --wb-button-main-color: var(--wb-color-green-500);

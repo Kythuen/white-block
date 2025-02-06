@@ -1,7 +1,7 @@
 <template>
   <footer relative w="full" p="6 y-8" flex="~ wrap">
-    <Placeholder :src="withBase('/assets/tmp/footer.png')" :opacity="1" />
-    <div w="lg:63" flex="~ col" gap="2">
+    <!-- <Placeholder :src="withBase('/assets/tmp/footer.png')" :opacity="0.5" /> -->
+    <div w="lg:63" flex="~ col" gap="3">
       <a
         :href="withBase(`${localePrefix}/`)"
         un-text="lg $wb-color-text-main"
@@ -22,12 +22,26 @@
             filter=" drop-shadow-sm"
             alt="logo"
           />
-          <p text="md white">WhiteBlock</p>
+          <p text="md $wb-color-text-active">WhiteBlock</p>
         </div>
       </a>
-      <div text="sm white">Intuitive Design for Effortless Development</div>
+      <div text="sm $wb-color-text-active">
+        Intuitive Design for Effortless Development
+      </div>
       <div text="xs">© 2023-2025 Kythuen</div>
-      <div w="48" h="12" bg="gray/10" rounded="2"></div>
+      <div p="y-1" text="5" flex gap="3">
+        <a
+          v-for="item in SOCIALS"
+          :key="item.name"
+          :href="item.link"
+          target="__blank"
+          un-text="hover:$wb-color-text-active"
+          flex="~ col"
+          gap="2"
+        >
+          <div m="1" :class="item.icon"></div>
+        </a>
+      </div>
       <div
         w="48"
         h="8"
@@ -45,16 +59,20 @@
     </div>
     <div w="full" h="50" flex="~ 1">
       <div v-for="group in LINKS" :key="group.title" flex="~ col 1" gap="2">
-        <div m="b-4" text="md white" font="bold">{{ group.title }}</div>
-        <div
+        <div m="b-4" text="md $wb-color-text-active" font="bold">
+          {{ group.title }}
+        </div>
+        <a
           v-for="item in group.items"
           :key="item.title"
-          text="sm"
+          :href="withBase(item.value)"
+          target="__blank"
+          un-text="sm hover:$wb-color-text-active"
           flex="~ col"
           gap="2"
         >
           <div>{{ item.title }}</div>
-        </div>
+        </a>
       </div>
     </div>
   </footer>
@@ -82,44 +100,49 @@ const LINKS = [
     ]
   },
   {
-    title: '产品',
+    title: 'Features',
+    items: [{ title: 'Components', value: '/guide/overview' }]
+  },
+  {
+    title: 'Roadmap',
     items: [
-      { title: '更新进度', value: '/guide/' },
-      { title: '价格与计划', value: '/guide/overview' },
-      { title: '助手市场', value: '/guide/overview' },
-      { title: '插件市场', value: '/guide/overview' },
-      { title: '社区版', value: '/guide/colors' }
+      { title: 'Changelog', value: '/changelog' },
+      { title: 'Plan', value: '/plan' }
     ]
   },
   {
-    title: '产品',
+    title: 'Packages',
     items: [
-      { title: '更新进度', value: '/guide/' },
-      { title: '价格与计划', value: '/guide/overview' },
-      { title: '助手市场', value: '/guide/overview' },
-      { title: '插件市场', value: '/guide/overview' },
-      { title: '社区版', value: '/guide/colors' }
+      { title: 'Resolver', value: '/packages/resolver/' },
+      { title: 'Types', value: '/packages/types/' },
+      { title: 'Vitepress', value: '/packages/vitepress' },
+      { title: 'VSCode', value: '/packages/vscode' },
+      { title: 'CLI', value: '/packages/cli' }
     ]
   },
   {
-    title: '产品',
+    title: 'About',
     items: [
-      { title: '更新进度', value: '/guide/' },
-      { title: '价格与计划', value: '/guide/overview' },
-      { title: '助手市场', value: '/guide/overview' },
-      { title: '插件市场', value: '/guide/overview' },
-      { title: '社区版', value: '/guide/colors' }
+      { title: 'About Us', value: 'https://github.com/Kythuen' },
+      { title: 'Contact', value: 'mailto:616332192@qq.com' }
     ]
+  }
+]
+const SOCIALS = [
+  {
+    name: 'github',
+    icon: 'i-simple-icons:github',
+    link: 'https://github.com/Kythuen/white-block'
   },
   {
-    title: '产品',
-    items: [
-      { title: '更新进度', value: '/guide/' },
-      { title: '价格与计划', value: '/guide/overview' },
-      { title: '助手市场', value: '/guide/overview' },
-      { title: '插件市场', value: '/guide/overview' },
-      { title: '社区版', value: '/guide/colors' }
-    ]
+    name: 'discord',
+    icon: 'i-simple-icons:discord',
+    link: 'https://discord.gg/SYJT65pk'
+  },
+  {
+    name: 'juejin',
+    icon: 'i-simple-icons:juejin',
+    link: 'https://juejin.cn/user/413072101742743'
   }
 ]
 </script>

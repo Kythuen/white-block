@@ -1,8 +1,13 @@
 <template>
-  <div relative w="full">
+  <div
+    relative
+    w="full"
+    bg="#000000"
+    color="$wb-color-text-default"
+    class="dark"
+  >
     <div
       absolute
-      inset="0"
       w="screen"
       h="screen"
       :style="{
@@ -22,9 +27,21 @@
       />
       <KongMing />
     </div>
-    <div sticky top="4 md:6" z="100" w="85% xl:280" p="t-4 md:t-6" m="x-auto">
-      <WBHeader />
-    </div>
+    <Transition name="down">
+      <div
+        v-show="showHeader"
+        fixed
+        top="4 md:6"
+        left="50%"
+        z="100"
+        w="85% xl:280"
+        p="t-4 md:t-6"
+        m="x-auto"
+        transform="translate-x--50%"
+      >
+        <WBHeader />
+      </div>
+    </Transition>
     <div relative>
       <div
         relative
@@ -36,7 +53,7 @@
       >
         <div
           w="85% xl:280"
-          h="[calc(100vh-10rem)]"
+          h="screen"
           flex="~ col"
           items="center"
           justify-center
@@ -65,8 +82,8 @@
             items=" start"
             gap="2"
           >
-            <div h="10" font="leading-tight">WhiteBlock</div>
-            <wb-button type="plain" size="sm">1.1.17</wb-button>
+            <div h="10" font="extrabold leading-tight">WhiteBlock</div>
+            <wb-button type="plain" size="sm">0.0.36</wb-button>
           </div>
           <div
             w="full"
@@ -106,6 +123,7 @@
           <div relative w="60" m="x-auto">
             <wb-radio-group
               :options="options"
+              font="bold"
               type="tab"
               tab-type="emphasize"
               theme="success"
@@ -226,8 +244,47 @@
             ></div>
           </div>
         </div>
-        <WBFooter m="t-50" />
+        <div h="200" p="y-8">
+          <div flex gap="4">
+            <div
+              flex="1"
+              h="160"
+              ring="px $wb-color-border"
+              rounded="2"
+              style="
+                background: linear-gradient(to bottom, #000000 50%, #111111);
+              "
+            ></div>
+            <div
+              flex="1"
+              h="160"
+              ring="px $wb-color-border"
+              rounded="2"
+              style="
+                background: linear-gradient(to bottom, #000000 50%, #111111);
+              "
+            ></div>
+            <div
+              flex="1"
+              h="160"
+              ring="px $wb-color-border"
+              rounded="2"
+              style="
+                background: linear-gradient(to bottom, #000000 50%, #111111);
+              "
+            ></div>
+          </div>
+          <div m="t-8" flex justify="center">
+            <wb-button type="plain" theme="default" size="lg">
+              View the Complete Roadmap
+            </wb-button>
+          </div>
+        </div>
+        <WBFooter m="t-50 b-10" />
       </div>
+    </div>
+    <div fixed right="6" top="50%" z="100" transform="translate-y--50%">
+      <WBAside />
     </div>
   </div>
 </template>
@@ -236,14 +293,18 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TextPlugin } from 'gsap/TextPlugin'
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, onBeforeUnmount } from 'vue'
 import KongMing from './KongMing.vue'
 import WBHeader from './WBHeader.vue'
 import WBFooter from './WBFooter.vue'
+import WBAside from './WBAside.vue'
 import Card from './Card.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(TextPlugin)
+
+const controller = new AbortController()
+const { signal } = controller
 
 onMounted(() => {
   ScrollTrigger.defaults({
@@ -266,7 +327,7 @@ onMounted(() => {
     end: 'center center',
     animation: gsap
       .timeline()
-      .fromTo('.preview-box', { rotateX: 30, y: -200 }, { rotateX: 0, y: 140 }),
+      .fromTo('.preview-box', { rotateX: 30, y: -120 }, { rotateX: 0, y: 120 }),
     onUpdate: ({ progress }) => {
       active.value = progress > 0.9
     }
@@ -293,18 +354,38 @@ onMounted(() => {
   ScrollTrigger.create({
     trigger: '.title-box',
     start: 'top center',
-    end: 'center center',
+    end: 'center top',
     animation: gsap
       .timeline()
       .to('.text-box', {
-        duration: 1.5,
+        duration: 1,
         text: '不论普通用户与专业开发者，LobeChat 旨在成为所有人的 AI 助手实验场。👇✨'
       })
       .to('.text-box2', {
-        duration: 3,
+        duration: 1.5,
         text: '随着人工智能模型能力不断进步，我们相信通过共享知识与技能能够将每个人潜在的创造力和生产力发挥至极致。 👯👭🏻🧑‍🤝‍🧑👫🧑🏿‍🤝‍🧑🏻👩🏾‍🤝‍👨🏿👬🏿'
       })
   })
+  // TODO: 滚动超过一屏后，继续向下滚动header隐藏，向上滚动时header恢复显示
+  const container = document.getElementById('layoutRoot')
+  container?.addEventListener('scroll', doSomething, { signal })
+})
+
+let scrollTop = 0
+const showHeader = ref(true)
+function doSomething(e: any) {
+  if (e.target.scrollTop < document.body.clientHeight) {
+    if (!showHeader.value) {
+      showHeader.value = true
+    }
+    return
+  }
+  showHeader.value = scrollTop > e.target.scrollTop
+  scrollTop = e.target.scrollTop
+}
+
+onBeforeUnmount(() => {
+  controller.abort()
 })
 
 const active = ref(false)
@@ -314,3 +395,15 @@ const options = [
   { label: 'Mode', value: '3' }
 ]
 </script>
+
+<style scoped>
+.down-enter-active,
+.down-leave-active {
+  transform: translate3d(-50%, 0, 0);
+  transition: transform 0.5s ease-in-out;
+}
+.down-enter-from,
+.down-leave-to {
+  transform: translate3d(-50%, -10rem, 0);
+}
+</style>

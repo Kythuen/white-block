@@ -21,6 +21,7 @@
       <wb-button
         v-else
         size="lg"
+        font="semibold"
         :type="route.path === withBase(group.link) ? 'base' : 'text'"
         :theme="route.path === withBase(group.link) ? 'primary' : 'contrast'"
         @click="toPage(group.link)"

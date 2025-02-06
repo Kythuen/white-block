@@ -3,7 +3,7 @@ import 'virtual:group-icons.css'
 import 'virtual:uno.css'
 import './styles/index.less'
 import type { Theme } from 'vitepress'
-import ComponentOverview from './components/ComponentOverview.vue'
+// import ComponentOverview from './components/ComponentOverview.vue'
 // import CustomUsageBlock from './components/global/CustomUsageBlock.vue'
 // import DemoBlock from './components/global/DemoBlock.vue'
 // import DemoBox from './components/global/DemoBox.vue'
@@ -17,7 +17,7 @@ const theme: Theme = {
   Layout,
   enhanceApp({ app }) {
     app.use(WhiteBlock)
-    app.component('ComponentOverview', ComponentOverview)
+    // app.component('ComponentOverview', ComponentOverview)
   }
 }
 

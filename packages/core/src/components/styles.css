@@ -131,18 +131,6 @@
   --wb-color-primary-800: #067549;
   --wb-color-primary-900: #07603e;
   --wb-color-primary-950: #003721;
-  /*
-  --wb-color-primary-50: #f6f6f6;
-  --wb-color-primary-100: #e7e7e7;
-  --wb-color-primary-200: #d1d1d1;
-  --wb-color-primary-300: #b0b0b0;
-  --wb-color-primary-400: #888888;
-  --wb-color-primary-500: #6d6d6d;
-  --wb-color-primary-600: #5d5d5d;
-  --wb-color-primary-700: #4f4f4f;
-  --wb-color-primary-800: #454545;
-  --wb-color-primary-900: #3d3d3d;
-  --wb-color-primary-950: #222222; */
 
   --wb-color-white: #ffffff;
   --wb-color-black: #000000;
@@ -182,7 +170,7 @@
   --wb-transition-ease: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.dark:root {
+.dark {
   --wb-color-white: #ffffff;
   --wb-color-black: #000000;
   --wb-color-green: #45a557;
@@ -211,6 +199,7 @@
   --wb-color-foreground: var(--wb-color-text);
   --wb-color-text: var(--wb-color-text-default);
   --wb-color-border: var(--wb-color-border-default);
+  --wb-color-contrast: var(--wb-color-text-active);
 
   --wb-color-layer: #111111;
   --wb-color-comp: #161616;

@@ -19,20 +19,20 @@ yarn add white-block
 
 ## Usage
 
-White Block provides three ways to use components
+White Block provides three ways to use components.
 
 
 ### Fully Import
 
-In this way, all components will be registering into your app.
+In this way, all components will be registered into your app.
 
-If you don’t care about the bundle size so much, it’s more convenient to use full import.
+If you don’t care about the bundle size so much, it’s very convenient to use full import.
 
 ::: code-group
 ```ts [main.ts]
 import { createApp } from 'vue'
 import WhiteBlock from 'white-block'
-import 'white-block/dist/styles/components/index.css'
+import 'white-block/dist/styles/index.css'
 import App from './App.vue'
 
 const app = createApp(App)

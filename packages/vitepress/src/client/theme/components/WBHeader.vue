@@ -31,7 +31,7 @@
           p="1.5"
           :href="withBase(`${localePrefix}/`)"
           un-text="lg $wb-color-text-main"
-          font="bold"
+          font="extrabold"
           flex="~ row"
           items="center"
         >

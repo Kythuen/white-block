@@ -166,10 +166,10 @@
 </template>
 
 <script setup lang="ts">
-import DocumentHeader from './components/DocumentHeader.vue'
-import DocumentContent from './components/DocumentContent.vue'
-import DocumentMobileDock from './components/DocumentMobileDock.vue'
-import ThemeEditor from './components/theme-editor/Index.vue'
+// import DocumentHeader from './components/DocumentHeader.vue'
+// import DocumentContent from './components/DocumentContent.vue'
+// import DocumentMobileDock from './components/DocumentMobileDock.vue'
+// import ThemeEditor from './components/theme-editor/Index.vue'
 import { Layout, WBHeader, WBDocumentAside } from '@white-block/vitepress'
 import { useState } from 'white-block'
 import { useRouter, useData } from 'vitepress'

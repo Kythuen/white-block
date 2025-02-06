@@ -95,10 +95,6 @@ addEventListener('message', ({ data }) => {
     context.beginPath()
     context.fillStyle = `rgba(${this.color},${this.alpha})`
     context.fillRect(this.x, this.y, this.size, this.size)
-    // context.arc(this.x, this.y, this.size, 0, Math.PI * 2, true);
-    // context.rect(this.x, this.y, this.size, this.size)
-    // context.closePath()
-    // context.fill()
   }
 
   for (let i = 0; i < settings.density; i++) {
