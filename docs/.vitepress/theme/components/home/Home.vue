@@ -280,6 +280,26 @@
             </wb-button>
           </div>
         </div>
+        <Card
+          :style="{
+            boxShadow: active ? `0 0 12vw -4vw #a092ff` : 'none'
+          }"
+        >
+          <div h="full" rounded="3" ring="1 white/10" overflow="hidden">
+            <img :src="withBase('/mode.png')" />
+            <div
+              w="full"
+              h="30%"
+              bg="gradient-to-b no-repeat"
+              from="transparent"
+              to="black"
+              overflow="hidden"
+              :style="{
+                backgroundSize: '100% 100%'
+              }"
+            />
+          </div>
+        </Card>
         <WBFooter m="t-50 b-10" />
       </div>
     </div>
@@ -299,6 +319,7 @@ import WBHeader from './WBHeader.vue'
 import WBFooter from './WBFooter.vue'
 import WBAside from './WBAside.vue'
 import Card from './Card.vue'
+import { withBase } from 'vitepress'
 
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(TextPlugin)
