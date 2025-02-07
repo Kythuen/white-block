@@ -4,9 +4,9 @@
     h="15"
     m="x-auto"
     rounded="full"
-    ring="px $wb-color-border-dinky"
-    bg="#00000080"
-    style="backdrop-filter: saturate(180%) blur(16px)"
+    ring="px $wb-color-border-comp"
+    bg="#11111180"
+    style="backdrop-filter: saturate(180%) blur(24px)"
     @click.stop="
       clickDelegate($event, 'wb-button', handleMenuOptions, hideMenuPanel)
     "

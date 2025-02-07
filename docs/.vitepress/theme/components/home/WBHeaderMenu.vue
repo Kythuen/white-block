@@ -20,10 +20,9 @@
       </div>
       <wb-button
         v-else
-        size="lg"
-        font="semibold"
-        :type="route.path === withBase(group.link) ? 'base' : 'text'"
-        :theme="route.path === withBase(group.link) ? 'primary' : 'contrast'"
+        size="md"
+        :type="route.path === withBase(group.link) ? 'base' : 'ghost'"
+        :theme="route.path === withBase(group.link) ? 'primary' : 'default'"
         @click="toPage(group.link)"
       >
         <div text="sm">{{ group.text }}</div>
