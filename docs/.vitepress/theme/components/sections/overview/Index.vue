@@ -72,7 +72,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { withBase, useData } from 'vitepress'
-import { COMPONENTS_CATEGORY } from '../../../config/components'
+import { COMPONENTS_CATEGORY } from '~/config/components'
 
 const { isDark, lang } = useData()
 
@@ -81,10 +81,10 @@ const localePrefix = computed(() =>
 )
 function generateComponentData() {
   const components: Record<string, any> = import.meta.glob(
-    '../../../../packages/core/src/components/*/api.ts'
+    '../../../../../packages/core/src/components/*/api.ts'
   )
   const images: Record<string, any> = import.meta.glob(
-    '../../../src/public/assets/img/components/*.png'
+    '../../../../src/public/assets/img/components/*.png'
   )
 
   const componentsData: any = []
@@ -95,7 +95,8 @@ function generateComponentData() {
       name,
       text: name,
       link: withBase(`/components/${name}`),
-      image: !!images[`../../../src/public/assets/img/components/${name}.png`]
+      image:
+        !!images[`../../../../src/public/assets/img/components/${name}.png`]
     })
   }
 

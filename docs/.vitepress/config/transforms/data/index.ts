@@ -11,12 +11,12 @@ import { existsSync, readFileSync } from 'node:fs'
 import { posix, resolve } from 'node:path'
 import { pascal, title } from 'radash'
 import { PageData } from 'vitepress'
-import CoverageData from '../../../coverage.json'
-import { COMPONENT_PROPERTIES } from '../../config/components'
+import CoverageData from '../../../../coverage.json'
+import { COMPONENT_PROPERTIES } from '../../../config/components'
 import { getCommonAPI } from './common'
 import { getEmitsHeader, getPropsHeader } from './constant'
 
-const DOCS_PATH_RELATIVE = '../../..'
+const DOCS_PATH_RELATIVE = '../../../..'
 const Md = MarkdownIt()
 
 export async function transformPageData(pageData: PageData) {

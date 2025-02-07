@@ -10,7 +10,7 @@ export function getCommonAPI(lang: string) {
   const code = readFileSync(
     resolve(
       __dirname,
-      `../../../../packages/core/src/components/api${lang === 'en' ? '' : `.${lang}`}.ts`
+      `../../../../../packages/core/src/components/api${lang === 'en' ? '' : `.${lang}`}.ts`
     ),
     { encoding: 'utf-8' }
   )

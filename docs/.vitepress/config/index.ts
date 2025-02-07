@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
-import { transformPageData } from '../transforms/data'
-import mdPlugin from '../transforms/markdown'
+import { transformPageData } from './transforms/data'
+import mdPlugin from './transforms/markdown'
 import {
   DESCRIPTION,
   DESCRIPTION_ZH,

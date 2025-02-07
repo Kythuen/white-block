@@ -307,7 +307,7 @@
 <script setup lang="ts">
 import { clickDelegate } from 'white-block'
 import { nextTick, ref, watchEffect } from 'vue'
-import { copyToClipboard, formatCode, getHighlighter } from '~/utils'
+import { copyToClipboard, formatCode, getHighlighter } from '~/theme/utils'
 
 defineOptions({ name: 'CustomUsageBlock', inheritAttrs: false })
 

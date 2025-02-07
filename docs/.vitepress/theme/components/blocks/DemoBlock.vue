@@ -65,7 +65,7 @@
 <script setup lang="ts">
 import { clickDelegate } from 'white-block'
 import { ref } from 'vue'
-import { copyToClipboard, getHighlighter, utoa } from '~/utils'
+import { copyToClipboard, getHighlighter, utoa } from '~/theme/utils'
 
 defineOptions({ name: 'DemoBlock', inheritAttrs: false })
 

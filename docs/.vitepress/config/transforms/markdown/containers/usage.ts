@@ -1,7 +1,7 @@
 import { ModuleResolver } from '@white-block/types'
 import { existsSync, readFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
-import { COMPONENT_PROPERTIES } from '../../../config/components'
+import { COMPONENT_PROPERTIES } from '../../../../config/components'
 import { COMPONENTS_API_FILE, COMPONENTS_ROOT } from '../constant'
 
 /**

@@ -10,6 +10,7 @@ import { version } from './package.json'
 
 const alias: Alias[] = [
   { find: '~/', replacement: `${resolve(__dirname, './.vitepress')}/` },
+  // handling references `@/` in packages/core
   { find: '@/', replacement: `${resolve(__dirname, '../packages/core/src')}/` }
 ]
 
@@ -34,14 +35,15 @@ export default defineConfig({
     vueJSX(),
     groupIconVitePlugin(),
     Components({
-      dirs: ['../.vitepress/theme/components'],
+      dirs: [
+        '../.vitepress/theme/components/blocks',
+        '../.vitepress/theme/components/tools'
+      ],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      deep: true,
       dts: 'components.d.ts',
       extensions: ['vue']
     })
   ],
-
   optimizeDeps: {
     exclude: ['vitepress']
   },

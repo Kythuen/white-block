@@ -16,13 +16,13 @@
       class="stars"
     >
       <img
+        :src="withBase('/assets/img/home/bg-earth.webp')"
         absolute
         left="0"
         bottom="0"
         width="auto"
         h="100% md:60%"
         m="x-auto"
-        src="../../assets/img/bg-earth.webp"
         style="object-fit: cover"
       />
       <KongMing />
@@ -318,7 +318,6 @@ import KongMing from './KongMing.vue'
 import WBHeader from './WBHeader.vue'
 import WBFooter from './WBFooter.vue'
 import WBAside from './WBAside.vue'
-import Card from './Card.vue'
 import { withBase } from 'vitepress'
 
 gsap.registerPlugin(ScrollTrigger)

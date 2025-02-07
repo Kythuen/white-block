@@ -8,7 +8,7 @@ import type { Theme } from 'vitepress'
 // import DemoBlock from './components/global/DemoBlock.vue'
 // import DemoBox from './components/global/DemoBox.vue'
 // import UsageBlock from './components/global/UsageBlock.vue'
-import Layout from './Layout.vue'
+import Layout from './layouts/Layout.vue'
 import WhiteBlock from 'white-block'
 // import 'white-block/dist/styles/index.css'
 

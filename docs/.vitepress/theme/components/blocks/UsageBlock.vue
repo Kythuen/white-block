@@ -299,7 +299,7 @@
 import { clickDelegate } from 'white-block'
 import { useData } from 'vitepress'
 import { nextTick, ref, watchEffect } from 'vue'
-import { copyToClipboard, formatCode, getHighlighter } from '~/utils'
+import { copyToClipboard, formatCode, getHighlighter } from '~/theme/utils'
 
 defineOptions({ name: 'UsageBlock', inheritAttrs: false })
 
