@@ -31,6 +31,7 @@ declare module 'vue' {
     StatusColors: typeof import('./../.vitepress/theme/components/colors/StatusColors.vue')['default']
     TextColors: typeof import('./../.vitepress/theme/components/colors/TextColors.vue')['default']
     UsageBlock: typeof import('./../.vitepress/theme/components/blocks/UsageBlock.vue')['default']
+    WBAside: typeof import('./../.vitepress/theme/components/home/WBAside.vue')['default']
     WBFooter: typeof import('./../.vitepress/theme/components/home/WBFooter.vue')['default']
     WBHeader: typeof import('./../.vitepress/theme/components/home/WBHeader.vue')['default']
     WBHeaderMenu: typeof import('./../.vitepress/theme/components/home/WBHeaderMenu.vue')['default']

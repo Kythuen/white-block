@@ -1,7 +1,7 @@
 <p align="center">
   <br>
   <a href="https://github.com/Kythuen/white-block">
-    <img src="https://cdn.jsdelivr.net/gh/Kythuen/static/logos/white-block/white.png" alt="WhiteBlock - Intuitive Design for Effortless Development" height="120">
+    <img src="https://cdn.jsdelivr.net/gh/Kythuen/static/logos/white-block/dark.png" alt="WhiteBlock - Intuitive Design for Effortless Development" height="120">
   </a>
   <!-- <a href="https://github.com/Kythuen/white-block">
     <img src="https://raw.githubusercontent.com/Kythuen/white-block/main/docs/src/public/logo.png" alt="WhiteBlock - Intuitive Design for Effortless Development" height="120">
@@ -76,33 +76,7 @@ Whether for users or professional developers, LobeHub will be your AI Agent play
 
 ### 🤝 Contributing
 
-## Getting Started
 
-### Installation
-
-```shell
-pnpm add white-block
-```
-
-### Usage
-
-```js
-import { createApp } from 'vue'
-import WhiteBlock from 'white-block'
-import 'white-block/dist/style/index.css'
-import App from './app.vue'
-
-createApp(App).use(WhiteBlock).mount('#app')
-```
-
-Read [Documents](https://kythuen.github.io/white-block) for more detail usage.
-
-
-## Playground
-[Playground](https://kythuen.github.io/white-block/playground)
-
-## Welcome Star
-If there were anything help you, please give me star.
 
 
 <!-- LINK GROUP -->
