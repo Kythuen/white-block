@@ -38,7 +38,7 @@
                 <WBHome />
               </slot>
             </template>
-            <template v-else-if="frontmatter.layout === 'page'">
+            <!-- <template v-else-if="frontmatter.layout === 'page'">
               <slot name="index-content">
                 <WBPage>
                   <template #page-content>
@@ -46,7 +46,7 @@
                   </template>
                 </WBPage>
               </slot>
-            </template>
+            </template> -->
             <template v-else-if="frontmatter.layout === 'empty'">
               <Content />
             </template>
@@ -93,7 +93,7 @@ import NotFound from 'vitepress/dist/client/theme-default/NotFound.vue'
 import WBDocument from './components/WBDocument.vue'
 import WBHeader from './components/WBHeader.vue'
 import WBHome from './components/WBHome.vue'
-import WBPage from './components/WBPage.vue'
+// import WBPage from './components/WBPage.vue'
 import WBSidebar from './components/WBSidebar.vue'
 
 defineOptions({ name: 'WBLayout' })
