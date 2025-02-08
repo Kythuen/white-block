@@ -1,6 +1,6 @@
 <template>
   <div flex="~ wrap lg:nowrap" items="start" gap="4">
-    <div w="16" h="9" text="lg" font="semibold" flex items="center">
+    <div w="16" h="9" text="lg" flex items="center">
       {{ title }}
     </div>
     <div w="full" flex="1" items="center" gap="2">

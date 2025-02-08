@@ -30,7 +30,7 @@
             p="x-3"
             rounded="md"
             :style="{
-              backgroundColor: variable
+              color: variable
                 ? `rgb(var(--${name}-${item}))`
                 : `var(--${name}-${item})`
             }"

@@ -120,7 +120,7 @@
         <div w="40">
           <wb-radio-group
             :default-value="tab"
-            ring="1 inset $wb-color-border-base"
+            ring="1 inset $wb-color-border"
             :options="TAB_OPTIONS"
             type="tab"
             tab-type="emphasize"
@@ -162,12 +162,18 @@
         #document-aside-bottom
       </div>
     </template> -->
+    <template #layout-bottom>
+      <div max-w="lg:360" m="x-auto">
+        <DocumentFooter></DocumentFooter>
+      </div>
+    </template>
   </Layout>
 </template>
 
 <script setup lang="ts">
 import DocumentHeader from './docs/DocumentHeader.vue'
 import DocumentContent from './docs/DocumentContent.vue'
+import DocumentFooter from './docs/DocumentFooter.vue'
 import DocumentMobileDock from './docs/DocumentMobileDock.vue'
 import ThemeEditor from './theme-editor/Index.vue'
 import Home from './home/Index.vue'

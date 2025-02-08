@@ -14,7 +14,7 @@
       v-for="(item, name) in page.params.api"
       :key="name"
       p="b-4 last:b-0"
-      border="0 b-px last:b-0 solid $wb-color-border-base "
+      border="0 b-px last:b-0 solid $wb-color-border"
       color="$wb-color-text-3"
     >
       <template v-if="item[lang]?.props">

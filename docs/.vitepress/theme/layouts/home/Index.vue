@@ -16,13 +16,13 @@
       class="stars"
     >
       <img
-        :src="withBase('/assets/img/home/bg-earth.webp')"
         absolute
         left="0"
         bottom="0"
         width="auto"
         h="100% md:60%"
         m="x-auto"
+        :src="withBase('/assets/img/home/bg-earth.webp')"
         style="object-fit: cover"
       />
       <KongMing />
@@ -275,7 +275,7 @@
             ></div>
           </div>
           <div m="t-8" flex justify="center">
-            <wb-button type="plain" theme="default" size="lg">
+            <wb-button p="x-6" type="plain" theme="default" size="lg">
               View the Complete Roadmap
             </wb-button>
           </div>
@@ -300,7 +300,7 @@
             />
           </div>
         </Card>
-        <WBFooter m="t-50 b-10" />
+        <!-- <WBFooter m="t-50 b-10" /> -->
       </div>
     </div>
     <div fixed right="6" top="50%" z="100" transform="translate-y--50%">
@@ -316,7 +316,7 @@ import { TextPlugin } from 'gsap/TextPlugin'
 import { onMounted, ref, onBeforeUnmount } from 'vue'
 import KongMing from './KongMing.vue'
 import WBHeader from './WBHeader.vue'
-import WBFooter from './WBFooter.vue'
+// import WBFooter from './WBFooter.vue'
 import WBAside from './WBAside.vue'
 import { withBase } from 'vitepress'
 

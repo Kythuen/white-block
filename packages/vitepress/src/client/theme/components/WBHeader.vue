@@ -111,7 +111,6 @@ import WBHeaderMenu from './WBHeaderMenu.vue'
 
 const { site, isDark, lang, theme, frontmatter } = useData()
 
-console.log(site.value)
 const SOCIALS: any = {
   github: { icon: 'i-simple-icons-github', title: 'GitHub' },
   twitter: { icon: 'i-simple-icons-x', title: 'Twitter' },

@@ -84,17 +84,41 @@
   --wb-color-gray-900: #3d3d3d;
   --wb-color-gray-950: #262626;
 
-  --wb-color-green-50: #f3faf4;
-  --wb-color-green-100: #e3f5e6;
-  --wb-color-green-200: #c8eace;
-  --wb-color-green-300: #9cd9a7;
-  --wb-color-green-400: #69bf78;
-  --wb-color-green-500: #45a557;
-  --wb-color-green-600: #348543;
-  --wb-color-green-700: #2b6a38;
-  --wb-color-green-800: #275430;
-  --wb-color-green-900: #214629;
-  --wb-color-green-950: #0e2513;
+  --wb-color-green-50: #faffe6;
+  --wb-color-green-100: #f4fec9;
+  --wb-color-green-200: #e7fd99;
+  --wb-color-green-300: #d4f95d;
+  --wb-color-green-400: #c4f042;
+  --wb-color-green-500: #9fd50d;
+  --wb-color-green-600: #7baa06;
+  --wb-color-green-700: #5d810a;
+  --wb-color-green-800: #4a660e;
+  --wb-color-green-900: #3f5611;
+  --wb-color-green-950: #203003;
+
+  --wb-color-info-50: #ebfdff;
+  --wb-color-info-100: #cdf6ff;
+  --wb-color-info-200: #8ae8ff;
+  --wb-color-info-300: #62ddfe;
+  --wb-color-info-400: #1bc4f5;
+  --wb-color-info-500: #00a7db;
+  --wb-color-info-600: #0284b8;
+  --wb-color-info-700: #0a6a94;
+  --wb-color-info-800: #125778;
+  --wb-color-info-900: #134766;
+  --wb-color-info-950: #062e46;
+
+  --wb-color-blue-50: #ecf9ff;
+  --wb-color-blue-100: #d4efff;
+  --wb-color-blue-200: #b2e5ff;
+  --wb-color-blue-300: #7dd6ff;
+  --wb-color-blue-400: #40bdff;
+  --wb-color-blue-500: #149aff;
+  --wb-color-blue-600: #0078ff;
+  --wb-color-blue-700: #0060ff;
+  --wb-color-blue-800: #004cca;
+  --wb-color-blue-900: #0845a0;
+  --wb-color-blue-950: #0a2a61;
 
   --wb-color-red-50: #fdf3f3;
   --wb-color-red-100: #fde3e4;
@@ -108,6 +132,18 @@
   --wb-color-red-900: #7a2225;
   --wb-color-red-950: #420d0f;
 
+  --wb-color-orange-50: #fffaeb;
+  --wb-color-orange-100: #fff0c6;
+  --wb-color-orange-200: #ffde88;
+  --wb-color-orange-300: #ffc84a;
+  --wb-color-orange-400: #ffb224;
+  --wb-color-orange-500: #f98d07;
+  --wb-color-orange-600: #dd6702;
+  --wb-color-orange-700: #b74606;
+  --wb-color-orange-800: #94350c;
+  --wb-color-orange-900: #7a2c0d;
+  --wb-color-orange-950: #461502;
+
   --wb-color-yellow-50: #fffaeb;
   --wb-color-yellow-100: #fff0c6;
   --wb-color-yellow-200: #ffde88;
@@ -120,17 +156,29 @@
   --wb-color-yellow-900: #7a2c0d;
   --wb-color-yellow-950: #461502;
 
-  --wb-color-primary-50: #edfff7;
-  --wb-color-primary-100: #d5ffee;
-  --wb-color-primary-200: #aeffde;
-  --wb-color-primary-300: #70ffc6;
-  --wb-color-primary-400: #2bfda7;
-  --wb-color-primary-500: #00dc82;
-  --wb-color-primary-600: #00c06d;
-  --wb-color-primary-700: #009658;
-  --wb-color-primary-800: #067549;
-  --wb-color-primary-900: #07603e;
-  --wb-color-primary-950: #003721;
+  --wb-color-red-50: #fff1f3;
+  --wb-color-red-100: #ffe4e8;
+  --wb-color-red-200: #fecdd6;
+  --wb-color-red-300: #fda4b5;
+  --wb-color-red-400: #fb718f;
+  --wb-color-red-500: #f4416c;
+  --wb-color-red-600: #e11d56;
+  --wb-color-red-700: #be1248;
+  --wb-color-red-800: #9f1243;
+  --wb-color-red-900: #88133f;
+  --wb-color-red-950: #4c051e;
+
+  --wb-color-primary-50: #ecfdf4;
+  --wb-color-primary-100: #d2f9e2;
+  --wb-color-primary-200: #a8f2ca;
+  --wb-color-primary-300: #70e5ad;
+  --wb-color-primary-400: #42d392;
+  --wb-color-primary-500: #13b672;
+  --wb-color-primary-600: #07945c;
+  --wb-color-primary-700: #06764d;
+  --wb-color-primary-800: #075e3e;
+  --wb-color-primary-900: #074d34;
+  --wb-color-primary-950: #032b1f;
 
   --wb-color-white: #ffffff;
   --wb-color-black: #000000;
@@ -165,7 +213,7 @@
   --wb-color-foreground: var(--wb-color-text);
   --wb-color-contrast: var(--wb-color-text-active);
   --wb-color-border: var(--wb-color-border-default);
-  --wb-color-primary: var(--wb-color-primary-600);
+  --wb-color-primary: var(--wb-color-primary-500);
 
   --wb-transition-ease: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -207,4 +255,6 @@
   --wb-color-popup: #333333;
   --wb-color-operation: #ffffff0f;
   --wb-color-card: linear-gradient(to bottom, #000000 50%, #111111);
+  --wb-color-card: #0e0e0e;
+  --wb-color-layer: #1a1a1a;
 }

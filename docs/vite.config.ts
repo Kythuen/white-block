@@ -37,10 +37,10 @@ export default defineConfig({
     Components({
       dirs: [
         '../.vitepress/theme/components/blocks',
-        '../.vitepress/theme/components/tools'
+        '../.vitepress/theme/components/tools',
+        '../.vitepress/theme/components/awesome'
       ],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      dts: 'components.d.ts',
       extensions: ['vue']
     })
   ],

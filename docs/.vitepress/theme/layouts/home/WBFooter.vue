@@ -22,27 +22,27 @@
             filter=" drop-shadow-sm"
             alt="logo"
           />
-          <p text="md $wb-color-text-active">WhiteBlock</p>
+          <p text="md $wb-color-text" font="extrabold">WhiteBlock</p>
         </div>
       </a>
-      <div text="sm $wb-color-text-active">
+      <div text="sm $wb-color-text">
         Intuitive Design for Effortless Development
       </div>
-      <div text="xs">© 2023-2025 Kythuen</div>
+      <div text="xs $wb-color-text-secondly">© 2023-2025 Kythuen</div>
       <div p="y-1" text="5" flex gap="3">
         <a
           v-for="item in SOCIALS"
           :key="item.name"
           :href="item.link"
           target="__blank"
-          un-text="hover:$wb-color-text-active"
+          un-text="hover:$wb-color-text"
           flex="~ col"
           gap="2"
         >
           <div m="1" :class="item.icon"></div>
         </a>
       </div>
-      <div
+      <!-- <div
         w="48"
         h="8"
         text="sm"
@@ -55,11 +55,11 @@
       >
         <div text="4 green" i="heroicons-check-circle-20-solid"></div>
         All services are online
-      </div>
+      </div> -->
     </div>
     <div w="full" h="50" flex="~ 1">
       <div v-for="group in LINKS" :key="group.title" flex="~ col 1" gap="2">
-        <div m="b-4" text="md $wb-color-text-active" font="bold">
+        <div m="b-4" text="md $wb-color-text" font="bold">
           {{ group.title }}
         </div>
         <a

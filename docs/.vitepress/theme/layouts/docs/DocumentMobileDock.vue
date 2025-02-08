@@ -27,7 +27,7 @@
       h="12"
       bg="$wb-color-container"
       rounded="full"
-      ring="1 inset $wb-color-border-base"
+      ring="1 inset $wb-color-border"
       color="$wb-color-text-main"
       flex
       items="center"

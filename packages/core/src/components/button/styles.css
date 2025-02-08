@@ -104,7 +104,15 @@
   --wb-button-text-hover: var(--wb-color-text-main);
   --wb-button-text-active: var(--wb-color-text-main);
 }
+.dark .wb-button--default.wb-button--base {
+  --wb-button-text: var(--wb-color-text);
+}
 .wb-button--default.wb-button--plain {
+  --wb-button-main-color: var(--wb-color-gray-100);
+  --wb-button-main-color-lighten: var(--wb-color-gray-200);
+  --wb-button-main-color-darken: var(--wb-color-gray-100);
+}
+.dark .wb-button--default.wb-button--plain {
   --wb-button-main-color: var(--wb-color-gray-900);
   --wb-button-main-color-lighten: var(--wb-color-gray-500);
   --wb-button-main-color-darken: var(--wb-color-gray-950);
@@ -126,12 +134,18 @@
   --wb-button-border: var(--wb-button-background);
   --wb-button-border-hover: var(--wb-button-background-hover);
   --wb-button-border-active: var(--wb-button-background-active);
-  --wb-button-text: color-contrast(
+  --wb-button-text: var(--wb-color-white);
+  --wb-button-text-hover: var(--wb-color-white);
+  --wb-button-text-active: var(--wb-color-white);
+  /* --wb-button-text: color-contrast(
     var(--wb-button-main-color) vs var(--wb-color-black),
     var(--wb-color-white)
-  );
+  ); */
   --wb-button-text-hover: var(--wb-button-text);
   --wb-button-text-active: var(--wb-button-text);
+}
+.dark .wb-button--base {
+  --wb-button-text: var(--wb-color-black);
 }
 .wb-button--plain {
   --wb-button-background: color-mix(

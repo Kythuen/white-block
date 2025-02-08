@@ -1,26 +1,26 @@
 <template>
   <header
-    w="full"
-    h="15"
+    w="80%"
+    h="14"
     m="x-auto"
     rounded="full"
     ring="px $wb-color-border-comp"
-    bg="#11111180"
+    bg="#00000080"
     style="backdrop-filter: saturate(180%) blur(24px)"
     @click.stop="
       clickDelegate($event, 'wb-button', handleMenuOptions, hideMenuPanel)
     "
   >
     <div
-      h="$wb-height-layout-header"
+      h="full"
       m="x-auto"
-      p="x-2 !md:x-6 !lg:x-6"
+      p="x-3"
       flex="~ row"
       justify="between"
       items="center"
       gap="3"
     >
-      <div max-w="60" flex="none">
+      <div max-w="60" m="l-2" flex="none">
         <a
           :href="withBase(`${localePrefix}/`)"
           un-text="lg $wb-color-text-main"
@@ -90,6 +90,9 @@
             tip="Menu"
           />
         </div>
+        <wb-button ml-4 p="x-4" h="9" rounded="full" theme="contrast">
+          Get Started
+        </wb-button>
       </div>
     </div>
   </header>

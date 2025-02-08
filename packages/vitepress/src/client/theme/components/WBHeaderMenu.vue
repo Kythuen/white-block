@@ -20,8 +20,8 @@
       </div>
       <wb-button
         v-else
-        size="lg"
-        :type="route.path === withBase(group.link) ? 'base' : 'text'"
+        type="ghost"
+        :font="route.path === withBase(group.link) ? 'bold' : ''"
         :theme="route.path === withBase(group.link) ? 'primary' : 'contrast'"
         @click="toPage(group.link)"
       >

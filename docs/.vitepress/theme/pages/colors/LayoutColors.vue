@@ -4,7 +4,7 @@
     p="10"
     rounded="md"
     ring="px $wb-color-border-dinky"
-    bg="[rgb(var(--wb-vc-background))]"
+    bg="$wb-color-background"
     flex
     items="start"
     justify="center"
@@ -17,7 +17,7 @@
       p="5"
       ring="px $wb-color-border1-1"
       rounded="md"
-      bg="[rgb(var(--wb-vc-card))]"
+      bg="$wb-color-card"
       flex="~ col"
       justify="between"
     >
@@ -28,7 +28,7 @@
               <div
                 w="4"
                 h="4"
-                bg="[rgb(var(--wb-vc-text-normal))]"
+                bg="$wb-color-text"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
@@ -36,7 +36,7 @@
                 w="4"
                 h="4"
                 m="l--1.5"
-                bg="[rgb(var(--wb-vc-text-active))]"
+                bg="$wb-color-text-active"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
@@ -45,7 +45,7 @@
               <div
                 w="4"
                 h="4"
-                bg="[rgb(var(--wb-vc-card))]"
+                bg="$wb-color-card"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
@@ -53,7 +53,7 @@
                 w="4"
                 h="4"
                 m="l--1.5"
-                bg="[rgb(var(--wb-vc-active-bg))]"
+                bg="$wb-color-layer"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
@@ -63,44 +63,44 @@
             <div>
               <div w="full" flex items="center" gap="2">
                 <div w="20">text</div>
-                <div flex="1">--wb-vc-text-normal</div>
+                <div flex="1">--wb-color-text-normal</div>
                 <div
                   w="4"
                   h="4"
-                  bg="[rgb(var(--wb-vc-text-normal))]"
+                  bg="$wb-color-text"
                   rounded="full"
                   ring="px $wb-color-border-soft"
                 />
               </div>
               <div w="full" flex items="center" gap="2">
                 <div w="20">text:active</div>
-                <div flex="1">--wb-vc-text-active</div>
+                <div flex="1">--wb-color-text-active</div>
                 <div
                   w="4"
                   h="4"
-                  bg="[rgb(var(--wb-vc-text-active))]"
+                  bg="$wb-color-text-active"
                   rounded="full"
                   ring="px $wb-color-border-soft"
                 />
               </div>
               <div w="full" flex items="center" gap="2">
                 <div w="20">bg</div>
-                <div flex="1">--wb-vc-text-normal</div>
+                <div flex="1">--wb-color-text-normal</div>
                 <div
                   w="4"
                   h="4"
-                  bg="[rgb(var(--wb-vc-card))]"
+                  bg="$wb-color-card"
                   rounded="full"
                   ring="px $wb-color-border-soft"
                 />
               </div>
               <div w="full" flex items="center" gap="2">
                 <div w="20">bg:hover</div>
-                <div flex="1">--wb-vc-text-normal</div>
+                <div flex="1">--wb-color-text-normal</div>
                 <div
                   w="4"
                   h="4"
-                  bg="[rgb(var(--wb-vc-active-bg))]"
+                  bg="$wb-color-active-bg"
                   rounded="full"
                   ring="px $wb-color-border-soft"
                 />
@@ -113,7 +113,7 @@
         p="2"
         ring="px $wb-color-border1-1"
         rounded="md"
-        bg="[rgb(var(--wb-vc-tag))] hover:[rgb(var(--wb-vc-active-bg))]"
+        bg="$wb-color-layer hover:$wb-color-active-bg"
         flex
         justify-center
         gap="2"
@@ -125,7 +125,7 @@
               <div
                 w="4"
                 h="4"
-                bg="[rgb(var(--wb-vc-text-normal))]"
+                bg="$wb-color-text-normal"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
@@ -133,7 +133,7 @@
                 w="4"
                 h="4"
                 m="l--1.5"
-                bg="[rgb(var(--wb-vc-text-active))]"
+                bg="$wb-color-text-active"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
@@ -142,7 +142,7 @@
               <div
                 w="4"
                 h="4"
-                bg="[rgb(var(--wb-vc-card))]"
+                bg="$wb-color-card"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
@@ -150,7 +150,7 @@
                 w="4"
                 h="4"
                 m="l--1.5"
-                bg="[rgb(var(--wb-vc-active-bg))]"
+                bg="$wb-color-active-bg"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
@@ -160,44 +160,44 @@
             <div>
               <div w="full" flex items="center" gap="2">
                 <div w="20">text</div>
-                <div flex="1">--wb-vc-text-normal</div>
+                <div flex="1">--wb-color-text-normal</div>
                 <div
                   w="4"
                   h="4"
-                  bg="[rgb(var(--wb-vc-text-normal))]"
+                  bg="$wb-color-text-normal"
                   rounded="full"
                   ring="px $wb-color-border-soft"
                 />
               </div>
               <div w="full" flex items="center" gap="2">
                 <div w="20">text:active</div>
-                <div flex="1">--wb-vc-text-active</div>
+                <div flex="1">--wb-color-text-active</div>
                 <div
                   w="4"
                   h="4"
-                  bg="[rgb(var(--wb-vc-text-active))]"
+                  bg="$wb-color-text-active"
                   rounded="full"
                   ring="px $wb-color-border-soft"
                 />
               </div>
               <div w="full" flex items="center" gap="2">
                 <div w="20">bg</div>
-                <div flex="1">--wb-vc-text-normal</div>
+                <div flex="1">--wb-color-text-normal</div>
                 <div
                   w="4"
                   h="4"
-                  bg="[rgb(var(--wb-vc-card))]"
+                  bg="$wb-color-card"
                   rounded="full"
                   ring="px $wb-color-border-soft"
                 />
               </div>
               <div w="full" flex items="center" gap="2">
                 <div w="20">bg:hover</div>
-                <div flex="1">--wb-vc-text-normal</div>
+                <div flex="1">--wb-color-text-normal</div>
                 <div
                   w="4"
                   h="4"
-                  bg="[rgb(var(--wb-vc-active-bg))]"
+                  bg="$wb-color-active-bg"
                   rounded="full"
                   ring="px $wb-color-border-soft"
                 />
@@ -214,7 +214,7 @@
             <div
               w="4"
               h="4"
-              bg="[rgb(var(--wb-vc-text-normal))]"
+              bg="$wb-color-text-normal"
               rounded="full"
               ring="px $wb-color-border-soft"
             />
@@ -222,7 +222,7 @@
               w="4"
               h="4"
               m="l--1.5"
-              bg="[rgb(var(--wb-vc-text-active))]"
+              bg="$wb-color-text-active"
               rounded="full"
               ring="px $wb-color-border-soft"
             />
@@ -231,7 +231,7 @@
             <div
               w="4"
               h="4"
-              bg="[rgb(var(--wb-vc-card))]"
+              bg="$wb-color-card"
               rounded="full"
               ring="px $wb-color-border-soft"
             />
@@ -239,7 +239,7 @@
               w="4"
               h="4"
               m="l--1.5"
-              bg="[rgb(var(--wb-vc-active-bg))]"
+              bg="$wb-color-active-bg"
               rounded="full"
               ring="px $wb-color-border-soft"
             />
@@ -249,44 +249,44 @@
           <div>
             <div w="full" flex items="center" gap="2">
               <div w="20">text</div>
-              <div flex="1">--wb-vc-text-normal</div>
+              <div flex="1">--wb-color-text-normal</div>
               <div
                 w="4"
                 h="4"
-                bg="[rgb(var(--wb-vc-text-normal))]"
+                bg="$wb-color-text-normal"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
             </div>
             <div w="full" flex items="center" gap="2">
               <div w="20">text:active</div>
-              <div flex="1">--wb-vc-text-active</div>
+              <div flex="1">--wb-color-text-active</div>
               <div
                 w="4"
                 h="4"
-                bg="[rgb(var(--wb-vc-text-active))]"
+                bg="$wb-color-text-active"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
             </div>
             <div w="full" flex items="center" gap="2">
               <div w="20">bg</div>
-              <div flex="1">--wb-vc-text-normal</div>
+              <div flex="1">--wb-color-text-normal</div>
               <div
                 w="4"
                 h="4"
-                bg="[rgb(var(--wb-vc-card))]"
+                bg="$wb-color-card"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
             </div>
             <div w="full" flex items="center" gap="2">
               <div w="20">bg:hover</div>
-              <div flex="1">--wb-vc-text-normal</div>
+              <div flex="1">--wb-color-text-normal</div>
               <div
                 w="4"
                 h="4"
-                bg="[rgb(var(--wb-vc-active-bg))]"
+                bg="$wb-color-active-bg"
                 rounded="full"
                 ring="px $wb-color-border-soft"
               />
