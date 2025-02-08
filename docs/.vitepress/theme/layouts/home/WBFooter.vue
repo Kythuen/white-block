@@ -67,7 +67,7 @@
           :key="item.title"
           :href="withBase(item.value)"
           target="__blank"
-          un-text="sm hover:$wb-color-text-active"
+          un-text="sm $wb-color-text-secondly hover:$wb-color-text-active"
           flex="~ col"
           gap="2"
         >
@@ -100,10 +100,6 @@ const LINKS = [
     ]
   },
   {
-    title: 'Features',
-    items: [{ title: 'Components', value: '/guide/overview' }]
-  },
-  {
     title: 'Roadmap',
     items: [
       { title: 'Changelog', value: '/changelog' },
@@ -115,8 +111,14 @@ const LINKS = [
     items: [
       { title: 'Resolver', value: '/packages/resolver/' },
       { title: 'Types', value: '/packages/types/' },
-      { title: 'Vitepress', value: '/packages/vitepress' },
-      { title: 'VSCode', value: '/packages/vscode' },
+      { title: 'Vitepress', value: '/packages/vitepress' }
+    ]
+  },
+  {
+    title: 'Tools',
+    items: [
+      { title: 'Playground', value: '/playground' },
+      { title: 'VSCode Plugin', value: '/packages/vscode' },
       { title: 'CLI', value: '/packages/cli' }
     ]
   },

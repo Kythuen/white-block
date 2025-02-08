@@ -93,8 +93,8 @@
   --wb-button-main-color-lighten: var(--wb-color-gray-400);
   --wb-button-main-color-darken: var(--wb-color-gray-600);
   --wb-button-text: var(--wb-color-text);
-  --wb-button-text-hover: var(--wb-color-main);
-  --wb-button-text-active: var(--wb-color-main);
+  --wb-button-text-hover: var(--wb-color-text-main);
+  --wb-button-text-active: var(--wb-color-text-main);
 }
 .wb-button--default.wb-button--base {
   --wb-button-main-color: var(--wb-color-default);
@@ -111,11 +111,11 @@
 }
 .wb-button--default.wb-button--ghost {
   --wb-button-main-color: var(--wb-color-default);
-  --wb-button-background-hover: var(--wb-color-default-1);
-  --wb-button-background-active: var(--wb-color-default-2);
+  --wb-button-background-hover: var(--wb-color-default-2);
+  --wb-button-background-active: var(--wb-color-default-1);
   --wb-button-text: var(--wb-color-foreground);
-  --wb-button-text-hover: var(--wb-color-foreground);
-  --wb-button-text-active: var(--wb-color-foreground);
+  --wb-button-text-hover: var(--wb-color-text-main);
+  --wb-button-text-active: var(--wb-color-text-main);
 }
 
 /* -------------------------------------------- type -------------------------------------------- */
@@ -162,7 +162,7 @@
   --wb-button-border-active: transparent;
   --wb-button-background-hover: color-mix(
     in srgb,
-    var(--wb-button-main-color) 25%,
+    var(--wb-button-main-color) 10%,
     transparent
   );
   --wb-button-background-active: color-mix(
