@@ -25,7 +25,9 @@
         :class="['anchor-link']"
         :style="{ paddingLeft: `${level - minLevel}em` }"
       >
-        <a :href="link" @click="onClickAnchor($event, link)">{{ title }}</a>
+        <a :href="link" :title="title" @click="onClickAnchor($event, link)">{{
+          title
+        }}</a>
       </div>
     </div>
     <div

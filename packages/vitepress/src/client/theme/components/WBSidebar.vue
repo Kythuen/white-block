@@ -33,9 +33,9 @@ const menuHeightStyle = ref('')
 
 onMounted(() => {
   const topHeight = SidebarMenuTop.value.offsetHeight
-  const topMargin = topHeight ? '1rem' : '0'
+  const topMargin = topHeight ? '3rem' : '0'
   const bottomHeight = SidebarMenuBottom.value.offsetHeight
-  const bottomMargin = bottomHeight ? '1rem' : '0'
+  const bottomMargin = bottomHeight ? '3rem' : '0'
 
   menuHeightStyle.value = `calc(100% - ${topHeight + bottomHeight}px - ${topMargin} - ${bottomMargin}`
 })

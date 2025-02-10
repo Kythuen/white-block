@@ -1,5 +1,11 @@
 <template>
-  <div bg="#111111" rounded="3" ring="px $wb-color-border" overflow="hidden">
+  <a
+    :href="data.link"
+    bg="#111111"
+    rounded="3"
+    ring="px $wb-color-border"
+    overflow="hidden"
+  >
     <div relative h="16" bg="#ffffff1a">
       <div
         relative
@@ -10,12 +16,7 @@
         items="center"
         justify="center"
       >
-        <div
-          absolute
-          w="480px"
-          h="480px"
-          style="filter: blur(40px) saturate(1.5)"
-        >
+        <div absolute w="120" h="120" filter="blur-40 saturate-150">
           <img w="full" h="full" :src="data.img" />
         </div>
       </div>
@@ -57,7 +58,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script setup lang="ts">

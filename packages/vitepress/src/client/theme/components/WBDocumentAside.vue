@@ -7,7 +7,7 @@
     :h="
       focus
         ? '[calc(100vh-var(--wb-doc-height-header)-10.5rem)]'
-        : '[calc(100vh-var(--wb-doc-height-header)-19rem)]'
+        : '[calc(100vh-var(--wb-doc-height-header)-23rem)]'
     "
     class="vp-raw"
   >

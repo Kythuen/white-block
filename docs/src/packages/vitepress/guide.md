@@ -1,7 +1,9 @@
 ---
-title: Getting Started
+title: '@white-block/vitepress'
 description: WhiteBlock document theme for vitepress.
 ---
+
+WhiteBlock's docs base on vitepress and has many customize ​configurations. You can use `@white-block/vitepress` to quickly create the docs below.
 
 ## Preview
 ![preview](/vitepress/preview.png)
@@ -42,7 +44,7 @@ export default {
 ```
 :::
 
-#### Add unocss config file
+#### Add unocss config
 ::: code-group
 ```ts [uno.config.ts]
 import { UnocssConfig } from '@white-block/vitepress/unocss'
@@ -52,7 +54,7 @@ export default UnocssConfig()
 ```
 :::
 
-#### Add vite config file
+#### Add vite config
 ::: code-group
 ```ts [vite.config.ts]
 import UnoCSS from 'unocss/vite'
@@ -99,7 +101,7 @@ yarn dlx wb-vitepress init
 
 If `@white-block/vitepress` can meet most of your needs, but you want to customize some parts. There also some ways provided for you to customize your documents in more detailed places.
 
-### Layout
+### Extend Layout
 
 [Layouts](./layout)
 

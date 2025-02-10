@@ -1,6 +1,6 @@
 ---
 layout: home
-header: false
+# header: false
 title: White Block
 titleTemplate: Intuitive Design for Effortless Development
 ---

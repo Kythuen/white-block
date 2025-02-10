@@ -9,22 +9,32 @@ description: '@white-block/vitepress provide several layout.'
 
 ![](/vitepress/preview.png)
 
-#### Components
+### Components
 
 You can use frontmatter to control the visible of the components.
-- sidebar
-- document-header
-- document-aside
-
 ::: code-group
 ```md [markdown file]
 ---
+header: false
 sidebar: false
 document-header: false
 document-aside: false
 ---
 ```
 :::
+
+#### header
+![](/vitepress/components/header.png)
+
+#### sidebar
+![](/vitepress/components/sidebar.png)
+
+#### document-header
+![](/vitepress/components/document-header.png)
+
+#### document-aside
+![](/vitepress/components/document-aside.png)
+
 
 ### Home
 

@@ -18,8 +18,8 @@
       gap="8"
       class="vp-doc"
     >
+      <!-- max-w="xl:264" -->
       <div
-        max-w="xl:264"
         w="full"
         :m="frontmatterField(frontmatter, 'sidebar') ? '' : 'x-auto'"
       >
@@ -35,15 +35,17 @@
           :set-tab="setCurrentTab"
         />
       </div>
-      <WBDocumentAside
-        v-if="frontmatterField(frontmatter, 'document-aside')"
-        :focus="isFocusMode"
-        :tab="currentTab"
-      >
-        <template #document-aside-bottom>
-          <slot name="document-aside-bottom" />
-        </template>
-      </WBDocumentAside>
+      <slot name="document-aside-menu">
+        <WBDocumentAside
+          v-if="frontmatterField(frontmatter, 'document-aside')"
+          :focus="isFocusMode"
+          :tab="currentTab"
+        >
+          <template #document-aside-bottom>
+            <slot name="document-aside-bottom" />
+          </template>
+        </WBDocumentAside>
+      </slot>
     </div>
   </div>
 </template>

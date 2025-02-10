@@ -73,7 +73,7 @@ const PACKAGES = [
   {
     title: '@white-block/resolve',
     desc: 'unplugin-vue-components resolver for WhiteBlock.',
-    link: '/packages/vitepress',
+    link: withBase('/packages/resolve/'),
     authorLink: 'https://github.com/Kythuen',
     author: 'Kythuen',
     img: withBase('/assets/img/packages/unplugin.png'),
@@ -82,7 +82,7 @@ const PACKAGES = [
   {
     title: '@white-block/types',
     desc: 'A tool to resolve types for WhiteBlock components.',
-    link: '/packages/vitepress',
+    link: withBase('/packages/types/'),
     authorLink: 'https://github.com/Kythuen',
     author: 'Kythuen',
     img: withBase('/assets/img/packages/typescript.png'),
@@ -91,7 +91,7 @@ const PACKAGES = [
   {
     title: '@white-block/vitepress',
     desc: 'WhiteBlock document theme for vitepress.',
-    link: '/packages/vitepress',
+    link: withBase('/packages/vitepress/guide'),
     authorLink: 'https://github.com/Kythuen',
     author: 'Kythuen',
     img: withBase('/assets/img/packages/vitepress.svg'),

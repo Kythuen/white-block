@@ -79,7 +79,11 @@ function serializeHeader(h: Element) {
 export function getHeaders(type = 'content') {
   const queryString = `.vp-doc-${type} :where(h1,h2,h3,h4,h5,h6)`
   const headers = Array.from(document.querySelectorAll(queryString))
-    .filter(el => el.id && el.hasChildNodes())
+    .filter(el => {
+      // const level = Number(el.tagName[1])
+      return el.id && el.hasChildNodes()
+      //  && level < 3
+    })
     .map(el => {
       const level = Number(el.tagName[1])
       return {

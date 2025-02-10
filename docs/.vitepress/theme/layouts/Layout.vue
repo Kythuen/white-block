@@ -6,13 +6,13 @@
         @close="setThemeEditorVisible(false)"
       />
     </template>
-    <!-- <template #home-top>
+    <template #home-top>
       <div
         v-if="homeTopVisible"
         w="full"
         h="17.5"
         color="$wb-color-text-5"
-        bg="$wb-color-background"
+        bg="$wb-color-layer"
         rounded="1"
         flex
         items="center"
@@ -21,17 +21,17 @@
       >
         #home-top
       </div>
-    </template> -->
-    <template #home-content>
-      <Home />
     </template>
-    <!-- <template #header-top>
+    <!-- <template #home-content>
+      <Home />
+    </template> -->
+    <template #header-top>
       <div
         v-if="headerTopVisible"
         w="full"
         h="17.5"
         color="$wb-color-text-5"
-        bg="$wb-color-container"
+        bg="$wb-color-layer"
         rounded="1"
         flex
         items="center"
@@ -40,25 +40,60 @@
       >
         #header-top / #home-top
       </div>
-    </template> -->
+    </template>
     <template #header-operation-before>
-      <WBIconButton
+      <div
+        w="40"
+        h="8"
+        bg="$wb-color-layer"
+        text="xs"
+        flex
+        items="center"
+        justify="center"
+      >
+        #header-operation-before
+      </div>
+      <!-- <WBIconButton
         name="theme"
         icon="i-heroicons-swatch-20-solid"
         tip="Theme"
         theme="primary"
         @click="setThemeEditorVisible(true)"
-      />
+      /> -->
     </template>
     <template #header-operation-inside>
-      <WBIconButton
+      <div
+        w="40"
+        h="8"
+        bg="$wb-color-layer"
+        text="xs"
+        flex
+        items="center"
+        justify="center"
+      >
+        #header-operation-inside
+      </div>
+      <!-- <WBIconButton
         name="lang"
         icon="i-tdesign-translate"
         tip="Language"
         @click="changeLanguage"
-      />
+      /> -->
     </template>
     <template #sidebar-top>
+      <div
+        w="full"
+        h="20"
+        m="b-4"
+        color="$wb-color-text-5"
+        bg="$wb-color-layer"
+        rounded="1"
+        flex
+        items="center"
+        justify="center"
+      >
+        #sidebar-top
+      </div>
       <!-- <div
         v-if="
           matchItems(router.route.path, [
@@ -73,7 +108,7 @@
           placeholder="0.0.1"
         />
       </div> -->
-      <div
+      <!-- <div
         v-if="router.route.path.includes('vitepress')"
         w="full"
         h="30"
@@ -92,15 +127,15 @@
           changlogs, npm,github,Q&A
         </div>
         <div>{{ frontmatter.package }}</div>
-      </div>
+      </div> -->
     </template>
-    <!-- <template #sidebar-bottom>
+    <template #sidebar-bottom>
       <div
         w="full"
-        h="40"
+        h="60"
         m="t-4"
         color="$wb-color-text-5"
-        bg="$wb-color-container"
+        bg="$wb-color-layer"
         rounded="1"
         flex
         items="center"
@@ -108,15 +143,41 @@
       >
         #sidebar-bottom
       </div>
-    </template> -->
+    </template>
     <template #document-header="{ focus, tab, setTab }">
-      <DocumentHeader :focus="focus" :tab="tab" :set-tab="setTab" />
+      <div
+        w="full"
+        h="60"
+        m="t-4"
+        color="$wb-color-text-5"
+        bg="$wb-color-layer"
+        rounded="1"
+        flex
+        items="center"
+        justify="center"
+      >
+        #document-header
+      </div>
+      <!-- <DocumentHeader :focus="focus" :tab="tab" :set-tab="setTab" /> -->
     </template>
     <template #document-content="{ tab }">
-      <DocumentContent :tab="tab" />
+      <div
+        w="full"
+        h="160"
+        m="t-4"
+        color="$wb-color-text-5"
+        bg="$wb-color-layer"
+        rounded="1"
+        flex
+        items="center"
+        justify="center"
+      >
+        #document-content
+      </div>
+      <!-- <DocumentContent :tab="tab" /> -->
     </template>
     <template #document-bottom="{ focus, tab, setTab }">
-      <DocumentMobileDock :focus="focus">
+      <!-- <DocumentMobileDock :focus="focus">
         <div w="40">
           <wb-radio-group
             :default-value="tab"
@@ -129,31 +190,44 @@
             @change="setTab"
           />
         </div>
-      </DocumentMobileDock>
-      <!-- <div
+      </DocumentMobileDock> -->
+      <div
         w="full"
         h="60"
         m="t-6"
         color="$wb-color-text-5"
-        bg="$wb-color-container"
+        bg="$wb-color-layer"
         rounded="1"
         flex
         items="center"
         justify="center"
       >
         #document-bottom
-      </div> -->
+      </div>
     </template>
     <template #document-aside-menu="{ focus, tab }">
-      <WBDocumentAside :focus="focus" :tab="tab" />
+      <div
+        w="52"
+        h="160"
+        color="$wb-color-text-5"
+        bg="$wb-color-layer"
+        text="sm"
+        rounded="1"
+        flex
+        items="center"
+        justify="center"
+      >
+        #document-aside-menu
+      </div>
+      <!-- <WBDocumentAside :focus="focus" :tab="tab" /> -->
     </template>
-    <!-- <template #document-aside-bottom>
+    <template #document-aside-bottom>
       <div
         w="full"
         h="60"
         m="t-4"
         color="$wb-color-text-5"
-        bg="$wb-color-container"
+        bg="$wb-color-layer"
         rounded="1"
         flex
         items="center"
@@ -161,7 +235,7 @@
       >
         #document-aside-bottom
       </div>
-    </template> -->
+    </template>
     <template #layout-bottom>
       <div max-w="lg:360" m="x-auto">
         <DocumentFooter></DocumentFooter>

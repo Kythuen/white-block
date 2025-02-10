@@ -15,14 +15,18 @@ import CoverageData from '../../../../coverage.json'
 import { COMPONENT_PROPERTIES } from '../../../config/components'
 import { getCommonAPI } from './common'
 import { getEmitsHeader, getPropsHeader } from './constant'
+import { changelogsData } from './changelogs'
 
 const DOCS_PATH_RELATIVE = '../../../..'
 const Md = MarkdownIt()
 
 export async function transformPageData(pageData: PageData) {
   const { frontmatter } = pageData
-  const extendData = { params: { coverage: null, api: {} } }
+  if (frontmatter.type === 'changelogs') {
+    return changelogsData(pageData)
+  }
 
+  const extendData = { params: { coverage: null, api: {} } }
   if (frontmatter.component) {
     const componentName = frontmatter.component
     const components = glob.sync([

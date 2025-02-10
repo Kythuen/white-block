@@ -9,7 +9,6 @@
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "preserveSymlinks": true,
     "lib": ["DOM", "DOM.Iterable", "WebWorker"],
     "jsx": "preserve",
     "types": ["node", "vite/client"],
