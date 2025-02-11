@@ -9,7 +9,7 @@
       m="x-auto"
       rounded="full"
       bg="gray/10"
-      style="backdrop-filter: saturate(180%) blur(16px)"
+      backdrop="blur-lg saturate-180"
     ></header>
     <div relative w="screen" h="screen">
       <div

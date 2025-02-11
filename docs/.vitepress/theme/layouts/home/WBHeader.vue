@@ -6,7 +6,7 @@
     rounded="full"
     ring="px $wb-color-border-comp"
     bg="#00000080"
-    style="backdrop-filter: saturate(180%) blur(24px)"
+    backdrop="blur-xl saturate-180"
     @click.stop="
       clickDelegate($event, 'wb-button', handleMenuOptions, hideMenuPanel)
     "

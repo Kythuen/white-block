@@ -20,14 +20,15 @@
   --docsearch-container-background: var(--vp-backdrop-bg-color);
 
   /* ------------------------------------------- code ------------------------------------------- */
-  --vp-code-block-bg: var(--wb-color-layer);
-  --vp-code-block-border: var(--wb-color-border);
-  --vp-code-block-divider-color: var(--wb-color-border);
+  --vp-code-block-border: var(--wb-color-border-dinky);
+  --vp-code-block-divider-color: var(--wb-color-border-dinky);
   --vp-code-copy-code-bg: var(--vp-code-block-bg);
   --vp-code-copy-code-border-color: var(--wb-color-border);
   --vp-code-copy-code-hover-bg: var(--wb-color-white);
   --vp-code-copy-code-hover-border-color: var(--vp-code-copy-code-border-color);
   --vp-code-copy-code-active-text: var(--wb-color-text-active);
+  --vp-code-block-bg: transparent;
+  --vp-code-tab-bg: transparent;
 }
 
 .dark:root {
@@ -125,6 +126,10 @@
   }
   .shiki {
     background-color: transparent !important;
+  }
+  img {
+    border-radius: 4px;
+    border: 1px solid var(--vp-code-block-border);
   }
 }
 .vp-raw {

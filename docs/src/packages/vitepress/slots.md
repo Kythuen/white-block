@@ -1,35 +1,54 @@
 ---
-title: Layout Slots
+title: Slots
 description: '@white-block/vitepress provide several slots for user to custom the theme.'
 ---
 
-![home-top](/vitepress/slots/overview.png)
+# Document Page
+When there is document page with `docs` layout, we provide the slots below.
 
-## HomePage
-### home-top
-![home-top](/vitepress/slots/home-top.png)
-
-### home-content
-![home-top](/vitepress/slots/home-content.png)
+## Overview
+<script setup>
+import SlotsOverview from '../../../.vitepress/theme/pages/packages/vitepress/Slots.vue'
+import HeaderSlot from '../../../.vitepress/theme/pages/packages/vitepress/HeaderSlot.vue'
+import SidebarSlot from '../../../.vitepress/theme/pages/packages/vitepress/SidebarSlot.vue'
+import ContentSlot from '../../../.vitepress/theme/pages/packages/vitepress/ContentSlot.vue'
+</script>
+<SlotsOverview />
 
 ## Header
-### header-top
-similar with the slot `#home-top`, but alway show on the header top.
 
-when both exists `#home-top` and `#header-top`, `#header-top` has greater priority than `#home-top`.
+You can use frontmatter `header` to control the header component visible or not.
+```md
+---
+header: false
+---
+```
+<HeaderSlot />
 
-![header-top](/vitepress/slots/header-top.png)
+:::tip
+- `#header-top`: Usually use for one-time banner on the top of the site.
 
-### header-operation-before
-![header-operation-before](/vitepress/slots/header-operation-before.png)
+- `#header-operation-[position]`: 
+Sometime you when add the operation button in header.
+:::
 
-### header-operation-inside
-![header-operation-inside](/vitepress/slots/header-operation-inside.png)
+## Sidebar
+<SidebarSlot />
 
-### sidebar-top
-### sidebar-bottom
-### document-header
-### document-content
-### document-bottom
-### document-aside-menu
-### document-aside-bottom
+:::tip
+`#sidebar-top` & `#sidebar-bottom` usually for ads. 
+:::
+
+## Content
+The main content area of the page.
+<ContentSlot />
+
+## Footer
+Usually use for links & copyright information.
+
+<!-- ### HomePage
+#### home-top
+![home-top](/vitepress/slots/home-top.png)
+
+#### home-content
+![home-top](/vitepress/slots/home-content.png) -->

@@ -54,11 +54,11 @@
         </a>
       </div>
       <div class="hidden !lg:flex" flex="lg:1" justify="center">
-        <VPNavBarSearch class="search" absolute translate="x-999" />
         <WBHeaderMenu />
       </div>
       <div min-w="60" flex="lg:none ~ row" items="center" justify="end">
         <slot name="header-operation-before" />
+        <VPNavBarSearch class="search" absolute translate="x-999" />
         <WBIconButton
           name="search"
           icon="i-heroicons-magnifying-glass"

@@ -7,7 +7,7 @@
       />
     </template>
     <template #home-top>
-      <div
+      <!-- <div
         v-if="homeTopVisible"
         w="full"
         h="17.5"
@@ -20,13 +20,13 @@
         @click="setHomeTopVisible(false)"
       >
         #home-top
-      </div>
+      </div> -->
     </template>
     <!-- <template #home-content>
       <Home />
     </template> -->
     <template #header-top>
-      <div
+      <!-- <div
         v-if="headerTopVisible"
         w="full"
         h="17.5"
@@ -39,10 +39,10 @@
         @click="setHeaderTopVisible(false)"
       >
         #header-top / #home-top
-      </div>
+      </div> -->
     </template>
     <template #header-operation-before>
-      <div
+      <!-- <div
         w="40"
         h="8"
         bg="$wb-color-layer"
@@ -52,17 +52,17 @@
         justify="center"
       >
         #header-operation-before
-      </div>
-      <!-- <WBIconButton
+      </div> -->
+      <WBIconButton
         name="theme"
         icon="i-heroicons-swatch-20-solid"
         tip="Theme"
         theme="primary"
         @click="setThemeEditorVisible(true)"
-      /> -->
+      />
     </template>
     <template #header-operation-inside>
-      <div
+      <!-- <div
         w="40"
         h="8"
         bg="$wb-color-layer"
@@ -72,7 +72,7 @@
         justify="center"
       >
         #header-operation-inside
-      </div>
+      </div> -->
       <!-- <WBIconButton
         name="lang"
         icon="i-tdesign-translate"
@@ -81,7 +81,7 @@
       /> -->
     </template>
     <template #sidebar-top>
-      <div
+      <!-- <div
         w="full"
         h="20"
         m="b-4"
@@ -93,7 +93,7 @@
         justify="center"
       >
         #sidebar-top
-      </div>
+      </div> -->
       <!-- <div
         v-if="
           matchItems(router.route.path, [
@@ -130,7 +130,7 @@
       </div> -->
     </template>
     <template #sidebar-bottom>
-      <div
+      <!-- <div
         w="full"
         h="60"
         m="t-4"
@@ -142,10 +142,10 @@
         justify="center"
       >
         #sidebar-bottom
-      </div>
+      </div> -->
     </template>
     <template #document-header="{ focus, tab, setTab }">
-      <div
+      <!-- <div
         w="full"
         h="60"
         m="t-4"
@@ -157,11 +157,11 @@
         justify="center"
       >
         #document-header
-      </div>
-      <!-- <DocumentHeader :focus="focus" :tab="tab" :set-tab="setTab" /> -->
+      </div> -->
+      <DocumentHeader :focus="focus" :tab="tab" :set-tab="setTab" />
     </template>
     <template #document-content="{ tab }">
-      <div
+      <!-- <div
         w="full"
         h="160"
         m="t-4"
@@ -173,11 +173,11 @@
         justify="center"
       >
         #document-content
-      </div>
-      <!-- <DocumentContent :tab="tab" /> -->
+      </div> -->
+      <DocumentContent :tab="tab" />
     </template>
     <template #document-bottom="{ focus, tab, setTab }">
-      <!-- <DocumentMobileDock :focus="focus">
+      <DocumentMobileDock :focus="focus">
         <div w="40">
           <wb-radio-group
             :default-value="tab"
@@ -190,8 +190,8 @@
             @change="setTab"
           />
         </div>
-      </DocumentMobileDock> -->
-      <div
+      </DocumentMobileDock>
+      <!-- <div
         w="full"
         h="60"
         m="t-6"
@@ -203,10 +203,10 @@
         justify="center"
       >
         #document-bottom
-      </div>
+      </div> -->
     </template>
     <template #document-aside-menu="{ focus, tab }">
-      <div
+      <!-- <div
         w="52"
         h="160"
         color="$wb-color-text-5"
@@ -218,11 +218,11 @@
         justify="center"
       >
         #document-aside-menu
-      </div>
-      <!-- <WBDocumentAside :focus="focus" :tab="tab" /> -->
+      </div> -->
+      <WBDocumentAside :focus="focus" :tab="tab" />
     </template>
     <template #document-aside-bottom>
-      <div
+      <!-- <div
         w="full"
         h="60"
         m="t-4"
@@ -234,7 +234,7 @@
         justify="center"
       >
         #document-aside-bottom
-      </div>
+      </div> -->
     </template>
     <template #layout-bottom>
       <div max-w="lg:360" m="x-auto">
