@@ -5,41 +5,44 @@ description: WhiteBlock document theme for vitepress.
 
 WhiteBlock's docs base on vitepress and has many customize ​configurations. We have encapsulated these modifications, and you can use `@white-block/vitepress` to quickly create the docs below.
 
-## Preview
+## Theme Preview
 ![preview](/vitepress/preview.png)
 
-[Online Demo](https://kythuen.github.io/white-block/) 
+<!-- [Online Demo](https://kythuen.github.io/white-block/)  -->
 
 ## Quick Start
+
 By using command line tool provided, to create your docs with `WhiteBlock` theme is effortless.
 
 ::: code-group
-```sh [pnpm]
+<!-- ```sh [pnpm]
 pnpm dlx @white-block/vitepress init
-```
+``` -->
 ```sh [npm]
 npx @white-block/vitepress init
 ```
-```sh [yarn]
-yarn dlx @white-block/vitepress init
-```
+<!-- ```sh [yarn] -->
+<!-- yarn dlx @white-block/vitepress init -->
+<!-- ``` -->
 :::
 
-## Installation
+<!-- GIF -->
+![cli](/vitepress/cli.png)
 
+## Manual Install
+
+### Add Dependencies
 ::: code-group
 ```sh [pnpm]
-pnpm add @white-block/vitepress unocss
+pnpm add @white-block/vitepress
 ```
 ```sh [npm]
-npm install @white-block/vitepress unocss
+npm install @white-block/vitepress
 ```
 ```sh [yarn]
-yarn add @white-block/vitepress unocss
+yarn add @white-block/vitepress
 ```
 :::
-
-## Usage
 
 ### Extend Default Theme
 
