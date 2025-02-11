@@ -26,29 +26,42 @@ npx @white-block/vitepress init
 <!-- ``` -->
 :::
 
-<!-- GIF -->
+<!-- TODO: GIF -->
 ![cli](/vitepress/cli.png)
 
 ## Manual Install
 
-### Add Dependencies
+### Add Vitepress
 ::: code-group
 ```sh [pnpm]
-pnpm add @white-block/vitepress
+pnpm dlx vitepress init
 ```
 ```sh [npm]
-npm install @white-block/vitepress
+npx vitepress init
 ```
 ```sh [yarn]
-yarn add @white-block/vitepress
+yarn dlx vitepress init
+```
+:::
+
+### Install Dependencies
+::: code-group
+```sh [pnpm]
+pnpm add @white-block/vitepress unocss vitepress
+```
+```sh [npm]
+npm install @white-block/vitepress unocss vitepress
+```
+```sh [yarn]
+yarn add @white-block/vitepress unocss vitepress
 ```
 :::
 
 ### Extend Default Theme
 
-If you already have a vitepress docs project, do follow steps to take WhiteBlock theme into your docs. 
+Now you already have a vitepress docs project, do follow steps to take WhiteBlock theme into your docs. 
 
-#### Edit vitepress theme
+#### Add Vitepress Theme
 ::: code-group
 ```ts [.vitepress/theme.ts]
 import 'virtual:uno.css'
@@ -62,7 +75,7 @@ export default {
 ```
 :::
 
-#### Add unocss config
+#### Add Unocss Config
 ::: code-group
 ```ts [uno.config.ts]
 import { UnocssConfig } from '@white-block/vitepress/unocss'
@@ -72,7 +85,7 @@ export default UnocssConfig()
 ```
 :::
 
-#### Add vite config
+#### Add Vite Config
 ::: code-group
 ```ts [vite.config.ts]
 import UnoCSS from 'unocss/vite'
@@ -100,29 +113,14 @@ export default defineConfig({
 ```
 :::
 
-### Create with CLI
-Also, you can CLI tool provided, quick create a new vitepress project with WhiteBlock theme.
-
-::: code-group
-```sh [pnpm]
-pnpm dlx wb-vitepress init
-```
-```sh [npm]
-npx wb-vitepress init
-```
-```sh [yarn]
-yarn dlx wb-vitepress init
-```
+:::info
+Now, the docs is ready.
 :::
 
-## Customize 
 
-If `@white-block/vitepress` can meet most of your needs, but you want to customize some parts. There also some ways provided for you to customize your documents in more detailed places.
+## What's Next?
+Sometime When you want to customize some parts of the docs. There also some ways provided for you to customize in more detailed places.
 
-### Extend Layout
-
-[Layouts](./layout)
-
-### Layout Slots
-
-[Layout Slots](./slots)
+- Read more about usage of [Default Layout](./default-layout).
+- Provided default component and page template, see [Layouts](./layout).
+- Further customize the docs with [Slots](./slots).

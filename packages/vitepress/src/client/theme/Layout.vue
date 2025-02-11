@@ -92,7 +92,7 @@ import { frontmatterField } from '../utils'
 import NotFound from 'vitepress/dist/client/theme-default/NotFound.vue'
 import WBDocument from './components/WBDocument.vue'
 import WBHeader from './components/WBHeader.vue'
-import WBHome from './components/WBHome.vue'
+import WBHome from './components/WBHome1.vue'
 // import WBPage from './components/WBPage.vue'
 import WBSidebar from './components/WBSidebar.vue'
 

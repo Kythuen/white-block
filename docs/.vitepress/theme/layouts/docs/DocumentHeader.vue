@@ -4,7 +4,6 @@
     sticky
     top="-6 !md:-18"
     z="80"
-    bg="$wb-color-background"
     backdrop="blur"
     border="0 b-px solid $wb-color-border"
   >
