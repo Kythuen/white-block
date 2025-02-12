@@ -25,9 +25,10 @@ You can use frontmatter `header` to control the header component visible or not.
 header: false
 ---
 ```
-### Dynamic Slots
 
 <HeaderSlot />
+
+### Dynamic Slots
 
 #### header-top
 Usually use for one-time banner on the top of the site.
@@ -48,7 +49,7 @@ Sometime you when add the operation button in header.
 
 When built-in navigation not meet your needs. We provide slot of navigation area for you to customize.
 
-Default component is [WBHeaderNav]().
+Default component is [WBHeaderNav](./components#navigation).
 
 ## Sidebar
 
@@ -59,8 +60,9 @@ sidebar: false
 ---
 ```
 
-### Dynamic Slots
 <SidebarSlot />
+
+### Dynamic Slots
 
 #### sidebar-top
 Usually use for main Ads or main content.
@@ -74,7 +76,7 @@ Usually use for Ads.
 
 When built-in sidebar menu not meet your needs. We provide slot of navigation area for you to customize.
 
-Default component is [WBSidebarMenu](/packages/vitepress/components#menu).
+Default component is [WBSidebarMenu](./components#menu).
 
 ## Document Content
 
@@ -88,8 +90,9 @@ doc-footer: false
 ---
 ```
 
-### Dynamic Slots
 <ContentSlot />
+
+### Dynamic Slots
 
 #### doc-header-top
 Content above the document header.
@@ -115,13 +118,20 @@ Content below the document footer.
 
 When built-in document header not meet your needs. We provide slot of navigation area for you to customize.
 
-Default component is [WBDocumentHeader](/packages/vitepress/components#document-header).
+Default component is [WBDocumentHeader](./components#document-header).
+
+#### doc-content
+
+When built-in document content not meet your needs. We provide slot of navigation area for you to customize.
+
+Default component is `<Content />` provided by vitepress.
+
 
 #### doc-aside
 
 When built-in document header not meet your needs. We provide slot of navigation area for you to customize.
 
-Default component is [WBDocumentAside](/packages/vitepress/components#document-aside).
+Default component is [WBDocumentAside](./components#document-aside).
 
 ## Footer
 
@@ -165,4 +175,4 @@ header: false
 ### home-content
 Use to customize you home page.
 
-Default component is [WBHome](/packages/vitepress/components#home).
+Default component is [WBHome](./components#home).

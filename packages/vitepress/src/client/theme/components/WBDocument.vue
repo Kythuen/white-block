@@ -2,13 +2,20 @@
   <div w="full" h="full">
     <div id="DocumentHeaderIndicator" w="full" h="0" />
     <slot
-      v-if="frontmatterField(frontmatter, 'document-header')"
-      name="document-header"
+      v-if="frontmatterField(frontmatter, 'doc-header')"
+      name="doc-header"
       :focus="isFocusMode"
       :tab="currentTab"
       :set-tab="setCurrentTab"
     >
-      <WBDocumentHeader :focus="isFocusMode" />
+      <WBDocumentHeader :focus="isFocusMode">
+        <template #doc-header-top>
+          <slot name="doc-header-top" />
+        </template>
+        <template #doc-header-bottom>
+          <slot name="doc-header-bottom" />
+        </template>
+      </WBDocumentHeader>
     </slot>
     <div
       w="full"
@@ -18,31 +25,35 @@
       gap="8"
       class="vp-doc"
     >
-      <!-- max-w="xl:264" -->
+      <!-- TODO: take a check -->
       <div
         w="full"
+        max-w="xl:220"
         :m="frontmatterField(frontmatter, 'sidebar') ? '' : 'x-auto'"
       >
-        <slot name="document-content" :tab="currentTab">
-          <div class="vp-doc-content">
+        <div class="vp-doc-content">
+          <slot name="doc-content" :tab="currentTab">
             <Content />
-          </div>
-        </slot>
+          </slot>
+        </div>
         <slot
-          name="document-bottom"
+          name="doc-footer"
           :focus="isFocusMode"
           :tab="currentTab"
           :set-tab="setCurrentTab"
         />
       </div>
-      <slot name="document-aside-menu">
+      <slot name="doc-aside">
         <WBDocumentAside
-          v-if="frontmatterField(frontmatter, 'document-aside')"
+          v-if="frontmatterField(frontmatter, 'doc-aside')"
           :focus="isFocusMode"
           :tab="currentTab"
         >
+          <template #document-aside-top>
+            <slot name="doc-aside-top" />
+          </template>
           <template #document-aside-bottom>
-            <slot name="document-aside-bottom" />
+            <slot name="doc-aside-bottom" />
           </template>
         </WBDocumentAside>
       </slot>

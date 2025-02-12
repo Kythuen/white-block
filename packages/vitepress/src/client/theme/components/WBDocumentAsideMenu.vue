@@ -128,8 +128,6 @@ function setActiveLink() {
     document.querySelectorAll(`.vp-doc-${props.tab} .header-anchor`)
   )
   const scrollTop = container?.scrollTop || 0
-  // const containerHeight = container?.offsetHeight || 0
-  // const contentHeight = container?.scrollHeight || 0
 
   for (let i = 0; i < anchors.length; i++) {
     const anchor = anchors[i]

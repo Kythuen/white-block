@@ -3,7 +3,7 @@
     <div
       v-for="group in resolveSidebar"
       :key="group.text"
-      p="b-5 last:b-0"
+      p="b-4 last:b-0"
       border="0 b-px last:b-0 solid $wb-color-border"
     >
       <div v-if="group.items">

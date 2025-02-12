@@ -208,8 +208,9 @@
   --wb-color-active: #222222;
   --wb-color-popup: #333333;
   --wb-color-operation: #ffffff0f;
-  --wb-color-card: linear-gradient(to bottom, #000000 50%, #111111);
-  --wb-color-background: var(--wb-color-white);
+  --wb-color-card: #ffffff;
+  --wb-color-text: var(--wb-color-text-default);
+  --wb-color-background: #f8f8f8;
   --wb-color-foreground: var(--wb-color-text);
   --wb-color-contrast: var(--wb-color-text-active);
   --wb-color-border: var(--wb-color-border-default);

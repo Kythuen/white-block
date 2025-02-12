@@ -12,6 +12,12 @@
           </div>
           <div w="50" flex items="center" gap="2">
             <div style="margin-top: 0; font-weight: 500; font-size: 1rem">
+              doc-content
+            </div>
+            <wb-toggle :value="true" size="sm" readonly></wb-toggle>
+          </div>
+          <div w="50" flex items="center" gap="2">
+            <div style="margin-top: 0; font-weight: 500; font-size: 1rem">
               doc-footer
             </div>
             <wb-toggle v-model="showDocFooter" size="sm"></wb-toggle>

@@ -144,7 +144,7 @@
         #sidebar-bottom
       </div> -->
     </template>
-    <template #document-header="{ focus, tab, setTab }">
+    <template #doc-header="{ focus, tab, setTab }">
       <!-- <div
         w="full"
         h="60"
@@ -160,7 +160,7 @@
       </div> -->
       <DocumentHeader :focus="focus" :tab="tab" :set-tab="setTab" />
     </template>
-    <template #document-content="{ tab }">
+    <template #doc-content="{ tab }">
       <!-- <div
         w="full"
         h="160"
@@ -176,7 +176,7 @@
       </div> -->
       <DocumentContent :tab="tab" />
     </template>
-    <template #document-bottom="{ focus, tab, setTab }">
+    <template #doc-footer="{ focus, tab, setTab }">
       <DocumentMobileDock :focus="focus">
         <div w="40">
           <wb-radio-group
@@ -205,7 +205,7 @@
         #document-bottom
       </div> -->
     </template>
-    <template #document-aside-menu="{ focus, tab }">
+    <template #doc-aside-menu="{ focus, tab }">
       <!-- <div
         w="52"
         h="160"
@@ -221,7 +221,7 @@
       </div> -->
       <WBDocumentAside :focus="focus" :tab="tab" />
     </template>
-    <template #document-aside-bottom>
+    <template #doc-aside-bottom>
       <!-- <div
         w="full"
         h="60"
@@ -236,7 +236,7 @@
         #document-aside-bottom
       </div> -->
     </template>
-    <template #layout-bottom>
+    <template #footer>
       <div max-w="lg:360" m="x-auto">
         <DocumentFooter></DocumentFooter>
       </div>

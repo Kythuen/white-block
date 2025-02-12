@@ -7,10 +7,12 @@
           w="full"
           h="screen"
           bg="$wb-color-background"
-          overflow="x-hidden"
-          class="scrollable-main"
+          overflow="x-hidden y-auto"
         >
           <WBHeader v-if="frontmatterField(frontmatter, 'header')">
+            <template #header-nav>
+              <slot name="header-nav" />
+            </template>
             <template #home-top>
               <slot name="home-top" />
             </template>
@@ -27,12 +29,12 @@
               <slot name="header-operation-after" />
             </template>
             <template #header-bottom>
-              <slot name="header-top" />
+              <slot name="header-bottom" />
             </template>
           </WBHeader>
           <div
             w="full"
-            min-h="[calc(100vh-var(--wb-height-layout-header)-1px)]"
+            min-h="[calc(100vh-var(--vp-wb-header-height)-1px)]"
             class="content"
           >
             <NotFound v-if="pageData.isNotFound" />
@@ -58,32 +60,38 @@
                 <template #sidebar-top>
                   <slot name="sidebar-top" />
                 </template>
+                <template #sidebar-menu>
+                  <slot name="sidebar-menu" />
+                </template>
                 <template #sidebar-bottom>
                   <slot name="sidebar-bottom" />
                 </template>
               </WBSidebar>
               <WBDocument>
-                <template #document-header="payload">
-                  <slot name="document-header" v-bind="payload" />
+                <template #doc-header="payload">
+                  <slot name="doc-header" v-bind="payload" />
                 </template>
-                <template #document-content="payload">
-                  <slot name="document-content" v-bind="payload" />
+                <template #doc-content="payload">
+                  <slot name="doc-content" v-bind="payload" />
                 </template>
-                <template #document-bottom="payload">
-                  <slot name="document-bottom" v-bind="payload" />
+                <template #doc-bottom="payload">
+                  <slot name="doc-bottom" v-bind="payload" />
                 </template>
-                <template #document-aside-menu="payload">
-                  <slot name="document-aside-menu" v-bind="payload" />
+                <template #doc-aside-top>
+                  <slot name="doc-aside-top" />
                 </template>
-                <template #document-aside-bottom>
-                  <slot name="document-aside-bottom" />
+                <template #doc-aside-menu="payload">
+                  <slot name="doc-aside-menu" v-bind="payload" />
+                </template>
+                <template #doc-aside-bottom>
+                  <slot name="doc-aside-bottom" />
                 </template>
               </WBDocument>
             </div>
           </div>
-          <slot name="layout-bottom" />
+          <slot name="footer" />
         </div>
-        <slot name="layout-aside" />
+        <slot name="aside" />
       </div>
     </Suspense>
   </ClientOnly>

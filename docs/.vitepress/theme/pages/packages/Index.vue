@@ -4,7 +4,7 @@
       <h2
         w="xl:200"
         m="t-0 b-2em"
-        text="8 md:10 xl:12 center white"
+        text="8 md:10 xl:12 center $wb-color-text-main"
         font="bold italic leading-[1.2]"
         gap="x-1em"
       >
@@ -13,63 +13,47 @@
       <Net />
     </div>
     <div w="95% lg:80%" m="x-auto t-6" style="--wb-color-primary: #ffffff">
-      <wb-input w="full" size="lg" placeholder="Search a package">
+      <wb-input
+        v-model="filterKeyword"
+        w="full"
+        size="lg"
+        placeholder="Search a package"
+        @change="filterPackages"
+      >
         <template #suffix>
-          <wb-button h="full" theme="contrast">Search</wb-button>
+          <wb-button h="full" theme="contrast" @click="filterPackages"
+            >Search</wb-button
+          >
         </template>
       </wb-input>
     </div>
     <div w="95% lg:80%" m="x-auto t-6">
       <div p="y-4" grid="~ cols-1 md:cols-2 lg:cols-3" gap="4">
-        <BlurCard v-for="item in PACKAGES" :key="item.title" :data="item" />
+        <BlurCard
+          v-for="item in resolvePackages"
+          :key="item.title"
+          :data="item"
+        />
       </div>
-      <!-- <h2>Recently</h2> -->
-      <!-- <h2>Explore All</h2> -->
-      <!-- <div
-        grid="~ cols-12"
-        gap="6"
-        @click="clickDelegate($event, 'pkg-item', toPage)"
-      >
-        <div
-          v-for="item in PACKAGES"
-          :key="item.name"
-          :data-value="`/${item.link}`"
-          p="4"
-          rounded="1.5"
-          ring="1 $wb-color-border-soft"
-          bg="#111111 hover:$wb-color-background"
-          grid="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3"
-          flex="~ col"
-          gap="3"
-          cursor="pointer"
-          shadow="inset white/10 sm"
-          class="pkg-item"
-        >
-          <div flex items="center" gap="3">
-            <div w="10" h="10" p="1" rounded="1" bg="white/10">
-              <img h="full" :src="withBase(`/logos/${item.link}.svg`)" alt="" />
-            </div>
-            <div text="lg" color="$wb-color-text-main">{{ item.name }}</div>
-          </div>
-          <div flex="1" color="$wb-color-text-disabled">
-            {{ item.description || 'Not Found' }}
-          </div>
-          <div flex="~" gap="3">
-            <div w="5" h="5" class="i-simple-icons-npm"></div>
-            <div w="5" h="5" class="i-simple-icons-github"></div>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { withBase, useRouter } from 'vitepress'
-// import { clickDelegate } from 'white-block'
+import { withBase } from 'vitepress'
+import { ref, shallowRef } from 'vue'
 import Net from './Net.vue'
 
 const PACKAGES = [
+  {
+    title: '@white-block/awesome',
+    desc: 'Awesome components for WhiteBlock.',
+    link: withBase('/packages/awesome/'),
+    authorLink: 'https://github.com/Kythuen',
+    author: 'Kythuen',
+    img: withBase('/assets/img/packages/awesome.webp'),
+    tags: ['components']
+  },
   {
     title: '@white-block/resolve',
     desc: 'unplugin-vue-components resolver for WhiteBlock.',
@@ -94,14 +78,16 @@ const PACKAGES = [
     link: withBase('/packages/vitepress/guide'),
     authorLink: 'https://github.com/Kythuen',
     author: 'Kythuen',
-    img: withBase('/assets/img/packages/vitepress.svg'),
+    img: withBase('/assets/img/packages/vitepress.webp'),
     tags: ['theme', 'vitepress']
   }
 ]
 
-// const router = useRouter()
-// function toPage(dataset: Record<string, string>) {
-//   const { value } = dataset
-//   router.go(withBase(value))
-// }
+const resolvePackages = shallowRef(PACKAGES)
+const filterKeyword = ref('')
+function filterPackages() {
+  resolvePackages.value = PACKAGES.filter(i =>
+    i.title.includes(filterKeyword.value)
+  )
+}
 </script>

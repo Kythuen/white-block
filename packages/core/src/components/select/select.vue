@@ -42,7 +42,8 @@
           ring="1 $wb-select-border"
           flex="~ col"
           gap="$wb-select-gap"
-          class="wb-select-content scrollable"
+          overflow="y-auto"
+          class="wb-select-content"
           :style="{ minWidth: `${trigger.width}px`, ...propsStyles }"
           @click.stop="
             clickDelegate($event, 'wb-select-option', handleSelectOptionItem)

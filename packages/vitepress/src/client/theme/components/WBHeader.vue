@@ -18,7 +18,7 @@
     </div>
     <div
       max-w="full lg:360"
-      h="$wb-height-layout-header"
+      h="$vp-wb-header-height"
       m="x-auto"
       p="x-2 !md:x-6 !lg:x-6"
       flex="~ row"

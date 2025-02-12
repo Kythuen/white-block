@@ -6,7 +6,7 @@ description: The built-in components provided.
 ## Header
 
 ```ts
-import { WBHeader } from '@white-block/vitepress'
+import { WBHeader, WBHeaderNav } from '@white-block/vitepress'
 ```
 
 This section contain areas: **logo**, **menu** and **operation**.
@@ -58,9 +58,7 @@ themeConfig: {
 ```
 :::
 
-
 > See [themeConfig nav](https://vitepress.dev/reference/default-theme-config#nav) declaration in vitepress.
-
 
 ### Operation
 
@@ -93,7 +91,7 @@ See [Slots of Header](./slots#header) for detail.
 Here is the css variables defined, you can use them to do customize.
 
 ```css
---wb-layout-height-header: 4rem;
+--vp-wb-header-height: 4rem;
 
 ```
 
@@ -163,7 +161,7 @@ document-aside: false
 ---
 
 ```ts
-import { WBDocumentHeader, WBDocumentAside, WBDocumentAside } from '@white-block/vitepress'
+import { WBDocumentHeader, WBDocumentContent, WBDocumentAside, WBDocumentAside } from '@white-block/vitepress'
 ```
 
 ### Document Header
@@ -177,6 +175,10 @@ title: '@white-block/vitepress'
 description: WhiteBlock document theme for vitepress.
 ---
 ```
+
+### Document Content
+
+Main content of the page. Default is `<Content />`, which is the parser result of the markdown file.
 
 ### Document Aside
 Document aside get headers of this page.

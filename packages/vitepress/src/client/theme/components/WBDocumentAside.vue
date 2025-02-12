@@ -1,21 +1,20 @@
 <template>
   <div
     sticky
-    top="[calc(var(--wb-doc-height-header)+8.5rem)]"
+    top="[calc(var(--vp-wb-header-height)+8.5rem)]"
     w="52"
     flex="hidden !xl:flex none col"
     :h="
       focus
-        ? '[calc(100vh-var(--wb-doc-height-header)-10.5rem)]'
-        : '[calc(100vh-var(--wb-doc-height-header)-23rem)]'
+        ? '[calc(100vh-var(--vp-wb-header-height)-10.5rem)]'
+        : '[calc(100vh-var(--vp-wb-header-height)-23rem)]'
     "
     class="vp-raw"
   >
     <div
       h="full"
       flex="1"
-      class="scrollable"
-      overflow-y-auto
+      overflow="y-auto"
       :style="{ height: menuHeightStyle }"
     >
       <slot name="document-aside-menu">

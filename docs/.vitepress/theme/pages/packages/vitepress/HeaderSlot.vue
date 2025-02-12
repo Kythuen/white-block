@@ -7,6 +7,12 @@
     bg="$wb-color-card"
   >
     <div w="full" p="y-4">
+      <div flex items="center" gap="2">
+        <div style="margin-top: 0; font-weight: 500; font-size: 1rem">
+          header-nav
+        </div>
+        <wb-toggle v-model="showHeaderNav" size="sm"></wb-toggle>
+      </div>
       <div flex items="center" gap="8">
         <div flex items="center" gap="2">
           <div style="margin-top: 0; font-weight: 500; font-size: 1rem">
@@ -50,7 +56,7 @@
         h="10"
       />
       <div w="90%" h="12" m="x-auto" flex>
-        <div w="1/6" flex items="center" color="white">
+        <div w="1/6" flex="~ grow-1 shrink-0" items="center" color="white">
           <img
             w="auto"
             h="5"
@@ -61,7 +67,14 @@
           />
           <span font="extrabold">WhiteBlock</span>
         </div>
-        <div w="4/6" flex items="center" justify="center" gap="1">
+        <div
+          v-show="showHeaderNav"
+          w="4/6"
+          flex
+          items="center"
+          justify="center"
+          gap="1"
+        >
           <wb-button
             v-for="item in NAV"
             :key="item"
@@ -72,7 +85,7 @@
             <div text="sm">{{ item }}</div>
           </wb-button>
         </div>
-        <div w="1/6" flex items="center" justify="end">
+        <div w="1/6" flex="~ grow-1 shrink-0" items="center" justify="end">
           <SimpleLayer
             v-show="showHeaderOperationBefore"
             name="header-operation"
@@ -120,6 +133,7 @@ import SimpleLayer from './SimpleLayer.vue'
 const { theme } = useData()
 
 const NAV = ['Guide', 'Components', 'Playground', 'Packages']
+const showHeaderNav = ref(false)
 const showHeaderTop = ref(false)
 const showHeaderBottom = ref(false)
 const showHeaderOperationBefore = ref(false)

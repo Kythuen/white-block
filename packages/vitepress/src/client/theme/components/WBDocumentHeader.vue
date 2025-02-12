@@ -4,10 +4,11 @@
     sticky
     top="-6 !md:-8"
     z="80"
-    backdrop="blur"
+    bg="$wb-color-background"
     border="0 b-px solid $wb-color-border dark:$wb-color-border"
   >
     <div relative w="full" h="38 !md:50" m="x-auto" p="3 md:6 lg:8">
+      <slot name="doc-header-top" />
       <div v-if="focus" h="12 md:18" m="t-21 md:t-19" flex items="center">
         <h1 text="6 md:7 lg:7" leading="relaxed" fw="extrabold">
           {{ frontmatter.title }}
@@ -26,9 +27,7 @@
           />
         </div>
       </div>
-      <slot name="doc-header-bottom">
-        <div absolute bottom="-6" w="42" h="12" bg="gray/50" rounded="md"></div>
-      </slot>
+      <slot name="doc-header-bottom" />
     </div>
   </div>
 </template>

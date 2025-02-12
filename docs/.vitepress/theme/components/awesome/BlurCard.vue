@@ -1,12 +1,12 @@
 <template>
   <a
     :href="data.link"
-    bg="#111111"
+    bg="$wb-color-card"
     rounded="3"
     ring="px $wb-color-border"
     overflow="hidden"
   >
-    <div relative h="16" bg="#ffffff1a">
+    <div relative h="16">
       <div
         relative
         w="full"
@@ -18,6 +18,7 @@
       >
         <div absolute w="120" h="120" filter="blur-40 saturate-150">
           <img w="full" h="full" :src="data.img" />
+          <div absolute inset="0" w="full" h="full" bg="#0000001a"></div>
         </div>
       </div>
 
@@ -27,7 +28,7 @@
         right="5"
         w="16"
         h="16"
-        bg="#111111"
+        bg="$wb-color-card"
         rounded="full"
         flex
         items="center"
@@ -39,7 +40,7 @@
     <div p="4">
       <div flex="~ col" gap="2">
         <div text="lg #ffffff" font="bold">{{ data.title }}</div>
-        <a :href="data.authorLink" un-text="xs #ffffff cyan" font="bold">
+        <a :href="data.authorLink" un-text="xs $wb-color-blue" font="bold">
           @{{ data.author }}
         </a>
         <div h="12" text="sm $wb-color-text-secondly line-clamp-2">
