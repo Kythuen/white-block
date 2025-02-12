@@ -3,7 +3,7 @@ title: Components
 description: The built-in components provided.
 ---
 
-## Header
+## WBHeader
 
 ```ts
 import { WBHeader, WBHeaderNav } from '@white-block/vitepress'
@@ -95,7 +95,7 @@ Here is the css variables defined, you can use them to do customize.
 
 ```
 
-## Sidebar
+## WBSidebar
 
 This section contain areas: **sidebar-top**, **sidebar-menu** and **sidebar-bottom**.
 
@@ -150,7 +150,7 @@ This component also provide slots for customize.
 See [Slots of Sidebar](./slots#sidebar) for detail.
 
 
-## Document
+## WBDocument
 
 This section contain areas: **doc-top**, **doc-aside** and **doc-bottom**.
 Use frontmatter to control visible of the component.
@@ -197,7 +197,7 @@ This component also provide slots for customize.
 
 See [Slots of Content](./slots#content) for detail.
 
-## Home
+## WBHome
 ```ts
 import { WBHome } from '@white-block/vitepress'
 ```

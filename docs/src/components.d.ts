@@ -12,6 +12,7 @@ declare module 'vue' {
     ChangelogsBlock: typeof import('./../.vitepress/theme/components/blocks/ChangelogsBlock.vue')['default']
     CustomUsageBlock: typeof import('./../.vitepress/theme/components/blocks/CustomUsageBlock.vue')['default']
     DemoBlock: typeof import('./../.vitepress/theme/components/blocks/DemoBlock.vue')['default']
+    NeonButton: typeof import('./../.vitepress/theme/components/awesome/NeonButton.vue')['default']
     Placeholder: typeof import('./../.vitepress/theme/components/tools/Placeholder.vue')['default']
     UsageBlock: typeof import('./../.vitepress/theme/components/blocks/UsageBlock.vue')['default']
   }
