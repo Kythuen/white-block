@@ -11,7 +11,13 @@
     "
     class="vp-raw"
   >
-    <div flex="1" class="scrollable" :style="{ height: menuHeightStyle }">
+    <div
+      h="full"
+      flex="1"
+      class="scrollable"
+      overflow-y-auto
+      :style="{ height: menuHeightStyle }"
+    >
       <slot name="document-aside-menu">
         <WBDocumentAsideMenu v-bind="props" />
       </slot>
@@ -37,7 +43,7 @@ const menuHeightStyle = ref('')
 function getMenuHeight() {
   const bottomHeight = AsideMenuBottom.value.offsetHeight
   const bottomMargin = bottomHeight ? '1rem' : '0'
-  return `calc(100% - ${bottomHeight}px - ${bottomMargin}`
+  return `calc(100% - ${bottomHeight}px - ${bottomMargin})`
 }
 
 onMounted(() => {

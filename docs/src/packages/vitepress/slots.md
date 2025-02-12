@@ -3,7 +3,7 @@ title: Slots
 description: '@white-block/vitepress provide several slots for user to custom the theme.'
 ---
 
-# Document Page
+# Default Layout
 When there is document page with `docs` layout, we provide the slots below.
 
 ## Overview
@@ -12,8 +12,10 @@ import SlotsOverview from '../../../.vitepress/theme/pages/packages/vitepress/Sl
 import HeaderSlot from '../../../.vitepress/theme/pages/packages/vitepress/HeaderSlot.vue'
 import SidebarSlot from '../../../.vitepress/theme/pages/packages/vitepress/SidebarSlot.vue'
 import ContentSlot from '../../../.vitepress/theme/pages/packages/vitepress/ContentSlot.vue'
+import HomeHeaderSlot from '../../../.vitepress/theme/pages/packages/vitepress/HomeHeaderSlot.vue'
 </script>
 <SlotsOverview />
+
 
 ## Header
 
@@ -23,32 +25,144 @@ You can use frontmatter `header` to control the header component visible or not.
 header: false
 ---
 ```
+### Dynamic Slots
+
 <HeaderSlot />
 
-:::tip
-- `#header-top`: Usually use for one-time banner on the top of the site.
+#### header-top
+Usually use for one-time banner on the top of the site.
 
-- `#header-operation-[position]`: 
-Sometime you when add the operation button in header.
-:::
+#### header-bottom
+Usually use for important notice above content area.
+
+#### header-operation
+
+Sometime you when add the operation button in header. 
+- `#header-operation-before`
+- `#header-operation-inside`
+- `#header-operation-after`. 
+
+### Static Slots
+
+#### header-nav
+
+When built-in navigation not meet your needs. We provide slot of navigation area for you to customize.
+
+Default component is [WBHeaderNav]().
 
 ## Sidebar
+
+You can use frontmatter `sidebar` to control the header component visible or not.
+```md
+---
+sidebar: false
+---
+```
+
+### Dynamic Slots
 <SidebarSlot />
 
+#### sidebar-top
+Usually use for main Ads or main content.
+
+#### sidebar-bottom
+Usually use for Ads.
+
+### Static Slots
+
+#### sidebar-menu
+
+When built-in sidebar menu not meet your needs. We provide slot of navigation area for you to customize.
+
+Default component is [WBSidebarMenu](/packages/vitepress/components#menu).
+
+## Document Content
+
+The main content area of the page.
+
+You can use frontmatter to control the header component visible or not.
+```md
+---
+doc-header: false
+doc-footer: false
+---
+```
+
+### Dynamic Slots
+<ContentSlot />
+
+#### doc-header-top
+Content above the document header.
+
+#### doc-header-bottom
+Content below the document header.
+
+#### doc-aside-top
+Content above the document aside.
+
+#### doc-aside-bottom
+Content below the document aside.
+
+#### doc-footer-top
+Content above the document footer.
+
+#### doc-footer-bottom
+Content below the document footer.
+
+### Static Slots
+
+#### doc-header
+
+When built-in document header not meet your needs. We provide slot of navigation area for you to customize.
+
+Default component is [WBDocumentHeader](/packages/vitepress/components#document-header).
+
+#### doc-aside
+
+When built-in document header not meet your needs. We provide slot of navigation area for you to customize.
+
+Default component is [WBDocumentAside](/packages/vitepress/components#document-aside).
+
+## Footer
+
+Usually use for links & copyright information.
+
+### Dynamic Slots
+
+#### footer-top
+Content above the layout footer.
+
+#### footer-bottom
+Content below the layout footer.
+
+## Aside
+Usually for isolated aside bar at right of the page.
+
+### Dynamic Slots
+
+#### aside
+Aside slot default to a empty area.
+
+
+# Home Layout
+
+## Header
+
+You can use frontmatter `header` to control the header component visible or not.
+```md
+---
+header: false
+---
+```
+<HomeHeaderSlot />
+
 :::tip
-`#sidebar-top` & `#sidebar-bottom` usually for ads. 
+`#home-top` only show in `home` layout and have less priority than `#header-top`.
 :::
 
 ## Content
-The main content area of the page.
-<ContentSlot />
 
-## Footer
-Usually use for links & copyright information.
+### home-content
+Use to customize you home page.
 
-<!-- ### HomePage
-#### home-top
-![home-top](/vitepress/slots/home-top.png)
-
-#### home-content
-![home-top](/vitepress/slots/home-content.png) -->
+Default component is [WBHome](/packages/vitepress/components#home).

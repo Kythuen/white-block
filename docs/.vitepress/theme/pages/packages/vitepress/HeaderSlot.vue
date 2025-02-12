@@ -1,59 +1,54 @@
 <template>
-  <div p="y-3">
+  <div
+    m="y-3"
+    p="4"
+    ring="px $wb-color-border-dinky"
+    rounded="md"
+    bg="$wb-color-card"
+  >
     <div w="full" p="y-4">
-      <div flex items="center" gap="2">
-        <h3
-          id="header-top"
-          style="margin-top: 0; font-weight: 500; font-size: 1rem"
-        >
-          header-top
-        </h3>
-        <wb-toggle v-model="showHeaderTop" size="sm"></wb-toggle>
+      <div flex items="center" gap="8">
+        <div flex items="center" gap="2">
+          <div style="margin-top: 0; font-weight: 500; font-size: 1rem">
+            header-top
+          </div>
+          <wb-toggle v-model="showHeaderTop" size="sm"></wb-toggle>
+        </div>
+        <div flex items="center" gap="2">
+          <div style="margin-top: 0; font-weight: 500; font-size: 1rem">
+            header-bottom
+          </div>
+          <wb-toggle v-model="showHeaderBottom" size="sm"></wb-toggle>
+        </div>
       </div>
       <div flex items="center" gap="8">
         <div flex items="center" gap="2">
-          <h3
-            id="header-operation-before"
-            style="margin-top: 0; font-weight: 500; font-size: 1rem"
-          >
+          <div style="margin-top: 0; font-weight: 500; font-size: 1rem">
             header-operation-before
-          </h3>
+          </div>
           <wb-toggle v-model="showHeaderOperationBefore" size="sm"></wb-toggle>
         </div>
         <div flex items="center" gap="2">
-          <h3
-            id="header-operation-inside"
-            style="margin-top: 0; font-weight: 500; font-size: 1rem"
-          >
+          <div style="margin-top: 0; font-weight: 500; font-size: 1rem">
             header-operation-inside
-          </h3>
+          </div>
           <wb-toggle v-model="showHeaderOperationInside" size="sm"></wb-toggle>
         </div>
         <div flex items="center" gap="2">
-          <h3
-            id="header-operation-after"
-            style="margin-top: 0; font-weight: 500; font-size: 1rem"
-          >
+          <div style="margin-top: 0; font-weight: 500; font-size: 1rem">
             header-operation-after
-          </h3>
+          </div>
           <wb-toggle v-model="showHeaderOperationAfter" size="sm"></wb-toggle>
         </div>
       </div>
     </div>
-    <div
-      w="full"
-      ring="px $wb-color-border-dinky"
-      rounded="md"
-      text="sm"
-      @click="clickDelegate($event, 'slots-layer', handleClick)"
-    >
+    <div w="full" ring="px $wb-color-border-dinky" rounded="md" text="sm">
       <img
         v-show="showHeaderTop"
         w="full"
         :src="withBase('/vitepress/slots/header-top-banner.png')"
         h="10"
       />
-      <!-- <Layer  name="header-top" /> -->
       <div w="90%" h="12" m="x-auto" flex>
         <div w="1/6" flex items="center" color="white">
           <img
@@ -107,6 +102,12 @@
           />
         </div>
       </div>
+      <SimpleLayer
+        v-show="showHeaderBottom"
+        name="header-bottom"
+        w="full"
+        h="6"
+      />
     </div>
   </div>
 </template>
@@ -114,19 +115,13 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { ref } from 'vue'
-import { clickDelegate } from 'white-block'
 import SimpleLayer from './SimpleLayer.vue'
 
 const { theme } = useData()
 
-function handleClick(dataset: Record<string, string>) {
-  const { value } = dataset
-  const el: any = document.querySelector(`.anchor-link a[href="#${value}"]`)
-  el.click()
-}
-
 const NAV = ['Guide', 'Components', 'Playground', 'Packages']
 const showHeaderTop = ref(false)
+const showHeaderBottom = ref(false)
 const showHeaderOperationBefore = ref(false)
 const showHeaderOperationInside = ref(false)
 const showHeaderOperationAfter = ref(false)

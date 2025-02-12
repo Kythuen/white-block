@@ -26,6 +26,9 @@
             <template #header-operation-after>
               <slot name="header-operation-after" />
             </template>
+            <template #header-bottom>
+              <slot name="header-top" />
+            </template>
           </WBHeader>
           <div
             w="full"

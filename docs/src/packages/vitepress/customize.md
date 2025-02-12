@@ -1,290 +1,301 @@
 ---
 title: Customize
+description: This page show how to advance customize your theme.
 ---
 
-```vue
+:::info
+In this tutorial, let’s add a tab effect for the content at DocumentHeader like [WhiteBlock component](/components/button).
+
+![](/vitepress/customize/tab-effect.png)
+:::
+
+<!-- TODO: CodeSandbox -->
+[Online Demo]()
+
+## Import the Theme
+::: code-group
+```ts [.vitepress/theme/index.ts]
+import { Theme as WBTheme } from '@white-block/vitepress'
+import 'uno.css'
+import type { Theme } from 'vitepress'
+
+const theme: Theme = {
+  extends: WBTheme
+}
+
+export default theme
+```
+:::
+
+
+## Extend the Theme
+Add a custom layout and change the DocumentHeader component with `doc-top` slot.
+
+
+### Add Custom Layout
+
+::: code-group
+```vue [.vitepress/theme/Layout.vue]
 <template>
   <Layout>
-    <template #layout-aside>
-      <ThemeEditor
-        v-if="themeEditorVisible"
-        @close="setThemeEditorVisible(false)"
-      />
-    </template>
-    <template #home-top>
-      <!-- <div
-        v-if="homeTopVisible"
-        w="full"
-        h="17.5"
-        color="$wb-color-text-5"
-        bg="$wb-color-layer"
-        rounded="1"
-        flex
-        items="center"
-        justify="center"
-        @click="setHomeTopVisible(false)"
-      >
-        #home-top
-      </div> -->
-    </template>
-    <!-- <template #home-content>
-      <Home />
-    </template> -->
-    <template #header-top>
-      <!-- <div
-        v-if="headerTopVisible"
-        w="full"
-        h="17.5"
-        color="$wb-color-text-5"
-        bg="$wb-color-layer"
-        rounded="1"
-        flex
-        items="center"
-        justify="center"
-        @click="setHeaderTopVisible(false)"
-      >
-        #header-top / #home-top
-      </div> -->
-    </template>
-    <template #header-operation-before>
-      <!-- <div
-        w="40"
-        h="8"
-        bg="$wb-color-layer"
-        text="xs"
-        flex
-        items="center"
-        justify="center"
-      >
-        #header-operation-before
-      </div> -->
-      <WBIconButton
-        name="theme"
-        icon="i-heroicons-swatch-20-solid"
-        tip="Theme"
-        theme="primary"
-        @click="setThemeEditorVisible(true)"
-      />
-    </template>
-    <template #header-operation-inside>
-      <!-- <div
-        w="40"
-        h="8"
-        bg="$wb-color-layer"
-        text="xs"
-        flex
-        items="center"
-        justify="center"
-      >
-        #header-operation-inside
-      </div> -->
-      <!-- <WBIconButton
-        name="lang"
-        icon="i-tdesign-translate"
-        tip="Language"
-        @click="changeLanguage"
-      /> -->
-    </template>
-    <template #sidebar-top>
-      <!-- <div
-        w="full"
-        h="20"
-        m="b-4"
-        color="$wb-color-text-5"
-        bg="$wb-color-layer"
-        rounded="1"
-        flex
-        items="center"
-        justify="center"
-      >
-        #sidebar-top
-      </div> -->
-      <!-- <div
-        v-if="
-          matchItems(router.route.path, [
-            '/white-block/components',
-            '/white-block/guide'
-          ])
-        "
-        m="b-4"
-      >
-        <wb-select
-          :options="[{ label: '0.0.1', value: '0.0.1' }]"
-          placeholder="0.0.1"
-        />
-      </div> -->
-      <!-- <div
-        v-if="router.route.path.includes('vitepress')"
-        w="full"
-        h="30"
-        p="x-3"
-        m="b-4"
-        color="$wb-color-text-5"
-        rounded="1"
-        flex="~ col"
-        gap="4"
-        justify="center"
-      >
-        <div text="lg white/80" font="bold">@ephemeras/types</div>
-        <div flex gap="2">
-          <div w="5" h="5" class="i-simple-icons-npm"></div>
-          <div w="5" h="5" class="i-simple-icons-github"></div>
-          changlogs, npm,github,Q&A
-        </div>
-        <div>{{ frontmatter.package }}</div>
-      </div> -->
-    </template>
-    <template #sidebar-bottom>
-      <!-- <div
-        w="full"
-        h="60"
-        m="t-4"
-        color="$wb-color-text-5"
-        bg="$wb-color-layer"
-        rounded="1"
-        flex
-        items="center"
-        justify="center"
-      >
-        #sidebar-bottom
-      </div> -->
-    </template>
-    <template #document-header="{ focus, tab, setTab }">
-      <!-- <div
-        w="full"
-        h="60"
-        m="t-4"
-        color="$wb-color-text-5"
-        bg="$wb-color-layer"
-        rounded="1"
-        flex
-        items="center"
-        justify="center"
-      >
-        #document-header
-      </div> -->
-      <DocumentHeader :focus="focus" :tab="tab" :set-tab="setTab" />
-    </template>
-    <template #document-content="{ tab }">
-      <!-- <div
-        w="full"
-        h="160"
-        m="t-4"
-        color="$wb-color-text-5"
-        bg="$wb-color-layer"
-        rounded="1"
-        flex
-        items="center"
-        justify="center"
-      >
-        #document-content
-      </div> -->
-      <DocumentContent :tab="tab" />
-    </template>
-    <template #document-bottom="{ focus, tab, setTab }">
-      <DocumentMobileDock :focus="focus">
-        <div w="40">
-          <wb-radio-group
-            :default-value="tab"
-            ring="1 inset $wb-color-border"
-            :options="TAB_OPTIONS"
-            type="tab"
-            tab-type="emphasize"
-            shape="round"
-            size="lg"
-            @change="setTab"
-          />
-        </div>
-      </DocumentMobileDock>
-      <!-- <div
-        w="full"
-        h="60"
-        m="t-6"
-        color="$wb-color-text-5"
-        bg="$wb-color-layer"
-        rounded="1"
-        flex
-        items="center"
-        justify="center"
-      >
-        #document-bottom
-      </div> -->
-    </template>
-    <template #document-aside-menu="{ focus, tab }">
-      <!-- <div
-        w="52"
-        h="160"
-        color="$wb-color-text-5"
-        bg="$wb-color-layer"
-        text="sm"
-        rounded="1"
-        flex
-        items="center"
-        justify="center"
-      >
-        #document-aside-menu
-      </div> -->
-      <WBDocumentAside :focus="focus" :tab="tab" />
-    </template>
-    <template #document-aside-bottom>
-      <!-- <div
-        w="full"
-        h="60"
-        m="t-4"
-        color="$wb-color-text-5"
-        bg="$wb-color-layer"
-        rounded="1"
-        flex
-        items="center"
-        justify="center"
-      >
-        #document-aside-bottom
-      </div> -->
-    </template>
-    <template #layout-bottom>
-      <div max-w="lg:360" m="x-auto">
-        <DocumentFooter></DocumentFooter>
-      </div>
+    <template #doc-top="{ focus, tab, setTab }">
+      <WBDocumentHeader>
+        <template #doc-header-bottom>
+          <div absolute bottom="-6" w="42" h="12">
+            <wb-radio-group
+              :value="tab"
+              :options="TAB_OPTIONS"
+              type="tab"
+              theme="white"
+              size="lg"
+              ring="1 inset $wb-color-border"
+              @change="setTab"
+            />
+          </div>
+        </template>
+      </WBDocumentHeader>
     </template>
   </Layout>
 </template>
 
 <script setup lang="ts">
-import DocumentHeader from './docs/DocumentHeader.vue'
-import DocumentContent from './docs/DocumentContent.vue'
-import DocumentFooter from './docs/DocumentFooter.vue'
-import DocumentMobileDock from './docs/DocumentMobileDock.vue'
-import ThemeEditor from './theme-editor/Index.vue'
-import Home from './home/Index.vue'
-import { Layout, WBHeader, WBDocumentAside } from '@white-block/vitepress'
-import { useState } from 'white-block'
-import { useRouter, useData } from 'vitepress'
-
-const { site, frontmatter } = useData()
-const router = useRouter()
+import { WBDocumentHeader } from '@white-block/vitepress'
 
 const TAB_OPTIONS = [
   { label: 'DEMO', value: 'content' },
   { label: 'API', value: 'api' }
 ]
-// const [currentTab, setCurrentTab] = useState<string>('content')
-
-const [homeTopVisible, setHomeTopVisible] = useState<boolean>(true)
-const [headerTopVisible, setHeaderTopVisible] = useState<boolean>(true)
-
-const [themeEditorVisible, setThemeEditorVisible] = useState<boolean>(false)
-function changeLanguage() {
-  let targetPath = ''
-  const { path } = router.route
-  if (path.includes('/zh')) {
-    targetPath = path.replace('/zh', '')
-  } else {
-    const { base } = site.value
-    const pure = path.replace(base, '')
-    targetPath = `${base}zh/${pure}`
-  }
-  router.go(targetPath)
-}
 </script>
 
 ```
+:::
+
+### Add New DocumentHeader
+::: code-group
+```vue [.vitepress/theme/DocumentHeader.vue]
+<template>
+  <div
+    sticky
+    top="-6 !md:-18"
+    z="80"
+    bg="$wb-color-background"
+    border="0 b-px solid $wb-color-border"
+  >
+    <div relative w="full" h="38 !md:60" m="x-auto" p="3 md:6 lg:8">
+      <div v-if="focus" h="12 md:18" m="t-21 md:t-29" flex items="center">
+        <h1
+          text="$wb-color-text-main 6 md:7 lg:7"
+          leading="relaxed"
+          font="extrabold"
+        >
+          {{ frontmatter.title }}
+        </h1>
+      </div>
+      <div v-else h="full">
+        <div w="full lg:70%" flex="~ col">
+          <div v-if="frontmatter.component" m="b-4">
+            <div class="!md:hidden">
+              <img
+                :src="`https://img.shields.io/badge/coverages-${coverageData.statements?.value}%25-${coverageData.statements?.color}`"
+              />
+            </div>
+            <div gap="2" op="dark:85" class="hidden !md:flex">
+              <img
+                v-for="item in coverageData"
+                :key="item.type"
+                :src="`https://img.shields.io/badge/coverages:%20${item.type}-${item.value}%25-${item.color}`"
+              />
+            </div>
+          </div>
+          <h1
+            text="$wb-color-text-main 6 md:8 lg:10"
+            leading="relaxed"
+            fw="extrabold"
+          >
+            {{ frontmatter.title }}
+          </h1>
+          <p
+            color="$wb-color-text"
+            text="line-clamp-2"
+            m="t-2 md:t-4 lg:t-5"
+            v-html="frontmatter.description"
+          />
+        </div>
+      </div>
+      <div
+        v-if="frontmatter?.component"
+        absolute
+        bottom="-6"
+        w="42"
+        class="hidden !md:block"
+      >
+        <wb-radio-group
+          :value="tab"
+          :options="TAB_OPTIONS"
+          type="tab"
+          theme="white"
+          size="lg"
+          ring="1 inset $wb-color-border"
+          @change="setTab"
+        />
+      </div>
+      <div
+        v-if="frontmatter.component"
+        absolute
+        right="8"
+        bottom="8"
+        class="vp-raw hidden !md:block"
+      >
+        <wb-button-group w="72" theme="emphasize">
+          <wb-button
+            v-for="item in ISSUE_BUTTONS"
+            :key="item.value"
+            :href="`https://github.com/Kythuen/white-block/issues/${item.href}`"
+            type="plain"
+            theme="default"
+            tag="a"
+            target="_blank"
+          >
+            <template #prefix> <i :class="item.icon" /></template>
+            {{ issueData.open }} {{ item.value }}
+          </wb-button>
+        </wb-button-group>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import axios from 'axios'
+import { useData, useRoute } from 'vitepress'
+import { ref, watch } from 'vue'
+
+defineProps({
+  focus: { type: Boolean, default: false },
+  tab: {
+    type: String,
+    default: 'content'
+  },
+  setTab: {
+    type: Function,
+    default: () => {}
+  }
+})
+
+const TAB_OPTIONS = [
+  { label: 'DEMO', value: 'content' },
+  { label: 'API', value: 'api' }
+]
+
+const { page, frontmatter } = useData()
+// const { hash } = window.location
+
+const componentName = frontmatter.value.component
+const issueData = ref({ open: 0, closed: 0 })
+const ISSUE_BUTTONS = [
+  { label: 'Add', value: 'add', icon: 'i-tdesign-add', href: 'new/choose' },
+  {
+    label: 'Open',
+    value: 'open',
+    icon: 'i-tdesign-error-circle',
+    href: `?q=is:issue+is:open+${componentName}`
+  },
+  {
+    label: 'Closed',
+    value: 'closed',
+    icon: 'i-tdesign-check',
+    href: `?q=is:issue+is:closed+${componentName}`
+  }
+]
+const URL = 'https://api.github.com/search/issues'
+async function getIssueData(type: 'open' | 'closed') {
+  if (process.env.NODE_ENV !== 'production') return
+  const q = `is:issue is:${type} ${componentName} repo:Kythuen/white-block`
+  const { data } = await axios.get(URL, { params: { q } })
+  if (data) {
+    issueData.value[type] = data.items.length
+  }
+}
+
+const coverageData: any = ref({})
+const colorMap: any = { 0: 'red', 70: 'yellow', 90: 'green' }
+async function getCoverageData() {
+  const { coverage } = page.value.params || {}
+  const result: any = {}
+  for (const item in coverage) {
+    const data = coverage[item]
+    const value = parseFloat(data)
+    const range =
+      Object.keys(colorMap).find(key => value <= parseFloat(key)) || 90
+    result[item] = {
+      type: item,
+      value,
+      color: colorMap[range]
+    }
+  }
+  coverageData.value = result
+}
+
+const currentRoute = useRoute()
+watch(
+  () => currentRoute.path,
+  () => {
+    if (frontmatter.value.component) {
+      getIssueData('open')
+      // getIssueData('closed')
+      getCoverageData()
+    }
+  },
+  { immediate: true }
+)
+</script>
+
+```
+:::
+
+### Replace Default Layout
+::: code-group
+```ts [.vitepress/theme/index.ts]
+// ...
+import Layout from './Layout.vue'
+
+const theme: Theme = {
+  // ...
+  Layout,
+}
+// ...
+```
+:::
+
+
+
+
+## Others
+
+### Override CSS Variables
+You can also 
+```css
+.vp-code-group .tabs label:only-of-type {
+  &::after {
+    display: none;
+  }
+}
+.VPLocalSearchBox {
+  background: #00000066;
+}
+:root {
+  --vp-local-search-bg: var(--wb-color-layer);
+  --vp-c-divider: var(--wb-color-border-comp);
+}
+
+.dark:root {
+  --vp-local-search-bg: var(--wb-color-popup);
+}
+```
+
+### Advance
+
+For more customize or further handle of markdown.
+
+You can use [markdown](https://vitepress.dev/reference/site-config#markdown), [transformPageData](https://vitepress.dev/reference/site-config#transformpagedata) options in vitepress configs.
+

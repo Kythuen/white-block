@@ -76,15 +76,3 @@ footer: false
 ---
 ```
 :::
-
-
-## Layout CSS Variables
-
-Here is the css variables defined, you can use them to do customize.
-
-```css
---wb-layout-height-header: 4rem;
---wb-layout-width-aside: 13rem;
---wb-layout-max-width-content: 66rem;
-
-```

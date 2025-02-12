@@ -26,6 +26,9 @@
           />
         </div>
       </div>
+      <slot name="doc-header-bottom">
+        <div absolute bottom="-6" w="42" h="12" bg="gray/50" rounded="md"></div>
+      </slot>
     </div>
   </div>
 </template>
