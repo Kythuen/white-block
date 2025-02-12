@@ -28,14 +28,7 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Kythuen' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { name: 'og:title', content: TITLE }],
-    ['meta', { property: 'og:image', content: OG_IMAGE }],
-    [
-      'script',
-      {
-        type: 'module',
-        src: 'https://unpkg.com/@splinetool/viewer@1.9.54/build/spline-viewer.js'
-      }
-    ]
+    ['meta', { property: 'og:image', content: OG_IMAGE }]
   ],
   themeConfig: {
     search: localSearchConfig
@@ -48,7 +41,7 @@ export default defineConfig({
       head: [['meta', { name: 'og:description', content: DESCRIPTION }]],
       themeConfig: {
         logo: '/logo.png',
-        siteTitle: 'WhiteBlock',
+        siteTitle: TITLE,
         nav: NAV,
         socialLinks: [{ icon: 'github', link: GITHUB_URL }],
         sidebar: SIDEBAR
@@ -61,7 +54,7 @@ export default defineConfig({
       head: [['meta', { name: 'og:description', content: DESCRIPTION_ZH }]],
       themeConfig: {
         logo: '/logo.png',
-        siteTitle: 'WhiteBlock',
+        siteTitle: TITLE,
         nav: NAV_ZH,
         socialLinks: [{ icon: 'github', link: GITHUB_URL }],
         sidebar: SIDEBAR_ZH

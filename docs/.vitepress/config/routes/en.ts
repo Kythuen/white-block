@@ -40,14 +40,15 @@ const SidebarWhiteBlock = [
 ]
 const SidebarVitepress = [
   { text: 'Getting Started', link: '/packages/vitepress/guide' },
-  { text: 'Layout', link: '/packages/vitepress/layout' },
+  { text: 'Layouts', link: '/packages/vitepress/layouts' },
+  { text: 'Components', link: '/packages/vitepress/components' },
   { text: 'Slots', link: '/packages/vitepress/slots' },
-  { text: 'Customize', link: '/packages/vitepress/customize' },
-  { text: 'CLI', link: '/packages/vitepress/cli' },
-  { text: 'Q&A', link: '/packages/vitepress/qa' }
+  { text: 'Customize', link: '/packages/vitepress/customize' }
+  // { text: 'CLI', link: '/packages/vitepress/cli' }
 ]
-const SidebarVitepressPackage = [
-  { text: 'Changelogs', link: '/packages/vitepress/changelogs' }
+const SidebarVitepressOthers = [
+  { text: 'Changelogs', link: '/packages/vitepress/changelogs' },
+  { text: 'Q & A', link: '/packages/vitepress/qa' }
 ]
 const SidebarTypes = [
   { text: 'Getting Started', link: '/packages/types/guide' }
@@ -58,7 +59,7 @@ export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
   '/components/': SidebarWhiteBlock,
   '/packages/vitepress/': [
     { text: 'Guides', items: SidebarVitepress },
-    { text: 'Information', items: SidebarVitepressPackage }
+    { text: 'Others', items: SidebarVitepressOthers }
     // SidebarEcosystem
   ],
   '/packages/types/': [

@@ -4,7 +4,7 @@
     sticky
     top="-6 !md:-18"
     z="80"
-    backdrop="blur"
+    bg="$wb-color-background"
     border="0 b-px solid $wb-color-border"
   >
     <div relative w="full" h="38 !md:60" m="x-auto" p="3 md:6 lg:8">

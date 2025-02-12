@@ -8,6 +8,7 @@ WhiteBlock's docs base on vitepress and has many customize ​configurations. We
 ## Theme Preview
 ![preview](/vitepress/preview.png)
 
+<!-- TODO: code sandbox -->
 <!-- [Online Demo](https://kythuen.github.io/white-block/)  -->
 
 ## Quick Start
@@ -15,19 +16,12 @@ WhiteBlock's docs base on vitepress and has many customize ​configurations. We
 By using command line tool provided, to create your docs with `WhiteBlock` theme is effortless.
 
 ::: code-group
-<!-- ```sh [pnpm]
-pnpm dlx @white-block/vitepress init
-``` -->
 ```sh [npm]
 npx @white-block/vitepress init
 ```
-<!-- ```sh [yarn] -->
-<!-- yarn dlx @white-block/vitepress init -->
-<!-- ``` -->
 :::
 
-<!-- TODO: GIF -->
-![cli](/vitepress/cli.png)
+![cli](/vitepress/cli.gif)
 
 ## Manual Install
 
@@ -121,6 +115,6 @@ Now, the docs is ready.
 ## What's Next?
 Sometime When you want to customize some parts of the docs. There also some ways provided for you to customize in more detailed places.
 
-- Read more about usage of [Default Layout](./default-layout).
-- Provided default component and page template, see [Layouts](./layout).
-- Further customize the docs with [Slots](./slots).
+- Read more about different layouts [Layouts](./layouts).
+- The built-in components provided, see [Components](./components).
+- Customize your docs with [Slots](./slots).
