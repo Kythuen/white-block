@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
@@ -25,5 +24,10 @@
     "declaration": true,
     "types": ["node", "vite/client"]
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": [
+    "**/dist/**",
+    "**/__tests__/**",
+    "**/examples/**"
+  ]
 }
