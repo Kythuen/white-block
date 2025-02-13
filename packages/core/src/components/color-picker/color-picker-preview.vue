@@ -8,7 +8,8 @@
     select="none"
     style="
       background: #ffffff66;
-      background-image: linear-gradient(
+      background-image:
+        linear-gradient(
           45deg,
           #c5c5c5 25%,
           transparent 0,

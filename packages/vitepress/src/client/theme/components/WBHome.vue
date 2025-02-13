@@ -1,122 +1,172 @@
 <template>
-  <div max-w="lg:400" h="full" m="x-auto">
-    <div relative p="y-32 md:y-48 lg:y-25vh b-16">
-      <div absolute inset="0" h="full" class="hidden !lg:block">
-        <div
-          absolute
-          inset="0"
-          m="auto"
-          w="80"
-          h="40"
-          bg="$wb-color-primary"
-          rounded="full"
-          filter="blur-240"
-        />
-      </div>
-      <div relative p="x-5 md:x-4 lg:x-8">
-        <h1
-          max-w="100 md:180"
-          m="x-auto"
-          text="11 md:6xl $wb-color-text-main center"
-          font="black tracking-tight !leading-[1.2]"
+  <div>
+    <main w="full lg:320" m="x-auto" p="5">
+      <section
+        p="t-12 b-16 lg:b-24"
+        w="full"
+        h="full"
+        grid="~ lg:cols-2 place-items-center"
+      >
+        <div w="full" flex="~ col" justify="center">
+          <h1 text="5xl lg:6xl" font="bold lg:tracking-tighter">
+            {{ frontmatter.hero?.slogan || 'Slogan' }}
+          </h1>
+          <p
+            v-if="frontmatter.hero?.intro"
+            max-w="xl"
+            m="t-5"
+            text="lg dark:white/70"
+          >
+            {{ frontmatter.hero?.intro }}
+          </p>
+          <div
+            v-if="frontmatter.hero?.actions"
+            h="12"
+            m="t-8"
+            flex="~ wrap"
+            items="center"
+            gap="4"
+          >
+            <template
+              v-for="item in frontmatter.hero?.actions || []"
+              :key="item.text"
+            >
+              <NeonButton v-if="item.theme === 'neon'" w="full md:50" h="12">
+                <div w="5" h="5" m="r-1" :class="item.icon" />
+                <span>{{ item.text }}</span>
+              </NeonButton>
+              <wb-button
+                v-else
+                :href="withBase(item.link)"
+                :theme="item.theme"
+                tag="a"
+                size="lg"
+                w="full md:50"
+                h="12"
+              >
+                <div w="5" h="5" m="r-1" :class="item.icon" />
+                <span>{{ item.text }}</span>
+              </wb-button>
+            </template>
+          </div>
+        </div>
+        <div w="full" p="y-6" hidden md:flex items="center" justify="center">
+          <img v-if="frontmatter.hero?.image" :src="frontmatter.hero?.image" />
+          <img v-else src="../assets/img/hero.webp" />
+        </div>
+      </section>
+      <section v-if="frontmatter.features" m="t-16 md:t-6">
+        <h2
+          v-if="frontmatter.features?.title"
+          text="4xl lg:5xl"
+          font="bold lg:tracking-tight"
         >
-          {{ site.description }}
-        </h1>
-        <div m="t-12" text="center" flex="~ col" gap="y-2 md:y-4">
-          <p>
-            Inspired by
-            <a
-              color="$wb-color-primary"
-              font="bold"
-              class="hover:underline"
-              href="https://tdesign.tencent.com/vue-next/overview"
+          {{ frontmatter.features?.title }}
+        </h2>
+        <p v-if="frontmatter.features?.desc" text="lg dark:white/70" m="t-4">
+          {{ frontmatter.features?.desc }}
+        </p>
+        <div
+          v-if="frontmatter.features?.items"
+          m="t-8 lg:t-16"
+          grid="~ sm:cols-2 md:cols-3"
+          gap="4"
+        >
+          <div
+            v-for="item in frontmatter.features?.items"
+            :key="item.title"
+            p="4"
+            bg="$wb-color-card"
+            ring="px $wb-color-border"
+            rounded="3"
+            flex
+            items="start"
+            gap="4"
+          >
+            <div
+              w="9"
+              h="9"
+              shrink="0"
+              flex="~ none"
+              items="center"
+              justify="center"
             >
-              TDesign
-            </a>
-            &
-            <a
-              color="$wb-color-primary"
-              font="bold"
-              class="hover:underline"
-              href="https://ui.nuxt.com/"
-            >
-              NuxtUI
-            </a>
-          </p>
-          <p>
-            Implement with
-            <a
-              color="$wb-color-primary"
-              font="bold"
-              class="hover:underline"
-              href="https://vitejs.dev/"
-            >
-              Vite
-            </a>
-            &
-            <a
-              color="$wb-color-primary"
-              font="bold"
-              class="hover:underline"
-              href="https://unocss.dev/"
-            >
-              Unocss
-            </a>
-          </p>
-          <p>
-            With
-            <span color="$wb-color-text-main" font="black">
-              efficient docs
-            </span>
-            &
-            <span color="$wb-color-text-main" font="black"> better DX </span>
-          </p>
+              <img v-if="item.icon?.includes('/')" :src="item.icon" />
+              <div v-else text="8">{{ item.icon }}</div>
+            </div>
+            <div>
+              <h3 text="lg dark:white" font="semibold">{{ item.title }}</h3>
+              <p text="dark:white/70" m="t-2" font="leading-relaxed">
+                {{ item.desc }}
+              </p>
+            </div>
+          </div>
         </div>
-        <div m="t-16" text="md" flex="~ wrap" gap="x-6 y-3" justify="center">
+      </section>
+      <section m="t-24">
+        <h2 v-if="frontmatter.technologies?.title" text="center" m="b-10">
+          {{ frontmatter.technologies?.title }}
+        </h2>
+        <div flex="~ wrap" gap="20" items="center" justify="center">
+          <a
+            v-for="item in frontmatter.technologies?.items"
+            :key="item.title"
+            :href="item.link"
+          >
+            <div w="3em" h="3em" :class="item.icon"></div>
+          </a>
+        </div>
+      </section>
+      <section
+        v-if="frontmatter.started"
+        relative
+        inset="0"
+        max-w="5xl"
+        m="t-20 x-auto"
+        p="10 md:20"
+        bg="$wb-color-card"
+        ring="px $wb-color-border"
+        rounded="lg"
+        overflow="hidden"
+        flex="~ col"
+        items="center"
+        justify="center"
+        class="card"
+      >
+        <h2 text="dark:white 3xl md:4xl lg:5xl" font="tracking-tight">
+          {{ frontmatter.started?.title }}
+        </h2>
+        <p m="t-6" text="lg md:xl black/70 dark:white/70">
+          {{ frontmatter.started?.desc }}
+        </p>
+        <div flex m="t-12">
           <wb-button
+            :href="frontmatter.started?.link"
             tag="a"
-            size="lg"
-            :href="withBase(lang === 'zh' ? `/zh/guide/` : '/guide/')"
+            theme="contrast"
+            size="xl"
+            p="x-6"
           >
-            Getting started
-            <template #suffix>
-              <i w="5" h="5" class="i-heroicons-arrow-right-20-solid" />
-            </template>
+            <span>Get Started</span>
+            <div w="1em" h="1em" class="i-heroicons-arrow-right-20-solid" />
           </wb-button>
-          <wb-input
-            w="58"
-            size="lg"
-            text="$wb-color-foreground"
-            readonly
-            value="pnpm add white-block"
-          >
-            <template #prefix>
-              <i
-                w="5"
-                h="5"
-                text="$wb-color-text-secondly"
-                class="i-heroicons-command-line"
-              />
-            </template>
-            <template #suffix>
-              <button w="5" h="5" flex="~ row" items="center" justify="center">
-                <i
-                  w="4"
-                  h="4"
-                  text="$wb-color-text-secondly"
-                  class="i-heroicons-clipboard-document"
-                />
-              </button>
-            </template>
-          </wb-input>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </div>
 </template>
 
 <script setup lang="ts">
-import { withBase, useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 
-const { site, lang } = useData()
+const { frontmatter } = useData()
 </script>
+
+<style scoped>
+.card {
+  background-image: url(../assets/img/card-bg.webp);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
+}
+</style>

@@ -2,9 +2,9 @@ import type { DefaultTheme } from 'vitepress'
 import { PLAYGROUND_URL } from '../constant'
 
 const SidebarGuides: DefaultTheme.NavItemWithLink[] = [
-  { text: 'Getting Started', link: '/guide' },
-  { text: 'Overview', link: '/guide/overview' },
-  { text: 'Colors', link: '/guide/colors' }
+  { text: 'Getting Started', link: '/guide/' },
+  { text: 'Overview', link: '/guide/overview/' },
+  { text: 'Colors', link: '/guide/colors/' }
 ]
 
 const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
@@ -39,28 +39,38 @@ const SidebarWhiteBlock = [
   { text: 'Components', items: SidebarComponents }
 ]
 const SidebarVitepress = [
-  { text: 'Getting Started', link: '/vitepress/guide' },
-  { text: 'Layout', link: '/vitepress/layout' },
-  { text: 'Layout Slots', link: '/vitepress/slots' }
+  { text: 'Getting Started', link: '/packages/vitepress/guide/' },
+  { text: 'Layouts', link: '/packages/vitepress/layouts/' },
+  { text: 'Slots', link: '/packages/vitepress/slots/' },
+  { text: 'Components', link: '/packages/vitepress/components/' },
+  { text: 'Customize', link: '/packages/vitepress/customize/' }
+  // { text: 'CLI', link: '/packages/vitepress/cli' }
 ]
-const SidebarTypes = [{ text: 'Getting Started', link: '/types/guide' }]
+const SidebarVitepressOthers = [
+  { text: 'Changelogs', link: '/packages/vitepress/changelogs/' },
+  { text: 'Q & A', link: '/packages/vitepress/qa/' }
+]
+const SidebarTypes = [
+  { text: 'Getting Started', link: '/packages/types/guide/' }
+]
 
 export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
   '/guide': SidebarWhiteBlock,
   '/components/': SidebarWhiteBlock,
-  '/vitepress/': [
-    { text: 'Guides', items: SidebarVitepress }
+  '/packages/vitepress/': [
+    { text: 'Guides', items: SidebarVitepress },
+    { text: 'Others', items: SidebarVitepressOthers }
     // SidebarEcosystem
   ],
-  '/types/': [
+  '/packages/types/': [
     { text: 'Guides', items: SidebarTypes }
     // SidebarEcosystem
   ]
 }
 
 export const NAV = [
-  { text: 'Guide', link: '/guide' },
-  { text: 'Components', link: '/guide/overview' },
+  { text: 'Guide', link: '/guide/' },
+  { text: 'Components', link: '/guide/overview/' },
   { text: 'Playground', link: PLAYGROUND_URL },
-  { text: 'Packages', link: '/packages' }
+  { text: 'Packages', link: '/packages/' }
 ]

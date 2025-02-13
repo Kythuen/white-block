@@ -1,8 +1,8 @@
-// @ts-ignore
 import { Button } from 'white-block'
 
 export default [
   { type: 'base', content: <div>base</div> },
+  // @ts-ignore
   { type: 'plain', content: <Button>plain</Button> },
   { type: 'dashed', content: 'dashed' },
   { type: 'outline', content: 'outline' },

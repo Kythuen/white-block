@@ -1,5 +1,5 @@
 .wb-radio-group {
-  --wb-radio-group-text: var(--wb-color-text-3);
+  --wb-radio-group-text: var(--wb-color-text);
   --wb-radio-group-item-border: transparent;
   --wb-radio-group-item-border-active: transparent;
 }
@@ -57,7 +57,6 @@
   --wb-radio-group-vc-main: var(--wb-vc-danger);
   --wb-radio-group-color-main: rgb(var(--wb-vc-danger));
 }
-/* TODO: theme default --wb-vc-layer */
 .wb-radio-group--default {
   --wb-radio-group-vc-main: var(--wb-vc-foreground);
   --wb-radio-group-color-main: rgb(var(--wb-vc-foreground));
@@ -76,19 +75,19 @@
 }
 .wb-radio-group--tab.wb-radio-group--soft {
   --wb-radio-group-background: var(--wb-color-background);
-  --wb-radio-group-indicator: rgb(var(--wb-radio-group-vc-main) / 15%);
+  --wb-radio-group-indicator: var(--wb-color-default-1);
 }
 .wb-radio-group--tab.wb-radio-group--emphasize {
   --wb-radio-group-background: var(--wb-color-container);
   --wb-radio-group-indicator: var(--wb-radio-group-color-main);
-  --wb-radio-group-border: var(--wb-color-border-base);
+  --wb-radio-group-border: var(--wb-color-border);
 }
 .wb-radio-group--tab.wb-radio-group--emphasize .wb-radio {
   --wb-radio-text-active: var(--wb-color-background);
 }
 
 .wb-radio-group--outline {
-  --wb-radio-group-item-border: var(--wb-color-border-base);
+  --wb-radio-group-item-border: var(--wb-color-border);
   --wb-radio-group-item-border-active: var(--wb-radio-group-color-main);
 }
 .wb-radio-group--outline .wb-radio input {
@@ -102,7 +101,7 @@
   z-index: 1;
 }
 .wb-radio-group--outline .wb-radio {
-  --wb-radio-group-border: var(--wb-color-border-base);
+  --wb-radio-group-border: var(--wb-color-border);
 }
 .wb-radio-group--outline .wb-radio:hover {
   position: relative;

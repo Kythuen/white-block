@@ -1,38 +1,23 @@
 import { defineConfig } from 'vitepress'
-import { DESCRIPTION, GITHUB_URL } from './constant'
-import { NAV, SIDEBAR } from './routes/en'
+import * as CONSTANT from './locales/constant'
+import en, { description, title } from './locales/en'
 
 export default defineConfig({
   lang: 'en',
   base: '/{{ repo }}/',
   srcDir: 'src',
-  title: '{{ title }}',
-  description: '{{ slogan }}',
+  title,
+  description,
   cleanUrls: true,
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }]
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: CONSTANT.FAVICON }]
   ],
   themeConfig: {
-    search: {
-      provider: 'local'
-    }
+    search: { provider: 'local' },
+    socialLinks: [{ icon: 'github', link: CONSTANT.GITHUB_URL }]
   },
   locales: {
-    root: {
-      label: 'English',
-      lang: 'en',
-      description: DESCRIPTION,
-      head: [['meta', { name: 'og:description', content: DESCRIPTION }]],
-      themeConfig: {
-        logo: '/logo.svg',
-        siteTitle: '',
-        nav: NAV,
-        socialLinks: [{ icon: 'github', link: GITHUB_URL }],
-        sidebar: SIDEBAR
-      }
-    }
+    root: en
   },
-  vite: {
-    configFile: 'vite.config.ts'
-  }
+  vite: { configFile: 'vite.config.ts' }
 })

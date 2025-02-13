@@ -60,165 +60,202 @@
   --wb-comp-content-gap-xl: var(--wb-size-6);
 
   /* ------------------------------------------- color ------------------------------------------- */
-  /* Slate */
-  --wb-vc-gray-50: 248 250 252;
-  --wb-vc-gray-100: 241 245 249;
-  --wb-vc-gray-200: 226 232 240;
-  --wb-vc-gray-300: 203 213 225;
-  --wb-vc-gray-400: 148 163 184;
-  --wb-vc-gray-500: 100 116 139;
-  --wb-vc-gray-600: 71 85 105;
-  --wb-vc-gray-700: 51 65 85;
-  --wb-vc-gray-800: 30 41 59;
-  --wb-vc-gray-900: 15 23 42;
-  --wb-vc-gray-950: 2 6 23;
+  --wb-color-gray-50: #f6f6f6;
+  --wb-color-gray-100: #e7e7e7;
+  --wb-color-gray-200: #d1d1d1;
+  --wb-color-gray-300: #b0b0b0;
+  --wb-color-gray-400: #888888;
+  --wb-color-gray-500: #737373;
+  --wb-color-gray-600: #5d5d5d;
+  --wb-color-gray-700: #4f4f4f;
+  --wb-color-gray-800: #454545;
+  --wb-color-gray-900: #3d3d3d;
+  --wb-color-gray-950: #262626;
 
-  /* Neutral */
-  --wb-vc-gray-50: 250 250 250;
-  --wb-vc-gray-100: 245 245 245;
-  --wb-vc-gray-200: 229 229 229;
-  --wb-vc-gray-300: 212 212 212;
-  --wb-vc-gray-400: 163 163 163;
-  --wb-vc-gray-500: 115 115 115;
-  --wb-vc-gray-600: 82 82 82;
-  --wb-vc-gray-700: 64 64 64;
-  --wb-vc-gray-800: 38 38 38;
-  --wb-vc-gray-900: 23 23 23;
-  --wb-vc-gray-950: 10 10 10;
+  --wb-color-gray-50: #f6f6f6;
+  --wb-color-gray-100: #e7e7e7;
+  --wb-color-gray-200: #d1d1d1;
+  --wb-color-gray-300: #b0b0b0;
+  --wb-color-gray-400: #888888;
+  --wb-color-gray-500: #666666;
+  --wb-color-gray-600: #5d5d5d;
+  --wb-color-gray-700: #4f4f4f;
+  --wb-color-gray-800: #454545;
+  --wb-color-gray-900: #3d3d3d;
+  --wb-color-gray-950: #262626;
 
-  --wb-color-white: rgb(var(--wb-vc-white));
-  --wb-color-black: rgb(var(--wb-vc-black));
-  --wb-color-primary: rgb(var(--wb-vc-primary));
-  --wb-color-soft: rgb(var(--wb-vc-soft));
-  --wb-color-success: rgb(var(--wb-vc-success));
-  --wb-color-warning: rgb(var(--wb-vc-warning));
-  --wb-color-danger: rgb(var(--wb-vc-danger));
-  --wb-color-background: rgb(var(--wb-vc-background));
-  --wb-color-foreground: rgb(var(--wb-vc-foreground));
-  --wb-color-container: rgb(var(--wb-vc-container));
-  --wb-color-layer: rgb(var(--wb-vc-layer));
-  --wb-color-panel: rgb(var(--wb-vc-layer));
-  --wb-color-scrollbar: rgb(var(--wb-vc-scrollbar));
-  --wb-color-placeholder: color-mix(
-    in srgb,
-    var(--wb-color-soft) 80%,
-    var(--wb-color-foreground)
-  );
+  --wb-color-green-50: #faffe6;
+  --wb-color-green-100: #f4fec9;
+  --wb-color-green-200: #e7fd99;
+  --wb-color-green-300: #d4f95d;
+  --wb-color-green-400: #c4f042;
+  --wb-color-green-500: #9fd50d;
+  --wb-color-green-600: #7baa06;
+  --wb-color-green-700: #5d810a;
+  --wb-color-green-800: #4a660e;
+  --wb-color-green-900: #3f5611;
+  --wb-color-green-950: #203003;
 
-  --wb-vc-white: 255 255 255;
-  --wb-vc-black: 0 0 0;
-  --wb-vc-primary: 0 193 106;
-  --wb-vc-soft: var(--wb-vc-gray-300);
-  --wb-vc-success: 19 219 101;
-  --wb-vc-warning: 255 165 0;
-  --wb-vc-danger: 237 72 84;
-  --wb-vc-background: var(--wb-vc-white);
-  --wb-vc-foreground: var(--wb-vc-gray-700);
-  --wb-vc-container: var(--wb-vc-gray-200);
-  --wb-vc-layer: var(--wb-vc-gray-300);
-  --wb-vc-panel: var(--wb-vc-gray-400);
-  --wb-vc-scrollbar: var(--wb-vc-gray-200);
+  --wb-color-info-50: #ebfdff;
+  --wb-color-info-100: #cdf6ff;
+  --wb-color-info-200: #8ae8ff;
+  --wb-color-info-300: #62ddfe;
+  --wb-color-info-400: #1bc4f5;
+  --wb-color-info-500: #00a7db;
+  --wb-color-info-600: #0284b8;
+  --wb-color-info-700: #0a6a94;
+  --wb-color-info-800: #125778;
+  --wb-color-info-900: #134766;
+  --wb-color-info-950: #062e46;
 
-  --wb-color-text-main: var(--wb-color-text-1);
-  --wb-color-text-default: var(--wb-color-text-2);
-  --wb-color-text-disabled: var(--wb-color-text-3);
-  --wb-color-text-secondly: var(--wb-color-text-4);
-  --wb-color-text-placeholder: var(--wb-color-text-4);
+  --wb-color-blue-50: #ecf9ff;
+  --wb-color-blue-100: #d4efff;
+  --wb-color-blue-200: #b2e5ff;
+  --wb-color-blue-300: #7dd6ff;
+  --wb-color-blue-400: #40bdff;
+  --wb-color-blue-500: #149aff;
+  --wb-color-blue-600: #0078ff;
+  --wb-color-blue-700: #0060ff;
+  --wb-color-blue-800: #004cca;
+  --wb-color-blue-900: #0845a0;
+  --wb-color-blue-950: #0a2a61;
 
-  --wb-color-text-1: rgb(var(--wb-vc-gray-900));
-  --wb-color-text-2: rgb(var(--wb-vc-gray-800));
-  --wb-color-text-3: rgb(var(--wb-vc-gray-700));
-  --wb-color-text-4: rgb(var(--wb-vc-gray-600));
-  --wb-color-text-5: rgb(var(--wb-vc-gray-500));
+  --wb-color-red-50: #fdf3f3;
+  --wb-color-red-100: #fde3e4;
+  --wb-color-red-200: #fcccce;
+  --wb-color-red-300: #f8a9ac;
+  --wb-color-red-400: #f2777b;
+  --wb-color-red-500: #e74c52;
+  --wb-color-red-600: #d32c32;
+  --wb-color-red-700: #b22328;
+  --wb-color-red-800: #932125;
+  --wb-color-red-900: #7a2225;
+  --wb-color-red-950: #420d0f;
 
-  --wb-color-border-container: rgb(var(--wb-vc-gray-500));
-  --wb-color-border-emphasize: rgb(var(--wb-vc-gray-400));
-  --wb-color-border-base: rgb(var(--wb-vc-gray-300));
-  --wb-color-border-soft: rgb(var(--wb-vc-gray-200));
-  --wb-color-border-dinky: rgb(var(--wb-vc-gray-100));
+  --wb-color-orange-50: #fffaeb;
+  --wb-color-orange-100: #fff0c6;
+  --wb-color-orange-200: #ffde88;
+  --wb-color-orange-300: #ffc84a;
+  --wb-color-orange-400: #ffb224;
+  --wb-color-orange-500: #f98d07;
+  --wb-color-orange-600: #dd6702;
+  --wb-color-orange-700: #b74606;
+  --wb-color-orange-800: #94350c;
+  --wb-color-orange-900: #7a2c0d;
+  --wb-color-orange-950: #461502;
 
-  /* ------------------------------------------- other ------------------------------------------- */
-  --wb-transition-ease: all 0.2s cubic-bezier(0.38, 0, 0.24, 1);
-  --wb-transition-linear: all 0.2s linear;
+  --wb-color-yellow-50: #fffaeb;
+  --wb-color-yellow-100: #fff0c6;
+  --wb-color-yellow-200: #ffde88;
+  --wb-color-yellow-300: #ffc84a;
+  --wb-color-yellow-400: #ffb224;
+  --wb-color-yellow-500: #f98d07;
+  --wb-color-yellow-600: #dd6702;
+  --wb-color-yellow-700: #b74606;
+  --wb-color-yellow-800: #94350c;
+  --wb-color-yellow-900: #7a2c0d;
+  --wb-color-yellow-950: #461502;
+
+  --wb-color-red-50: #fff1f3;
+  --wb-color-red-100: #ffe4e8;
+  --wb-color-red-200: #fecdd6;
+  --wb-color-red-300: #fda4b5;
+  --wb-color-red-400: #fb718f;
+  --wb-color-red-500: #f4416c;
+  --wb-color-red-600: #e11d56;
+  --wb-color-red-700: #be1248;
+  --wb-color-red-800: #9f1243;
+  --wb-color-red-900: #88133f;
+  --wb-color-red-950: #4c051e;
+
+  --wb-color-primary-50: #ecfdf4;
+  --wb-color-primary-100: #d2f9e2;
+  --wb-color-primary-200: #a8f2ca;
+  --wb-color-primary-300: #70e5ad;
+  --wb-color-primary-400: #42d392;
+  --wb-color-primary-500: #13b672;
+  --wb-color-primary-600: #07945c;
+  --wb-color-primary-700: #06764d;
+  --wb-color-primary-800: #075e3e;
+  --wb-color-primary-900: #074d34;
+  --wb-color-primary-950: #032b1f;
+
+  --wb-color-white: #ffffff;
+  --wb-color-black: #000000;
+  --wb-color-gray: #737373;
+  --wb-color-green: #45a557;
+  --wb-color-yellow: #ffb224;
+  --wb-color-red: #d82c32;
+  --wb-color-blue: #1e84f8;
+  --wb-color-default: #d6d6d6;
+  --wb-color-default-1: #eeeeee;
+  --wb-color-default-2: #161616;
+
+  --wb-color-text-main: #000000;
+  --wb-color-text-active: #262626;
+  --wb-color-text-default: #666666;
+  --wb-color-text-secondly: #888888;
+  --wb-color-text-placeholder: #b0b0b0;
+
+  --wb-color-border-active: #d1d1d1;
+  --wb-color-border-default: #e7e7e7;
+  --wb-color-border-comp: #e7e7e7;
+  --wb-color-border-dinky: #f6f6f6;
+
+  --wb-color-scrollbar: #d1d1d1;
+  --wb-color-layer: #f6f6f6;
+  --wb-color-comp: #161616;
+  --wb-color-active: #222222;
+  --wb-color-popup: #333333;
+  --wb-color-operation: #ffffff0f;
+  --wb-color-card: #ffffff;
+  --wb-color-text: var(--wb-color-text-default);
+  --wb-color-background: #f8f8f8;
+  --wb-color-foreground: var(--wb-color-text);
+  --wb-color-contrast: var(--wb-color-text-active);
+  --wb-color-border: var(--wb-color-border-default);
+  --wb-color-primary: var(--wb-color-primary-500);
+
+  --wb-transition-ease: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.dark:root {
-  /* ------------------------------------------- color ------------------------------------------- */
-  --wb-vc-white: 255 255 255;
-  --wb-vc-black: 0 0 0;
-  --wb-vc-primary: 0 193 106;
-  --wb-vc-soft: var(--wb-vc-gray-800);
-  --wb-vc-success: 19 219 101;
-  --wb-vc-warning: 255 165 0;
-  --wb-vc-danger: 237 72 84;
-  --wb-vc-foreground: var(--wb-vc-gray-200);
-  --wb-vc-background: var(--wb-vc-gray-900);
-  --wb-vc-container: var(--wb-vc-gray-800);
-  --wb-vc-layer: var(--wb-vc-gray-700);
-  --wb-vc-panel: var(--wb-vc-gray-600);
-  --wb-vc-scrollbar: var(--wb-vc-gray-700);
+.dark {
+  --wb-color-white: #ffffff;
+  --wb-color-black: #000000;
+  --wb-color-green: #45a557;
+  --wb-color-yellow: #ffb224;
+  --wb-color-red: #d32c32;
+  --wb-color-blue: #1e84f8;
+  --wb-color-gray: #737373;
+  --wb-color-default: #222222;
+  --wb-color-default-1: #333333;
+  --wb-color-default-2: #161616;
 
-  --wb-color-text-1: rgb(var(--wb-vc-gray-100));
-  --wb-color-text-2: rgb(var(--wb-vc-gray-200));
-  --wb-color-text-3: rgb(var(--wb-vc-gray-300) / 75%);
-  --wb-color-text-4: rgb(var(--wb-vc-gray-400));
-  --wb-color-text-5: rgb(var(--wb-vc-gray-400) / 75%);
+  --wb-color-text-main: #eeeeee;
+  --wb-color-text-active: #dddddd;
+  --wb-color-text-default: #cccccc;
+  --wb-color-text-secondly: #888888;
+  --wb-color-text-placeholder: #555555;
 
-  --wb-color-border-container: rgb(var(--wb-vc-gray-800));
-  --wb-color-border-emphasize: rgb(var(--wb-vc-gray-600) / 75%);
-  --wb-color-border-base: rgb(var(--wb-vc-gray-700));
-  --wb-color-border-soft: rgb(var(--wb-vc-gray-800));
-  --wb-color-border-dinky: rgb(var(--wb-vc-gray-800) / 50%);
-}
+  --wb-color-border-active: #555555;
+  --wb-color-border-default: #333333;
+  --wb-color-border-comp: #2d2d2d;
+  --wb-color-border-dinky: #fafafa1f;
 
-/* ----------------------------------- utilities ----------------------------------- */
-.scrollable-main {
-  overflow-y: auto;
-  &::-webkit-scrollbar {
-    width: 16px;
-    height: 16px;
-  }
-  &::-webkit-scrollbar-corner {
-    width: 0;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--wb-color-scrollbar);
-    background-clip: content-box;
-    border: 4px solid transparent;
-    border-radius: 8px;
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-}
-@media (max-width: 641px) {
-  .scrollable-main {
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-}
-.scrollable {
-  overflow-y: auto;
-  &::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-    background: transparent;
-  }
-  &::-webkit-scrollbar-corner {
-    width: 0;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--wb-color-scrollbar);
-    background-clip: content-box;
-    border: 4px solid transparent;
-    border-radius: 6px;
-  }
-}
-@media (max-width: 641px) {
-  .scrollable {
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
+  --wb-color-scrollbar: #3d3d3d;
+  --wb-color-primary: var(--wb-color-primary-500);
+  --wb-color-background: var(--wb-color-black);
+  --wb-color-foreground: var(--wb-color-text);
+  --wb-color-text: var(--wb-color-text-default);
+  --wb-color-border: var(--wb-color-border-default);
+  --wb-color-contrast: var(--wb-color-text-active);
+
+  --wb-color-layer: #111111;
+  --wb-color-comp: #161616;
+  --wb-color-active: #222222;
+  --wb-color-popup: #333333;
+  --wb-color-operation: #ffffff0f;
+  --wb-color-card: linear-gradient(to bottom, #000000 50%, #111111);
+  --wb-color-card: #0e0e0e;
+  --wb-color-layer: #1a1a1a;
 }

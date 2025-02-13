@@ -3,14 +3,14 @@ import { resolve } from 'node:path'
 import UnoCSS from 'unocss/vite'
 import type { Alias } from 'vite'
 import { defineConfig } from 'vite'
-import {
-  groupIconMdPlugin,
-  groupIconVitePlugin
-} from 'vitepress-plugin-group-icons'
+import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import Components from 'unplugin-vue-components/vite'
+
 import { version } from './package.json'
 
 const alias: Alias[] = [
   { find: '~/', replacement: `${resolve(__dirname, './.vitepress')}/` },
+  // handling references `@/` in packages/core
   { find: '@/', replacement: `${resolve(__dirname, '../packages/core/src')}/` }
 ]
 
@@ -30,7 +30,20 @@ export default defineConfig({
   resolve: {
     alias
   },
-  plugins: [UnoCSS(), vueJSX(), groupIconVitePlugin()],
+  plugins: [
+    UnoCSS(),
+    vueJSX(),
+    groupIconVitePlugin(),
+    Components({
+      dirs: [
+        '../.vitepress/theme/components/blocks',
+        '../.vitepress/theme/components/tools',
+        '../.vitepress/theme/components/awesome'
+      ],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      extensions: ['vue']
+    })
+  ],
   optimizeDeps: {
     exclude: ['vitepress']
   },

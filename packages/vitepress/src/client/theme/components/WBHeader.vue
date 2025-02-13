@@ -1,12 +1,11 @@
 <template>
   <header
     sticky
-    top="0"
+    inset="0"
     w="full"
     z="100"
-    bg="[rgb(var(--wb-vc-background)/75%)]"
-    backdrop="blur-20"
-    border="0 b-px solid $wb-color-border-soft"
+    bg="$wb-color-background"
+    border="0 b-px solid $wb-color-border"
     @click.stop="
       clickDelegate($event, 'wb-button', handleMenuOptions, hideMenuPanel)
     "
@@ -18,8 +17,8 @@
       <slot name="home-top" />
     </div>
     <div
-      max-w="lg:384"
-      h="$wb-height-layout-header"
+      max-w="full lg:360"
+      h="$vp-wb-header-height"
       m="x-auto"
       p="x-2 !md:x-6 !lg:x-6"
       flex="~ row"
@@ -31,15 +30,15 @@
         <a
           p="1.5"
           :href="withBase(`${localePrefix}/`)"
-          un-text="4"
-          font="semibold"
+          un-text="lg $wb-color-text-main"
+          font="extrabold"
           flex="~ row"
           items="center"
         >
           <div v-if="theme.logo" flex items="center">
             <img
               w="auto"
-              h="6"
+              h="7"
               m="r-2"
               :src="
                 withBase(
@@ -55,11 +54,13 @@
         </a>
       </div>
       <div class="hidden !lg:flex" flex="lg:1" justify="center">
-        <VPNavBarSearch class="search" absolute translate="x-999" />
-        <WBHeaderMenu />
+        <slot name="header-nav">
+          <WBHeaderNav />
+        </slot>
       </div>
       <div min-w="60" flex="lg:none ~ row" items="center" justify="end">
         <slot name="header-operation-before" />
+        <VPNavBarSearch class="search" absolute translate="x-999" />
         <WBIconButton
           name="search"
           icon="i-heroicons-magnifying-glass"
@@ -73,14 +74,19 @@
           "
           tip="Mode"
         />
-        <WBIconButton
-          name="gitHub"
-          icon="i-simple-icons-github"
-          tip="GitHub"
-          tag="a"
-          target="__blank"
-          href="https://github.com/Kythuen/white-block"
-        />
+        <template
+          v-for="item in site.themeConfig.socialLinks || []"
+          :key="item.icon"
+        >
+          <WBIconButton
+            :name="item.icon"
+            :icon="SOCIALS[item.icon].icon"
+            :tip="SOCIALS[item.icon].title"
+            tag="a"
+            target="__blank"
+            :href="item.link"
+          />
+        </template>
         <slot name="header-operation-after" />
         <div class="header-option-item lg:hidden">
           <WBIconButton
@@ -95,6 +101,9 @@
         </div>
       </div>
     </div>
+    <div v-if="$slots['header-bottom']">
+      <slot name="header-bottom" />
+    </div>
   </header>
 </template>
 
@@ -103,9 +112,15 @@ import { useData, withBase } from 'vitepress'
 import VPNavBarSearch from 'vitepress/dist/client/theme-default/components/VPNavBarSearch.vue'
 import { computed, ref } from 'vue'
 import { clickDelegate } from 'white-block'
-import WBHeaderMenu from './WBHeaderMenu.vue'
+import WBHeaderNav from './WBHeaderNav.vue'
 
 const { site, isDark, lang, theme, frontmatter } = useData()
+
+const SOCIALS: any = {
+  github: { icon: 'i-simple-icons-github', title: 'GitHub' },
+  twitter: { icon: 'i-simple-icons-x', title: 'Twitter' },
+  discord: { icon: 'i-simple-icons-discord', title: 'Discord' }
+}
 
 const showMenuPanel = ref(false)
 function hideMenuPanel() {

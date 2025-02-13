@@ -94,14 +94,14 @@ input[type='number'] {
 
 /* ----------------------------------- type ----------------------------------- */
 .wb-input--base {
-  --wb-input-border: var(--wb-color-border-base);
+  --wb-input-border: var(--wb-color-border-comp);
 }
 .wb-input--ghost {
   --wb-input-color-bg: transparent;
   --wb-input-color-border: transparent;
 }
 .wb-input--ghost:hover {
-  --wb-input-border: var(--wb-color-border-base);
+  --wb-input-border: var(--wb-color-border-comp);
 }
 
 /* ----------------------------------- align ----------------------------------- */

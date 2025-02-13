@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
-import { transformPageData } from '../transforms/data'
-import mdPlugin from '../transforms/markdown'
+import { transformPageData } from './transforms/data'
+import mdPlugin from './transforms/markdown'
 import {
   DESCRIPTION,
   DESCRIPTION_ZH,
@@ -21,14 +21,21 @@ export default defineConfig({
   appearance: 'dark',
   cleanUrls: true,
   head: [
-    ['link', { rel: 'icon', href: '/logo.png', type: 'image/png' }],
+    [
+      'link',
+      { rel: 'icon', href: '/white-block/logo.svg ', type: 'image/svg+xml' }
+    ],
     ['meta', { name: 'author', content: 'Kythuen' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { name: 'og:title', content: TITLE }],
     ['meta', { property: 'og:image', content: OG_IMAGE }]
   ],
   themeConfig: {
-    search: localSearchConfig
+    search: localSearchConfig,
+    footer: {
+      copyright:
+        'Copyright © 2023-present <a href="https://github.com/Kythuen">Kythuen</a>. All rights reserved.'
+    }
   },
   locales: {
     root: {
@@ -38,7 +45,7 @@ export default defineConfig({
       head: [['meta', { name: 'og:description', content: DESCRIPTION }]],
       themeConfig: {
         logo: '/logo.png',
-        siteTitle: 'WhiteBlock',
+        siteTitle: TITLE,
         nav: NAV,
         socialLinks: [{ icon: 'github', link: GITHUB_URL }],
         sidebar: SIDEBAR
@@ -51,7 +58,7 @@ export default defineConfig({
       head: [['meta', { name: 'og:description', content: DESCRIPTION_ZH }]],
       themeConfig: {
         logo: '/logo.png',
-        siteTitle: 'WhiteBlock',
+        siteTitle: TITLE,
         nav: NAV_ZH,
         socialLinks: [{ icon: 'github', link: GITHUB_URL }],
         sidebar: SIDEBAR_ZH

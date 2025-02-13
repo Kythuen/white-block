@@ -1,4 +1,4 @@
-export const TITLE = 'White Block'
+export const TITLE = 'WhiteBlock'
 export const DESCRIPTION = 'Intuitive Design for Effortless Development'
 export const DESCRIPTION_ZH = '更符合直觉的设计，更轻松地开发'
 

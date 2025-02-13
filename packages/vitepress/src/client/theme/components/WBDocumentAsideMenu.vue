@@ -3,7 +3,7 @@
     <div
       w="full"
       p="l-4"
-      border="0 l-2px solid $wb-color-border-soft"
+      border="0 l-2px solid $wb-color-border"
       flex="~ col"
       gap="0.5"
     >
@@ -17,7 +17,7 @@
         :color="
           decodeURIComponent(currentActiveHash) === link
             ? '$wb-color-primary'
-            : '$wb-color-text-secondly'
+            : '$wb-color-text'
         "
         leading="6"
         truncate
@@ -25,7 +25,9 @@
         :class="['anchor-link']"
         :style="{ paddingLeft: `${level - minLevel}em` }"
       >
-        <a :href="link" @click="onClickAnchor($event, link)">{{ title }}</a>
+        <a :href="link" :title="title" @click="onClickAnchor($event, link)">{{
+          title
+        }}</a>
       </div>
     </div>
     <div
@@ -126,8 +128,6 @@ function setActiveLink() {
     document.querySelectorAll(`.vp-doc-${props.tab} .header-anchor`)
   )
   const scrollTop = container?.scrollTop || 0
-  // const containerHeight = container?.offsetHeight || 0
-  // const contentHeight = container?.scrollHeight || 0
 
   for (let i = 0; i < anchors.length; i++) {
     const anchor = anchors[i]

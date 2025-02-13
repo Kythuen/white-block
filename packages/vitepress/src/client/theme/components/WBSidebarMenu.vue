@@ -1,8 +1,19 @@
 <template>
-  <div text="sm" flex="~ col" gap="4">
-    <div v-for="group in resolveSidebar" :key="group.text">
+  <div text="3.5" flex="~ col" gap="5">
+    <div
+      v-for="group in resolveSidebar"
+      :key="group.text"
+      p="b-4 last:b-0"
+      border="0 b-px last:b-0 solid $wb-color-border"
+    >
       <div v-if="group.items">
-        <div p="y-1" color="$wb-color-text-main" select="none">
+        <div
+          text="4"
+          p="y-1"
+          color="$wb-color-text-active"
+          font="bold"
+          select="none"
+        >
           {{ group.text }}
         </div>
         <div
@@ -13,14 +24,14 @@
           flex="~ row"
           items="center"
           gap="1.5 lg:2"
-          color="$wb-color-text-secondly hover:$wb-color-text-main"
+          color="$wb-color-text hover:$wb-color-text-main"
           cursor="pointer"
           transition="color ease-in duration-200"
           select="none"
           :style="getStyles(item.link)"
           @click="toPage(item.link)"
         >
-          <div text="sm">{{ item.text }}</div>
+          <div>{{ item.text }}</div>
           <div v-if="EXTERNAL_URL_RE.test(item.link)">
             <div w="4" h="4" class="i-heroicons-arrow-up-right-20-solid" />
           </div>
@@ -32,7 +43,7 @@
         class="group"
         flex
         items="center"
-        color="$wb-color-text-secondly hover:$wb-color-text-main"
+        color="$wb-color-text hover:$wb-color-text-main"
         cursor="pointer"
         transition="color ease-in duration-200"
         select="none"
@@ -78,7 +89,7 @@ function getStyles(link: string) {
   const match = route.path === withBase(link)
   if (match) {
     return {
-      '--wb-color-text-secondly': 'var(--wb-color-primary)',
+      '--wb-color-text': 'var(--wb-color-primary)',
       '--wb-color-text-main': 'var(--wb-color-primary)'
     }
   }

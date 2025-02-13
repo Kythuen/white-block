@@ -6,10 +6,13 @@
           id="layoutRoot"
           w="full"
           h="screen"
-          bg="[rgb(var(--wb-vc-background))]"
-          class="scrollable-main"
+          bg="$wb-color-background"
+          overflow="x-hidden y-auto"
         >
-          <WBHeader>
+          <WBHeader v-if="frontmatterField(frontmatter, 'header')">
+            <template #header-nav>
+              <slot name="header-nav" />
+            </template>
             <template #home-top>
               <slot name="home-top" />
             </template>
@@ -25,10 +28,13 @@
             <template #header-operation-after>
               <slot name="header-operation-after" />
             </template>
+            <template #header-bottom>
+              <slot name="header-bottom" />
+            </template>
           </WBHeader>
           <div
             w="full"
-            min-h="[calc(100vh-var(--wb-height-layout-header)-1px)]"
+            min-h="[calc(100vh-var(--vp-wb-header-height)-1px)]"
             class="content"
           >
             <NotFound v-if="pageData.isNotFound" />
@@ -37,7 +43,7 @@
                 <WBHome />
               </slot>
             </template>
-            <template v-else-if="frontmatter.layout === 'page'">
+            <!-- <template v-else-if="frontmatter.layout === 'page'">
               <slot name="index-content">
                 <WBPage>
                   <template #page-content>
@@ -45,41 +51,56 @@
                   </template>
                 </WBPage>
               </slot>
-            </template>
+            </template> -->
             <template v-else-if="frontmatter.layout === 'empty'">
               <Content />
             </template>
-            <div v-else max-w="lg:400" h="full" m="x-auto" flex>
+            <div v-else max-w="lg:360" h="full" m="x-auto" flex>
               <WBSidebar v-if="frontmatterField(frontmatter, 'sidebar')">
                 <template #sidebar-top>
                   <slot name="sidebar-top" />
+                </template>
+                <template #sidebar-menu>
+                  <slot name="sidebar-menu" />
                 </template>
                 <template #sidebar-bottom>
                   <slot name="sidebar-bottom" />
                 </template>
               </WBSidebar>
               <WBDocument>
-                <template #document-header="payload">
-                  <slot name="document-header" v-bind="payload" />
+                <template #doc-header="payload">
+                  <slot name="doc-header" v-bind="payload" />
                 </template>
-                <template #document-content="payload">
-                  <slot name="document-content" v-bind="payload" />
+                <template #doc-content="payload">
+                  <slot name="doc-content" v-bind="payload" />
                 </template>
-                <template #document-bottom="payload">
-                  <slot name="document-bottom" v-bind="payload" />
+                <template #doc-bottom="payload">
+                  <slot name="doc-bottom" v-bind="payload" />
                 </template>
-                <template #document-aside-menu="payload">
-                  <slot name="document-aside-menu" v-bind="payload" />
+                <template #doc-aside-top>
+                  <slot name="doc-aside-top" />
                 </template>
-                <template #document-aside-bottom>
-                  <slot name="document-aside-bottom" />
+                <template #doc-aside-menu="payload">
+                  <slot name="doc-aside-menu" v-bind="payload" />
+                </template>
+                <template #doc-aside-bottom>
+                  <slot name="doc-aside-bottom" />
                 </template>
               </WBDocument>
             </div>
           </div>
-          <slot name="layout-bottom" />
+          <slot name="footer">
+            <WBFooter v-if="frontmatterField(frontmatter, 'footer')">
+              <template #footer-top>
+                <slot name="footer-top" />
+              </template>
+              <template #footer-bottom>
+                <slot name="footer-bottom" />
+              </template>
+            </WBFooter>
+          </slot>
         </div>
-        <slot name="layout-aside" />
+        <slot name="aside" />
       </div>
     </Suspense>
   </ClientOnly>
@@ -92,8 +113,8 @@ import NotFound from 'vitepress/dist/client/theme-default/NotFound.vue'
 import WBDocument from './components/WBDocument.vue'
 import WBHeader from './components/WBHeader.vue'
 import WBHome from './components/WBHome.vue'
-import WBPage from './components/WBPage.vue'
 import WBSidebar from './components/WBSidebar.vue'
+import WBFooter from './components/WBFooter.vue'
 
 defineOptions({ name: 'WBLayout' })
 

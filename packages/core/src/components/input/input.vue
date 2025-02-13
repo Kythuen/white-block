@@ -3,12 +3,11 @@
     relative
     w="$wb-input-width"
     h="$wb-input-height"
-    p="x-$wb-input-padding y-2px"
     bg="$wb-input-background"
     rounded="$wb-input-radius"
     ring="1 $wb-input-border"
     overflow="hidden"
-    focus-within="outline outline-2 outline-$wb-color-primary"
+    focus-within="outline outline-1 outline-$wb-color-primary"
     flex="inline"
     items="center"
     gap="$wb-input-gap"
@@ -25,6 +24,7 @@
       :readonly="readonly"
       :disabled="disabled"
       :placeholder="placeholder ?? 'Please input'"
+      p="x-$wb-input-padding y-2px"
       border="none"
       flex="1"
       w="full"
@@ -36,7 +36,7 @@
       @blur="emits('blur')"
     />
     <button
-      v-if="icon || $slots.icon || loading || clearable"
+      v-if="icon || $slots.icon() || loading || clearable"
       tabindex="-1"
       flex="~ shrink-0"
       items="center"

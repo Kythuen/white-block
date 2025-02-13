@@ -73,7 +73,7 @@ exports[`# ColorPicker > ## Base > ### default config 1`] = `
         items="center"
         justify="center"
         overflow="hidden"
-        style="background: rgba(0, 0, 0, 1);"
+        style="background: rgb(0, 0, 0);"
         text="white"
         w="full"
       >

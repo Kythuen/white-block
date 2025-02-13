@@ -1,19 +1,22 @@
 <template>
   <div
     sticky
-    top="$wb-doc-height-header"
+    top="$vp-wb-header-height"
     w="60"
     flex="none"
-    h="[calc(100vh-var(--wb-doc-height-header))]"
+    h="[calc(100vh-var(--vp-wb-header-height))]"
     p="8 l-2 !md:l-6"
-    class="hidden !xl:block scrollable"
+    overflow="y-auto"
+    class="hidden !xl:block"
   >
     <div h="full" relative>
       <div ref="SidebarMenuTop">
         <slot name="sidebar-top" />
       </div>
-      <div flex="1" class="scrollable" :style="{ height: menuHeightStyle }">
-        <WBSidebarMenu />
+      <div flex="1" overflow="y-auto" :style="{ height: menuHeightStyle }">
+        <slot name="sidebar-menu">
+          <WBSidebarMenu />
+        </slot>
       </div>
       <div ref="SidebarMenuBottom">
         <slot name="sidebar-bottom" />
@@ -33,9 +36,9 @@ const menuHeightStyle = ref('')
 
 onMounted(() => {
   const topHeight = SidebarMenuTop.value.offsetHeight
-  const topMargin = topHeight ? '1rem' : '0'
+  const topMargin = topHeight ? '3rem' : '0'
   const bottomHeight = SidebarMenuBottom.value.offsetHeight
-  const bottomMargin = bottomHeight ? '1rem' : '0'
+  const bottomMargin = bottomHeight ? '3rem' : '0'
 
   menuHeightStyle.value = `calc(100% - ${topHeight + bottomHeight}px - ${topMargin} - ${bottomMargin}`
 })
