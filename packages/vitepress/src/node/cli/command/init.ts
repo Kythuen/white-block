@@ -44,12 +44,12 @@ export default async function () {
 
   console.log()
   console.log(TEXT.TITLE_INSTALL_DEPENDENCIES)
-  await setPkg('scripts.dev', 'vitepress dev --port 28802')
+  await setPkg('scripts.dev', 'vitepress dev')
   await setPkg('scripts.build', 'vitepress build')
   await setPkg('scripts.preview', 'vitepress preview')
   await setPkg('type', 'module')
 
-  const spinner = ora('start install dependencies').start()
+  const spinner = ora('installing dependencies').start()
   await runCmd('pnpm', [
     'add',
     '-D',

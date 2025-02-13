@@ -43,15 +43,6 @@
                 <WBHome />
               </slot>
             </template>
-            <!-- <template v-else-if="frontmatter.layout === 'page'">
-              <slot name="index-content">
-                <WBPage>
-                  <template #page-content>
-                    <slot name="page-content" />
-                  </template>
-                </WBPage>
-              </slot>
-            </template> -->
             <template v-else-if="frontmatter.layout === 'empty'">
               <Content />
             </template>
@@ -71,11 +62,23 @@
                 <template #doc-header="payload">
                   <slot name="doc-header" v-bind="payload" />
                 </template>
+                <template #doc-header-top>
+                  <slot name="doc-header-top" />
+                </template>
+                <template #doc-header-bottom>
+                  <slot name="doc-header-bottom" />
+                </template>
                 <template #doc-content="payload">
                   <slot name="doc-content" v-bind="payload" />
                 </template>
-                <template #doc-bottom="payload">
-                  <slot name="doc-bottom" v-bind="payload" />
+                <template #doc-footer="payload">
+                  <slot name="doc-footer" v-bind="payload" />
+                </template>
+                <template #doc-footer-top>
+                  <slot name="doc-footer-top" />
+                </template>
+                <template #doc-footer-bottom>
+                  <slot name="doc-footer-bottom" />
                 </template>
                 <template #doc-aside-top>
                   <slot name="doc-aside-top" />

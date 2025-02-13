@@ -90,6 +90,17 @@
 
 /* ----------------------------------------- docs ------------------------------------------- */
 .vp-doc {
+  [class*='language-'] code {
+    .highlighted,
+    .diff {
+      width: calc(100% + 32px);
+      margin: 0 -16px;
+      padding: 0 16px;
+      &::before {
+        left: 4px;
+      }
+    }
+  }
   h2 {
     border-top: none;
     padding-top: 0;

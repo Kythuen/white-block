@@ -161,6 +161,7 @@
 </template>
 
 <script setup lang="ts">
+import NeonButton from './NeonButton.vue'
 import { useData, withBase } from 'vitepress'
 
 const { frontmatter } = useData()

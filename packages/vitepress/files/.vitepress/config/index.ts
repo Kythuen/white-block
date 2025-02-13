@@ -14,7 +14,11 @@ export default defineConfig({
   ],
   themeConfig: {
     search: { provider: 'local' },
-    socialLinks: [{ icon: 'github', link: CONSTANT.GITHUB_URL }]
+    socialLinks: [{ icon: 'github', link: CONSTANT.GITHUB_URL }],
+    footer: {
+      copyright:
+        'Copyright © 2023-present <a href="https://github.com/Kythuen">Kythuen</a>. All rights reserved.'
+    }
   },
   locales: {
     root: en
