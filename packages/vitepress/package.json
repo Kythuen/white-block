@@ -16,8 +16,9 @@
   "type": "module",
   "files": [
     "dist",
-    "dist/node/cli/files/.vitepress",
-    "dist/node/cli/files/.gitignore"
+    "files",
+    "files/.vitepress",
+    "files/.gitignore"
   ],
   "exports": {
     ".": {

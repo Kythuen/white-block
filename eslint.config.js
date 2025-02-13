@@ -11,7 +11,7 @@ export default tsEslint.config([
       '**/dist',
       'docs/.vitepress/cache/',
       '.changeset/',
-      'packages/vitepress/src/node/cli/files'
+      'packages/vitepress/files'
     ]
   },
   eslint.configs.recommended,

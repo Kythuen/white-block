@@ -14,7 +14,7 @@ export type InitData = {
 }
 export async function init(data: InitData) {
   const parser = new Parser({
-    source: resolve(fileURLToPath(import.meta.url), '../files'),
+    source: resolve(fileURLToPath(import.meta.url), '../../../../files'),
     destination: process.cwd(),
     plugins: [nunjucks(data || {})],
     relativize: true,

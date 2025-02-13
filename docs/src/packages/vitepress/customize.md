@@ -12,6 +12,18 @@ In this tutorial, let’s add a tab effect for the content at DocumentHeader lik
 <!-- TODO: CodeSandbox -->
 [Online Demo]()
 
+## Prepare
+
+### Create Project
+```shell
+pnpm init
+```
+
+### Initial Document
+```shell
+npx @white-block/vitepress init
+```
+
 ## Import the Theme
 ::: code-group
 ```ts [.vitepress/theme/index.ts]

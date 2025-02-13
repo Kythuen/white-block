@@ -31,7 +31,7 @@
               v-for="item in frontmatter.hero?.actions || []"
               :key="item.text"
             >
-              <NeonButton v-if="item.theme === 'neon'" w="full md:50" h="12">
+              <NeonButton v-if="item.theme === 'neon'" w="full !md:50" h="12">
                 <div w="5" h="5" m="r-1" :class="item.icon" />
                 <span>{{ item.text }}</span>
               </NeonButton>
