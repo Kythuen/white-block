@@ -9,8 +9,7 @@ In this tutorial, let’s add a tab effect for the content at DocumentHeader lik
 ![](/vitepress/customize/tab-effect.png)
 :::
 
-<!-- TODO: CodeSandbox -->
-[Online Demo]()
+[Online Demo](https://stackblitz.com/edit/vitejs-vite-bb2yespt)
 
 ## Use the Theme
 
