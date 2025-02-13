@@ -36,7 +36,7 @@
       @blur="emits('blur')"
     />
     <button
-      v-if="icon || $slots.icon() || loading || clearable"
+      v-if="icon || loading || clearable"
       tabindex="-1"
       flex="~ shrink-0"
       items="center"

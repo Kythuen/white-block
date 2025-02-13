@@ -10,10 +10,6 @@ export type Slots = {
    * Prefix slot after input area.
    */
   suffix: () => any
-  /*
-   * Icon slot for input area.
-   */
-  icon: () => any
 }
 
 export type Emits = {
