@@ -181,11 +181,8 @@
               width: 100%;
               height: 400px;
               margin-block-end: -120px;
-              background-image: conic-gradient(
-                  from 90deg at 80% 50%,
-                  #000000,
-                  #a092ff
-                ),
+              background-image:
+                conic-gradient(from 90deg at 80% 50%, #000000, #a092ff),
                 conic-gradient(from 270deg at 20% 50%, #a092ff, #000000);
               background-repeat: no-repeat;
               background-size: 50% 100%;
