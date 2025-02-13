@@ -7,7 +7,6 @@
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "preserveSymlinks": true,
     "skipLibCheck": true,
     "types": ["node", "vite/client", "vitest/importMeta"],
     "jsx": "preserve",
@@ -18,11 +17,11 @@
     }
   },
   "exclude": [
-    "node_modules",
     "**/dist/**",
     "**/__tests__/**",
     "**/examples/**",
     "packages/cli/files/**",
+    "packages/vitepress/node/cli/files/**",
     "packages/playground/**/template/**"
   ]
 }
