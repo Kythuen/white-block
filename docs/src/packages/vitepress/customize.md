@@ -1,6 +1,6 @@
 ---
 title: Customize
-description: This page show how to advance customize your theme.
+description: Tutorial show how to advance customize the theme.
 ---
 
 :::info

@@ -10,7 +10,7 @@ import type { Theme } from 'vitepress'
 // import UsageBlock from './components/global/UsageBlock.vue'
 import Layout from './layouts/Layout.vue'
 import WhiteBlock from 'white-block'
-// import 'white-block/dist/styles/index.css'
+import 'white-block/dist/styles/index.css'
 
 const theme: Theme = {
   extends: WBTheme,

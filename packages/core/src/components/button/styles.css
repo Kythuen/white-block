@@ -98,9 +98,9 @@
 }
 .wb-button--default.wb-button--base {
   --wb-button-main-color: var(--wb-color-default);
-  --wb-button-main-color-lighten: var(--wb-color-default-1);
-  --wb-button-main-color-darken: var(--wb-color-default-2);
-  --wb-button-text: var(--wb-color-text);
+  --wb-button-main-color-lighten: var(--wb-color-default-2);
+  --wb-button-main-color-darken: var(--wb-color-default-1);
+  --wb-button-text: var(--wb-color-text-main);
   --wb-button-text-hover: var(--wb-color-text-main);
   --wb-button-text-active: var(--wb-color-text-main);
 }

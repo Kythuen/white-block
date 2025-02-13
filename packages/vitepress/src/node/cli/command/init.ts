@@ -55,6 +55,7 @@ export default async function () {
     '-D',
     '@white-block/vitepress',
     'unocss',
+    'vite',
     'vitepress'
   ])
   spinner.succeed('successfully install dependencies')

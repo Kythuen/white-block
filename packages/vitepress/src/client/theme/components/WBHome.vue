@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main w="full lg:320" m="x-auto" p="5">
+    <main w="full !lg:320" m="x-auto" p="5">
       <section
         p="t-12 b-16 lg:b-24"
         w="full"
@@ -38,10 +38,11 @@
               <wb-button
                 v-else
                 :href="withBase(item.link)"
+                :target="item.link.startsWith('http') ? '__blank' : ''"
                 :theme="item.theme"
                 tag="a"
                 size="lg"
-                w="full md:50"
+                w="full !md:50"
                 h="12"
               >
                 <div w="5" h="5" m="r-1" :class="item.icon" />
@@ -133,7 +134,7 @@
         justify="center"
         class="card"
       >
-        <h2 text="dark:white 3xl md:4xl lg:5xl" font="tracking-tight">
+        <h2 text="dark:white 3xl md:4xl lg:5xl" font="bold tracking-tight">
           {{ frontmatter.started?.title }}
         </h2>
         <p m="t-6" text="lg md:xl black/70 dark:white/70">
