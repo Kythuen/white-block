@@ -5,6 +5,8 @@ description: The built-in components provided.
 
 ## WBHeader
 
+![](/vitepress/components/wb-header.png)
+
 ```ts
 import { WBHeader, WBHeaderNav } from '@white-block/vitepress'
 ```
@@ -97,6 +99,8 @@ Here is the css variables defined, you can use them to do customize.
 
 ## WBSidebar
 
+![](/vitepress/components/wb-sidebar.png)
+
 This section contain areas: **sidebar-top**, **sidebar-menu** and **sidebar-bottom**.
 
 Use frontmatter to control visible of the component.
@@ -152,6 +156,8 @@ See [Slots of Sidebar](./slots#sidebar) for detail.
 
 ## WBDocument
 
+![](/vitepress/components/wb-document.png)
+
 This section contain areas: **doc-top**, **doc-aside** and **doc-bottom**.
 Use frontmatter to control visible of the component.
 ```md
@@ -200,6 +206,8 @@ See [Slots of Content](./slots#content) for detail.
 
 ## WBFooter
 
+![](/vitepress/components/wb-footer.png)
+
 Use frontmatter to control visible of the component.
 ```md
 ---
@@ -238,10 +246,11 @@ See [Slots of Footer](./slots#footer) for detail.
 
 
 ## WBHome
+
+![](/vitepress/components/wb-home.png)
+
 ```ts
 import { WBHome } from '@white-block/vitepress'
 ```
-### Preview
-![](/vitepress/components/wb-home.png)
 
-<!-- TODO: Usage -->
+See [Usage of WBHome](./layouts#home-layout)

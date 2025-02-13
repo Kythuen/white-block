@@ -237,9 +237,9 @@
       </div> -->
     </template>
     <template #footer>
-      <div max-w="lg:360" m="x-auto">
+      <!-- <div max-w="lg:360" m="x-auto">
         <DocumentFooter></DocumentFooter>
-      </div>
+      </div> -->
     </template>
   </Layout>
 </template>
