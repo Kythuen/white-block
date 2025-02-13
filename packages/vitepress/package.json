@@ -1,6 +1,6 @@
 {
   "name": "@white-block/vitepress",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1",
   "description": "white-block document theme for vitepress",
   "keywords": [
     "white-block",
