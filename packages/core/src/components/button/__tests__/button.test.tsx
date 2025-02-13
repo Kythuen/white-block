@@ -176,7 +176,7 @@ describe('# Button', () => {
       })
       const elStyle = wrapper.find('button').attributes('style')
       expect(
-        elStyle?.includes('--wb-button-color-main: rgb(255 165 0 / 1);')
+        elStyle?.includes('--wb-button-main-color: rgb(255 165 0 / 1);')
       ).toBe(true)
     })
 
