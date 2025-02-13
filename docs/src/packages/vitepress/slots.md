@@ -145,6 +145,14 @@ Content above the layout footer.
 #### footer-bottom
 Content below the layout footer.
 
+### Static Slots
+
+#### footer
+
+When built-in document header not meet your needs. We provide slot of navigation area for you to customize.
+
+Default component is [WBFooter](./components#footer).
+
 ## Aside
 Usually for isolated aside bar at right of the page.
 

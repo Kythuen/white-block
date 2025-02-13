@@ -3,9 +3,9 @@ layout: home
 
 hero:
   slogan: Intuitive Design for Effortless Development
-  intro: Ephemeras is a collection of various types projects, such as websites, npm library & command line tool. You can easily and quickly create a website with this starter.
+  intro: WhiteBlock is an open source component library for modern web apps which has intuitive component design and highly customizable and other optimized for fast development.
   actions:
-    - theme: default
+    - theme: neon
       text: Get Started
       icon: i-iconamoon:lightning-2-fill
       link: ./guide/
@@ -15,16 +15,16 @@ hero:
       link: https://github.com/Kythuen/white-block
 
 features:
-  title: Start your project with ephemeras
-  desc: Ephemeras has adopted popular technologies in the community and summarized various project templates, making it easy for you to quickly start your project development.
+  title: Why choose WhiteBlock?
+  desc: WhiteBlock has adopted popular technologies, making it easy for you to quickly start your project development.
   items:
-    - icon: 🌟
+    - icon: 💎
       title: Popular Technologies
       desc: Keep up with popular technology trends, build your project using Vue, TypeScript, Vite, Unocss etc.
     - icon: 🎯
       title: Focus On Inspiration
       desc: No need to start building frameworks from scratch, saving your time and quickly implement your ideas.
-    - icon: 🪄
+    - icon: 🚀
       title: Been Optimized
       desc: On the basis of popular scaffolding, many optimizations have been made to code structure, linter, bundler, etc.
     - icon: 🔌
@@ -60,7 +60,7 @@ technologies:
       link: https://unjs.dev/
 
 started:
-  title: Build project faster.
-  desc: Quickly implement your ideas with templates and enjoy your coding.
+  title: Build project easier.
+  desc: Quickly implement your ideas and enjoy your coding.
   link: ./guide/
 ---

@@ -197,6 +197,46 @@ This component also provide slots for customize.
 
 See [Slots of Content](./slots#content) for detail.
 
+
+## WBFooter
+
+Use frontmatter to control visible of the component.
+```md
+---
+footer: false
+---
+```
+
+```ts
+import { WBFooter } from '@white-block/vitepress'
+```
+
+Footer get data from vitepress themeConfig. 
+
+> See [themeConfig sidebar](https://vitepress.dev/reference/default-theme-sidebar#sidebar) declaration in vitepress.
+
+::: code-group
+```ts [.vitepress/config.ts]
+themeConfig: {
+  footer: {
+    message:
+      'Released under the <a href="https://github.com/Kythuen/white-block/blob/main/LICENSE">MIT License</a>.',
+    copyright:
+      'Copyright © 2023-present <a href="https://github.com/Kythuen">Kythuen</a>. All rights reserved.'
+  }
+}
+```
+:::
+
+### Slots
+
+This component also provide slots for customize.
+- footer-top
+- footer-bottom
+
+See [Slots of Footer](./slots#footer) for detail.
+
+
 ## WBHome
 ```ts
 import { WBHome } from '@white-block/vitepress'

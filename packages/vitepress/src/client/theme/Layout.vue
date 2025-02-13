@@ -89,7 +89,14 @@
               </WBDocument>
             </div>
           </div>
-          <slot name="footer" />
+          <WBFooter v-if="frontmatterField(frontmatter, 'sidebar')">
+            <template #footer-top>
+              <slot name="footer-top" />
+            </template>
+            <template #footer-bottom>
+              <slot name="footer-bottom" />
+            </template>
+          </WBFooter>
         </div>
         <slot name="aside" />
       </div>
@@ -105,6 +112,7 @@ import WBDocument from './components/WBDocument.vue'
 import WBHeader from './components/WBHeader.vue'
 import WBHome from './components/WBHome.vue'
 import WBSidebar from './components/WBSidebar.vue'
+import WBFooter from './components/WBFooter.vue'
 
 defineOptions({ name: 'WBLayout' })
 

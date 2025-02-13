@@ -16,6 +16,7 @@ import WBDocumentAside from './components/WBDocumentAside.vue'
 import WBDocumentAsideMenu from './components/WBDocumentAsideMenu.vue'
 import WBDocumentHeader from './components/WBDocumentHeader.vue'
 import WBHeader from './components/WBHeader.vue'
+import WBFooter from './components/WBFooter.vue'
 import WBHome from './components/WBHome.vue'
 import WBIconButton from './components/WBIconButton.vue'
 import WBSidebar from './components/WBSidebar.vue'
@@ -42,6 +43,7 @@ export {
   WBDocumentAsideMenu,
   WBDocumentHeader,
   WBHeader,
+  WBFooter,
   WBHome,
   WBIconButton,
   WBSidebar,

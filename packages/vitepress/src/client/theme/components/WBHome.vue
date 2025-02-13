@@ -22,24 +22,32 @@
           <div
             v-if="frontmatter.hero?.actions"
             h="12"
-            m="t-6"
+            m="t-8"
             flex="~ wrap"
             items="center"
-            gap="3"
+            gap="4"
           >
-            <wb-button
+            <template
               v-for="item in frontmatter.hero?.actions || []"
               :key="item.text"
-              :href="withBase(item.link)"
-              :theme="item.theme"
-              tag="a"
-              size="lg"
-              w="full md:50"
-              h="12"
             >
-              <div w="5" h="5" m="r-1" :class="item.icon" />
-              <span>{{ item.text }}</span>
-            </wb-button>
+              <NeonButton v-if="item.theme === 'neon'" w="full md:50" h="12">
+                <div w="5" h="5" m="r-1" :class="item.icon" />
+                <span>{{ item.text }}</span>
+              </NeonButton>
+              <wb-button
+                v-else
+                :href="withBase(item.link)"
+                :theme="item.theme"
+                tag="a"
+                size="lg"
+                w="full md:50"
+                h="12"
+              >
+                <div w="5" h="5" m="r-1" :class="item.icon" />
+                <span>{{ item.text }}</span>
+              </wb-button>
+            </template>
           </div>
         </div>
         <div w="full" p="y-6" hidden md:flex items="center" justify="center">
@@ -69,6 +77,7 @@
             :key="item.title"
             p="4"
             bg="$wb-color-card"
+            ring="px $wb-color-border"
             rounded="3"
             flex
             items="start"
@@ -115,20 +124,15 @@
         max-w="5xl"
         m="t-20 x-auto"
         p="10 md:20"
+        bg="$wb-color-card"
         ring="px $wb-color-border"
         rounded="lg"
         overflow="hidden"
         flex="~ col"
         items="center"
         justify="center"
+        class="card"
       >
-        <img
-          absolute
-          bottom="0"
-          left="0"
-          h="70%"
-          src="../assets/img/card-bg.webp"
-        />
         <h2 text="dark:white 3xl md:4xl lg:5xl" font="tracking-tight">
           {{ frontmatter.started?.title }}
         </h2>
@@ -136,9 +140,16 @@
           {{ frontmatter.started?.desc }}
         </p>
         <div flex m="t-12">
-          <a :href="frontmatter.started?.link">
-            <NeonButton />
-          </a>
+          <wb-button
+            :href="frontmatter.started?.link"
+            tag="a"
+            theme="contrast"
+            size="xl"
+            p="x-6"
+          >
+            <span>Get Started</span>
+            <div w="1em" h="1em" class="i-heroicons-arrow-right-20-solid" />
+          </wb-button>
         </div>
       </section>
     </main>
@@ -150,3 +161,12 @@ import { useData, withBase } from 'vitepress'
 
 const { frontmatter } = useData()
 </script>
+
+<style scoped>
+.card {
+  background-image: url(../assets/img/card-bg.webp);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
+}
+</style>

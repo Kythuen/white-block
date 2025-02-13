@@ -37,21 +37,34 @@
         );
         background-size: 400% 400%;
         animation: 5s bgp-animation 5s ease infinite;
-        filter: blur(2em);
+        filter: blur(3em);
       "
     />
     <div
       absolute
-      top="1px"
-      left="1px"
-      w="[calc(100%-2px)]"
-      h="[calc(100%-2px)]"
+      top="2px"
+      left="2px"
+      w="[calc(100%-4px)]"
+      h="[calc(100%-4px)]"
       bg="$wb-color-background"
       rounded="2"
     />
-    <div relative w="full" h="full" text="4">Get Started</div>
 
-    <i w="5" h="5" class="i-heroicons-arrow-right-20-solid" />
+    <div
+      relative
+      w="full"
+      h="full"
+      text="lg"
+      flex
+      items="center"
+      justify="center"
+      gap="2"
+    >
+      <slot>
+        <span>Get Started</span>
+        <div w="1em" h="1em" class="i-heroicons-arrow-right-20-solid" />
+      </slot>
+    </div>
   </button>
 </template>
 
