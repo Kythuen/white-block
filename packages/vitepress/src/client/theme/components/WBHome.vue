@@ -143,6 +143,9 @@
         <div flex m="t-12">
           <wb-button
             :href="frontmatter.started?.link"
+            :target="
+              frontmatter.started?.link?.startsWith('http') ? '__blank' : ''
+            "
             tag="a"
             theme="contrast"
             size="xl"

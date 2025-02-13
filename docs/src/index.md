@@ -62,5 +62,5 @@ technologies:
 started:
   title: Build project easier.
   desc: Quickly implement your ideas and enjoy your coding.
-  link: ./guide/
+  link: ./guide/started
 ---
