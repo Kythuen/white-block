@@ -2,21 +2,21 @@
 layout: home
 
 hero:
-  slogan: Intuitive Design for Effortless Development
+  slogan: WhiteBlock Document Theme for VitePress
   intro: WhiteBlock is an open source component library for modern web apps which has intuitive component design and highly customizable and other optimized for fast development.
   actions:
     - theme: default
       text: Get Started
       icon: i-iconamoon:lightning-2-fill
-      link: ./guide/
+      link: ./guide
     - theme: contrast
       text: View on GitHub
       icon: i-simple-icons:github
       link: https://github.com/Kythuen/white-block
 
 features:
-  title: Why choose WhiteBlock?
-  desc: WhiteBlock has adopted popular technologies, making it easy for you to quickly start your project development.
+  title: Why choose WhiteBlock theme?
+  desc: With WhiteBlock theme, it's easy create a nice-looking document.
   items:
     - icon: 💎
       title: Popular Technologies
@@ -60,7 +60,7 @@ technologies:
       link: https://unjs.dev/
 
 started:
-  title: Build project easier
+  title: Explore More
   desc: Quickly implement your ideas and enjoy your coding.
-  link: ./guide/
+  link: https://kythuen.github.io/white-block/packages/vitepress/guide
 ---
