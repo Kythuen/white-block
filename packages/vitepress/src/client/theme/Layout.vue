@@ -89,14 +89,16 @@
               </WBDocument>
             </div>
           </div>
-          <WBFooter v-if="frontmatterField(frontmatter, 'sidebar')">
-            <template #footer-top>
-              <slot name="footer-top" />
-            </template>
-            <template #footer-bottom>
-              <slot name="footer-bottom" />
-            </template>
-          </WBFooter>
+          <slot name="footer">
+            <WBFooter v-if="frontmatterField(frontmatter, 'footer')">
+              <template #footer-top>
+                <slot name="footer-top" />
+              </template>
+              <template #footer-bottom>
+                <slot name="footer-bottom" />
+              </template>
+            </WBFooter>
+          </slot>
         </div>
         <slot name="aside" />
       </div>
