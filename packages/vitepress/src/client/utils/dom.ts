@@ -76,13 +76,19 @@ function serializeHeader(h: Element) {
   }
   return ret.trim()
 }
-export function getHeaders(type = 'content') {
+export function getHeaders(type = 'content', aside: any = true) {
+  if (!aside) return []
+  let min = 1
+  let max = 6
+  if (Object.prototype.toString.call(aside)) {
+    min = aside[0] || 1
+    max = aside[1] || 6
+  }
   const queryString = `.vp-doc-${type} :where(h1,h2,h3,h4,h5,h6)`
   const headers = Array.from(document.querySelectorAll(queryString))
     .filter(el => {
-      // const level = Number(el.tagName[1])
-      return el.id && el.hasChildNodes()
-      //  && level < 3
+      const level = Number(el.tagName[1])
+      return el.id && el.hasChildNodes() && level >= min && level <= max
     })
     .map(el => {
       const level = Number(el.tagName[1])

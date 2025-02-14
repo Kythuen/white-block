@@ -1,6 +1,8 @@
 ---
 title: Slots
 description: '@white-block/vitepress provide several slots for user to custom the theme.'
+
+doc-aside: [1,3]
 ---
 
 # Default Layout
@@ -87,6 +89,7 @@ You can use frontmatter to control the header component visible or not.
 ---
 doc-header: false
 doc-footer: false
+doc-aside: false
 ---
 ```
 
@@ -132,6 +135,18 @@ Default component is `<Content />` provided by vitepress.
 When built-in document header not meet your needs. We provide slot of navigation area for you to customize.
 
 Default component is [WBDocumentAside](./components#document-aside).
+
+:::tip
+You can also use frontmatter `doc-aside` to control the display level of anchors. 
+
+That would be useful in long article sense.
+```md
+---
+doc-aside: [2,3]
+---
+```
+The frontmatter defined above mean only show anchors for `h2-h3`.
+:::
 
 ## Footer
 

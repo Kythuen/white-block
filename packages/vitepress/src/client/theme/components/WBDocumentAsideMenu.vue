@@ -9,7 +9,7 @@
     >
       <div
         v-for="{ level, link, title } in headers"
-        :key="title"
+        :key="title + level + link"
         :data-link="link"
         w="full"
         h="6"
@@ -25,9 +25,9 @@
         :class="['anchor-link']"
         :style="{ paddingLeft: `${level - minLevel}em` }"
       >
-        <a :href="link" :title="title" @click="onClickAnchor($event, link)">{{
-          title
-        }}</a>
+        <a :href="link" :title="title" @click="onClickAnchor($event, link)">
+          {{ title }}
+        </a>
       </div>
     </div>
     <div
@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vitepress'
+import { useRoute, useData } from 'vitepress'
 import { onMounted, onUnmounted, ref, shallowRef, watch } from 'vue'
 // @ts-ignore
 import { throttleAndDebounce } from 'vitepress/dist/client/theme-default/support/utils'
@@ -57,6 +57,8 @@ const props = defineProps({
   focus: { type: Boolean, default: false },
   tab: { type: String, default: 'content' }
 })
+
+const { frontmatter } = useData()
 
 const SPECIAL_HEIGHT = useSpecialHeight()
 const THROTTLE_TIME = 60
@@ -169,7 +171,7 @@ onMounted(() => {
     ([, tab]) => {
       setTimeout(() => {
         markerTop.value = 0
-        headers.value = getHeaders(tab)
+        headers.value = getHeaders(tab, frontmatter.value?.['doc-aside'])
         if (headers.value.length) {
           let min = 6
           headers.value.forEach(item => {
