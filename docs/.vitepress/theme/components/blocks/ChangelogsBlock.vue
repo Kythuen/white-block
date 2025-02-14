@@ -1,17 +1,31 @@
 <template>
-  <div flex="~ col" gap="8">
+  <div class="changelogs vp-raw" flex="~ col" gap="8">
     <div v-for="item in page.changelogs" :key="item.date" flex gap="8">
-      <!-- eslint-disable-next-line vue/no-v-html -->
-      <div v-html="item.content"></div>
+      <div>
+        <div v-html="item.content" />
+        <wb-button
+          v-if="item.data?.version"
+          href="https://github.com/Kythuen/white-block/releases"
+          target="__blank"
+          tag="a"
+          type="base"
+          size="sm"
+          theme="default"
+          shape="round"
+        >
+          {{ item.data.version }}
+        </wb-button>
+      </div>
       <div
         :id="item.date"
+        class="hidden !lg:block"
         w="52"
         h="10"
         text="md right $wb-color-text-secondly"
         font="leading-10"
+        shrink="0"
       >
         <div>{{ item.date }}</div>
-        <span p="x-1.5" text="sm">v1.0.0</span>
       </div>
     </div>
   </div>

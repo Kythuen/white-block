@@ -25,10 +25,8 @@
       gap="8"
       class="vp-doc"
     >
-      <!-- TODO: take a check -->
       <div
         w="full"
-        max-w="xl:220"
         :m="frontmatterField(frontmatter, 'sidebar') ? '' : 'x-auto'"
       >
         <div class="vp-doc-content">

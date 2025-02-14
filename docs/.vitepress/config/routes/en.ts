@@ -39,12 +39,12 @@ const SidebarWhiteBlock = [
   { text: 'Components', items: SidebarComponents }
 ]
 const SidebarVitepress = [
-  { text: 'Getting Started', link: '/packages/vitepress/guide/started' },
+  { text: 'Getting Started', link: '/packages/vitepress/guide' },
   { text: 'Layouts', link: '/packages/vitepress/layouts' },
   { text: 'Slots', link: '/packages/vitepress/slots' },
   { text: 'Components', link: '/packages/vitepress/components' },
-  { text: 'Customize', link: '/packages/vitepress/customize' }
-  // { text: 'CLI', link: '/packages/vitepress/cli' }
+  { text: 'Customize', link: '/packages/vitepress/customize' },
+  { text: 'Deploy', link: '/packages/vitepress/deploy' }
 ]
 const SidebarVitepressOthers = [
   { text: 'Changelogs', link: '/packages/vitepress/changelogs' },
