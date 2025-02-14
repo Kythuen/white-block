@@ -47,6 +47,7 @@ const SidebarVitepress = [
   { text: 'Deploy', link: '/packages/vitepress/deploy' }
 ]
 const SidebarVitepressOthers = [
+  { text: 'API Reference', link: '/packages/vitepress/api' },
   { text: 'Changelogs', link: '/packages/vitepress/changelogs' },
   { text: 'Q & A', link: '/packages/vitepress/qa' }
 ]

@@ -53,7 +53,6 @@ export function getElementBySelector(selector: string | HTMLElement) {
 
 export function clickDelegate(
   e: MouseEvent | any,
-  // TODO: 支持 string[]
   className: string,
   handler: (dataset: any, event?: MouseEvent) => void,
   fallback?: () => void
