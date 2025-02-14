@@ -144,6 +144,7 @@
         #sidebar-bottom
       </div> -->
     </template>
+    <!-- <template #doc-header-bottom="{ focus, tab, setTab }"> 111 </template> -->
     <template #doc-header="{ focus, tab, setTab }">
       <!-- <div
         w="full"
@@ -237,9 +238,9 @@
       </div> -->
     </template>
     <template #footer>
-      <!-- <div max-w="lg:360" m="x-auto">
+      <div max-w="lg:360" m="x-auto">
         <DocumentFooter></DocumentFooter>
-      </div> -->
+      </div>
     </template>
   </Layout>
 </template>
@@ -250,13 +251,13 @@ import DocumentContent from './docs/DocumentContent.vue'
 import DocumentFooter from './docs/DocumentFooter.vue'
 import DocumentMobileDock from './docs/DocumentMobileDock.vue'
 import ThemeEditor from './theme-editor/Index.vue'
-import Home from './home/Index.vue'
-import { Layout, WBHeader, WBDocumentAside } from '@white-block/vitepress'
+// import Home from './home/Index.vue'
+import { Layout, WBDocumentAside } from '@white-block/vitepress'
 import { useState } from 'white-block'
-import { useRouter, useData } from 'vitepress'
+// import { useRouter, useData } from 'vitepress'
 
-const { site, frontmatter } = useData()
-const router = useRouter()
+// const { site } = useData()
+// const router = useRouter()
 
 const TAB_OPTIONS = [
   { label: 'DEMO', value: 'content' },
@@ -264,20 +265,20 @@ const TAB_OPTIONS = [
 ]
 // const [currentTab, setCurrentTab] = useState<string>('content')
 
-const [homeTopVisible, setHomeTopVisible] = useState<boolean>(true)
-const [headerTopVisible, setHeaderTopVisible] = useState<boolean>(true)
+// const [homeTopVisible, setHomeTopVisible] = useState<boolean>(true)
+// const [headerTopVisible, setHeaderTopVisible] = useState<boolean>(true)
 
 const [themeEditorVisible, setThemeEditorVisible] = useState<boolean>(false)
-function changeLanguage() {
-  let targetPath = ''
-  const { path } = router.route
-  if (path.includes('/zh')) {
-    targetPath = path.replace('/zh', '')
-  } else {
-    const { base } = site.value
-    const pure = path.replace(base, '')
-    targetPath = `${base}zh/${pure}`
-  }
-  router.go(targetPath)
-}
+// function changeLanguage() {
+//   let targetPath = ''
+//   const { path } = router.route
+//   if (path.includes('/zh')) {
+//     targetPath = path.replace('/zh', '')
+//   } else {
+//     const { base } = site.value
+//     const pure = path.replace(base, '')
+//     targetPath = `${base}zh/${pure}`
+//   }
+//   router.go(targetPath)
+// }
 </script>

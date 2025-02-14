@@ -3,7 +3,9 @@ layout: home
 
 hero:
   slogan: WhiteBlock Document Theme for VitePress
-  intro: WhiteBlock is an open source component library for modern web apps which has intuitive component design and highly customizable and other optimized for fast development.
+  intro: WhiteBlock Theme has customized on the basis of Vitepress, which can generate efficient and nice-looking documents within a few seconds. It provides more rich feature and higher usability make it easily to handle your documents.
+
+
   actions:
     - theme: default
       text: Get Started
@@ -18,24 +20,24 @@ features:
   title: Why choose WhiteBlock theme?
   desc: With WhiteBlock theme, it's easy create a nice-looking document.
   items:
+    - icon: ⚡
+      title: Easy To Use
+      desc: With CLI tool, you can build your document within a few seconds. Just to start ideas in your mind right now.
+    - icon: ✨
+      title: Nice Looking & Powerful
+      desc: Unified style, elegant designed and build-in responsive. Abundant features that can meet the vast majority of needs.
+    - icon: ✏️
+      title: Customizable
+      desc: Provides rich components and slots for you to customize document according to your needs.
     - icon: 💎
       title: Popular Technologies
       desc: Keep up with popular technology trends, build your project using Vue, TypeScript, Vite, Unocss etc.
-    - icon: 🎯
-      title: Focus On Inspiration
-      desc: No need to start building frameworks from scratch, saving your time and quickly implement your ideas.
-    - icon: 🚀
-      title: Been Optimized
-      desc: On the basis of popular scaffolding, many optimizations have been made to code structure, linter, bundler, etc.
-    - icon: 🔌
-      title: Broad Integration
-      desc: Ephemeras templates supports TypeScript, Vue, Unocss, Vitepress and Easy to integrate other npm packages.
     - icon: 🌈
       title: Rich Ecosystem
-      desc: Ephemeras provides a rich collection of toolkit collection that can be applied in your projects as needed.
+      desc: WhiteBlock Theme provides a rich collection of toolkit collection that can be applied in your projects as needed.
     - icon: 👨‍💻
       title: Continuously Updates
-      desc: Ephemeras templates will continuously optimized and expanded according to needs and feedback.
+      desc: WhiteBlock Theme templates will continuously optimized and expanded according to needs and feedback.
 
 technologies:
   title: Works with your technologies
