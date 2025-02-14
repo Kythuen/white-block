@@ -2,6 +2,8 @@
   <div class="changelogs vp-raw" flex="~ col" gap="8">
     <div v-for="item in page.changelogs" :key="item.date" flex gap="8">
       <div>
+        <h2 v-if="item.data?.version">{{ item.data.title }}</h2>
+        <img v-if="item.data?.preview" :src="item.data?.preview" />
         <div v-html="item.content" />
         <wb-button
           v-if="item.data?.version"

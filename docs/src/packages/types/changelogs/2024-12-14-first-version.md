@@ -1,8 +1,7 @@
 ---
+title: ✨ Resolve Types for WhiteBlock components
 version: v0.0.1 ~ v0.0.4
 ---
-
-## ✨ Resolve Types for WhiteBlock components
 
 We are excited to announce that **@white-block/types** coming with it's first available version.
 

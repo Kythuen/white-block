@@ -1,10 +1,8 @@
 ---
+title: ✨ WhiteBlock documents theme for VitePress
+preview: /white-block/vitepress/preview.png
 version: v0.0.1 ~ v0.0.4
 ---
-
-## ✨ WhiteBlock documents theme for VitePress
-
-![@white-block/vitepress](/white-block/vitepress/preview.png)
 
 We are excited to announce that **@white-block/vitepress** coming with it's first available version.
 
