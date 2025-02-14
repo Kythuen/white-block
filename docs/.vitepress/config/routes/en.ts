@@ -52,6 +52,12 @@ const SidebarTypes = [
   { text: 'Changelogs', link: '/packages/types/changelogs' }
 ]
 
+/* ------------------------------ packages/resolver ------------------------------- */
+const SidebarResolver = [
+  { text: 'Usage', link: '/packages/resolver/' },
+  { text: 'Changelogs', link: '/packages/resolver/changelogs' }
+]
+
 export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
   '/guide': SidebarWhiteBlock,
   '/components/': SidebarWhiteBlock,
@@ -59,7 +65,8 @@ export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
     { text: 'Guides', items: SidebarVitepress },
     { text: 'Others', items: SidebarVitepressOthers }
   ],
-  '/packages/types/': [{ text: 'All', items: SidebarTypes }]
+  '/packages/types/': [{ text: 'All', items: SidebarTypes }],
+  '/packages/resolver/': [{ text: 'All', items: SidebarResolver }]
 }
 
 export const NAV = [

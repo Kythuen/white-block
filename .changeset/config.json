@@ -3,7 +3,9 @@
   "changelog": false,
   "commit": false,
   "fixed": [],
-  "linked": [],
+  "linked": [
+    ["white-block", "@white-block/resolver"]
+  ],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",

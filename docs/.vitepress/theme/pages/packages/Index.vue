@@ -55,9 +55,9 @@ const PACKAGES = [
     tags: ['theme', 'VitePress']
   },
   {
-    title: '@white-block/resolve',
+    title: '@white-block/resolver',
     desc: 'unplugin-vue-components resolver for WhiteBlock.',
-    link: withBase('/packages/resolve/'),
+    link: withBase('/packages/resolver/'),
     authorLink: 'https://github.com/Kythuen',
     author: 'Kythuen',
     img: withBase('/assets/img/packages/unplugin.png'),
