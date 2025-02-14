@@ -1,12 +1,12 @@
 import type { DefaultTheme } from 'vitepress'
 import { PLAYGROUND_URL } from '../constant'
 
+/* ---------------------------------- packages/core --------------------------------- */
 const SidebarGuides: DefaultTheme.NavItemWithLink[] = [
   { text: 'Getting Started', link: '/guide/started' },
   { text: 'Overview', link: '/guide/overview' },
   { text: 'Colors', link: '/guide/colors' }
 ]
-
 const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
   { text: 'Button', link: '/components/button' },
   { text: 'ButtonGroup', link: '/components/button-group' },
@@ -26,18 +26,12 @@ const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
   { text: 'Loading', link: '/components/loading' },
   { text: 'Message', link: '/components/message' }
 ]
-
-// const SidebarEcosystem = {
-//   text: 'Ecosystem',
-//   items: [
-//     { text: 'vitepress', link: '/vitepress' },
-//     { text: 'types', link: '/types' }
-//   ]
-// }
 const SidebarWhiteBlock = [
   { text: 'Guide', items: SidebarGuides },
   { text: 'Components', items: SidebarComponents }
 ]
+
+/* ------------------------------- packages/vitepress ------------------------------- */
 const SidebarVitepress = [
   { text: 'Getting Started', link: '/packages/vitepress/guide' },
   { text: 'Layouts', link: '/packages/vitepress/layouts' },
@@ -51,8 +45,11 @@ const SidebarVitepressOthers = [
   { text: 'Changelogs', link: '/packages/vitepress/changelogs' },
   { text: 'Q & A', link: '/packages/vitepress/qa' }
 ]
+
+/* -------------------------------- packages/types --------------------------------- */
 const SidebarTypes = [
-  { text: 'Getting Started', link: '/packages/types/guide' }
+  { text: 'Usage', link: '/packages/types/' },
+  { text: 'Changelogs', link: '/packages/types/changelogs' }
 ]
 
 export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
@@ -61,12 +58,8 @@ export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
   '/packages/vitepress/': [
     { text: 'Guides', items: SidebarVitepress },
     { text: 'Others', items: SidebarVitepressOthers }
-    // SidebarEcosystem
   ],
-  '/packages/types/': [
-    { text: 'Guides', items: SidebarTypes }
-    // SidebarEcosystem
-  ]
+  '/packages/types/': [{ text: 'All', items: SidebarTypes }]
 }
 
 export const NAV = [

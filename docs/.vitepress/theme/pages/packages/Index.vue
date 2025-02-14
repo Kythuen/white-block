@@ -46,13 +46,13 @@ import Net from './Net.vue'
 
 const PACKAGES = [
   {
-    title: '@white-block/awesome',
-    desc: 'Awesome components for WhiteBlock.',
-    link: withBase('/packages/awesome/'),
+    title: '@white-block/vitepress',
+    desc: 'WhiteBlock document theme for VitePress.',
+    link: withBase('/packages/vitepress/guide'),
     authorLink: 'https://github.com/Kythuen',
     author: 'Kythuen',
-    img: withBase('/assets/img/packages/awesome.webp'),
-    tags: ['components']
+    img: withBase('/assets/img/packages/vitepress.webp'),
+    tags: ['theme', 'VitePress']
   },
   {
     title: '@white-block/resolve',
@@ -65,7 +65,7 @@ const PACKAGES = [
   },
   {
     title: '@white-block/types',
-    desc: 'A tool to resolve types for WhiteBlock components.',
+    desc: 'Tools to resolve types for WhiteBlock components',
     link: withBase('/packages/types/'),
     authorLink: 'https://github.com/Kythuen',
     author: 'Kythuen',
@@ -73,13 +73,13 @@ const PACKAGES = [
     tags: ['API', 'AST']
   },
   {
-    title: '@white-block/vitepress',
-    desc: 'WhiteBlock document theme for vitepress.',
-    link: withBase('/packages/vitepress/guide'),
+    title: '@white-block/awesome',
+    desc: 'Awesome components for WhiteBlock.',
+    link: withBase('/packages/awesome/'),
     authorLink: 'https://github.com/Kythuen',
     author: 'Kythuen',
-    img: withBase('/assets/img/packages/vitepress.webp'),
-    tags: ['theme', 'vitepress']
+    img: withBase('/assets/img/packages/awesome.webp'),
+    tags: ['components']
   }
 ]
 

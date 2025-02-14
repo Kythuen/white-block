@@ -19,7 +19,7 @@ We are excited to announce that **@white-block/vitepress** coming with it's firs
 
 ### 🌟 How to Use
 
-Reference to [Getting Started](/white-block/vitepress/guide/started).
+Reference to [*Getting Started*](/white-block/vitepress/guide/started).
 
 ### 📢 Feedback and Support
 

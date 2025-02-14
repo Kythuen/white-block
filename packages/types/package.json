@@ -1,7 +1,7 @@
 {
   "name": "@white-block/types",
   "version": "0.0.3",
-  "description": "A tool to resolve Props & Emits type for Vue3",
+  "description": "Tools to resolve types for WhiteBlock components",
   "keywords": [
     "ephemeras",
     "white-block",
