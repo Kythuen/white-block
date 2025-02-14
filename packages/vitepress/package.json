@@ -49,8 +49,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development tsup --watch src",
     "build": "cross-env NODE_ENV=production tsup",
-    "test": "echo \"@ephemeras/vitepress ignore\"",
-    "test:coverage": "echo \"@ephemeras/vitepress coverage ignore\""
+    "test": "echo \"package vitepress ignore\"",
+    "test:coverage": "echo \"package vitepress coverage ignore\""
   },
   "dependencies": {
     "@ephemeras/parser": "0.0.2-alpha.3",
