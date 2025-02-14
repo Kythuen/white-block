@@ -14,7 +14,7 @@ We are excited to announce that **@white-block/types** coming with it's first av
 
 ### 🌟 How to Use
 
-Reference to [*Getting Started*](/white-block/packages/types/).
+Reference to [*Getting Started*](https://kythuen.github.io/white-block/packages/types).
 
 ### 📢 Feedback and Support
 
