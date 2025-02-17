@@ -92,7 +92,7 @@
           <WBIconButton
             name="menu"
             :icon="
-              showMenuPanel
+              showNavPanel
                 ? 'i-heroicons-x-mark-20-solid'
                 : 'i-heroicons-bars-3-20-solid'
             "
@@ -105,6 +105,7 @@
       <slot name="header-bottom" />
     </div>
   </header>
+  <WBNavPanel v-show="showNavPanel" @change="showNavPanel = false" />
 </template>
 
 <script setup lang="ts">
@@ -113,6 +114,7 @@ import VPNavBarSearch from 'vitepress/dist/client/theme-default/components/VPNav
 import { computed, ref } from 'vue'
 import { clickDelegate } from 'white-block'
 import WBHeaderNav from './WBHeaderNav.vue'
+import WBNavPanel from './WBNavPanel.vue'
 
 const { site, isDark, lang, theme, frontmatter } = useData()
 
@@ -122,9 +124,9 @@ const SOCIALS: any = {
   discord: { icon: 'i-simple-icons-discord', title: 'Discord' }
 }
 
-const showMenuPanel = ref(false)
+const showNavPanel = ref(false)
 function hideMenuPanel() {
-  showMenuPanel.value = false
+  showNavPanel.value = false
 }
 
 const localePrefix = computed(() =>
@@ -139,7 +141,7 @@ function handleMenuOptions(dataset: Record<string, string>) {
       break
     }
     case 'menu': {
-      showMenuPanel.value = !showMenuPanel.value
+      showNavPanel.value = !showNavPanel.value
       break
     }
     case 'search': {

@@ -116,29 +116,8 @@
             size="lg"
             ring="1 inset $wb-color-border"
           />
-          <!-- <wb-radio-group
-            v-model="currentTab"
-            ring="1 inset $wb-color-border"
-            :options="TAB_OPTIONS"
-            type="tab"
-            tab-type="emphasize"
-            size="lg"
-          /> -->
         </div>
       </DocumentMobileDock>
-      <!-- <div
-        w="full"
-        h="60"
-        m="t-6"
-        color="$wb-color-text-5"
-        bg="$wb-color-layer"
-        rounded="1"
-        flex
-        items="center"
-        justify="center"
-      >
-        #document-bottom
-      </div> -->
     </template>
     <template #doc-aside="{ focus }">
       <WBDocumentAside
@@ -149,7 +128,7 @@
     </template>
     <template #footer>
       <div max-w="lg:360" m="x-auto">
-        <DocumentFooter></DocumentFooter>
+        <DocumentFooter />
       </div>
     </template>
   </Layout>

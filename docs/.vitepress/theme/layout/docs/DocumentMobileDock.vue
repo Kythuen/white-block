@@ -2,7 +2,7 @@
   <div
     fixed
     bottom="8"
-    z="100"
+    z="90"
     left="50%"
     transform="translate-x--50%"
     rounded="full"

@@ -1,5 +1,10 @@
 <template>
-  <div text="3.5" flex="~ col" gap="5">
+  <div
+    text="3.5"
+    flex="~ col"
+    gap="5"
+    @click="clickDelegate($event, 'menu-item', handleMenuClick)"
+  >
     <div
       v-for="group in resolveSidebar"
       :key="group.text"
@@ -19,7 +24,8 @@
         <div
           v-for="item in group.items"
           :key="item.text"
-          class="group"
+          :data-value="item.link"
+          class="group menu-item"
           p="y-1"
           flex="~ row"
           items="center"
@@ -29,7 +35,6 @@
           transition="color ease-in duration-200"
           select="none"
           :style="getStyles(item.link)"
-          @click="toPage(item.link)"
         >
           <div>{{ item.text }}</div>
           <div v-if="EXTERNAL_URL_RE.test(item.link)">
@@ -40,7 +45,8 @@
       <div
         v-else
         :key="group.text"
-        class="group"
+        :data-value="group.link"
+        class="group menu-item"
         flex
         items="center"
         color="$wb-color-text hover:$wb-color-text-main"
@@ -48,7 +54,6 @@
         transition="color ease-in duration-200"
         select="none"
         :style="getStyles(group.link)"
-        @click="toPage(group.link)"
       >
         <div text="sm">{{ group.text }}</div>
         <div v-if="EXTERNAL_URL_RE.test(group.link)">
@@ -61,9 +66,11 @@
 
 <script setup lang="ts">
 import { useData, useRoute, useRouter, withBase } from 'vitepress'
+import { clickDelegate } from 'white-block'
 import { computed } from 'vue'
 
 const EXTERNAL_URL_RE = /^(?:[a-z]+:|\/\/)/i
+const emits = defineEmits(['change'])
 
 const { theme } = useData()
 const router = useRouter()
@@ -96,7 +103,9 @@ function getStyles(link: string) {
   return {}
 }
 
-function toPage(link: string) {
-  router.go(withBase(link))
+function handleMenuClick(dataset: Record<string, string>) {
+  const { value } = dataset
+  router.go(withBase(value))
+  emits('change', withBase(value))
 }
 </script>
