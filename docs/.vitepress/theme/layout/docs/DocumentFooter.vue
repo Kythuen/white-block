@@ -6,9 +6,8 @@
     p="6 t-16 b-8"
     border="0 t-px solid $wb-color-border"
   >
-    <div flex="~ wrap" gap="8">
-      <!-- <Placeholder :src="withBase('/assets/tmp/footer.png')" :opacity="0.5" /> -->
-      <div w="lg:80" flex="~ col" gap="3">
+    <div flex="~ wrap" gap="8" justify="center !md:start">
+      <div w="lg:80" flex="~ col" gap="3" items="center !md:start">
         <a
           :href="withBase(`${localePrefix}/`)"
           un-text="lg $wb-color-text-main"
@@ -35,7 +34,6 @@
         <div text="sm $wb-color-text">
           Intuitive Design for Effortless Development
         </div>
-        <!-- <div text="xs $wb-color-text-secondly">© 2023-2025 Kythuen</div> -->
         <div p="y-1" text="5" flex gap="3">
           <a
             v-for="item in SOCIALS"
@@ -49,22 +47,8 @@
             <div m="1" :class="item.icon"></div>
           </a>
         </div>
-        <!-- <div
-        w="48"
-        h="8"
-        text="sm"
-        p="x-2"
-        bg="gray/20"
-        rounded="full"
-        flex
-        items="center"
-        gap="2"
-      >
-        <div text="4 green" i="heroicons-check-circle-20-solid"></div>
-        All services are online
-      </div> -->
       </div>
-      <div w="full" h="40" flex="~ 1">
+      <div class="hidden !md:flex" w="full" h="40" flex="1">
         <div v-for="group in LINKS" :key="group.title" flex="~ col 1" gap="2">
           <div m="b-4" text="md $wb-color-text" font="bold">
             {{ group.title }}
