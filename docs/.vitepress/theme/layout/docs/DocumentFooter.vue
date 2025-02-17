@@ -77,7 +77,7 @@
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
 
-const { site, isDark, lang, theme, frontmatter } = useData()
+const { isDark, lang, theme } = useData()
 const localePrefix = computed(() =>
   lang.value === 'en' ? '' : `/${lang.value}`
 )
