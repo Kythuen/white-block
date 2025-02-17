@@ -1,15 +1,14 @@
 <template>
   <div
     fixed
-    bottom="4"
+    bottom="8"
+    z="100"
     left="50%"
     transform="translate-x--50%"
-    backdrop="blur"
     rounded="full"
-    shadow="lg"
     flex
     gap="2"
-    class="!md:hidden"
+    class="!lg:hidden"
   >
     <div
       h="full"
@@ -25,9 +24,9 @@
       v-show="focus"
       w="12"
       h="12"
-      bg="$wb-color-container"
-      rounded="full"
-      ring="1 inset $wb-color-border"
+      bg="$wb-color-comp"
+      rounded="md"
+      ring="1 $wb-color-border"
       color="$wb-color-text-main"
       flex
       items="center"

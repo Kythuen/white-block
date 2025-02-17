@@ -29,11 +29,11 @@
         w="full"
         :m="frontmatterField(frontmatter, 'sidebar') ? '' : 'x-auto'"
       >
-        <div class="vp-doc-content">
-          <slot name="doc-content" :tab="currentTab">
+        <slot name="doc-content" :tab="currentTab">
+          <div class="vp-doc-content">
             <Content />
-          </slot>
-        </div>
+          </div>
+        </slot>
         <slot
           name="doc-footer"
           :focus="isFocusMode"
@@ -41,7 +41,7 @@
           :set-tab="setCurrentTab"
         />
       </div>
-      <slot name="doc-aside">
+      <slot name="doc-aside" :focus="isFocusMode">
         <WBDocumentAside
           v-if="frontmatterField(frontmatter, 'doc-aside')"
           :focus="isFocusMode"

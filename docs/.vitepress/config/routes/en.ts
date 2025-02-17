@@ -3,8 +3,8 @@ import { PLAYGROUND_URL } from '../constant'
 
 /* ---------------------------------- packages/core --------------------------------- */
 const SidebarGuides: DefaultTheme.NavItemWithLink[] = [
-  { text: 'Getting Started', link: '/guide/started' },
-  { text: 'Overview', link: '/guide/overview' },
+  { text: 'Getting Started', link: '/guide' },
+  { text: 'Overview', link: '/components' },
   { text: 'Colors', link: '/guide/colors' }
 ]
 const SidebarComponents: DefaultTheme.NavItemWithLink[] = [
@@ -60,18 +60,18 @@ const SidebarResolver = [
 
 export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
   '/guide': SidebarWhiteBlock,
-  '/components/': SidebarWhiteBlock,
-  '/packages/vitepress/': [
+  '/components': SidebarWhiteBlock,
+  '/packages/vitepress': [
     { text: 'Guides', items: SidebarVitepress },
     { text: 'Others', items: SidebarVitepressOthers }
   ],
-  '/packages/types/': [{ text: 'All', items: SidebarTypes }],
-  '/packages/resolver/': [{ text: 'All', items: SidebarResolver }]
+  '/packages/types': [{ text: 'All', items: SidebarTypes }],
+  '/packages/resolver': [{ text: 'All', items: SidebarResolver }]
 }
 
 export const NAV = [
-  { text: 'Guide', link: '/guide/started' },
-  { text: 'Components', link: '/guide/overview' },
+  { text: 'Guide', link: '/guide' },
+  { text: 'Components', link: '/components' },
   { text: 'Playground', link: PLAYGROUND_URL },
   { text: 'Packages', link: '/packages' }
 ]

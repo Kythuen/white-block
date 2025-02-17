@@ -3,13 +3,13 @@
     sticky
     top="[calc(var(--vp-wb-header-height)+8.5rem)]"
     w="52"
-    flex="hidden !xl:flex none col"
+    flex="none col"
     :h="
       focus
         ? '[calc(100vh-var(--vp-wb-header-height)-10.5rem)]'
         : '[calc(100vh-var(--vp-wb-header-height)-23rem)]'
     "
-    class="vp-raw"
+    class="hidden !lg:flex vp-raw"
   >
     <div
       h="full"

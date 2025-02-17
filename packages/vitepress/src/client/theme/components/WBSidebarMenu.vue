@@ -86,7 +86,7 @@ const resolveSidebar = computed(() => {
   return theme.value.sidebar
 })
 function getStyles(link: string) {
-  const match = route.path === withBase(link)
+  const match = route.path === withBase(link) + '/'
   if (match) {
     return {
       '--wb-color-text': 'var(--wb-color-primary)',

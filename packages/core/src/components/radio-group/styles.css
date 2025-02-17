@@ -43,7 +43,7 @@
 }
 .wb-radio-group--white {
   --wb-radio-group-vc-main: var(--wb-vc-foreground);
-  --wb-radio-group-color-main: rgb(var(--wb-vc-foreground));
+  --wb-radio-group-color-main: var(--wb-color-foreground);
 }
 .wb-radio-group--success {
   --wb-radio-group-vc-main: var(--wb-vc-success);

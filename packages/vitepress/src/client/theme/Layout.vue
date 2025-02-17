@@ -80,6 +80,9 @@
                 <template #doc-footer-bottom>
                   <slot name="doc-footer-bottom" />
                 </template>
+                <template #doc-aside="payload">
+                  <slot name="doc-aside" v-bind="payload" />
+                </template>
                 <template #doc-aside-top>
                   <slot name="doc-aside-top" />
                 </template>

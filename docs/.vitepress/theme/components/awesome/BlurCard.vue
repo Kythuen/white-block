@@ -1,5 +1,6 @@
 <template>
   <a
+    w="full"
     :href="data.link"
     bg="$wb-color-card"
     rounded="3"
@@ -40,7 +41,12 @@
     <div p="4">
       <div flex="~ col" gap="2">
         <div text="lg #ffffff" font="bold">{{ data.title }}</div>
-        <a :href="data.authorLink" un-text="xs $wb-color-blue" font="bold">
+        <a
+          :href="data.authorLink"
+          un-text="xs $wb-color-blue"
+          font="bold"
+          style="width: fit-content"
+        >
           @{{ data.author }}
         </a>
         <div h="12" text="sm $wb-color-text-secondly line-clamp-2">

@@ -31,10 +31,17 @@
               v-for="item in frontmatter.hero?.actions || []"
               :key="item.text"
             >
-              <NeonButton v-if="item.theme === 'neon'" w="full !md:50" h="12">
-                <div w="5" h="5" m="r-1" :class="item.icon" />
-                <span>{{ item.text }}</span>
-              </NeonButton>
+              <a
+                v-if="item.theme === 'neon'"
+                :href="withBase(item.link)"
+                :target="item.link.startsWith('http') ? '__blank' : ''"
+                w="full !md:50"
+              >
+                <NeonButton w="full" h="12">
+                  <div w="5" h="5" m="r-1" :class="item.icon" />
+                  <span>{{ item.text }}</span>
+                </NeonButton>
+              </a>
               <wb-button
                 v-else
                 :href="withBase(item.link)"

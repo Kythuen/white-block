@@ -6,9 +6,9 @@
     p="6 t-16 b-8"
     border="0 t-px solid $wb-color-border"
   >
-    <div flex="~ wrap">
+    <div flex="~ wrap" gap="8">
       <!-- <Placeholder :src="withBase('/assets/tmp/footer.png')" :opacity="0.5" /> -->
-      <div w="lg:60" flex="~ col" gap="3">
+      <div w="lg:80" flex="~ col" gap="3">
         <a
           :href="withBase(`${localePrefix}/`)"
           un-text="lg $wb-color-text-main"

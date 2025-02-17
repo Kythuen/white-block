@@ -84,6 +84,8 @@ export function getHeaders(type = 'content', aside: any = true) {
     max = aside[1] || 6
   }
   const queryString = `.vp-doc-${type} :where(h1,h2,h3,h4,h5,h6)`
+  console.log(queryString)
+  console.log(document.querySelectorAll(queryString))
   const headers = Array.from(document.querySelectorAll(queryString))
     .filter(el => {
       const level = Number(el.tagName[1])
