@@ -60,6 +60,10 @@ function transformItems(items: DefaultTheme.NavItemWithLink[]) {
 }
 
 function toPage(link: string) {
+  if (link.startsWith('http')) {
+    window.open(link, '__blank')
+    return
+  }
   router.go(withBase(link))
 }
 </script>
