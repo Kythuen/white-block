@@ -70,6 +70,6 @@
     "vue-tsc": "^2.1.10"
   },
   "dependencies": {
-    "@white-block/vitepress": "0.0.5"
+    "@white-block/vitepress": "workspace:*"
   }
 }
