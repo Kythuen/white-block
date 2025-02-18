@@ -43,7 +43,7 @@ export default defineConfig({
   resolve: {
     alias
   },
-  plugins: [Unocss(), vue(), vueJSX(), copyDependencies()],
+  plugins: [copyDependencies(), Unocss(), vue(), vueJSX()],
   optimizeDeps: {
     exclude: ['@vue/repl']
   },

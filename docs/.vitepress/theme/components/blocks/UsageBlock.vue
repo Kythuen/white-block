@@ -299,7 +299,12 @@
 import { clickDelegate } from 'white-block'
 import { useData } from 'vitepress'
 import { nextTick, ref, watchEffect } from 'vue'
-import { copyToClipboard, formatCode, getHighlighter } from '~/theme/utils'
+import {
+  copyToClipboard,
+  formatCode,
+  getHighlighter,
+  utoa
+} from '~/theme/utils'
 
 defineOptions({ name: 'UsageBlock', inheritAttrs: false })
 
@@ -463,6 +468,22 @@ function handleCodeOperations(dataset: Record<string, string>, e: any) {
         setTimeout(() => {
           iconDom.className = 'i-mdi-content-copy'
         }, 1000)
+      }
+      break
+    }
+    case 'stackblitz': {
+      const fileCode = decodeURIComponent(compCode.value)
+      const files = {
+        'App.vue': fileCode
+      }
+
+      const tabId = `__blank${new Date().getTime()}`
+      const hash = `#${utoa(JSON.stringify(files))}`
+      const url = import.meta.env.DEV
+        ? 'http://localhost:28802'
+        : 'https://kythuen.github.io/white-block/playground'
+      if (!import.meta.env.SSR || import.meta.env.DEV) {
+        window.open(`${url}/${hash}`, tabId)
       }
       break
     }

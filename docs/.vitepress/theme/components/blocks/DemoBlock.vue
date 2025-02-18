@@ -57,7 +57,6 @@
       transition="all duration-300 ease-in-out"
       class="scrollable"
     >
-      <!-- eslint-disable-next-line vue/no-v-html -->
       <div p="x-6" v-html="compCode" />
     </div>
   </div>
@@ -136,12 +135,12 @@ function handleCodeOperations(dataset: Record<string, string>, e: any) {
       }
 
       const tabId = `__blank${new Date().getTime()}`
-      if (!import.meta.env.SSR) {
-        window.open(
-          // `http://localhost:5173/#${btoa(encodeURIComponent(JSON.stringify(files)))}`,
-          `http://localhost:5173/#${utoa(JSON.stringify(files))}`,
-          tabId
-        )
+      const hash = `#${utoa(JSON.stringify(files))}`
+      const url = import.meta.env.DEV
+        ? 'http://localhost:28802'
+        : 'https://kythuen.github.io/white-block/playground'
+      if (!import.meta.env.SSR || import.meta.env.DEV) {
+        window.open(`${url}/${hash}`, tabId)
       }
       break
     }

@@ -3,7 +3,7 @@
     w="full"
     h="16"
     p="x-2 md:x-6 lg:x-6"
-    border="0 b-px solid $wb-color-border-base"
+    border="0 b-px solid $wb-color-border"
     flex
     items="center"
     justify="between"
@@ -20,7 +20,7 @@
       items="center"
     >
       <img w="auto" h="8" src="/logo.png" filter=" drop-shadow-sm" alt="logo" />
-      <span m="l-2">White Block</span>
+      <span m="l-2">WhiteBlock</span>
     </a>
     <div flex gap="4">
       <div text="xs" flex gap="4" items="center">
