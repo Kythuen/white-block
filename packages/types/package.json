@@ -32,9 +32,9 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@babel/parser": "^7.26.2"
+    "@babel/parser": "^7.26.9"
   },
   "devDependencies": {
-    "@babel/types": "^7.26.0"
+    "@babel/types": "^7.26.9"
   }
 }
