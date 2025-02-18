@@ -35,8 +35,9 @@
         m="b-4"
       >
         <wb-select
-          :options="[{ label: '0.0.x', value: '0.0.x' }]"
-          placeholder="0.0.x"
+          :options="[{ label: CURRENT_VERSION, value: CURRENT_VERSION }]"
+          :placeholder="CURRENT_VERSION"
+          readonly
           @change="changeDocsVersion"
         />
       </div>
@@ -146,6 +147,8 @@ import { Layout, WBDocumentAside } from '@white-block/vitepress'
 import { frontmatterField } from '@white-block/vitepress/utils'
 import { useState, matchItems } from 'white-block'
 import { useRoute, useRouter, useData } from 'vitepress'
+
+const CURRENT_VERSION = __VERSION__
 
 const { page, site, frontmatter } = useData()
 

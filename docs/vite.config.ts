@@ -6,7 +6,7 @@ import { defineConfig } from 'vite'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import Components from 'unplugin-vue-components/vite'
 
-import { version } from './package.json'
+import { version } from '../packages/core/package.json'
 
 const alias: Alias[] = [
   { find: '~/', replacement: `${resolve(__dirname, './.vitepress')}/` },

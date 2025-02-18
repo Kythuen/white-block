@@ -21,6 +21,7 @@ export default tsEslint.config([
   {
     languageOptions: {
       globals: {
+        __VERSION__: 'readonly',
         ...globals.es2021,
         ...globals.browser,
         ...globals.node
