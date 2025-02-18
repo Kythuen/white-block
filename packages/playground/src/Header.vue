@@ -25,7 +25,7 @@
     <div flex gap="4">
       <div text="xs" flex gap="4" items="center">
         <div flex items="center" gap="2">
-          White Block:
+          WhiteBlock:
           <wb-select
             :options="[
               { label: 'latest', value: '' },

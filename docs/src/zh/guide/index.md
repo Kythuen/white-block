@@ -1,5 +1,5 @@
 ---
-title: White Block
+title: WhiteBlock
 description: 更符合直觉的设计，更轻松地开发。
 ---
 
