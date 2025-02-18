@@ -175,7 +175,7 @@ const issueData = ref({ open: 0, closed: 0 })
 const URL = 'https://api.github.com/search/issues'
 async function getIssueData(type: 'open' | 'closed') {
   if (process.env.NODE_ENV !== 'production') return
-  const q = `is:issue is:${type} ${componentName} repo:Kythuen/white-block`
+  const q = `is:issue+is:${type}+${componentName}+repo:Kythuen/white-block`
   const { data } = await axios.get(URL, { params: { q } })
   if (data) {
     issueData.value[type] = data.items.length
@@ -205,9 +205,9 @@ const currentRoute = useRoute()
 watch(
   () => currentRoute.path,
   () => {
-    if (componentName) {
+    if (componentName && import.meta.env.DEV) {
       getIssueData('open')
-      // getIssueData('closed')
+      getIssueData('closed')
       getCoverageData()
     }
   },
