@@ -4,7 +4,7 @@
   "commit": false,
   "fixed": [],
   "linked": [
-    ["white-block", "@white-block/resolver", "@white-block/playground"]
+    ["white-block", "@white-block/resolver", "@white-block/playground", "white-block-vscode"]
   ],
   "access": "public",
   "baseBranch": "main",
