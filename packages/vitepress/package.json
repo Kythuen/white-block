@@ -55,7 +55,7 @@
   "dependencies": {
     "@ephemeras/parser": "0.0.2-alpha.3",
     "cac": "^6.7.14",
-    "execa": "^4.1.0",
+    "execa": "^9.5.2",
     "fs-extra": "^11.2.0",
     "gradient-string": "^3.0.0",
     "gsap": "^3.12.5",
