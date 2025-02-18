@@ -11,7 +11,7 @@
     <a
       :href="
         isProd
-          ? 'https://kythuen.github.io/white-block-next'
+          ? 'https://kythuen.github.io/white-block'
           : 'http://localhost:28801/'
       "
       un-text="lg"
