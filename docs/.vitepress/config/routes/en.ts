@@ -66,7 +66,6 @@ const SidebarResolver = [
 ]
 
 export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
-  '/': [{ text: 'Navigation', items: NAV }],
   '/guide': SidebarWhiteBlock,
   '/components': SidebarWhiteBlock,
   '/packages/vitepress': [
@@ -74,5 +73,6 @@ export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
     { text: 'Others', items: SidebarVitepressOthers }
   ],
   '/packages/types': [{ text: 'All', items: SidebarTypes }],
-  '/packages/resolver': [{ text: 'All', items: SidebarResolver }]
+  '/packages/resolver': [{ text: 'All', items: SidebarResolver }],
+  '/': [{ text: 'Navigation', items: NAV }]
 }

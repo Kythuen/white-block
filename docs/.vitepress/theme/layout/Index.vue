@@ -25,7 +25,6 @@
       />
     </template>
     <template #sidebar-top>
-      <!-- TODO: 切换版本 -->
       <div
         v-if="
           matchItems(router.route.path, [
@@ -36,8 +35,9 @@
         m="b-4"
       >
         <wb-select
-          :options="[{ label: '0.0.1', value: '0.0.1' }]"
-          placeholder="0.0.1"
+          :options="[{ label: '0.0.x', value: '0.0.x' }]"
+          placeholder="0.0.x"
+          @change="changeDocsVersion"
         />
       </div>
     </template>
@@ -228,5 +228,9 @@ function changeLanguage() {
     targetPath = `${base}zh/${pure}`
   }
   router.go(targetPath)
+}
+
+function changeDocsVersion(version) {
+  console.log(version)
 }
 </script>

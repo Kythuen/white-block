@@ -8,8 +8,7 @@ WhiteBlock's docs base on vitepress and has many customize ​configurations. We
 ## Theme Preview
 ![preview](/vitepress/preview.png)
 
-<!-- TODO: code sandbox -->
-<!-- [Online Demo](https://kythuen.github.io/white-block/)  -->
+[Online Demo](https://stackblitz.com/edit/vitejs-vite-bb2yespt) 
 
 ## Quick Start
 
