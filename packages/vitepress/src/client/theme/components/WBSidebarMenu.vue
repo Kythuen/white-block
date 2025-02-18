@@ -105,7 +105,11 @@ function getStyles(link: string) {
 
 function handleMenuClick(dataset: Record<string, string>) {
   const { value } = dataset
-  router.go(withBase(value))
+  if (value.startsWith('http')) {
+    window.open(value, '__blank')
+  } else {
+    router.go(withBase(value))
+  }
   emits('change', withBase(value))
 }
 </script>
