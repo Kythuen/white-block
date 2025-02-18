@@ -1,6 +1,13 @@
 import type { DefaultTheme } from 'vitepress'
 import { PLAYGROUND_URL } from '../constant'
 
+export const NAV = [
+  { text: 'Guide', link: '/guide' },
+  { text: 'Components', link: '/components' },
+  { text: 'Playground', link: PLAYGROUND_URL },
+  { text: 'Packages', link: '/packages' }
+]
+
 /* ---------------------------------- packages/core --------------------------------- */
 const SidebarGuides: DefaultTheme.NavItemWithLink[] = [
   { text: 'Getting Started', link: '/guide' },
@@ -59,6 +66,7 @@ const SidebarResolver = [
 ]
 
 export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
+  '/': [{ text: 'Navigation', items: NAV }],
   '/guide': SidebarWhiteBlock,
   '/components': SidebarWhiteBlock,
   '/packages/vitepress': [
@@ -68,10 +76,3 @@ export const SIDEBAR: Record<string, DefaultTheme.SidebarItem[]> = {
   '/packages/types': [{ text: 'All', items: SidebarTypes }],
   '/packages/resolver': [{ text: 'All', items: SidebarResolver }]
 }
-
-export const NAV = [
-  { text: 'Guide', link: '/guide' },
-  { text: 'Components', link: '/components' },
-  { text: 'Playground', link: PLAYGROUND_URL },
-  { text: 'Packages', link: '/packages' }
-]

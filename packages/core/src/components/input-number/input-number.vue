@@ -110,9 +110,10 @@
 </template>
 
 <script setup lang="ts">
-import { useClasses, useStyles, useNode, useVModel } from '@/composables'
+import { useClasses, useNode, useStyles, useVModel } from '@/composables'
 import { clickDelegate, off, on } from '@/utils'
 import { Ref, onBeforeUnmount, onMounted, ref, toRefs, watchEffect } from 'vue'
+import WbButton from '../button'
 import { DefaultProps, Emits, Props, Slots } from './config'
 
 defineOptions({ name: 'WbInputNumber' })

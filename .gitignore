@@ -36,4 +36,8 @@ docs/.vitepress/cache/
 docs/.vitepress/dist/
 docs/.vitepress/.temp/
 
+# Playground
+packages/playground/public/white-block.css
+packages/playground/public/white-block.js
+
 # WIP

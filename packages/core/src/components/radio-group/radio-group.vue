@@ -47,6 +47,7 @@
 <script setup lang="ts">
 import { useClasses, useStyles, useVModel } from '@/composables'
 import { toRefs } from 'vue'
+import WbRadio from '../radio'
 import { DefaultProps, Emits, Props, Slots } from './config'
 
 defineOptions({ name: 'WbRadioGroup' })

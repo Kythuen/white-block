@@ -40,36 +40,64 @@ exports[`# InputNumber > ## Base > ### default config 1`] = `
     m="r-px"
     p="b-px"
   >
-    <wb-button
+    <button
+      bg="$wb-button-background hover:$wb-button-background-hover active:$wb-button-background-active"
+      class="wb-button wb-button--base wb-button--default wb-button--rectangle wb-button--md"
+      color="$wb-button-text hover:$wb-button-text-hover active:$wb-button-text-active"
+      cursor="pointer"
       data-key="add"
-      disabled="false"
+      flex="inline row nowrap"
       focus-visible="outline-0 bg-$wb-color-primary"
+      gap="$wb-button-gap"
       h="[calc(50%)]"
+      items="center"
+      justify="center"
+      outline="none"
+      p="x-$wb-button-padding"
+      ring="1 inset $wb-button-border hover:$wb-button-border-hover active:$wb-button-border-active"
       rounded="rt-$wb-input-number-radius"
-      size="md"
+      select="none"
       tabindex="-1"
-      theme="default"
+      type="button"
       w="full"
     >
+      <!--v-if-->
+      
       <i
         i="tdesign-chevron-up"
       />
-    </wb-button>
-    <wb-button
+      
+      <!---->
+    </button>
+    <button
+      bg="$wb-button-background hover:$wb-button-background-hover active:$wb-button-background-active"
+      class="wb-button wb-button--base wb-button--default wb-button--rectangle wb-button--md"
+      color="$wb-button-text hover:$wb-button-text-hover active:$wb-button-text-active"
+      cursor="pointer"
       data-key="sub"
-      disabled="false"
+      flex="inline row nowrap"
       focus-visible="outline-0 bg-$wb-color-primary"
+      gap="$wb-button-gap"
       h="[calc(50%)]"
+      items="center"
+      justify="center"
+      outline="none"
+      p="x-$wb-button-padding"
+      ring="1 inset $wb-button-border hover:$wb-button-border-hover active:$wb-button-border-active"
       rounded="rb-$wb-input-number-radius"
-      size="md"
+      select="none"
       tabindex="-1"
-      theme="default"
+      type="button"
       w="full"
     >
+      <!--v-if-->
+      
       <i
         i="tdesign-chevron-down"
       />
-    </wb-button>
+      
+      <!---->
+    </button>
   </div>
 </div>
 `;

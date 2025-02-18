@@ -9,9 +9,10 @@ export default tsEslint.config([
   {
     ignores: [
       '**/dist',
-      'docs/.vitepress/cache/',
       '.changeset/',
-      'packages/vitepress/files'
+      'docs/.vitepress/cache/',
+      'packages/vitepress/files',
+      'packages/core/src/components/**/__test_/__snapshots__'
     ]
   },
   eslint.configs.recommended,

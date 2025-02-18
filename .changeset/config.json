@@ -4,7 +4,7 @@
   "commit": false,
   "fixed": [],
   "linked": [
-    ["white-block", "@white-block/resolver"]
+    ["white-block", "@white-block/resolver", "@white-block/playground"]
   ],
   "access": "public",
   "baseBranch": "main",

@@ -1,6 +1,8 @@
+.changeset
 dist
 **/*.md
+pnpm-lock.yaml
+
 packages/cli/files
 packages/core/src/components/keys.ts
-pnpm-lock.yaml
-.changeset
+packages/core/src/components/**/__test_/__snapshots__
