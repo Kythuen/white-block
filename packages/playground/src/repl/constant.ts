@@ -57,6 +57,7 @@ import { appendStyle, install } from './dependencies.js'
 
 appendStyle()
 install()
+console.log('----------------------------')
 </script>
 
 <template>
@@ -115,7 +116,7 @@ export function install() {
   const instance = getCurrentInstance()
   instance.appContext.app.use(WhiteBlock)
 }
-  `
+`
 
 export const APP_FILE = 'src/App.vue'
 export const APP_FILE_CONTENT = `

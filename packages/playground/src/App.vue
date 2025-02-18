@@ -21,7 +21,12 @@ import { watch, watchEffect } from 'vue'
 import Header, { ActionType, ActionVersionsPayload } from './Header.vue'
 import { downloadProject } from './download'
 import { Repl, setVersion, store } from './repl'
-import { APP_FILE, HIDDEN_FILES, PREVIEW_OPTIONS } from './repl/constant'
+import {
+  APP_FILE,
+  HIDDEN_FILES,
+  PREVIEW_OPTIONS,
+  APP_MAIN_FILE
+} from './repl/constant'
 import { ThemeState } from './states'
 
 function handleHeaderActions(
@@ -46,6 +51,7 @@ watch(
       for (const file of HIDDEN_FILES) {
         store.files[file].hidden = true
       }
+      store.mainFile = APP_MAIN_FILE
     }
   }
 )
