@@ -14,10 +14,10 @@ export const VUE_SERVER_RENDER_URL =
   'https://cdn.jsdelivr.net/npm/@vue/server-renderer/dist/server-renderer.esm-browser.js'
 
 export const WHITE_BLOCK_URL = isProd
-  ? 'https://cdn.jsdelivr.net/npm/white-block@0.0.17/dist/es/index.mjs'
+  ? 'https://cdn.jsdelivr.net/npm/white-block@latest/dist/es/index.mjs'
   : './white-block.js'
 export const WHITE_BLOCK_CSS_URL = isProd
-  ? 'https://cdn.jsdelivr.net/npm/white-block@0.0.17/dist/styles/index.css'
+  ? 'https://cdn.jsdelivr.net/npm/white-block@latest/dist/styles/index.css'
   : './white-block.css'
 
 // ------------------------------------------------------- files -----------------------------------------------------
