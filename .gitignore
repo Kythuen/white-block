@@ -40,4 +40,6 @@ docs/.vitepress/.temp/
 packages/playground/public/white-block.css
 packages/playground/public/white-block.js
 
+# VSCode Extension
+packages/vscode/*.vsix
 # WIP

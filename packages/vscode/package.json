@@ -1,0 +1,47 @@
+{
+  "name": "white-block-vscode",
+  "description": "VSCode Extension for WhiteBlock",
+  "version": "0.0.39",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kythuen/white-block.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kythuen/white-block/issues"
+  },
+  "displayName": "WhiteBlock",
+  "icon": "logo.png",
+  "publisher": "Kythuen",
+  "engines": {
+    "vscode": "^1.56.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:vue",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "tsup --watch src",
+    "build": "tsup",
+    "config": "tsx scripts/config.ts",
+    "test": "echo \"package vscode ignore\"",
+    "test:coverage": "echo \"package vscode coverage ignore\""
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.56.0",
+    "@vscode/vsce": "^2.32.0",
+    "@white-block/types": "workspace:*",
+    "fast-glob": "^3.3.3"
+  },
+  "dependencies": {
+    "radash": "^12.1.0"
+  }
+}

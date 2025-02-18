@@ -59,10 +59,14 @@
             :href="withBase(item.value)"
             target="__blank"
             un-text="sm $wb-color-text-secondly hover:$wb-color-text-active"
-            flex="~ col"
+            flex
+            items="center"
             gap="2"
           >
             <div>{{ item.title }}</div>
+            <div v-if="EXTERNAL_URL_RE.test(item.value)">
+              <div w="4" h="4" class="i-heroicons-arrow-up-right-20-solid" />
+            </div>
           </a>
         </div>
       </div>
@@ -76,6 +80,8 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
+
+const EXTERNAL_URL_RE = /^(?:[a-z]+:|\/\/)/i
 
 const { isDark, lang, theme } = useData()
 const localePrefix = computed(() =>
@@ -109,8 +115,17 @@ const LINKS = [
   {
     title: 'Tools',
     items: [
-      { title: 'Playground', value: '/playground' },
-      { title: 'VSCode Plugin', value: '/packages/vscode' },
+      {
+        title: 'Playground',
+        value: import.meta.env.DEV
+          ? 'http://localhost:28802'
+          : 'https://kythuen.github.io/white-block/playground'
+      },
+      {
+        title: 'VSCode Plugin',
+        value:
+          'https://marketplace.visualstudio.com/items?itemName=Kythuen.white-block-vscode'
+      },
       { title: 'CLI', value: '/packages/cli' }
     ]
   },

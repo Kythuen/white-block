@@ -4,7 +4,10 @@ import { PLAYGROUND_URL } from '../constant'
 export const NAV = [
   { text: 'Guide', link: '/guide' },
   { text: 'Components', link: '/components' },
-  { text: 'Playground', link: PLAYGROUND_URL },
+  {
+    text: 'Playground',
+    link: PLAYGROUND_URL
+  },
   { text: 'Packages', link: '/packages' }
 ]
 

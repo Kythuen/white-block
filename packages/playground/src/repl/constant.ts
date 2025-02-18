@@ -57,7 +57,6 @@ import { appendStyle, install } from './dependencies.js'
 
 appendStyle()
 install()
-console.log('----------------------------')
 </script>
 
 <template>
