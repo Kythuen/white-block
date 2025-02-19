@@ -59,7 +59,11 @@
           </div>
         </div>
         <div w="full" p="y-6" hidden md:flex items="center" justify="center">
-          <img v-if="frontmatter.hero?.image" :src="frontmatter.hero?.image" />
+          <img
+            v-if="frontmatter.hero?.image"
+            :src="withBase(frontmatter.hero?.image)"
+            w="80%"
+          />
           <img v-else src="../assets/img/hero.webp" />
         </div>
       </section>

@@ -15,8 +15,8 @@ hero:
       link: https://github.com/Kythuen/white-block
 
 features:
-  title: Why choose WhiteBlock theme?
-  desc: With WhiteBlock theme, it's easy create a nice-looking document.
+  title: Why choose WhiteBlock?
+  desc: With WhiteBlock, it's easy create a nice-looking application.
   items:
     - icon: ⚡
       title: Easy To Use

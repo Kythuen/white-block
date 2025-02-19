@@ -21,9 +21,9 @@
         @change="filterPackages"
       >
         <template #suffix>
-          <wb-button h="full" theme="contrast" @click="filterPackages"
-            >Search</wb-button
-          >
+          <wb-button h="full" theme="contrast" @click="filterPackages">
+            Search
+          </wb-button>
         </template>
       </wb-input>
     </div>

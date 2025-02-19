@@ -39,6 +39,7 @@
             <img
               w="auto"
               h="7"
+              max-w="40"
               m="r-2"
               :src="
                 withBase(
@@ -88,7 +89,10 @@
           />
         </template>
         <slot name="header-operation-after" />
-        <div class="header-option-item lg:hidden">
+        <div
+          v-if="site.themeConfig?.nav?.length"
+          class="header-option-item lg:hidden"
+        >
           <WBIconButton
             name="menu"
             :icon="
