@@ -31,26 +31,23 @@
               v-for="item in frontmatter.hero?.actions || []"
               :key="item.text"
             >
-              <a
+              <NeonButton
                 v-if="item.theme === 'neon'"
-                :href="withBase(item.link)"
-                :target="item.link.startsWith('http') ? '__blank' : ''"
                 w="full !md:50"
+                h="12"
+                @click="toPage(item.link)"
               >
-                <NeonButton w="full" h="12">
-                  <div w="5" h="5" m="r-1" :class="item.icon" />
-                  <span>{{ item.text }}</span>
-                </NeonButton>
-              </a>
+                <div w="5" h="5" m="r-1" :class="item.icon" />
+                <span>{{ item.text }}</span>
+              </NeonButton>
               <wb-button
                 v-else
-                :href="withBase(item.link)"
-                :target="item.link.startsWith('http') ? '__blank' : ''"
                 :theme="item.theme"
                 tag="a"
                 size="lg"
                 w="full !md:50"
                 h="12"
+                @click="toPage(item.link)"
               >
                 <div w="5" h="5" m="r-1" :class="item.icon" />
                 <span>{{ item.text }}</span>
@@ -172,10 +169,19 @@
 </template>
 
 <script setup lang="ts">
+import { useData, useRouter, withBase } from 'vitepress'
 import NeonButton from './NeonButton.vue'
-import { useData, withBase } from 'vitepress'
 
 const { frontmatter } = useData()
+const router = useRouter()
+
+function toPage(link: string) {
+  if (link.startsWith('http')) {
+    window.open(withBase(link), '__blank')
+    return
+  }
+  router.go(withBase(link))
+}
 </script>
 
 <style scoped>

@@ -8,7 +8,7 @@ hero:
     - theme: neon
       text: Get Started
       icon: i-iconamoon:lightning-2-fill
-      link: ./guide
+      link: /guide
     - theme: contrast
       text: View on GitHub
       icon: i-simple-icons:github
