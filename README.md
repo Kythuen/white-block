@@ -3,9 +3,6 @@
   <a href="https://github.com/Kythuen/white-block">
     <img src="https://cdn.jsdelivr.net/gh/Kythuen/static/logos/white-block/dark.png" alt="WhiteBlock - Intuitive Design for Effortless Development" height="120">
   </a>
-  <!-- <a href="https://github.com/Kythuen/white-block">
-    <img src="https://raw.githubusercontent.com/Kythuen/white-block/main/docs/src/public/logo.png" alt="WhiteBlock - Intuitive Design for Effortless Development" height="120">
-  </a> -->
 </p>
 <h3 align="center">Intuitive Design for Effortless Development</h3>
 <br>
@@ -45,88 +42,42 @@
 
 ### 👋🏻 Welcome to WhiteBlock
 
-We are a group of e/acc design-engineers, hoping to provide modern design components and tools for AIGC, and creating a technology-driven forum, fostering knowledge interaction and the exchange of ideas that may culminate in mutual inspiration and collaborative innovation.
-
-By adopting the Bootstrapping approach, we aim to provide developers and users with a more open, transparent, and user-friendly product ecosystem.
-
-Whether for users or professional developers, LobeHub will be your AI Agent playground.
-
-[![public-beta](https://github.com/user-attachments/assets/c5cd0023-3369-4311-9239-1589a0ab37e6)](https://lobechat.com)
-
-> \[!IMPORTANT]
-> LobeChat Cloud is currently in `Public Beta`. to start a [Free Trial](https://lobechat.com) with **450,000** Credits.
+WhiteBlock is an open source component library for modern web apps which has intuitive component design and highly customizable and other optimized for fast development.
 
 ### ⭐️ Our Projects
 
-| [**🤯 Lobe Chat**][lobe-chat-github]<br/>An open-source, modern-design ChatGPT/LLMs UI/Framework. Supports speech-synthesis, multi-modal, and extensible plugin system. One-click FREE deployment of your private ChatGPT/Gemini/Ollama chat application.<br/><br/>[![][lobe-chat-shield]][lobe-chat-github] | [![][lobe-chat-cover]][lobe-chat-github]   |
+| [**🤯 WhiteBlock**][white-block-link]<br/>An UI Library for modern applications.Aim to make more user friendly components for developer. | [![][white-block-cover]][white-block-link]   |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------- |
-| [**🅰️ Lobe Theme**][lobe-theme-github]<br/>The modern theme for stable diffusion webui, exquisite interface design, highly customizable UI, and efficiency boosting features.<br/><br/>[![][lobe-theme-shield]][lobe-theme-github]                                                                           | [![][lobe-theme-cover]][lobe-theme-github] |
-| [**🧸 Lobe Vidol**][lobe-vidol-github] `WIP`<br/>Experience the magic of virtual idol creation with Lobe Vidol, enjoy the elegance of our Exquisite UI Design, dance along using MMD Dance Support, and engage in Smooth Conversations.<br/><br/>[![][lobe-vidol-shield]][lobe-vidol-github]                 | [![][lobe-vidol-cover]][lobe-vidol-github] |
-| [**🌏 Lobe i18n**][lobe-i18n-github]<br/>Automation tool for the ai i18n translation proces. It supports features such as automatic splitting of large files, incremental updates, and customization options for markdown translation.<br/><br/>[![][lobe-i18n-shield]][lobe-i18n-npm]                       | [![][lobe-i18n-cover]][lobe-i18n-github]   |
+| [**🅰️ WhiteBlock Theme**][white-block-vitepress-link]<br/>WhiteBlock documents theme for vitepress. | [![][white-block-vitepress-cover]][white-block-vitepress-link]   |
+| [**🧸 WhiteBlock Resolver**][white-block-resolver-link]<br/>unplugin-vue-components resolver for WhiteBlock. | [![][white-block-resolver-cover]][white-block-resolver-link] |
+| [**🌏 WhiteBlock Types**][white-block-types-link]<br/>Tools to resolve types for WhiteBlock components. | [![][white-block-types-cover]][white-block-types-link]   |
+| [**🌏 WhiteBlock Awesome**][white-block-awesome-link] `WIP`<br/>Segment collection for usually usages. | [![][white-block-awesome-cover]][white-block-awesome-link]   |
 
-### 📦 Ecosystem
+### 🤝 Contribution
 
-| Repos                                    | Packages                            | Version                                     | Release Date          | Downloads                  |
-| :--------------------------------------- | :---------------------------------- | :------------------------------------------ | :-------------------- | :------------------------- |
-| [**🖖 Core**][lobe-ui-github]         | [@lobehub/ui][lobe-ui-link]         | [![][lobe-ui-shield]][lobe-ui-link]         | ![][lobe-ui-date]     | ![][lobe-ui-downloads]     |
-| [**📦 Types**][lobe-icons-github]   | [@lobehub/icons][lobe-icons-link]   | [![][lobe-icons-shield]][lobe-icons-link]   | ![][lobe-icons-date]  | ![][lobe-icons-downloads]  |
-| [**📃 VitePress**][lobe-charts-github] | [@lobehub/charts][lobe-charts-link] | [![][lobe-charts-shield]][lobe-charts-link] | ![][lobe-charts-date] | ![][lobe-charts-downloads] |
-| [**🛠️ Resolver**][lobe-tts-github]       | [@lobehub/tts][lobe-tts-link]       | [![][lobe-tts-shield]][lobe-tts-link]       | ![][lobe-tts-date]    | ![][lobe-tts-downloads]    |
-| [**💻 VSCode**][lobe-lint-github]     | [@lobehub/lint][lobe-lint-link]     | [![][lobe-lint-shield]][lobe-lint-link]     | ![][lobe-lint-date]   | ![][lobe-lint-downloads]   |
+Please make sure to read the [Contributing Guide](./CONTRIBUTING.md) before making a pull request.
 
-### 🤝 Contributing
+If you have a related project/component/tool, add it with a pull request to [this curated list](https://github.com/Kythuen/awesome).
 
+Thank you to all the people who already contributed to Ephemeras!
+
+<a href="https://github.com/Kythuen/ephemeras/graphs/contributors"><img src="https://opencollective.com/ephemeras/contributors.svg?width=890" /></a>
+
+## License
+
+[MIT](./LICENSE) License &copy; 2023-PRESENT [Kythuen](https://github.com/Kythuen)
 
 
 
 <!-- LINK GROUP -->
 
-[discord-link]: https://discord.gg/AYFPHvv2jT
-[discord-shield]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square
-[github-link]: https://github.com/lobehub
-[github-star]: https://img.shields.io/github/stars/lobehub?color=ffcb47&labelColor=black&style=flat-square&logo=github
-[lobe-chat-cover]: https://gw.alipayobjects.com/zos/kitchen/sLO%24gbrQtp/lobe-chat.webp
-[lobe-chat-github]: https://github.com/lobehub/lobe-chat
-[lobe-chat-shield]: https://img.shields.io/github/stars/lobehub/lobe-chat?color=ffcb47&labelColor=black&style=flat-square&logo=github
-[lobe-vidol-cover]: https://github.com/lobehub/.github/assets/17870709/5bd39ca7-df0d-41a4-bfeb-c97147ee1ca3
-[lobe-vidol-github]: https://github.com/lobehub/lobe-vidol
-[lobe-vidol-shield]: https://img.shields.io/github/stars/lobehub/lobe-vidol?color=ffcb47&labelColor=black&style=flat-square&logo=github
-[lobe-commit-shield]: https://img.shields.io/npm/dt/@lobehub/commit-cli?color=8ae8ff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[lobe-i18n-cover]: https://gw.alipayobjects.com/zos/kitchen/AH7rvv06qn/preview-i18n.webp
-[lobe-i18n-github]: https://github.com/lobehub/lobe-cli-toolbox/tree/master/packages/lobe-i18n
-[lobe-i18n-npm]: https://www.npmjs.com/package/@lobehub/i18n-cli
-[lobe-i18n-shield]: https://img.shields.io/npm/dt/@lobehub/i18n-cli?color=8ae8ff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[lobe-icons-date]: https://img.shields.io/github/release-date/lobehub/lobe-icons?labelColor=black&style=flat-square
-[lobe-icons-downloads]: https://img.shields.io/npm/dt/@lobehub/icons?color=8ae8ff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[lobe-icons-github]: https://github.com/lobehub/lobe-icons
-[lobe-icons-link]: https://www.npmjs.com/package/@lobehub/icons
-[lobe-icons-shield]: https://img.shields.io/npm/v/@lobehub/icons?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[lobe-charts-date]: https://img.shields.io/github/release-date/lobehub/lobe-charts?labelColor=black&style=flat-square
-[lobe-charts-downloads]: https://img.shields.io/npm/dt/@lobehub/charts?color=8ae8ff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[lobe-charts-github]: https://github.com/lobehub/lobe-charts
-[lobe-charts-link]: https://www.npmjs.com/package/@lobehub/charts
-[lobe-charts-shield]: https://img.shields.io/npm/v/@lobehub/charts?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[lobe-lint-date]: https://img.shields.io/github/release-date/lobehub/lobe-lint?labelColor=black&style=flat-square
-[lobe-lint-downloads]: https://img.shields.io/npm/dt/@lobehub/lint?color=8ae8ff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[lobe-lint-github]: https://github.com/lobehub/lobe-lint
-[lobe-lint-link]: https://www.npmjs.com/package/@lobehub/lint
-[lobe-lint-shield]: https://img.shields.io/npm/v/@lobehub/lint?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[lobe-theme-cover]: https://gw.alipayobjects.com/zos/kitchen/8Ab%24hLJ5ur/cover.webp
-[lobe-theme-github]: https://github.com/lobehub/sd-webui-lobe-theme
-[lobe-theme-shield]: https://img.shields.io/github/stars/lobehub/sd-webui-lobe-theme?color=ffcb47&labelColor=black&style=flat-square&logo=github
-[lobe-tts-date]: https://img.shields.io/github/release-date/lobehub/lobe-tts?labelColor=black&style=flat-square
-[lobe-tts-downloads]: https://img.shields.io/npm/dt/@lobehub/tts?color=8ae8ff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[lobe-tts-github]: https://github.com/lobehub/lobe-tts
-[lobe-tts-link]: https://www.npmjs.com/package/@lobehub/tts
-[lobe-tts-shield]: https://img.shields.io/npm/v/@lobehub/tts?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[lobe-ui-date]: https://img.shields.io/github/release-date/lobehub/lobe-ui?labelColor=black&style=flat-square
-[lobe-ui-downloads]: https://img.shields.io/npm/dt/@lobehub/ui?color=8ae8ff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[lobe-ui-github]: https://github.com/lobehub/lobe-ui
-[lobe-ui-link]: https://www.npmjs.com/package/@lobehub/ui
-[lobe-ui-shield]: https://img.shields.io/npm/v/@lobehub/ui?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
-[social-x-link]: https://x.com/lobehub
-[social-x-shield]: https://img.shields.io/badge/-%40lobehub-white?labelColor=black&logo=x&logoColor=white&style=flat-square
-[sponsor-link]: https://opencollective.com/lobehub "Become 🩷 LobeHub Sponsor"
-[sponsor-shield]: https://img.shields.io/badge/-Sponsor%20LobeHub-f04f88?logo=opencollective&logoColor=white&style=flat-square
-[vercel-link]: https://lobehub.com
-[vercel-shield]: https://img.shields.io/website?down_message=offline&label=vercel&labelColor=black&logo=vercel&style=flat-square&up_message=online&url=https%3A%2F%2Flobehub.com
+[white-block-cover]: https://cdn.jsdelivr.net/gh/Kythuen/static/images/white-block/core.png
+[white-block-link]: https://kythuen.github.io/white-block/
+[white-block-vitepress-cover]: https://cdn.jsdelivr.net/gh/Kythuen/static/images/white-block/vitepress.png
+[white-block-vitepress-link]: https://kythuen.github.io/white-block/packages/vitepress
+[white-block-types-cover]: https://cdn.jsdelivr.net/gh/Kythuen/static/images/white-block/types.png
+[white-block-types-link]: https://kythuen.github.io/white-block/packages/types
+[white-block-resolver-cover]: https://cdn.jsdelivr.net/gh/Kythuen/static/images/white-block/resolver.png
+[white-block-resolver-link]: https://kythuen.github.io/white-block/packages/resolver
+[white-block-awesome-cover]: https://cdn.jsdelivr.net/gh/Kythuen/static/images/white-block/awesome.png
+[white-block-awesome-link]: https://kythuen.github.io/white-block/packages/awesome
