@@ -1,0 +1,1 @@
+import{_ as a,C as o,b as r,o as p,w as t,G as _,a as c,j as u}from"./framework.CDmdpyHB.js";const l={};function d(b,e){const n=o("wb-button"),s=o("wb-popup");return p(),r(s,null,{content:t(()=>e[1]||(e[1]=[u("div",null,"Content",-1)])),default:t(()=>[_(n,{type:"base"},{default:t(()=>e[0]||(e[0]=[c("Trigger")])),_:1})]),_:1})}const i=a(l,[["render",d]]);export{i as default};

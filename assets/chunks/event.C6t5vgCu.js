@@ -1,0 +1,1 @@
+import{d as s,C as t,b as _,o as l,w as p,G as a}from"./framework.CDmdpyHB.js";const u=s({__name:"event",setup(r){function e(o){console.log(o)}return(o,g)=>{const n=t("wb-toggle"),c=t("wb-space");return l(),_(c,null,{default:p(()=>[a(n,{onChange:e}),a(n,{"on-change":e})]),_:1})}}});export{u as default};

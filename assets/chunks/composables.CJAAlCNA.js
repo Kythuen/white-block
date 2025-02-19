@@ -1,0 +1,1 @@
+import{h as a}from"./theme.CGtRrSKC.js";import{d as s,b as r,o as c,w as p,a as u,k as l}from"./framework.CDmdpyHB.js";const d=s({__name:"composables",setup(i){const{node:t}=a({type:"plain"});function n(e){console.log("click:",e)}return(e,o)=>(c(),r(l(t),{onClick:n},{default:p(()=>o[0]||(o[0]=[u(" button ")])),_:1}))}});export{d as default};

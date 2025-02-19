@@ -1,0 +1,1 @@
+import{B as t}from"./theme.CGtRrSKC.js";import{G as e,a,F as r}from"./framework.CDmdpyHB.js";const l={default:e(r,null,[e(t,{style:"width: 1rem; height: 1rem"},{default:()=>[a("1")]}),e(t,{style:"width: 2rem; height: 2rem"},{default:()=>[a("2")]}),e(t,{style:"width: 3rem; height: 3rem"},{default:()=>[a("3")]})])};export{l as default};

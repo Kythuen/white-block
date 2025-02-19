@@ -1,0 +1,1 @@
+import{d as s,C as a,b as p,o as _,w as r,G as t}from"./framework.CDmdpyHB.js";const i=s({__name:"event",setup(l){function e(n){console.log(n)}return(n,h)=>{const o=a("wb-input"),c=a("wb-space");return _(),p(c,{vertical:""},{default:r(()=>[t(o,{placeholder:"@change",onChange:e}),t(o,{placeholder:"onChange","on-change":e})]),_:1})}}});export{i as default};

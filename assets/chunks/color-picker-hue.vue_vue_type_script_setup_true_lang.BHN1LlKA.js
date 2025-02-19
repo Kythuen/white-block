@@ -1,0 +1,10 @@
+import{d as R,t as x}from"./common.CZky7v_H.js";import{o as f,a as d}from"./dom.Ze_sGonF.js";import{d as B,p as s,v as X,$ as S,c as V,o as _,j as n,N as z}from"./framework.CDmdpyHB.js";const N={absolute:"",inset:"0",w:"full",h:"full",rounded:"full",flex:"",items:"center"},U=B({name:"ColorPickerHue",__name:"color-picker-hue",props:{defaultValue:{type:Number,default:1},selectedColor:{type:String,default:"#ff0000"}},emits:["change"],setup(i,{emit:b}){const c=i,m=b,a=s(),v=s(),H=s();let t=null,u=!1,p=0,r=0;const o=s(0);function C(l){l.stopPropagation(),u=!0,p=l.clientX,o.value=l.clientX-t.left,r=o.value,m("change",o.value/t.width*360),f(document.body,"mousemove",w)}function y(l){if(!u)return;u=!0;let e=l.clientX-p+r;e<0?e=0:e>t.width&&(e=t.width),o.value=e,m("change",o.value/t.width*360)}const w=x(y,18);function k(){u=!1,r=o.value,d(document.body,"mousemove",w)}function g(){t=v.value.getBoundingClientRect()}const h=R(g,300);return X(()=>{g(),c.defaultValue&&(o.value=t.width*c.defaultValue/360,r=o.value),f(a.value,"mousedown",C),f(document.body,"mouseup",k),f(window,"resize",h)}),S(()=>{d(a.value,"mousedown",C),d(window,"resize",h)}),(l,e)=>(_(),V("div",{ref_key:"ColorHueRef",ref:a,relative:"",w:"full",h:"2.5",select:"none"},[n("div",N,[e[0]||(e[0]=n("div",{w:"2",h:"full",bg:"#f00",rounded:"l-2",flex:"none"},null,-1)),n("div",{ref_key:"ColorHueContentRef",ref:v,w:"full",h:"full",flex:"1",select:"none",cursor:"pointer",style:{background:`linear-gradient(
+            90deg,
+            #f00,
+            #ff0 17%,
+            #0f0 33%,
+            #0ff 50%,
+            #00f 67%,
+            #f0f 83%,
+            #f00
+          )`}},null,512),e[1]||(e[1]=n("div",{w:"2",h:"full",bg:"#f00",rounded:"r-2",flex:"none"},null,-1))]),n("div",{ref_key:"ColorHueHandlerRef",ref:H,absolute:"",top:"50%",left:"0",w:"4",h:"4",rounded:"full",shadow:"sm black",cursor:"pointer",select:"none",style:z({background:i.selectedColor,transform:`translate3d(${o.value}px, -50%, 0)`})},e[2]||(e[2]=[n("div",{w:"full",h:"full",rounded:"full",ring:"2 inset $wb-color-foreground"},null,-1)]),4)],512))}});export{U as _};

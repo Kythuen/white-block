@@ -1,0 +1,1 @@
+import{_ as c,C as t,b as r,o as a,w as n,c as _,F as l,B as p,G as u,a as d,t as f}from"./framework.CDmdpyHB.js";const b={};function m(i,w){const o=t("wb-button"),s=t("wb-space");return a(),r(s,null,{default:n(()=>[(a(),_(l,null,p(3,e=>u(o,{key:e},{default:n(()=>[d(f(e),1)]),_:2},1024)),64))]),_:1})}const k=c(b,[["render",m]]);export{k as default};
