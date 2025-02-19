@@ -1,12 +1,10 @@
-<div align="center"><a name="readme-top"></a>
+<div align="center">
+<a name="readme-top"></a>
 
 <img height="120" src="https://cdn.jsdelivr.net/gh/Kythuen/static/logos/white-block/dark.png">
-<img height="120" src="https://gw.alipayobjects.com/zos/kitchen/qJ3l3EPsdW/split.svg">
-<img height="120" src="https://registry.npmmirror.com/@lobehub/assets-emoji-anim/1.0.0/files/assets/teddy-bear.webp">
-
-# white-block
 
 Intuitive Design for Effortless Development.
+</div>
 
 ## Getting Started
 

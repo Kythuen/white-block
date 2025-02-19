@@ -31,7 +31,7 @@
     "types": "tsc --noEmit",
     "format": "prettier --write --cache .",
     "clear": "rimraf 'packages/*/{dist,node_modules}' && rimraf node_modules",
-    "change": "changeset",
+    "change:add": "changeset",
     "change:version": "changeset version",
     "build": "pnpm --filter ./packages/** build",
     "release": "pnpm --recursive --stream build && changeset publish"
