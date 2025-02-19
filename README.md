@@ -46,12 +46,12 @@ WhiteBlock is an open source component library for modern web apps which has int
 
 ### ⭐️ Our Projects
 
-| [**🤯 WhiteBlock**][white-block-link]<br/>An UI Library for modern applications.Aim to make more user friendly components for developer. | [![][white-block-cover]][white-block-link]   |
+| [**WhiteBlock**][white-block-link]<br/>An UI Library for modern applications.Aim to make more user friendly components for developer. | [![][white-block-cover]][white-block-link]   |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------- |
-| [**🅰️ WhiteBlock Theme**][white-block-vitepress-link]<br/>WhiteBlock documents theme for vitepress. | [![][white-block-vitepress-cover]][white-block-vitepress-link]   |
-| [**🧸 WhiteBlock Resolver**][white-block-resolver-link]<br/>unplugin-vue-components resolver for WhiteBlock. | [![][white-block-resolver-cover]][white-block-resolver-link] |
-| [**🌏 WhiteBlock Types**][white-block-types-link]<br/>Tools to resolve types for WhiteBlock components. | [![][white-block-types-cover]][white-block-types-link]   |
-| [**🌏 WhiteBlock Awesome**][white-block-awesome-link] `WIP`<br/>Segment collection for usually usages. | [![][white-block-awesome-cover]][white-block-awesome-link]   |
+| [**WhiteBlock Theme**][white-block-vitepress-link]<br/>WhiteBlock documents theme for vitepress. | [![][white-block-vitepress-cover]][white-block-vitepress-link]   |
+| [**WhiteBlock Resolver**][white-block-resolver-link]<br/>unplugin-vue-components resolver for WhiteBlock. | [![][white-block-resolver-cover]][white-block-resolver-link] |
+| [**WhiteBlock Types**][white-block-types-link]<br/>Tools to resolve types for WhiteBlock components. | [![][white-block-types-cover]][white-block-types-link]   |
+| [**WhiteBlock Awesome**][white-block-awesome-link] `WIP`<br/>Segment collection for usually usages. | [![][white-block-awesome-cover]][white-block-awesome-link]   |
 
 ### 🤝 Contribution
 
