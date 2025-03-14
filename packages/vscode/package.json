@@ -15,7 +15,7 @@
   "icon": "logo.png",
   "publisher": "Kythuen",
   "engines": {
-    "vscode": "^1.56.0"
+    "vscode": "^1.97.2"
   },
   "categories": [
     "Other"
@@ -36,7 +36,7 @@
     "test:coverage": "echo \"package vscode coverage ignore\""
   },
   "devDependencies": {
-    "@types/vscode": "^1.56.0",
+    "@types/vscode": "^1.97.0",
     "@vscode/vsce": "^2.32.0",
     "@white-block/types": "workspace:*",
     "fast-glob": "^3.3.3"
