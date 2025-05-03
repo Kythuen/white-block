@@ -28,10 +28,10 @@ importers:
         specifier: 20.4.5
         version: 20.4.5
       '@vitest/coverage-istanbul':
-        specifier: ^2.1.5
+        specifier: ^2.1.9
         version: 2.1.9(vitest@2.1.9(@types/node@20.4.5)(jsdom@25.0.1)(less@4.2.2))
       '@vitest/coverage-v8':
-        specifier: ^2.1.5
+        specifier: ^2.1.9
         version: 2.1.9(vitest@2.1.9(@types/node@20.4.5)(jsdom@25.0.1)(less@4.2.2))
       commitizen:
         specifier: 4.3.1
@@ -67,8 +67,8 @@ importers:
         specifier: 15.2.10
         version: 15.2.10
       memfs:
-        specifier: ^4.14.0
-        version: 4.17.0
+        specifier: ^4.17.1
+        version: 4.17.1
       prettier:
         specifier: ^3.3.3
         version: 3.5.0
@@ -91,7 +91,7 @@ importers:
         specifier: ^5.4.10
         version: 5.4.14(@types/node@20.4.5)(less@4.2.2)
       vitest:
-        specifier: ^2.1.5
+        specifier: ^2.1.9
         version: 2.1.9(@types/node@20.4.5)(jsdom@25.0.1)(less@4.2.2)
       vue-tsc:
         specifier: ^2.1.10
@@ -181,7 +181,7 @@ importers:
     devDependencies:
       '@ephemeras/utils':
         specifier: ^2.4.0
-        version: 2.4.0(esbuild@0.23.1)
+        version: 2.4.0(esbuild@0.24.2)
       '@iconify-json/codicon':
         specifier: ^1.1.48
         version: 1.2.10
@@ -3845,8 +3845,8 @@ packages:
   mdurl@2.0.0:
     resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
 
-  memfs@4.17.0:
-    resolution: {integrity: sha512-4eirfZ7thblFmqFjywlTmuWVSvccHAJbn1r8qQLzmTO11qcqpohOjmY2mFce6x7x7WtskzRqApPD0hv+Oa74jg==}
+  memfs@4.17.1:
+    resolution: {integrity: sha512-thuTRd7F4m4dReCIy7vv4eNYnU6XI/tHMLSMMHLiortw/Y0QxqKtinG523U2aerzwYWGi606oBP4oMPy4+edag==}
     engines: {node: '>= 4.0.0'}
 
   memorystream@0.3.1:
@@ -6120,9 +6120,9 @@ snapshots:
       - chokidar
       - prettier
 
-  '@ephemeras/utils@2.4.0(esbuild@0.23.1)':
+  '@ephemeras/utils@2.4.0(esbuild@0.24.2)':
     dependencies:
-      bundle-require: 4.2.1(esbuild@0.23.1)
+      bundle-require: 4.2.1(esbuild@0.24.2)
     transitivePeerDependencies:
       - esbuild
 
@@ -7495,9 +7495,9 @@ snapshots:
       base64-js: 1.5.1
       ieee754: 1.2.1
 
-  bundle-require@4.2.1(esbuild@0.23.1):
+  bundle-require@4.2.1(esbuild@0.24.2):
     dependencies:
-      esbuild: 0.23.1
+      esbuild: 0.24.2
       load-tsconfig: 0.2.5
 
   bundle-require@5.1.0(esbuild@0.23.1):
@@ -9395,7 +9395,7 @@ snapshots:
 
   mdurl@2.0.0: {}
 
-  memfs@4.17.0:
+  memfs@4.17.1:
     dependencies:
       '@jsonjoy.com/json-pack': 1.1.1(tslib@2.8.1)
       '@jsonjoy.com/util': 1.5.0(tslib@2.8.1)
